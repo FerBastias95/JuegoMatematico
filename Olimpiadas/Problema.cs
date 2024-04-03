@@ -16,7 +16,6 @@ namespace Olimpiadas
         public Problema()
         {
             // Agrega instancias de Enunciado1 a la lista de todos los enunciados
-
             todosEnunciados.Add(new Enunciado1());
             todosEnunciados.Add(new Enunciado2());
             todosEnunciados.Add(new Enunciado3());

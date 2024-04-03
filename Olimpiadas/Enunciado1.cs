@@ -45,7 +45,7 @@ namespace Olimpiadas
             Respuesta = respuestaTrío;
 
             // Generar el enunciado utilizando las variables a y b del trío pitagórico
-            string Enunciado = $"En un triángulo rectángulo, la longitud de los catetos es {a} y {b}. ¿Cuál es la longitud de la hipotenusa? Debería ser {Respuesta}.";
+            string Enunciado = $"En un triángulo rectángulo, la longitud de los catetos es {a} y {b}. ¿Cuál es la longitud de la hipotenusa?";
 
             return Enunciado;
         }

@@ -16,8 +16,8 @@ namespace Olimpiadas
         public override string GenerarEnunciado()
         {
             Random randy = new Random();
-            int num1 = randy.Next(1, 11); // Número 1 entre 1 y 10
-            int num2 = randy.Next(1, 11); // Número 2 entre 1 y 10
+            int num1 = randy.Next(3, 11); // Número 1 entre 1 y 10
+            int num2 = randy.Next(2, 11); // Número 2 entre 1 y 10
             int respuesta = num1 * num2;
 
             Enunciado = $"¿Cuánto es {num1} * {num2}?";

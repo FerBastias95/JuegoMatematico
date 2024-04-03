@@ -48,12 +48,15 @@ namespace Olimpiadas
                         c++;
                         FormPrincipal.actualizarCorrectas(c);
                         this.Close();
+
                     }
                     else
                     {
                         MessageBox.Show("Error, intente nuevamente.");
                         v--;
                         FormPrincipal.actualizarVidas(v);
+                        FormPrincipal.problema1F = true;
+                        this.Close();
                     }
                     break;
                 case 2:
@@ -71,7 +74,8 @@ namespace Olimpiadas
                         MessageBox.Show("Error, intente nuevamente.");
                         v--;
                         FormPrincipal.actualizarVidas(v);
-
+                        FormPrincipal.problema2F = true;
+                        this.Close();
                     }
                     break;
                 case 3:
@@ -88,7 +92,9 @@ namespace Olimpiadas
                     {
                         MessageBox.Show("Error, intente nuevamente.");
                         v--;
-                        FormPrincipal.actualizarVidas(v);
+                        FormPrincipal.actualizarVidas(v); 
+                        FormPrincipal.problema3F = true;
+                        this.Close();
                     }
                     break;
                 case 4:
@@ -106,6 +112,8 @@ namespace Olimpiadas
                         MessageBox.Show("Error, intente nuevamente.");
                         v--;
                         FormPrincipal.actualizarVidas(v);
+                        FormPrincipal.problema4F = true;
+                        this.Close();
                     }
                     break;
                 case 5:
@@ -123,6 +131,8 @@ namespace Olimpiadas
                         MessageBox.Show("Error, intente nuevamente.");
                         v--;
                         FormPrincipal.actualizarVidas(v);
+                        FormPrincipal.problema5F = true;
+                        this.Close();
                     }
                     break;
                 default:

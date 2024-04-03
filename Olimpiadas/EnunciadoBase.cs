@@ -8,11 +8,25 @@ namespace Olimpiadas
 {
     public abstract class EnunciadoBase
     {
-        public string Enunciado { get; protected set; }
-        public int Respuesta { get; protected set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Categoria { get; set; }
+        public int Curso { get; set; }
+        public bool Avanzado { get; set; }
+        public bool UsarVariables { get; set; }
+        public int Inicio1 { get; set; }
+        public int Final1 { get; set; }
+        public int Inicio2 { get; set; }
+        public int Final2 { get; set; }
+        public int Inicio3 { get; set; }
+        public int Final3;
+        public int Inicio4 { get; set; }
+        public int Final4 { get; set; }
+        public string Enunciado { get; set; }
+        public byte[] Imagen { get; set; }
 
+        // Métodos abstractos para generar el enunciado y entregar la respuesta
         public abstract string GenerarEnunciado();
         public abstract int EntregarRespuesta();
     }
-
 }

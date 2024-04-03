@@ -43,6 +43,7 @@
             LabelP5 = new Label();
             labelVidas = new Label();
             LabelResueltos = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // botonP1
@@ -115,9 +116,9 @@
             // 
             // button6
             // 
-            button6.Location = new Point(155, 254);
+            button6.Location = new Point(238, 254);
             button6.Name = "button6";
-            button6.Size = new Size(156, 23);
+            button6.Size = new Size(197, 23);
             button6.TabIndex = 7;
             button6.Text = "Obtener recompensa";
             button6.UseVisualStyleBackColor = true;
@@ -190,12 +191,23 @@
             LabelResueltos.TabIndex = 14;
             LabelResueltos.Text = "0";
             // 
+            // button1
+            // 
+            button1.Location = new Point(36, 254);
+            button1.Name = "button1";
+            button1.Size = new Size(196, 23);
+            button1.TabIndex = 15;
+            button1.Text = "Editar enunciados";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(477, 302);
+            Controls.Add(button1);
             Controls.Add(LabelResueltos);
             Controls.Add(labelVidas);
             Controls.Add(LabelP5);
@@ -211,6 +223,7 @@
             Controls.Add(botonP3);
             Controls.Add(botonP2);
             Controls.Add(botonP1);
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -235,5 +248,6 @@
         private Label LabelP5;
         private Label labelVidas;
         private Label LabelResueltos;
+        private Button button1;
     }
 }
