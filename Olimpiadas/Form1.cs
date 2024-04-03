@@ -28,7 +28,7 @@ namespace Olimpiadas
             InitializeComponent();
             problema = new Problema();
 
-            e1 = problema.enunciadosSeleccionados[0].GenerarEnunciado();
+            /*e1 = problema.enunciadosSeleccionados[0].GenerarEnunciado();
             r1 = problema.enunciadosSeleccionados[0].EntregarRespuesta();
             e2 = problema.enunciadosSeleccionados[1].GenerarEnunciado();
             r2 = problema.enunciadosSeleccionados[1].EntregarRespuesta();
@@ -37,7 +37,7 @@ namespace Olimpiadas
             e4 = problema.enunciadosSeleccionados[3].GenerarEnunciado();
             r4 = problema.enunciadosSeleccionados[3].EntregarRespuesta();
             e5 = problema.enunciadosSeleccionados[4].GenerarEnunciado();
-            r5 = problema.enunciadosSeleccionados[4].EntregarRespuesta();
+            r5 = problema.enunciadosSeleccionados[4].EntregarRespuesta();*/
         }
 
         private void iniciarLayout()
@@ -67,8 +67,8 @@ namespace Olimpiadas
             {
                 if (problema1F == true)
                 {
-                    e1 = problema.enunciadosSeleccionados[0].GenerarEnunciado();
-                    r1 = problema.enunciadosSeleccionados[0].EntregarRespuesta();
+                    //e1 = problema.enunciadosSeleccionados[0].GenerarEnunciado();
+                    //r1 = problema.enunciadosSeleccionados[0].EntregarRespuesta();
                     problema1F = false;
                 }
                 Problema_1 problema1Form = new Problema_1(e1, r1, 1, vidas, correctas);
@@ -83,8 +83,8 @@ namespace Olimpiadas
             {
                 if (problema2F == true)
                 {
-                    e2 = problema.enunciadosSeleccionados[1].GenerarEnunciado();
-                    r2 = problema.enunciadosSeleccionados[1].EntregarRespuesta();
+                    //e2 = problema.enunciadosSeleccionados[1].GenerarEnunciado();
+                    //r2 = problema.enunciadosSeleccionados[1].EntregarRespuesta();
                     problema2F = false;
                 }
                 Problema_1 problema1Form = new Problema_1(e2, r2, 2, vidas, correctas);
@@ -99,8 +99,8 @@ namespace Olimpiadas
             {
                 if (problema3F == true)
                 {
-                    e3 = problema.enunciadosSeleccionados[2].GenerarEnunciado();
-                    r3 = problema.enunciadosSeleccionados[2].EntregarRespuesta();
+                    //e3 = problema.enunciadosSeleccionados[2].GenerarEnunciado();
+                    //r3 = problema.enunciadosSeleccionados[2].EntregarRespuesta();
                     problema3F = false;
                 }
                 Problema_1 problema1Form = new Problema_1(e3, r3, 3, vidas, correctas);
@@ -115,8 +115,8 @@ namespace Olimpiadas
             {
                 if (problema2F == true)
                 {
-                    e4 = problema.enunciadosSeleccionados[3].GenerarEnunciado();
-                    r4 = problema.enunciadosSeleccionados[3].EntregarRespuesta();
+                    //e4 = problema.enunciadosSeleccionados[3].GenerarEnunciado();
+                    //r4 = problema.enunciadosSeleccionados[3].EntregarRespuesta();
                     problema4F = false;
                 }
                 Problema_1 problema1Form = new Problema_1(e4, r4, 4, vidas, correctas);
@@ -131,8 +131,8 @@ namespace Olimpiadas
             {
                 if (problema5F == true)
                 {
-                    e5 = problema.enunciadosSeleccionados[4].GenerarEnunciado();
-                    r5 = problema.enunciadosSeleccionados[4].EntregarRespuesta();
+                    //e5 = problema.enunciadosSeleccionados[4].GenerarEnunciado();
+                   // r5 = problema.enunciadosSeleccionados[4].EntregarRespuesta();
                     problema5F = false;
                 }
                 Problema_1 problema1Form = new Problema_1(e5, r5, 5, vidas, correctas);
@@ -184,8 +184,8 @@ namespace Olimpiadas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AlterarBDD bdd = new AlterarBDD();
-            bdd.ShowDialog();
+            AlterarBDD alterar = new AlterarBDD(bdd);
+            alterar.ShowDialog();
         }
     }
 }

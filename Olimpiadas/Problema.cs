@@ -16,7 +16,7 @@ namespace Olimpiadas
         public Problema()
         {
             // Agrega instancias de Enunciado1 a la lista de todos los enunciados
-            todosEnunciados.Add(new Enunciado1());
+            /*todosEnunciados.Add(new Enunciado1());
             todosEnunciados.Add(new Enunciado2());
             todosEnunciados.Add(new Enunciado3());
             todosEnunciados.Add(new Enunciado4());
@@ -25,14 +25,14 @@ namespace Olimpiadas
             todosEnunciados.Add(new Enunciado7());
             todosEnunciados.Add(new Enunciado8());
             todosEnunciados.Add(new Enunciado9());
-            todosEnunciados.Add(new Enunciado10());
+            todosEnunciados.Add(new Enunciado10());*/
 
             // Selecciona 5 enunciados al azar
             for (int i = 0; i < 5; i++)
             {
-                int indiceAleatorio = randy.Next(todosEnunciados.Count);
-                enunciadosSeleccionados.Add(todosEnunciados[indiceAleatorio]);
-                todosEnunciados.RemoveAt(indiceAleatorio);
+                //int indiceAleatorio = randy.Next(todosEnunciados.Count);
+                //enunciadosSeleccionados.Add(todosEnunciados[indiceAleatorio]);
+                //todosEnunciados.RemoveAt(indiceAleatorio);
             }
         }
     }

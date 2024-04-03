@@ -59,7 +59,7 @@
             variable3 = new ComboBox();
             operacion4 = new ComboBox();
             variable4 = new ComboBox();
-            button1 = new Button();
+            ActAvanzado = new Button();
             label11 = new Label();
             SuspendLayout();
             // 
@@ -311,15 +311,15 @@
             variable4.Size = new Size(146, 23);
             variable4.TabIndex = 67;
             // 
-            // button1
+            // ActAvanzado
             // 
-            button1.BackColor = Color.FromArgb(128, 255, 128);
-            button1.Location = new Point(12, 373);
-            button1.Name = "button1";
-            button1.Size = new Size(640, 23);
-            button1.TabIndex = 68;
-            button1.Text = "Actualizar enunciado";
-            button1.UseVisualStyleBackColor = false;
+            ActAvanzado.BackColor = Color.FromArgb(128, 255, 128);
+            ActAvanzado.Location = new Point(12, 373);
+            ActAvanzado.Name = "ActAvanzado";
+            ActAvanzado.Size = new Size(640, 23);
+            ActAvanzado.TabIndex = 68;
+            ActAvanzado.Text = "Actualizar enunciado";
+            ActAvanzado.UseVisualStyleBackColor = false;
             // 
             // label11
             // 
@@ -336,7 +336,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(674, 414);
             Controls.Add(label11);
-            Controls.Add(button1);
+            Controls.Add(ActAvanzado);
             Controls.Add(variable4);
             Controls.Add(operacion4);
             Controls.Add(variable3);
@@ -409,7 +409,7 @@
         private ComboBox variable3;
         private ComboBox operacion4;
         private ComboBox variable4;
-        private Button button1;
+        private Button ActAvanzado;
         private Label label11;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Olimpiadas
 {
-    public abstract class EnunciadoBase
+    public class EnunciadoBase
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
@@ -22,11 +22,16 @@ namespace Olimpiadas
         public int Final3;
         public int Inicio4 { get; set; }
         public int Final4 { get; set; }
+        public double Respuesta { get; set; }
         public string Enunciado { get; set; }
         public byte[] Imagen { get; set; }
 
+
+
         // Métodos abstractos para generar el enunciado y entregar la respuesta
-        public abstract string GenerarEnunciado();
-        public abstract int EntregarRespuesta();
+        public void GenerarEnunciado()
+        {
+
+        }
     }
 }

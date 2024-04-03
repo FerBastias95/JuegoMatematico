@@ -11,7 +11,7 @@ namespace Olimpiadas
         public BDD()
         {
             // Establecer la cadena de conexión utilizando la ruta del archivo de la base de datos
-            connectionString = $"Data Source=\"miBaseDeDatos.sqlite\";Version=3;";
+            connectionString = $"Data Source=\"Enunciados.sqlite\";Version=3;";
             // Crear la tabla de enunciados si no existe
             CrearTablaEnunciados();
         }
@@ -40,7 +40,8 @@ namespace Olimpiadas
                     inicio4 INTEGER,
                     final4 INTEGER,
                     enunciado TEXT,
-                    imagen BLOB
+                    imagen BLOB,
+                    respuesta REAL
                 )";
 
                 using (SQLiteCommand command = new SQLiteCommand(createTableQuery, connection))
@@ -48,6 +49,57 @@ namespace Olimpiadas
                     command.ExecuteNonQuery();
                 }
             }
+        }
+        public List<EnunciadoBase> ObtenerTodosEnunciados()
+        {
+            List<EnunciadoBase> enunciados = new List<EnunciadoBase>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string selectQuery = "SELECT * FROM enunciados";
+
+                using (SQLiteCommand command = new SQLiteCommand(selectQuery, connection))
+                {
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            byte[] imagen = null;
+                            object imagenObj = reader["imagen"];
+                            if (imagenObj != DBNull.Value)
+                            {
+                                imagen = (byte[])imagenObj;
+                            }
+                            EnunciadoBase enunciado = new EnunciadoBase
+                            {
+                                Id = Convert.ToInt32(reader["id"]),
+                                Nombre = Convert.ToString(reader["nombre"]),
+                                Categoria = Convert.ToString(reader["categoria"]),
+                                UsarVariables = Convert.ToInt32(reader["usarVariables"]) == 1,
+                                Avanzado = Convert.ToInt32(reader["avanzado"]) == 1,
+                                Curso = Convert.ToInt32(reader["curso"]),
+                                Inicio1 = Convert.ToInt32(reader["inicio1"]),
+                                Final1 = Convert.ToInt32(reader["final1"]),
+                                Inicio2 = Convert.ToInt32(reader["inicio2"]),
+                                Final2 = Convert.ToInt32(reader["final2"]),
+                                Inicio3 = Convert.ToInt32(reader["inicio3"]),
+                                Final3 = Convert.ToInt32(reader["final3"]),
+                                Inicio4 = Convert.ToInt32(reader["inicio4"]),
+                                Final4 = Convert.ToInt32(reader["final4"]),
+                                Enunciado = Convert.ToString(reader["enunciado"]),
+                                Imagen = imagen,
+                                Respuesta = Convert.ToDouble(reader["respuesta"])
+                            };
+
+                            enunciados.Add(enunciado);
+                        }
+                    }
+                }
+            }
+
+            return enunciados;
         }
 
         // Método para insertar un enunciado en la base de datos
@@ -60,10 +112,10 @@ namespace Olimpiadas
                 string insertQuery = @"
             INSERT INTO enunciados (
                 nombre, categoria, usarVariables, avanzado, curso, inicio1, final1, inicio2, final2,
-                inicio3, final3, inicio4, final4, enunciado, imagen
+                inicio3, final3, inicio4, final4, enunciado, imagen, respuesta
             ) VALUES (
                 @nombre, @categoria, @usarVariables, @avanzado, @curso, @inicio1, @final1, @inicio2, @final2,
-                @inicio3, @final3, @inicio4, @final4, @enunciado, @imagen
+                @inicio3, @final3, @inicio4, @final4, @enunciado, @imagen, @respuesta
             )";
 
                 using (SQLiteCommand command = new SQLiteCommand(insertQuery, connection))
@@ -84,6 +136,24 @@ namespace Olimpiadas
                     command.Parameters.AddWithValue("@final4", enunciado.Final4);
                     command.Parameters.AddWithValue("@enunciado", enunciado.Enunciado);
                     command.Parameters.AddWithValue("@imagen", enunciado.Imagen);
+                    command.Parameters.AddWithValue("@respuesta", enunciado.Respuesta);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void EliminarEnunciado(int idEnunciado)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string deleteQuery = "DELETE FROM enunciados WHERE id = @id";
+
+                using (SQLiteCommand command = new SQLiteCommand(deleteQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@id", idEnunciado);
 
                     command.ExecuteNonQuery();
                 }

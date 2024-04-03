@@ -12,7 +12,7 @@ namespace Olimpiadas
 {
     public partial class Problema_1 : Form
     {
-        Enunciado1 enu;
+        EnunciadoBase enu;
         public Form1 FormPrincipal { get; set; }
         string en;
         int r;
@@ -21,7 +21,7 @@ namespace Olimpiadas
         int c;
         public Problema_1(string enunciado, int respuesta, int indice, int vidas, int correctas)
         {
-            enu = new Enunciado1();
+            enu = new EnunciadoBase();
             en = enunciado;
             r = respuesta;
             i = indice;
