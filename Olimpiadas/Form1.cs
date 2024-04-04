@@ -24,7 +24,6 @@ namespace Olimpiadas
             problema3F = false;
             problema4F = false;
             problema5F = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             InitializeComponent();
             problema = new Problema();
 

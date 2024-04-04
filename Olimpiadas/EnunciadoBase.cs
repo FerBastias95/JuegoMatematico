@@ -13,7 +13,6 @@ namespace Olimpiadas
         public string Categoria { get; set; }
         public int Curso { get; set; }
         public bool Avanzado { get; set; }
-        public bool UsarVariables { get; set; }
         public int Inicio1 { get; set; }
         public int Final1 { get; set; }
         public int Inicio2 { get; set; }
@@ -23,15 +22,12 @@ namespace Olimpiadas
         public int Inicio4 { get; set; }
         public int Final4 { get; set; }
         public double Respuesta { get; set; }
+        public double Variable1 { get; set; }
+        public double Variable2 { get; set; }
+        public double Variable3 { get; set; }
+        public double Variable4 { get; set; }
         public string Enunciado { get; set; }
         public byte[] Imagen { get; set; }
-
-
-
-        // Métodos abstractos para generar el enunciado y entregar la respuesta
-        public void GenerarEnunciado()
-        {
-
-        }
+        public int Tipo { get; set; }
     }
 }

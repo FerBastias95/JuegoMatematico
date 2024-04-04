@@ -10,8 +10,20 @@ namespace Olimpiadas
 
         public BDD()
         {
+            string folderPath = Path.Combine(Environment.CurrentDirectory, "Lista de enunciados");
+
+            // Verificar si la carpeta no existe y crearla si es necesario
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            // Establecer la ruta completa del archivo de la base de datos dentro de la carpeta
+            string databasePath = Path.Combine(folderPath, "Enunciados.sqlite");
+
             // Establecer la cadena de conexión utilizando la ruta del archivo de la base de datos
-            connectionString = $"Data Source=\"Enunciados.sqlite\";Version=3;";
+            connectionString = $"Data Source=\"{databasePath}\";Version=3;";
+
             // Crear la tabla de enunciados si no existe
             CrearTablaEnunciados();
         }
@@ -28,20 +40,24 @@ namespace Olimpiadas
                     id INTEGER PRIMARY KEY,
                     nombre TEXT,
                     categoria TEXT,
-                    usarVariables INTEGER,
                     avanzado INTEGER,
-                    curso INTEGER,  
-                    inicio1 INTEGER,
-                    final1 INTEGER,
-                    inicio2 INTEGER,
-                    final2 INTEGER,
-                    inicio3 INTEGER,
-                    final3 INTEGER,
-                    inicio4 INTEGER,
-                    final4 INTEGER,
+                    curso INTEGER,
+                    inicio1 REAL,
+                    final1 REAL,
+                    inicio2 REAL,
+                    final2 REAL,
+                    inicio3 REAL,
+                    final3 REAL,
+                    inicio4 REAL,
+                    final4 REAL,
                     enunciado TEXT,
                     imagen BLOB,
-                    respuesta REAL
+                    respuesta REAL,
+                    variable1 REAL,
+                    variable2 REAL,
+                    variable3 REAL,
+                    variable4 REAL,
+                    tipo INTEGER
                 )";
 
                 using (SQLiteCommand command = new SQLiteCommand(createTableQuery, connection))
@@ -77,7 +93,6 @@ namespace Olimpiadas
                                 Id = Convert.ToInt32(reader["id"]),
                                 Nombre = Convert.ToString(reader["nombre"]),
                                 Categoria = Convert.ToString(reader["categoria"]),
-                                UsarVariables = Convert.ToInt32(reader["usarVariables"]) == 1,
                                 Avanzado = Convert.ToInt32(reader["avanzado"]) == 1,
                                 Curso = Convert.ToInt32(reader["curso"]),
                                 Inicio1 = Convert.ToInt32(reader["inicio1"]),
@@ -90,7 +105,11 @@ namespace Olimpiadas
                                 Final4 = Convert.ToInt32(reader["final4"]),
                                 Enunciado = Convert.ToString(reader["enunciado"]),
                                 Imagen = imagen,
-                                Respuesta = Convert.ToDouble(reader["respuesta"])
+                                Respuesta = Convert.ToDouble(reader["respuesta"]),
+                                Variable1 = Convert.ToDouble(reader["variable1"]),
+                                Variable2 = Convert.ToDouble(reader["variable2"]),
+                                Variable3 = Convert.ToDouble(reader["variable3"]),
+                                Variable4 = Convert.ToDouble(reader["variable4"])
                             };
 
                             enunciados.Add(enunciado);
@@ -111,21 +130,19 @@ namespace Olimpiadas
 
                 string insertQuery = @"
             INSERT INTO enunciados (
-                nombre, categoria, usarVariables, avanzado, curso, inicio1, final1, inicio2, final2,
-                inicio3, final3, inicio4, final4, enunciado, imagen, respuesta
+                nombre, categoria, avanzado, curso, inicio1, final1, inicio2, final2,
+                inicio3, final3, inicio4, final4, enunciado, imagen, respuesta, variable1, variable2, variable3, variable4, tipo
             ) VALUES (
-                @nombre, @categoria, @usarVariables, @avanzado, @curso, @inicio1, @final1, @inicio2, @final2,
-                @inicio3, @final3, @inicio4, @final4, @enunciado, @imagen, @respuesta
+                @nombre, @categoria, @avanzado, @curso, @inicio1, @final1, @inicio2, @final2,
+                @inicio3, @final3, @inicio4, @final4, @enunciado, @imagen, @respuesta, @variable1, @variable2, @variable3, @variable4, @tipo
             )";
 
                 using (SQLiteCommand command = new SQLiteCommand(insertQuery, connection))
                 {
-                    // Asignar parámetros
                     command.Parameters.AddWithValue("@nombre", enunciado.Nombre);
                     command.Parameters.AddWithValue("@categoria", enunciado.Categoria);
-                    command.Parameters.AddWithValue("@usarVariables", enunciado.UsarVariables ? 1 : 0);
                     command.Parameters.AddWithValue("@avanzado", enunciado.Avanzado ? 1 : 0);
-                    command.Parameters.AddWithValue("@curso", enunciado.Curso); // Nuevo parámetro para el campo "Curso"
+                    command.Parameters.AddWithValue("@curso", enunciado.Curso);
                     command.Parameters.AddWithValue("@inicio1", enunciado.Inicio1);
                     command.Parameters.AddWithValue("@final1", enunciado.Final1);
                     command.Parameters.AddWithValue("@inicio2", enunciado.Inicio2);
@@ -137,6 +154,11 @@ namespace Olimpiadas
                     command.Parameters.AddWithValue("@enunciado", enunciado.Enunciado);
                     command.Parameters.AddWithValue("@imagen", enunciado.Imagen);
                     command.Parameters.AddWithValue("@respuesta", enunciado.Respuesta);
+                    command.Parameters.AddWithValue("@variable1", enunciado.Variable1);
+                    command.Parameters.AddWithValue("@variable2", enunciado.Variable2);
+                    command.Parameters.AddWithValue("@variable3", enunciado.Variable3);
+                    command.Parameters.AddWithValue("@variable4", enunciado.Variable4);
+                    command.Parameters.AddWithValue("@tipo", enunciado.Tipo); // Nuevo parámetro para el campo "tipo"
 
                     command.ExecuteNonQuery();
                 }
@@ -159,5 +181,64 @@ namespace Olimpiadas
                 }
             }
         }
+
+        public void ActualizarEnunciado(EnunciadoBase enunciado)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string updateQuery = @"
+            UPDATE enunciados
+            SET nombre = @nombre,
+                categoria = @categoria,
+                avanzado = @avanzado,
+                curso = @curso,
+                inicio1 = @inicio1,
+                final1 = @final1,
+                inicio2 = @inicio2,
+                final2 = @final2,
+                inicio3 = @inicio3,
+                final3 = @final3,
+                inicio4 = @inicio4,
+                final4 = @final4,
+                enunciado = @enunciado,
+                imagen = @imagen,
+                respuesta = @respuesta,
+                variable1 = @variable1,
+                variable2 = @variable2,
+                variable3 = @variable3,
+                variable4 = @variable4,
+                tipo = @tipo
+            WHERE id = @id";
+
+                using (SQLiteCommand command = new SQLiteCommand(updateQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@nombre", enunciado.Nombre);
+                    command.Parameters.AddWithValue("@categoria", enunciado.Categoria);
+                    command.Parameters.AddWithValue("@avanzado", enunciado.Avanzado ? 1 : 0);
+                    command.Parameters.AddWithValue("@curso", enunciado.Curso);
+                    command.Parameters.AddWithValue("@inicio1", enunciado.Inicio1);
+                    command.Parameters.AddWithValue("@final1", enunciado.Final1);
+                    command.Parameters.AddWithValue("@inicio2", enunciado.Inicio2);
+                    command.Parameters.AddWithValue("@final2", enunciado.Final2);
+                    command.Parameters.AddWithValue("@inicio3", enunciado.Inicio3);
+                    command.Parameters.AddWithValue("@final3", enunciado.Final3);
+                    command.Parameters.AddWithValue("@inicio4", enunciado.Inicio4);
+                    command.Parameters.AddWithValue("@final4", enunciado.Final4);
+                    command.Parameters.AddWithValue("@enunciado", enunciado.Enunciado);
+                    command.Parameters.AddWithValue("@imagen", enunciado.Imagen ?? (object)DBNull.Value);
+                    command.Parameters.AddWithValue("@respuesta", enunciado.Respuesta);
+                    command.Parameters.AddWithValue("@variable1", enunciado.Variable1);
+                    command.Parameters.AddWithValue("@variable2", enunciado.Variable2);
+                    command.Parameters.AddWithValue("@variable3", enunciado.Variable3);
+                    command.Parameters.AddWithValue("@variable4", enunciado.Variable4);
+                    command.Parameters.AddWithValue("@tipo", enunciado.Tipo); // Nuevo parámetro para el campo "tipo"
+                    command.Parameters.AddWithValue("@id", enunciado.Id);
+
+                    command.ExecuteNonQuery();
+                }
+    }
+}
     }
 }

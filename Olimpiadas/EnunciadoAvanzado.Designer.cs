@@ -42,25 +42,24 @@
             label3 = new Label();
             var1f = new TextBox();
             var1i = new TextBox();
-            richTextBox1 = new RichTextBox();
+            avanzadoTexto = new RichTextBox();
             label1 = new Label();
             label2 = new Label();
             label6 = new Label();
             label10 = new Label();
-            numero1 = new TextBox();
             operacion1 = new ComboBox();
             variable1 = new ComboBox();
-            numero2 = new TextBox();
             operacion2 = new ComboBox();
             variable2 = new ComboBox();
-            numero3 = new TextBox();
-            numero4 = new TextBox();
             operacion3 = new ComboBox();
             variable3 = new ComboBox();
             operacion4 = new ComboBox();
             variable4 = new ComboBox();
             ActAvanzado = new Button();
             label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            cancelarCambios = new Button();
             SuspendLayout();
             // 
             // label9
@@ -173,18 +172,18 @@
             var1i.Size = new Size(100, 23);
             var1i.TabIndex = 35;
             // 
-            // richTextBox1
+            // avanzadoTexto
             // 
-            richTextBox1.Location = new Point(12, 95);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(302, 125);
-            richTextBox1.TabIndex = 51;
-            richTextBox1.Text = "";
+            avanzadoTexto.Location = new Point(12, 107);
+            avanzadoTexto.Name = "avanzadoTexto";
+            avanzadoTexto.Size = new Size(302, 113);
+            avanzadoTexto.TabIndex = 51;
+            avanzadoTexto.Text = "";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 42);
+            label1.Location = new Point(12, 38);
             label1.Name = "label1";
             label1.Size = new Size(142, 15);
             label1.TabIndex = 52;
@@ -202,7 +201,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(12, 77);
+            label6.Location = new Point(12, 80);
             label6.Name = "label6";
             label6.Size = new Size(256, 15);
             label6.TabIndex = 54;
@@ -211,115 +210,106 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(38, 250);
+            label10.Location = new Point(41, 234);
             label10.Name = "label10";
             label10.Size = new Size(62, 15);
             label10.TabIndex = 55;
             label10.Text = "Resultado:";
             // 
-            // numero1
-            // 
-            numero1.Location = new Point(294, 247);
-            numero1.Name = "numero1";
-            numero1.Size = new Size(36, 23);
-            numero1.TabIndex = 56;
-            // 
             // operacion1
             // 
             operacion1.FormattingEnabled = true;
-            operacion1.Items.AddRange(new object[] { "+", "-", "*", "/", "Elevado a", "Raíz Cuadrada", "Raíz Cúbica", "Log B2", "Log B10", "Log Natural" });
-            operacion1.Location = new Point(150, 247);
+            operacion1.Items.AddRange(new object[] { "+", "-", "Raíz Cuadrada", "Raíz Cúbica", "Log B2", "Log B10", "Log Natural" });
+            operacion1.Location = new Point(161, 260);
             operacion1.Name = "operacion1";
-            operacion1.Size = new Size(138, 23);
+            operacion1.Size = new Size(164, 23);
             operacion1.TabIndex = 57;
+            operacion1.SelectedIndexChanged += operacion1_SelectedIndexChanged;
             // 
             // variable1
             // 
             variable1.FormattingEnabled = true;
             variable1.Items.AddRange(new object[] { "Variable 1", "Variable 2", "Variable 3", "Variable 4" });
-            variable1.Location = new Point(336, 247);
+            variable1.Location = new Point(331, 260);
             variable1.Name = "variable1";
-            variable1.Size = new Size(146, 23);
+            variable1.Size = new Size(162, 23);
             variable1.TabIndex = 58;
-            // 
-            // numero2
-            // 
-            numero2.Location = new Point(294, 276);
-            numero2.Name = "numero2";
-            numero2.Size = new Size(36, 23);
-            numero2.TabIndex = 59;
+            variable1.SelectedIndexChanged += variable1_SelectedIndexChanged;
             // 
             // operacion2
             // 
+            operacion2.Enabled = false;
             operacion2.FormattingEnabled = true;
-            operacion2.Location = new Point(150, 276);
+            operacion2.Items.AddRange(new object[] { "+", "-", "*", "/", "Elevado a", "Raíz Cuadrada", "Raíz Cúbica", "Log B2", "Log B10", "Log Natural" });
+            operacion2.Location = new Point(161, 289);
             operacion2.Name = "operacion2";
-            operacion2.Size = new Size(138, 23);
+            operacion2.Size = new Size(164, 23);
             operacion2.TabIndex = 60;
+            operacion2.SelectedIndexChanged += operacion2_SelectedIndexChanged;
             // 
             // variable2
             // 
+            variable2.Enabled = false;
             variable2.FormattingEnabled = true;
-            variable2.Location = new Point(335, 276);
+            variable2.Items.AddRange(new object[] { "Variable 1", "Variable 2", "Variable 3", "Variable 4" });
+            variable2.Location = new Point(331, 289);
             variable2.Name = "variable2";
-            variable2.Size = new Size(147, 23);
+            variable2.Size = new Size(162, 23);
             variable2.TabIndex = 61;
-            // 
-            // numero3
-            // 
-            numero3.Location = new Point(294, 305);
-            numero3.Name = "numero3";
-            numero3.Size = new Size(36, 23);
-            numero3.TabIndex = 62;
-            // 
-            // numero4
-            // 
-            numero4.Location = new Point(294, 334);
-            numero4.Name = "numero4";
-            numero4.Size = new Size(36, 23);
-            numero4.TabIndex = 63;
+            variable2.SelectedIndexChanged += variable2_SelectedIndexChanged;
             // 
             // operacion3
             // 
+            operacion3.Enabled = false;
             operacion3.FormattingEnabled = true;
-            operacion3.Location = new Point(150, 305);
+            operacion3.Items.AddRange(new object[] { "+", "-", "*", "/", "Elevado a", "Raíz Cuadrada", "Raíz Cúbica", "Log B2", "Log B10", "Log Natural" });
+            operacion3.Location = new Point(161, 318);
             operacion3.Name = "operacion3";
-            operacion3.Size = new Size(138, 23);
+            operacion3.Size = new Size(164, 23);
             operacion3.TabIndex = 64;
+            operacion3.SelectedIndexChanged += operacion3_SelectedIndexChanged;
             // 
             // variable3
             // 
+            variable3.Enabled = false;
             variable3.FormattingEnabled = true;
-            variable3.Location = new Point(336, 305);
+            variable3.Items.AddRange(new object[] { "Variable 1", "Variable 2", "Variable 3", "Variable 4" });
+            variable3.Location = new Point(331, 318);
             variable3.Name = "variable3";
-            variable3.Size = new Size(146, 23);
+            variable3.Size = new Size(162, 23);
             variable3.TabIndex = 65;
+            variable3.SelectedIndexChanged += variable3_SelectedIndexChanged;
             // 
             // operacion4
             // 
+            operacion4.Enabled = false;
             operacion4.FormattingEnabled = true;
-            operacion4.Location = new Point(150, 334);
+            operacion4.Items.AddRange(new object[] { "+", "-", "*", "/", "Elevado a", "Raíz Cuadrada", "Raíz Cúbica", "Log B2", "Log B10", "Log Natural" });
+            operacion4.Location = new Point(161, 347);
             operacion4.Name = "operacion4";
-            operacion4.Size = new Size(138, 23);
+            operacion4.Size = new Size(164, 23);
             operacion4.TabIndex = 66;
             // 
             // variable4
             // 
+            variable4.Enabled = false;
             variable4.FormattingEnabled = true;
-            variable4.Location = new Point(336, 334);
+            variable4.Items.AddRange(new object[] { "Variable 1", "Variable 2", "Variable 3", "Variable 4" });
+            variable4.Location = new Point(331, 347);
             variable4.Name = "variable4";
-            variable4.Size = new Size(146, 23);
+            variable4.Size = new Size(162, 23);
             variable4.TabIndex = 67;
             // 
             // ActAvanzado
             // 
             ActAvanzado.BackColor = Color.FromArgb(128, 255, 128);
-            ActAvanzado.Location = new Point(12, 373);
+            ActAvanzado.Location = new Point(12, 379);
             ActAvanzado.Name = "ActAvanzado";
-            ActAvanzado.Size = new Size(640, 23);
+            ActAvanzado.Size = new Size(317, 23);
             ActAvanzado.TabIndex = 68;
             ActAvanzado.Text = "Actualizar enunciado";
             ActAvanzado.UseVisualStyleBackColor = false;
+            ActAvanzado.Click += ActAvanzado_Click;
             // 
             // label11
             // 
@@ -330,30 +320,59 @@
             label11.TabIndex = 69;
             label11.Text = "Si desea que su enunciado sea generado automáticamente, este es el lugar indicado.";
             // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(161, 234);
+            label12.Name = "label12";
+            label12.Size = new Size(57, 15);
+            label12.TabIndex = 70;
+            label12.Text = "Operador";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(331, 234);
+            label13.Name = "label13";
+            label13.Size = new Size(53, 15);
+            label13.TabIndex = 71;
+            label13.Text = "Variables";
+            // 
+            // cancelarCambios
+            // 
+            cancelarCambios.BackColor = Color.Red;
+            cancelarCambios.ForeColor = Color.Black;
+            cancelarCambios.Location = new Point(331, 379);
+            cancelarCambios.Name = "cancelarCambios";
+            cancelarCambios.Size = new Size(317, 23);
+            cancelarCambios.TabIndex = 72;
+            cancelarCambios.Text = "Cancelar cambios";
+            cancelarCambios.UseVisualStyleBackColor = false;
+            cancelarCambios.Click += cancelarCambios_Click;
+            // 
             // EnunciadoAvanzado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(674, 414);
+            Controls.Add(cancelarCambios);
+            Controls.Add(label13);
+            Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(ActAvanzado);
             Controls.Add(variable4);
             Controls.Add(operacion4);
             Controls.Add(variable3);
             Controls.Add(operacion3);
-            Controls.Add(numero4);
-            Controls.Add(numero3);
             Controls.Add(variable2);
             Controls.Add(operacion2);
-            Controls.Add(numero2);
             Controls.Add(variable1);
             Controls.Add(operacion1);
-            Controls.Add(numero1);
             Controls.Add(label10);
             Controls.Add(label6);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(richTextBox1);
+            Controls.Add(avanzadoTexto);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -392,24 +411,23 @@
         private Label label3;
         private TextBox var1f;
         private TextBox var1i;
-        private RichTextBox richTextBox1;
+        private RichTextBox avanzadoTexto;
         private Label label1;
         private Label label2;
         private Label label6;
         private Label label10;
-        private TextBox numero1;
         private ComboBox operacion1;
         private ComboBox variable1;
-        private TextBox numero2;
         private ComboBox operacion2;
         private ComboBox variable2;
-        private TextBox numero3;
-        private TextBox numero4;
         private ComboBox operacion3;
         private ComboBox variable3;
         private ComboBox operacion4;
         private ComboBox variable4;
         private Button ActAvanzado;
         private Label label11;
+        private Label label12;
+        private Label label13;
+        private Button cancelarCambios;
     }
 }

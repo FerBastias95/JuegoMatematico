@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Olimpiadas
 {
@@ -18,10 +20,9 @@ namespace Olimpiadas
         public AlterarBDD(BDD info)
         {
             BaseEnunciados = info;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             InitializeComponent();
             enunciados = new List<EnunciadoBase>(); // Inicializar la lista de enunciados
-            listaEnunciados.SelectedIndexChanged += ListaEnunciados_SelectedIndexChanged;
+            listaEnunciados2.SelectedIndexChanged += ListaEnunciados2_SelectedIndexChanged;
 
             // Cargar los enunciados desde la base de datos al iniciar el formulario
             CargarEnunciadosDesdeBaseDatos();
@@ -35,7 +36,7 @@ namespace Olimpiadas
             // Agregar los nombres de los enunciados a la lista de enunciados en el formulario
             foreach (EnunciadoBase enunciado in enunciados)
             {
-                listaEnunciados.Items.Add(enunciado.Nombre);
+                listaEnunciados2.Items.Add(enunciado.Nombre);
             }
 
             // Actualizar el último ID utilizado
@@ -46,13 +47,21 @@ namespace Olimpiadas
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            EnunciadoAvanzado adv = new EnunciadoAvanzado();
-            adv.ShowDialog();
+            if (listaEnunciados2.SelectedIndex >= 0)
+            {
+                // Obtener el índice del enunciado seleccionado
+                int indiceSeleccionado = listaEnunciados2.SelectedIndex;
+
+                // Obtener el enunciado seleccionado
+                EnunciadoBase enunciadoSeleccionado = enunciados[indiceSeleccionado];
+                EnunciadoAvanzado adv = new EnunciadoAvanzado(BaseEnunciados, enunciadoSeleccionado);
+                adv.ShowDialog();
+            }
         }
-        private void ListaEnunciados_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListaEnunciados2_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Obtener el índice del enunciado seleccionado
-            int indiceSeleccionado = listaEnunciados.SelectedIndex;
+            int indiceSeleccionado = listaEnunciados2.SelectedIndex;
 
             if (indiceSeleccionado >= 0)
             {
@@ -63,18 +72,34 @@ namespace Olimpiadas
                 NombreEnunciado.Text = enunciadoSeleccionado.Nombre;
                 idEnunciado.Text = enunciadoSeleccionado.Id.ToString();
                 categoria.SelectedItem = enunciadoSeleccionado.Categoria;
-                opcionTexto.Checked = !enunciadoSeleccionado.UsarVariables; // Si no usa variables, seleccionar texto
-                opcionImagen.Checked = enunciadoSeleccionado.UsarVariables; // Si usa variables, seleccionar imagen
                 textoEnunciado.Text = enunciadoSeleccionado.Enunciado;
                 resultadoEnunciado.Text = enunciadoSeleccionado.Respuesta.ToString(); // Mostrar la respuesta
-                curso.SelectedItem = enunciadoSeleccionado.Curso.ToString();
-                permitirAvanzado.Checked = enunciadoSeleccionado.Avanzado;
+                cursoSeleccion.SelectedItem = enunciadoSeleccionado.Curso.ToString();
+
+                if (enunciadoSeleccionado.Tipo == 2)
+                {
+                    opcionAvanzado.Checked = true;
+                    opcionImagen.Checked = false;
+                    opcionTexto.Checked = false;
+                }
+                else if (enunciadoSeleccionado.Tipo == 1)
+                {
+                    opcionAvanzado.Checked = false;
+                    opcionImagen.Checked = true;
+                    opcionTexto.Checked = false;
+                }
+                else
+                {
+                    opcionAvanzado.Checked = false;
+                    opcionImagen.Checked = false;
+                    opcionTexto.Checked = true;
+                }
                 // Mostrar la imagen si hay una
                 if (enunciadoSeleccionado.Imagen != null)
                 {
                     using (MemoryStream ms = new MemoryStream(enunciadoSeleccionado.Imagen))
                     {
-                        imagenEnunciado.Image = Image.FromStream(ms);
+                        imagenEnunciado.Image = System.Drawing.Image.FromStream(ms);
                     }
                 }
                 else
@@ -83,27 +108,17 @@ namespace Olimpiadas
                 }
             }
         }
-        private void permitirAvanzado_CheckedChanged(object sender, EventArgs e)
-        {
-            if (permitirAvanzado.Checked == true)
-            {
-                abrirAvanzado.Enabled = true;
-            }
-            else
-            {
-                abrirAvanzado.Enabled = false;
-            }
-        }
-
         private void opcionTexto_CheckedChanged(object sender, EventArgs e)
         {
             if (opcionTexto.Checked == true)
             {
                 textoEnunciado.Enabled = true;
                 resultadoEnunciado.Enabled = true;
-                imagenEnunciado.Enabled = false;
                 abrirImagen.Enabled = false;
+                imagenTexto.Enabled = false;
                 resultadoImagen.Enabled = false;
+                imagenEnunciado.Enabled = false;
+                abrirAvanzado.Enabled = false;
             }
         }
 
@@ -114,8 +129,24 @@ namespace Olimpiadas
                 textoEnunciado.Enabled = false;
                 resultadoEnunciado.Enabled = false;
                 imagenEnunciado.Enabled = true;
+                imagenTexto.Enabled = true;
                 abrirImagen.Enabled = true;
                 resultadoImagen.Enabled = true;
+                abrirAvanzado.Enabled = false;
+            }
+        }
+
+        private void opcionAvanzado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (opcionAvanzado.Checked == true)
+            {
+                textoEnunciado.Enabled = false;
+                resultadoEnunciado.Enabled = false;
+                imagenEnunciado.Enabled = false;
+                imagenTexto.Enabled = false;
+                abrirImagen.Enabled = false;
+                resultadoImagen.Enabled = false;
+                abrirAvanzado.Enabled = true;
             }
         }
 
@@ -133,7 +164,6 @@ namespace Olimpiadas
                 Id = ultimoId,
                 Nombre = nuevoNombre,
                 Categoria = string.Empty, // Valor predeterminado para la categoría
-                UsarVariables = false,    // Valor predeterminado para UsarVariables
                 Avanzado = false,         // Valor predeterminado para Avanzado
                 Curso = 0,                // Valor predeterminado para Curso
                 Inicio1 = 0,              // Valor predeterminado para Inicio1
@@ -146,7 +176,8 @@ namespace Olimpiadas
                 Final4 = 0,               // Valor predeterminado para Final4
                 Enunciado = string.Empty, // Valor predeterminado para el enunciado
                 Imagen = null,            // Valor predeterminado para la imagen
-                Respuesta = 0             // Valor predeterminado para la respuesta
+                Respuesta = 0,            // Valor predeterminado para la respuesta
+                Tipo = 0
             };
 
             // Insertar el nuevo enunciado en la base de datos
@@ -155,16 +186,16 @@ namespace Olimpiadas
 
             // Agregar el nuevo enunciado a la lista de enunciados
             enunciados.Add(nuevoEnunciado);
-            listaEnunciados.Items.Add(nuevoEnunciado.Nombre);
+            listaEnunciados2.Items.Add(nuevoEnunciado.Nombre);
         }
 
         private void borrarEnunciado_Click(object sender, EventArgs e)
         {
             // Verificar si hay un enunciado seleccionado en la lista
-            if (listaEnunciados.SelectedIndex >= 0)
+            if (listaEnunciados2.SelectedIndex >= 0)
             {
                 // Obtener el índice del enunciado seleccionado
-                int indiceSeleccionado = listaEnunciados.SelectedIndex;
+                int indiceSeleccionado = listaEnunciados2.SelectedIndex;
 
                 // Obtener el enunciado seleccionado
                 EnunciadoBase enunciadoSeleccionado = enunciados[indiceSeleccionado];
@@ -176,23 +207,187 @@ namespace Olimpiadas
                 EliminarEnunciadoDeBaseDatos(enunciadoSeleccionado);
 
                 // Actualizar la vista de la lista
-                ActualizarListaEnunciados();
+                ActualizarListaEnunciados2();
             }
         }
         // Método para eliminar un enunciado de la base de datos
         private void EliminarEnunciadoDeBaseDatos(EnunciadoBase enunciado)
         {
-                BaseEnunciados.EliminarEnunciado(enunciado.Id);
+            BaseEnunciados.EliminarEnunciado(enunciado.Id);
         }
 
         // Método para actualizar la vista de la lista de enunciados
-        private void ActualizarListaEnunciados()
+        private void ActualizarListaEnunciados2()
         {
-            listaEnunciados.Items.Clear();
+            listaEnunciados2.Items.Clear();
             foreach (EnunciadoBase enunciado in enunciados)
             {
-                listaEnunciados.Items.Add(enunciado.Nombre);
+                listaEnunciados2.Items.Add(enunciado.Nombre);
+            }
+
+        }
+
+        private void actualizarEnunciado_Click(object sender, EventArgs e)
+        {
+            // Verificar si hay un enunciado seleccionado en la lista
+            if (listaEnunciados2.SelectedIndex >= 0)
+            {
+                // Obtener el índice del enunciado seleccionado
+                int indiceSeleccionado = listaEnunciados2.SelectedIndex;
+
+                // Obtener el enunciado seleccionado
+                EnunciadoBase enunciadoSeleccionado = enunciados[indiceSeleccionado];
+                if (opcionAvanzado.Checked)
+                {
+                    enunciadoSeleccionado.Tipo = 2;
+                }
+                else if (opcionImagen.Checked)
+                {
+                    enunciadoSeleccionado.Tipo = 1;
+                }
+                else
+                {
+                    enunciadoSeleccionado.Tipo = 0;
+                }
+
+                if (opcionTexto.Checked == true)
+                {
+                    enunciadoSeleccionado.Nombre = NombreEnunciado.Text;
+                    enunciadoSeleccionado.Categoria = categoria.Text;
+                    enunciadoSeleccionado.Avanzado = false;
+                    int test1;
+                    bool esPosible1 = int.TryParse(cursoSeleccion.Text, out test1);
+                    if (esPosible1)
+                    {
+                        enunciadoSeleccionado.Respuesta = int.Parse(cursoSeleccion.Text);
+                    }
+                    enunciadoSeleccionado.Curso = int.Parse(cursoSeleccion.Text);
+                    enunciadoSeleccionado.Enunciado = textoEnunciado.Text;
+                    double test2;
+                    bool esPosible2 = double.TryParse(resultadoEnunciado.Text, out test2);
+                    if (esPosible2)
+                    {
+                        enunciadoSeleccionado.Respuesta = double.Parse(resultadoEnunciado.Text);
+                    }
+                }
+                else if (opcionImagen.Checked)
+                {
+                    enunciadoSeleccionado.Nombre = NombreEnunciado.Text;
+                    enunciadoSeleccionado.Categoria = categoria.Text;
+                    enunciadoSeleccionado.Avanzado = false;
+                    int test1;
+                    bool esPosible1 = int.TryParse(cursoSeleccion.Text, out test1);
+                    if (esPosible1)
+                    {
+                        enunciadoSeleccionado.Respuesta = int.Parse(cursoSeleccion.Text);
+                    }
+                    enunciadoSeleccionado.Curso = int.Parse(cursoSeleccion.Text);
+                    enunciadoSeleccionado.Enunciado = imagenTexto.Text;
+
+                    if (imagenEnunciado.Image != null) // Verificar si hay una imagen asignada
+                    {
+                        byte[] imagenBytes = null;
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            imagenEnunciado.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                            imagenBytes = ms.ToArray();
+                        }
+                        enunciadoSeleccionado.Imagen = imagenBytes;
+                    }
+                    else
+                    {
+                        // Si no hay imagen asignada, simplemente dejamos en null la propiedad Imagen
+                        enunciadoSeleccionado.Imagen = null;
+                    }
+
+                    double test2;
+                    bool esPosible2 = double.TryParse(resultadoImagen.Text, out test2);
+                    if (esPosible2)
+                    {
+                        enunciadoSeleccionado.Respuesta = double.Parse(resultadoImagen.Text);
+                    }
+                }
+
+                else
+                {
+                    enunciadoSeleccionado.Nombre = NombreEnunciado.Text;
+                    enunciadoSeleccionado.Categoria = categoria.Text;
+                    int test1;
+                    bool esPosible1 = int.TryParse(cursoSeleccion.Text, out test1);
+
+                    if (esPosible1)
+                    {
+                        enunciadoSeleccionado.Respuesta = int.Parse(cursoSeleccion.Text);
+                    }
+                    enunciadoSeleccionado.Curso = int.Parse(cursoSeleccion.Text);
+                }
+                // Actualizar el enunciado en la base de datos
+                BaseEnunciados.ActualizarEnunciado(enunciadoSeleccionado);
+
+                // Actualizar la vista de la lista de enunciados
+                ActualizarListaEnunciados2();
             }
         }
+
+        private void abrirImagen_Click(object sender, EventArgs e)
+        {
+            // Crear un nuevo OpenFileDialog
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Establecer el filtro de archivos para mostrar solo imágenes
+            openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+            // Mostrar el diálogo
+            DialogResult result = openFileDialog.ShowDialog();
+
+            // Verificar si se seleccionó un archivo de imagen
+            if (result == DialogResult.OK)
+            {
+                // Obtener la ruta del archivo seleccionado
+                string filePath = openFileDialog.FileName;
+
+                // Verificar el tamaño del archivo (en bytes)
+                FileInfo fileInfo = new FileInfo(filePath);
+                long fileSize = fileInfo.Length;
+
+                // Verificar si el tamaño del archivo excede 1 MB (en bytes)
+                if (fileSize > 1024 * 1024) // 1 MB = 1024 * 1024 bytes
+                {
+                    MessageBox.Show("La imagen seleccionada excede el tamaño máximo permitido (1 MB). Por favor, selecciona una imagen más pequeña.", "Tamaño de imagen excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    // Definir la carpeta de destino para guardar la imagen
+                    string folderPath = "Imagenes";
+
+                    // Crear la carpeta si no existe
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+
+                    try
+                    {
+                        // Generar un nombre único para el archivo de imagen
+                        string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(filePath);
+
+                        // Construir la ruta completa del archivo de imagen en la carpeta de destino
+                        string destinationFilePath = Path.Combine(folderPath, uniqueFileName);
+
+                        // Copiar el archivo de la ubicación original a la carpeta de destino
+                        File.Copy(filePath, destinationFilePath);
+
+                        // Mostrar la imagen en el PictureBox
+                        imagenEnunciado.SizeMode = PictureBoxSizeMode.Zoom; // Escalar y centrar la imagen
+                        imagenEnunciado.Image = System.Drawing.Image.FromFile(destinationFilePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Se produjo un error al intentar guardar la imagen:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
     }
 }
