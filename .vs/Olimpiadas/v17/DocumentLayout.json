@@ -1,38 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\",
+  "WorkspaceRootPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|c:\\fer\\visualstudio\\olimpiadas\\juegomatematico\\olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|c:\\users\\ferba\\documents\\juegomatematico\\olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|c:\\fer\\visualstudio\\olimpiadas\\juegomatematico\\olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|C:\\Users\\ferba\\Documents\\JuegoMatematico\\ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|C:\\Users\\ferba\\Documents\\JuegoMatematico\\olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|c:\\fer\\visualstudio\\olimpiadas\\juegomatematico\\olimpiadas\\bdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|C:\\Users\\ferba\\Documents\\JuegoMatematico\\olimpiadas\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|C:\\Users\\ferba\\Documents\\JuegoMatematico\\olimpiadas\\alterarbdd.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\alterarbdd.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|C:\\Users\\ferba\\Documents\\JuegoMatematico\\olimpiadas\\bdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\bdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|c:\\fer\\visualstudio\\olimpiadas\\juegomatematico\\olimpiadas\\enunciadobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\enunciadobase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|c:\\fer\\visualstudio\\olimpiadas\\juegomatematico\\olimpiadas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|c:\\fer\\visualstudio\\olimpiadas\\juegomatematico\\olimpiadas\\problema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\problema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|c:\\fer\\visualstudio\\olimpiadas\\juegomatematico\\olimpiadas\\problema 1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\problema 1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|c:\\fer\\visualstudio\\olimpiadas\\juegomatematico\\olimpiadas\\alterarbdd.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\alterarbdd.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|C:\\Users\\ferba\\Documents\\JuegoMatematico\\olimpiadas\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\Olimpiadas.csproj|solutionrelative:olimpiadas\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,131 +41,89 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AlterarBDD.Designer.cs",
-              "DocumentMoniker": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\AlterarBDD.Designer.cs",
-              "RelativeDocumentMoniker": "Olimpiadas\\AlterarBDD.Designer.cs",
-              "ToolTip": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\AlterarBDD.Designer.cs",
-              "RelativeToolTip": "Olimpiadas\\AlterarBDD.Designer.cs",
-              "ViewState": "AQIAAJ4BAAAAAAAAAAAvwK0BAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "BDD.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\BDD.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\BDD.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\BDD.cs",
+              "RelativeToolTip": "Olimpiadas\\BDD.cs",
+              "ViewState": "AQIAAMYAAAAAAAAAAAAWwMMAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T16:30:11.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T15:28:44.951Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AlterarBDD.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs",
+              "DocumentIndex": 2,
+              "Title": "AlterarBDD.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs",
               "RelativeDocumentMoniker": "Olimpiadas\\AlterarBDD.cs",
-              "ToolTip": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Olimpiadas\\AlterarBDD.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs [Design]",
+              "RelativeToolTip": "Olimpiadas\\AlterarBDD.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T13:09:20.927Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-04-09T21:15:43.625Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AlterarBDD.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\AlterarBDD.Designer.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\AlterarBDD.Designer.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\AlterarBDD.Designer.cs",
+              "RelativeToolTip": "Olimpiadas\\AlterarBDD.Designer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwMcBAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T18:26:34.758Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AlterarBDD.cs",
-              "DocumentMoniker": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs",
               "RelativeDocumentMoniker": "Olimpiadas\\AlterarBDD.cs",
-              "ToolTip": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs",
               "RelativeToolTip": "Olimpiadas\\AlterarBDD.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAwwHYAAAAtAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAIwGAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T14:47:28.774Z",
+              "WhenOpened": "2024-04-05T12:59:24.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BDD.cs",
-              "DocumentMoniker": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\BDD.cs",
-              "RelativeDocumentMoniker": "Olimpiadas\\BDD.cs",
-              "ToolTip": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\BDD.cs",
-              "RelativeToolTip": "Olimpiadas\\BDD.cs",
-              "ViewState": "AQIAANQAAAAAAAAAAAAswNgAAAA5AAAA",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Form1.cs",
+              "RelativeDocumentMoniker": "Ejercicios\\Form1.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Form1.cs",
+              "RelativeToolTip": "Ejercicios\\Form1.cs",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAUwLoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T13:24:54.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-09T16:16:59.226Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EnunciadoBase.cs",
-              "DocumentMoniker": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\EnunciadoBase.cs",
-              "RelativeDocumentMoniker": "Olimpiadas\\EnunciadoBase.cs",
-              "ToolTip": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\EnunciadoBase.cs",
-              "RelativeToolTip": "Olimpiadas\\EnunciadoBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAlAAAA",
+              "Title": "Inicio.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Inicio.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\Inicio.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Inicio.cs",
+              "RelativeToolTip": "Olimpiadas\\Inicio.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAQwFYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T12:55:21.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Form1.cs",
-              "RelativeDocumentMoniker": "Olimpiadas\\Form1.cs",
-              "ToolTip": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Form1.cs",
-              "RelativeToolTip": "Olimpiadas\\Form1.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAmwAIAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:53:38.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Problema.cs",
-              "DocumentMoniker": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Problema.cs",
-              "RelativeDocumentMoniker": "Olimpiadas\\Problema.cs",
-              "ToolTip": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Problema.cs",
-              "RelativeToolTip": "Olimpiadas\\Problema.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAuwCAAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:53:38.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-09T16:03:07.267Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Problema 1.cs",
-              "DocumentMoniker": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Problema 1.cs",
-              "RelativeDocumentMoniker": "Olimpiadas\\Problema 1.cs",
-              "ToolTip": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Problema 1.cs",
-              "RelativeToolTip": "Olimpiadas\\Problema 1.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAnwCAAAAAkAAAA",
+              "Title": "Inicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Inicio.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\Inicio.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Inicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Olimpiadas\\Inicio.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:53:38.747Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+              "WhenOpened": "2024-04-09T15:58:20.496Z"
             }
           ]
         }

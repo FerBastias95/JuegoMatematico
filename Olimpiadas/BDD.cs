@@ -7,29 +7,16 @@ namespace Olimpiadas
     public class BDD
     {
         private string connectionString;
+        public string nombre;
 
-        public BDD()
+        public BDD(string databasePath)
         {
-            string folderPath = Path.Combine(Environment.CurrentDirectory, "Lista de enunciados");
-
-            // Verificar si la carpeta no existe y crearla si es necesario
-            if (!Directory.Exists(folderPath))
-            {
-                Directory.CreateDirectory(folderPath);
-            }
-
-            // Establecer la ruta completa del archivo de la base de datos dentro de la carpeta
-            string databasePath = Path.Combine(folderPath, "Enunciados.sqlite");
-
-            // Establecer la cadena de conexión utilizando la ruta del archivo de la base de datos
+            nombre = Path.GetFileNameWithoutExtension(connectionString);
             connectionString = $"Data Source=\"{databasePath}\";Version=3;";
-
-            // Crear la tabla de enunciados si no existe
-            CrearTablaEnunciados();
         }
 
         // Método para crear la tabla de enunciados si no existe
-        private void CrearTablaEnunciados()
+        public void CrearTablaEnunciados()
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -120,7 +107,10 @@ namespace Olimpiadas
 
             return enunciados;
         }
-
+        public string ObtenerDireccionBaseDatos()
+        {
+            return Path.GetFileNameWithoutExtension(connectionString);
+        }
         // Método para insertar un enunciado en la base de datos
         public void InsertarEnunciado(EnunciadoBase enunciado)
         {
@@ -238,7 +228,7 @@ namespace Olimpiadas
 
                     command.ExecuteNonQuery();
                 }
-    }
-}
+            }
+        }
     }
 }

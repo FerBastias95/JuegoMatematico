@@ -1,0 +1,8 @@
+C:\Users\ferba\OneDrive\Documents\GitHub\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Olimpiadas.Form1.resources
+C:\Users\ferba\OneDrive\Documents\GitHub\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Olimpiadas.Problema_1.resources
+C:\Users\ferba\OneDrive\Documents\GitHub\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.GenerateResource.cache
+C:\Users\ferba\OneDrive\Documents\GitHub\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ferba\OneDrive\Documents\GitHub\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.AssemblyInfoInputs.cache
+C:\Users\ferba\OneDrive\Documents\GitHub\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.AssemblyInfo.cs
+C:\Users\ferba\OneDrive\Documents\GitHub\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.CoreCompileInputs.cache
+C:\Users\ferba\OneDrive\Documents\GitHub\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.sourcelink.json

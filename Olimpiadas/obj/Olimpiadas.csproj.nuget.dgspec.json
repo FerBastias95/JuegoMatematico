@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj": {}
+    "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj": {}
   },
   "projects": {
-    "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj": {
+    "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj",
+        "projectUniqueName": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj",
         "projectName": "Olimpiadas",
-        "projectPath": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj",
-        "packagesPath": "C:\\Users\\Dpto. Informática\\.nuget\\packages\\",
-        "outputPath": "C:\\Fer\\VisualStudio\\Olimpiadas\\JuegoMatematico\\Olimpiadas\\obj\\",
+        "projectPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj",
+        "packagesPath": "C:\\Users\\ferba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dpto. Informática\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ferba\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -1,3 +1,5 @@
+using Olimpiadas;
+
 namespace Olimpiadas
 {
     public partial class Form1 : Form
@@ -8,10 +10,9 @@ namespace Olimpiadas
         public bool problema1R, problema2R, problema3R, problema4R, problema5R, problema1F, problema2F, problema3F, problema4F, problema5F;
         private string e1, e2, e3, e4, e5;
         private int r1, r2, r3, r4, r5;
-        public BDD bdd;
+        string pathName = "";
         public Form1()
         {
-            bdd = new BDD();
             vidas = 5;
             correctas = 0;
             problema1R = false;
@@ -183,8 +184,7 @@ namespace Olimpiadas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AlterarBDD alterar = new AlterarBDD(bdd);
-            alterar.ShowDialog();
+
         }
     }
 }

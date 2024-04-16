@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Olimpiadas
-build_property.ProjectDir = C:\Fer\VisualStudio\Olimpiadas\JuegoMatematico\Olimpiadas\
+build_property.ProjectDir = C:\Users\ferba\Documents\JuegoMatematico\Olimpiadas\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
