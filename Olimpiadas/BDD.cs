@@ -26,7 +26,7 @@ namespace Olimpiadas
                 CREATE TABLE IF NOT EXISTS enunciados (
                     id INTEGER PRIMARY KEY,
                     nombre TEXT,
-                    categoria TEXT,
+                    categoria INTEGER,
                     avanzado INTEGER,
                     curso INTEGER,
                     inicio1 REAL,
@@ -79,7 +79,7 @@ namespace Olimpiadas
                             {
                                 Id = Convert.ToInt32(reader["id"]),
                                 Nombre = Convert.ToString(reader["nombre"]),
-                                Categoria = Convert.ToString(reader["categoria"]),
+                                Categoria = Convert.ToInt32(reader["categoria"]),
                                 Avanzado = Convert.ToInt32(reader["avanzado"]) == 1,
                                 Curso = Convert.ToInt32(reader["curso"]),
                                 Inicio1 = Convert.ToInt32(reader["inicio1"]),
@@ -106,10 +106,6 @@ namespace Olimpiadas
             }
 
             return enunciados;
-        }
-        public string ObtenerDireccionBaseDatos()
-        {
-            return Path.GetFileNameWithoutExtension(connectionString);
         }
         // Método para insertar un enunciado en la base de datos
         public void InsertarEnunciado(EnunciadoBase enunciado)
@@ -154,7 +150,6 @@ namespace Olimpiadas
                 }
             }
         }
-
         public void EliminarEnunciado(int idEnunciado)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
@@ -171,7 +166,6 @@ namespace Olimpiadas
                 }
             }
         }
-
         public void ActualizarEnunciado(EnunciadoBase enunciado)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
@@ -223,7 +217,7 @@ namespace Olimpiadas
                     command.Parameters.AddWithValue("@variable2", enunciado.Variable2);
                     command.Parameters.AddWithValue("@variable3", enunciado.Variable3);
                     command.Parameters.AddWithValue("@variable4", enunciado.Variable4);
-                    command.Parameters.AddWithValue("@tipo", enunciado.Tipo); // Nuevo parámetro para el campo "tipo"
+                    command.Parameters.AddWithValue("@tipo", enunciado.Tipo);
                     command.Parameters.AddWithValue("@id", enunciado.Id);
 
                     command.ExecuteNonQuery();

@@ -46,7 +46,7 @@ namespace Olimpiadas
                 avanzado.Final1 = int.Parse(var1f.Text);
                 if (avanzado.Final1 > avanzado.Inicio1)
                 {
-                    avanzado.Variable1 = randy.Next(avanzado.Inicio1, avanzado.Final1 + 1);
+                    avanzado.Variable1 = randy.Next(avanzado.Inicio1, avanzado.Final1);
                 }
             }
 
@@ -60,7 +60,7 @@ namespace Olimpiadas
                 avanzado.Final2 = int.Parse(var2f.Text);
                 if (avanzado.Final2 > avanzado.Inicio2)
                 {
-                    avanzado.Variable2 = randy.Next(avanzado.Inicio2, avanzado.Final2 + 1);
+                    avanzado.Variable2 = randy.Next(avanzado.Inicio2, avanzado.Final2);
                 }
             }
 
@@ -74,7 +74,7 @@ namespace Olimpiadas
                 avanzado.Final3 = int.Parse(var3f.Text);
                 if (avanzado.Final3 > avanzado.Inicio3)
                 {
-                    avanzado.Variable3 = randy.Next(avanzado.Inicio3, avanzado.Final3 + 1);
+                    avanzado.Variable3 = randy.Next(avanzado.Inicio3, avanzado.Final3);
                 }
             }
 
@@ -88,7 +88,7 @@ namespace Olimpiadas
                 avanzado.Final4 = int.Parse(var4f.Text);
                 if (avanzado.Final3 > avanzado.Inicio3)
                 {
-                    avanzado.Variable4 = randy.Next(avanzado.Inicio4, avanzado.Final4 + 1);
+                    avanzado.Variable4 = randy.Next(avanzado.Inicio4, avanzado.Final4);
                 }
             }
 
@@ -161,22 +161,154 @@ namespace Olimpiadas
             switch (operacion3.Text)
             {
                 case "+":
-                    respuesta += avanzado.Variable3;
+                    switch (variable3.Text)
+                    {
+                        case "Variable 1":
+                            respuesta += avanzado.Variable1;
+                            break;
+                        case "Variable 2":
+                            respuesta += avanzado.Variable2;
+                            break;
+                        case "Variable 3":
+                            respuesta += avanzado.Variable3;
+                            break;
+                        case "Variable 4":
+                            respuesta += avanzado.Variable4;
+                            break;
+                        default:
+                            double test;
+                            bool sepuede = double.TryParse(variable3.Text, out test);
+                            if (sepuede)
+                            {
+                                respuesta += double.Parse(variable3.Text);
+                            }
+                            break;
+                    }
                     break;
                 case "-":
-                    respuesta -= avanzado.Variable3;
+                    switch (variable3.Text)
+                    {
+                        case "Variable 1":
+                            respuesta -= avanzado.Variable1;
+                            break;
+                        case "Variable 2":
+                            respuesta -= avanzado.Variable2;
+                            break;
+                        case "Variable 3":
+                            respuesta -= avanzado.Variable3;
+                            break;
+                        case "Variable 4":
+                            respuesta -= avanzado.Variable4;
+                            break;
+                        default:
+                            double test;
+                            bool sepuede = double.TryParse(variable3.Text, out test);
+                            if (sepuede)
+                            {
+                                respuesta -= double.Parse(variable3.Text);
+                            }
+                            break;
+                    }
                     break;
                 case "*":
-                    respuesta *= avanzado.Variable3;
+                    switch (variable3.Text)
+                    {
+                        case "Variable 1":
+                            respuesta *= avanzado.Variable1;
+                            break;
+                        case "Variable 2":
+                            respuesta *= avanzado.Variable2;
+                            break;
+                        case "Variable 3":
+                            respuesta *= avanzado.Variable3;
+                            break;
+                        case "Variable 4":
+                            respuesta *= avanzado.Variable4;
+                            break;
+                        default:
+                            double test;
+                            bool sepuede = double.TryParse(variable3.Text, out test);
+                            if (sepuede)
+                            {
+                                respuesta *= double.Parse(variable3.Text);
+                            }
+                            break;
+                    }
                     break;
                 case "/":
-                    respuesta /= avanzado.Variable3;
+                    switch (variable3.Text)
+                    {
+                        case "Variable 1":
+                            respuesta /= avanzado.Variable1;
+                            break;
+                        case "Variable 2":
+                            respuesta /= avanzado.Variable2;
+                            break;
+                        case "Variable 3":
+                            respuesta /= avanzado.Variable3;
+                            break;
+                        case "Variable 4":
+                            respuesta /= avanzado.Variable4;
+                            break;
+                        default:
+                            double test;
+                            bool sepuede = double.TryParse(variable3.Text, out test);
+                            if (sepuede)
+                            {
+                                respuesta /= double.Parse(variable3.Text);
+                            }
+                            break;
+                    }
                     break;
                 case "Elevado a":
-                    respuesta = Math.Pow(respuesta, avanzado.Variable3);
+                    switch (variable3.Text)
+                    {
+                        case "Variable 1":
+                            respuesta = Math.Pow(respuesta, avanzado.Variable1); 
+                            break;
+                        case "Variable 2":
+                            respuesta = Math.Pow(respuesta, avanzado.Variable2);
+                            break;
+                        case "Variable 3":
+                            respuesta = Math.Pow(respuesta, avanzado.Variable3);
+                            break;
+                        case "Variable 4":
+                            respuesta = Math.Pow(respuesta, avanzado.Variable4);
+                            break;
+                        default:
+                            double test;
+                            bool sepuede = double.TryParse(variable4.Text, out test);
+                            if (sepuede)
+                            {
+                                respuesta /= double.Parse(variable4.Text);
+                            }
+                            break;
+                    }
                     break;
                 case "Raíz Cuadrada":
-                    respuesta += Math.Sqrt(avanzado.Variable3);
+                    switch (variable3.Text)
+                    {
+                        case "Variable 1":
+                            respuesta += Math.Sqrt(avanzado.Variable1);
+                            break;
+                        case "Variable 2":
+                            respuesta += Math.Sqrt(avanzado.Variable2);
+                            break;
+                        case "Variable 3":
+                            respuesta += Math.Sqrt(avanzado.Variable3);
+                            break;
+                        case "Variable 4":
+                            respuesta += Math.Sqrt(avanzado.Variable4);
+                            break;
+                        default:
+                            double test;
+                            bool sepuede = double.TryParse(variable4.Text, out test);
+                            if (sepuede)
+                            {
+                                respuesta += Math.Sqrt(avanzado.Variable3);
+                            }
+                            break;
+                    }
                     break;
                 case "Raíz Cúbica":
                     respuesta += Math.Cbrt(avanzado.Variable3);

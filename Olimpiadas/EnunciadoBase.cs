@@ -10,7 +10,7 @@ namespace Olimpiadas
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string Categoria { get; set; }
+        public int Categoria { get; set; }
         public int Curso { get; set; }
         public bool Avanzado { get; set; }
         public int Inicio1 { get; set; }
