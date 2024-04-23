@@ -28,6 +28,6 @@ namespace Olimpiadas
         public double Variable4 { get; set; }
         public string Enunciado { get; set; }
         public byte[] Imagen { get; set; }
-        public int Tipo { get; set; }
+        public string Formula { get; set; }
     }
 }

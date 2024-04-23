@@ -73,7 +73,6 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel9 = new TableLayoutPanel();
             label8 = new Label();
-            avanzadoEnunciado = new RichTextBox();
             tableLayoutPanel5 = new TableLayoutPanel();
             tableLayoutPanel6 = new TableLayoutPanel();
             tableLayoutPanel7 = new TableLayoutPanel();
@@ -97,6 +96,13 @@
             tableLayoutPanel10 = new TableLayoutPanel();
             botonRandom = new Button();
             botonGuardar = new Button();
+            tableLayoutPanel11 = new TableLayoutPanel();
+            tableLayoutPanel12 = new TableLayoutPanel();
+            avanzadoEnunciado = new RichTextBox();
+            insertVar1 = new Button();
+            insertVar2 = new Button();
+            insertVar3 = new Button();
+            insertVar4 = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -107,6 +113,8 @@
             tableLayoutPanel7.SuspendLayout();
             tableLayoutPanel8.SuspendLayout();
             tableLayoutPanel10.SuspendLayout();
+            tableLayoutPanel11.SuspendLayout();
+            tableLayoutPanel12.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -153,7 +161,7 @@
             tableLayoutPanel1.Controls.Add(var3b, 2, 8);
             tableLayoutPanel1.Controls.Add(var4b, 3, 8);
             tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(3, 246);
+            tableLayoutPanel1.Location = new Point(3, 285);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 9;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
@@ -165,7 +173,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
-            tableLayoutPanel1.Size = new Size(400, 466);
+            tableLayoutPanel1.Size = new Size(400, 427);
             tableLayoutPanel1.TabIndex = 56;
             // 
             // button24
@@ -174,9 +182,9 @@
             button24.Dock = DockStyle.Fill;
             button24.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button24.ForeColor = Color.White;
-            button24.Location = new Point(103, 109);
+            button24.Location = new Point(103, 99);
             button24.Name = "button24";
-            button24.Size = new Size(94, 47);
+            button24.Size = new Size(94, 42);
             button24.TabIndex = 39;
             button24.Text = "cos-1";
             button24.UseVisualStyleBackColor = false;
@@ -188,9 +196,9 @@
             button18.Dock = DockStyle.Fill;
             button18.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button18.ForeColor = Color.White;
-            button18.Location = new Point(3, 162);
+            button18.Location = new Point(3, 147);
             button18.Name = "button18";
-            button18.Size = new Size(94, 47);
+            button18.Size = new Size(94, 42);
             button18.TabIndex = 26;
             button18.Text = "tan";
             button18.UseVisualStyleBackColor = false;
@@ -201,10 +209,10 @@
             button13.BackColor = Color.White;
             button13.Dock = DockStyle.Fill;
             button13.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button13.Location = new Point(104, 374);
+            button13.Location = new Point(104, 339);
             button13.Margin = new Padding(4, 3, 4, 3);
             button13.Name = "button13";
-            button13.Size = new Size(92, 47);
+            button13.Size = new Size(92, 42);
             button13.TabIndex = 12;
             button13.Text = ".";
             button13.UseVisualStyleBackColor = false;
@@ -215,10 +223,10 @@
             button19.BackColor = Color.White;
             button19.Dock = DockStyle.Fill;
             button19.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button19.Location = new Point(204, 374);
+            button19.Location = new Point(204, 339);
             button19.Margin = new Padding(4, 3, 4, 3);
             button19.Name = "button19";
-            button19.Size = new Size(92, 47);
+            button19.Size = new Size(92, 42);
             button19.TabIndex = 27;
             button19.Text = "(";
             button19.UseVisualStyleBackColor = false;
@@ -233,7 +241,7 @@
             btnEqual.Location = new Point(304, 3);
             btnEqual.Margin = new Padding(4, 3, 4, 3);
             btnEqual.Name = "btnEqual";
-            btnEqual.Size = new Size(92, 47);
+            btnEqual.Size = new Size(92, 42);
             btnEqual.TabIndex = 19;
             btnEqual.Text = "=";
             btnEqual.UseVisualStyleBackColor = false;
@@ -248,7 +256,7 @@
             button29.Location = new Point(204, 3);
             button29.Margin = new Padding(4, 3, 4, 3);
             button29.Name = "button29";
-            button29.Size = new Size(92, 47);
+            button29.Size = new Size(92, 42);
             button29.TabIndex = 49;
             button29.Text = "Ans";
             button29.UseVisualStyleBackColor = false;
@@ -259,10 +267,10 @@
             button10.BackColor = Color.White;
             button10.Dock = DockStyle.Fill;
             button10.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button10.Location = new Point(104, 321);
+            button10.Location = new Point(104, 291);
             button10.Margin = new Padding(4, 3, 4, 3);
             button10.Name = "button10";
-            button10.Size = new Size(92, 47);
+            button10.Size = new Size(92, 42);
             button10.TabIndex = 9;
             button10.Text = "2";
             button10.UseVisualStyleBackColor = false;
@@ -277,7 +285,7 @@
             btnBackSpace.Location = new Point(104, 3);
             btnBackSpace.Margin = new Padding(4, 3, 4, 3);
             btnBackSpace.Name = "btnBackSpace";
-            btnBackSpace.Size = new Size(92, 47);
+            btnBackSpace.Size = new Size(92, 42);
             btnBackSpace.TabIndex = 23;
             btnBackSpace.Text = "←";
             btnBackSpace.UseVisualStyleBackColor = false;
@@ -288,10 +296,10 @@
             button9.BackColor = Color.White;
             button9.Dock = DockStyle.Fill;
             button9.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button9.Location = new Point(204, 321);
+            button9.Location = new Point(204, 291);
             button9.Margin = new Padding(4, 3, 4, 3);
             button9.Name = "button9";
-            button9.Size = new Size(92, 47);
+            button9.Size = new Size(92, 42);
             button9.TabIndex = 10;
             button9.Text = "3";
             button9.UseVisualStyleBackColor = false;
@@ -302,10 +310,10 @@
             button8.BackColor = Color.White;
             button8.Dock = DockStyle.Fill;
             button8.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button8.Location = new Point(204, 268);
+            button8.Location = new Point(204, 243);
             button8.Margin = new Padding(4, 3, 4, 3);
             button8.Name = "button8";
-            button8.Size = new Size(92, 47);
+            button8.Size = new Size(92, 42);
             button8.TabIndex = 5;
             button8.Text = "6";
             button8.UseVisualStyleBackColor = false;
@@ -317,10 +325,10 @@
             button12.Dock = DockStyle.Fill;
             button12.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button12.ForeColor = Color.White;
-            button12.Location = new Point(304, 374);
+            button12.Location = new Point(304, 339);
             button12.Margin = new Padding(4, 3, 4, 3);
             button12.Name = "button12";
-            button12.Size = new Size(92, 47);
+            button12.Size = new Size(92, 42);
             button12.TabIndex = 13;
             button12.Text = "+";
             button12.UseVisualStyleBackColor = false;
@@ -332,10 +340,10 @@
             button5.Dock = DockStyle.Fill;
             button5.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(304, 321);
+            button5.Location = new Point(304, 291);
             button5.Margin = new Padding(4, 3, 4, 3);
             button5.Name = "button5";
-            button5.Size = new Size(92, 47);
+            button5.Size = new Size(92, 42);
             button5.TabIndex = 17;
             button5.Text = "-";
             button5.UseVisualStyleBackColor = false;
@@ -347,10 +355,10 @@
             button15.Dock = DockStyle.Fill;
             button15.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button15.ForeColor = Color.White;
-            button15.Location = new Point(304, 268);
+            button15.Location = new Point(304, 243);
             button15.Margin = new Padding(4, 3, 4, 3);
             button15.Name = "button15";
-            button15.Size = new Size(92, 47);
+            button15.Size = new Size(92, 42);
             button15.TabIndex = 16;
             button15.Text = "*";
             button15.UseVisualStyleBackColor = false;
@@ -366,7 +374,7 @@
             btnClear.Location = new Point(4, 3);
             btnClear.Margin = new Padding(4, 3, 4, 3);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(92, 47);
+            btnClear.Size = new Size(92, 42);
             btnClear.TabIndex = 14;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
@@ -377,10 +385,10 @@
             button14.BackColor = Color.White;
             button14.Dock = DockStyle.Fill;
             button14.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button14.Location = new Point(4, 374);
+            button14.Location = new Point(4, 339);
             button14.Margin = new Padding(4, 3, 4, 3);
             button14.Name = "button14";
-            button14.Size = new Size(92, 47);
+            button14.Size = new Size(92, 42);
             button14.TabIndex = 11;
             button14.Text = "0";
             button14.UseVisualStyleBackColor = false;
@@ -391,10 +399,10 @@
             button7.BackColor = Color.White;
             button7.Dock = DockStyle.Fill;
             button7.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.Location = new Point(104, 268);
+            button7.Location = new Point(104, 243);
             button7.Margin = new Padding(4, 3, 4, 3);
             button7.Name = "button7";
-            button7.Size = new Size(92, 47);
+            button7.Size = new Size(92, 42);
             button7.TabIndex = 6;
             button7.Text = "5";
             button7.UseVisualStyleBackColor = false;
@@ -406,9 +414,9 @@
             button4.Dock = DockStyle.Fill;
             button4.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(3, 56);
+            button4.Location = new Point(3, 51);
             button4.Name = "button4";
-            button4.Size = new Size(94, 47);
+            button4.Size = new Size(94, 42);
             button4.TabIndex = 24;
             button4.Text = "sin";
             button4.UseVisualStyleBackColor = false;
@@ -420,10 +428,10 @@
             button16.Dock = DockStyle.Fill;
             button16.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button16.ForeColor = Color.White;
-            button16.Location = new Point(304, 215);
+            button16.Location = new Point(304, 195);
             button16.Margin = new Padding(4, 3, 4, 3);
             button16.Name = "button16";
-            button16.Size = new Size(92, 47);
+            button16.Size = new Size(92, 42);
             button16.TabIndex = 15;
             button16.Text = "/";
             button16.UseVisualStyleBackColor = false;
@@ -435,9 +443,9 @@
             button17.Dock = DockStyle.Fill;
             button17.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button17.ForeColor = Color.White;
-            button17.Location = new Point(3, 109);
+            button17.Location = new Point(3, 99);
             button17.Name = "button17";
-            button17.Size = new Size(94, 47);
+            button17.Size = new Size(94, 42);
             button17.TabIndex = 25;
             button17.Text = "cos";
             button17.UseVisualStyleBackColor = false;
@@ -448,10 +456,10 @@
             button3.BackColor = Color.White;
             button3.Dock = DockStyle.Fill;
             button3.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(204, 215);
+            button3.Location = new Point(204, 195);
             button3.Margin = new Padding(4, 3, 4, 3);
             button3.Name = "button3";
-            button3.Size = new Size(92, 47);
+            button3.Size = new Size(92, 42);
             button3.TabIndex = 2;
             button3.Text = "9";
             button3.UseVisualStyleBackColor = false;
@@ -462,10 +470,10 @@
             button1.BackColor = Color.White;
             button1.Dock = DockStyle.Fill;
             button1.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(4, 215);
+            button1.Location = new Point(4, 195);
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
-            button1.Size = new Size(92, 47);
+            button1.Size = new Size(92, 42);
             button1.TabIndex = 0;
             button1.Text = "7";
             button1.UseVisualStyleBackColor = false;
@@ -476,10 +484,10 @@
             button6.BackColor = Color.White;
             button6.Dock = DockStyle.Fill;
             button6.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.Location = new Point(4, 268);
+            button6.Location = new Point(4, 243);
             button6.Margin = new Padding(4, 3, 4, 3);
             button6.Name = "button6";
-            button6.Size = new Size(92, 47);
+            button6.Size = new Size(92, 42);
             button6.TabIndex = 7;
             button6.Text = "4";
             button6.UseVisualStyleBackColor = false;
@@ -490,10 +498,10 @@
             button11.BackColor = Color.White;
             button11.Dock = DockStyle.Fill;
             button11.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button11.Location = new Point(4, 321);
+            button11.Location = new Point(4, 291);
             button11.Margin = new Padding(4, 3, 4, 3);
             button11.Name = "button11";
-            button11.Size = new Size(92, 47);
+            button11.Size = new Size(92, 42);
             button11.TabIndex = 8;
             button11.Text = "1";
             button11.UseVisualStyleBackColor = false;
@@ -504,10 +512,10 @@
             button2.BackColor = Color.White;
             button2.Dock = DockStyle.Fill;
             button2.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(104, 215);
+            button2.Location = new Point(104, 195);
             button2.Margin = new Padding(4, 3, 4, 3);
             button2.Name = "button2";
-            button2.Size = new Size(92, 47);
+            button2.Size = new Size(92, 42);
             button2.TabIndex = 1;
             button2.Text = "8";
             button2.UseVisualStyleBackColor = false;
@@ -519,9 +527,9 @@
             button25.Dock = DockStyle.Fill;
             button25.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button25.ForeColor = Color.White;
-            button25.Location = new Point(103, 56);
+            button25.Location = new Point(103, 51);
             button25.Name = "button25";
-            button25.Size = new Size(94, 47);
+            button25.Size = new Size(94, 42);
             button25.TabIndex = 38;
             button25.Text = "sin-1";
             button25.UseVisualStyleBackColor = false;
@@ -533,9 +541,9 @@
             button27.Dock = DockStyle.Fill;
             button27.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button27.ForeColor = Color.White;
-            button27.Location = new Point(203, 56);
+            button27.Location = new Point(203, 51);
             button27.Name = "button27";
-            button27.Size = new Size(94, 47);
+            button27.Size = new Size(94, 42);
             button27.TabIndex = 42;
             button27.Text = "√[b] x";
             button27.UseVisualStyleBackColor = false;
@@ -547,10 +555,10 @@
             button28.Dock = DockStyle.Fill;
             button28.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button28.ForeColor = Color.White;
-            button28.Location = new Point(304, 162);
+            button28.Location = new Point(304, 147);
             button28.Margin = new Padding(4, 3, 4, 3);
             button28.Name = "button28";
-            button28.Size = new Size(92, 47);
+            button28.Size = new Size(92, 42);
             button28.TabIndex = 43;
             button28.Text = "^";
             button28.UseVisualStyleBackColor = false;
@@ -562,9 +570,9 @@
             button23.Dock = DockStyle.Fill;
             button23.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button23.ForeColor = Color.White;
-            button23.Location = new Point(203, 162);
+            button23.Location = new Point(203, 147);
             button23.Name = "button23";
-            button23.Size = new Size(94, 47);
+            button23.Size = new Size(94, 42);
             button23.TabIndex = 48;
             button23.Text = "n!";
             button23.UseVisualStyleBackColor = false;
@@ -576,9 +584,9 @@
             button26.Dock = DockStyle.Fill;
             button26.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button26.ForeColor = Color.White;
-            button26.Location = new Point(103, 162);
+            button26.Location = new Point(103, 147);
             button26.Name = "button26";
-            button26.Size = new Size(94, 47);
+            button26.Size = new Size(94, 42);
             button26.TabIndex = 40;
             button26.Text = "tan-1";
             button26.UseVisualStyleBackColor = false;
@@ -589,10 +597,10 @@
             button20.BackColor = Color.White;
             button20.Dock = DockStyle.Fill;
             button20.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button20.Location = new Point(304, 56);
+            button20.Location = new Point(304, 51);
             button20.Margin = new Padding(4, 3, 4, 3);
             button20.Name = "button20";
-            button20.Size = new Size(92, 47);
+            button20.Size = new Size(92, 42);
             button20.TabIndex = 28;
             button20.Text = ")";
             button20.UseVisualStyleBackColor = false;
@@ -603,10 +611,10 @@
             button30.BackColor = Color.White;
             button30.Dock = DockStyle.Fill;
             button30.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button30.Location = new Point(304, 109);
+            button30.Location = new Point(304, 99);
             button30.Margin = new Padding(4, 3, 4, 3);
             button30.Name = "button30";
-            button30.Size = new Size(92, 47);
+            button30.Size = new Size(92, 42);
             button30.TabIndex = 50;
             button30.Text = "π";
             button30.UseVisualStyleBackColor = false;
@@ -618,9 +626,9 @@
             button22.Dock = DockStyle.Fill;
             button22.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button22.ForeColor = Color.White;
-            button22.Location = new Point(203, 109);
+            button22.Location = new Point(203, 99);
             button22.Name = "button22";
-            button22.Size = new Size(94, 47);
+            button22.Size = new Size(94, 42);
             button22.TabIndex = 31;
             button22.Text = "log[b] x";
             button22.UseVisualStyleBackColor = false;
@@ -629,9 +637,9 @@
             // var1b
             // 
             var1b.Dock = DockStyle.Fill;
-            var1b.Location = new Point(3, 427);
+            var1b.Location = new Point(3, 387);
             var1b.Name = "var1b";
-            var1b.Size = new Size(94, 36);
+            var1b.Size = new Size(94, 37);
             var1b.TabIndex = 51;
             var1b.Text = "Var1";
             var1b.UseVisualStyleBackColor = true;
@@ -640,9 +648,9 @@
             // var2b
             // 
             var2b.Dock = DockStyle.Fill;
-            var2b.Location = new Point(103, 427);
+            var2b.Location = new Point(103, 387);
             var2b.Name = "var2b";
-            var2b.Size = new Size(94, 36);
+            var2b.Size = new Size(94, 37);
             var2b.TabIndex = 52;
             var2b.Text = "Var2";
             var2b.UseVisualStyleBackColor = true;
@@ -651,9 +659,9 @@
             // var3b
             // 
             var3b.Dock = DockStyle.Fill;
-            var3b.Location = new Point(203, 427);
+            var3b.Location = new Point(203, 387);
             var3b.Name = "var3b";
-            var3b.Size = new Size(94, 36);
+            var3b.Size = new Size(94, 37);
             var3b.TabIndex = 53;
             var3b.Text = "Var3";
             var3b.UseVisualStyleBackColor = true;
@@ -662,9 +670,9 @@
             // var4b
             // 
             var4b.Dock = DockStyle.Fill;
-            var4b.Location = new Point(303, 427);
+            var4b.Location = new Point(303, 387);
             var4b.Name = "var4b";
-            var4b.Size = new Size(94, 36);
+            var4b.Size = new Size(94, 37);
             var4b.TabIndex = 54;
             var4b.Text = "Var4";
             var4b.UseVisualStyleBackColor = true;
@@ -684,8 +692,8 @@
             tableLayoutPanel4.Location = new Point(10, 10);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 34.1256371F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 65.87437F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 39.44056F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 60.55944F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
@@ -705,9 +713,9 @@
             tableLayoutPanel3.RowCount = 3;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 23.6263733F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 76.37363F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 81F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 111F));
-            tableLayoutPanel3.Size = new Size(400, 237);
+            tableLayoutPanel3.Size = new Size(400, 276);
             tableLayoutPanel3.TabIndex = 57;
             // 
             // label9
@@ -717,7 +725,7 @@
             label9.Dock = DockStyle.Fill;
             label9.Location = new Point(3, 0);
             label9.Name = "label9";
-            label9.Size = new Size(394, 43);
+            label9.Size = new Size(394, 46);
             label9.TabIndex = 2;
             label9.Text = "Ingrese la fórmula del resultado.";
             label9.TextAlign = ContentAlignment.MiddleCenter;
@@ -725,18 +733,18 @@
             // tbInput
             // 
             tbInput.Dock = DockStyle.Fill;
-            tbInput.Location = new Point(3, 46);
+            tbInput.Location = new Point(3, 49);
             tbInput.Name = "tbInput";
-            tbInput.Size = new Size(394, 133);
+            tbInput.Size = new Size(394, 142);
             tbInput.TabIndex = 4;
             tbInput.Text = "";
             // 
             // tbResult
             // 
             tbResult.Dock = DockStyle.Fill;
-            tbResult.Location = new Point(3, 185);
+            tbResult.Location = new Point(3, 197);
             tbResult.Name = "tbResult";
-            tbResult.Size = new Size(394, 49);
+            tbResult.Size = new Size(394, 76);
             tbResult.TabIndex = 5;
             tbResult.Text = "";
             // 
@@ -750,7 +758,7 @@
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(503, 237);
+            tableLayoutPanel2.Size = new Size(503, 276);
             tableLayoutPanel2.TabIndex = 58;
             // 
             // tableLayoutPanel9
@@ -758,14 +766,14 @@
             tableLayoutPanel9.ColumnCount = 1;
             tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel9.Controls.Add(label8, 0, 0);
-            tableLayoutPanel9.Controls.Add(avanzadoEnunciado, 0, 1);
+            tableLayoutPanel9.Controls.Add(tableLayoutPanel11, 0, 1);
             tableLayoutPanel9.Dock = DockStyle.Fill;
             tableLayoutPanel9.Location = new Point(3, 3);
             tableLayoutPanel9.Name = "tableLayoutPanel9";
             tableLayoutPanel9.RowCount = 2;
-            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 45.1219521F));
-            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 54.8780479F));
-            tableLayoutPanel9.Size = new Size(497, 231);
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 33.7662354F));
+            tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 66.2337646F));
+            tableLayoutPanel9.Size = new Size(497, 270);
             tableLayoutPanel9.TabIndex = 0;
             // 
             // label8
@@ -775,19 +783,10 @@
             label8.Dock = DockStyle.Fill;
             label8.Location = new Point(3, 0);
             label8.Name = "label8";
-            label8.Size = new Size(491, 104);
+            label8.Size = new Size(491, 91);
             label8.TabIndex = 0;
             label8.Text = "Ingrese el enunciado acá abajo. Si quiere utilizar variables, encierrelas bajo el formato {v1}, {v2}, y así sucesivamente.";
             label8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // avanzadoEnunciado
-            // 
-            avanzadoEnunciado.Dock = DockStyle.Fill;
-            avanzadoEnunciado.Location = new Point(3, 107);
-            avanzadoEnunciado.Name = "avanzadoEnunciado";
-            avanzadoEnunciado.Size = new Size(491, 121);
-            avanzadoEnunciado.TabIndex = 1;
-            avanzadoEnunciado.Text = "";
             // 
             // tableLayoutPanel5
             // 
@@ -795,11 +794,11 @@
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
             tableLayoutPanel5.Controls.Add(tableLayoutPanel6, 0, 0);
             tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(409, 246);
+            tableLayoutPanel5.Location = new Point(409, 285);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 48.913044F));
-            tableLayoutPanel5.Size = new Size(503, 466);
+            tableLayoutPanel5.Size = new Size(503, 427);
             tableLayoutPanel5.TabIndex = 59;
             // 
             // tableLayoutPanel6
@@ -812,9 +811,9 @@
             tableLayoutPanel6.Location = new Point(3, 3);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 2;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 56.3591F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 43.6409F));
-            tableLayoutPanel6.Size = new Size(497, 460);
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 63.04348F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 36.95652F));
+            tableLayoutPanel6.Size = new Size(497, 421);
             tableLayoutPanel6.TabIndex = 0;
             // 
             // tableLayoutPanel7
@@ -848,31 +847,31 @@
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 49F));
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 51F));
-            tableLayoutPanel7.Size = new Size(491, 253);
+            tableLayoutPanel7.Size = new Size(491, 259);
             tableLayoutPanel7.TabIndex = 0;
             // 
             // var1i
             // 
             var1i.Dock = DockStyle.Fill;
-            var1i.Location = new Point(173, 51);
+            var1i.Location = new Point(173, 54);
             var1i.Name = "var1i";
-            var1i.Size = new Size(150, 46);
+            var1i.Size = new Size(150, 49);
             var1i.TabIndex = 0;
             var1i.Text = "";
             // 
             // var1f
             // 
             var1f.Dock = DockStyle.Fill;
-            var1f.Location = new Point(329, 51);
+            var1f.Location = new Point(329, 54);
             var1f.Name = "var1f";
-            var1f.Size = new Size(159, 46);
+            var1f.Size = new Size(159, 49);
             var1f.TabIndex = 1;
             var1f.Text = "";
             // 
             // var2i
             // 
             var2i.Dock = DockStyle.Fill;
-            var2i.Location = new Point(173, 103);
+            var2i.Location = new Point(173, 109);
             var2i.Name = "var2i";
             var2i.Size = new Size(150, 46);
             var2i.TabIndex = 2;
@@ -881,7 +880,7 @@
             // var2f
             // 
             var2f.Dock = DockStyle.Fill;
-            var2f.Location = new Point(329, 103);
+            var2f.Location = new Point(329, 109);
             var2f.Name = "var2f";
             var2f.Size = new Size(159, 46);
             var2f.TabIndex = 3;
@@ -890,7 +889,7 @@
             // var3i
             // 
             var3i.Dock = DockStyle.Fill;
-            var3i.Location = new Point(173, 155);
+            var3i.Location = new Point(173, 161);
             var3i.Name = "var3i";
             var3i.Size = new Size(150, 43);
             var3i.TabIndex = 4;
@@ -899,7 +898,7 @@
             // var3f
             // 
             var3f.Dock = DockStyle.Fill;
-            var3f.Location = new Point(329, 155);
+            var3f.Location = new Point(329, 161);
             var3f.Name = "var3f";
             var3f.Size = new Size(159, 43);
             var3f.TabIndex = 5;
@@ -908,7 +907,7 @@
             // var4i
             // 
             var4i.Dock = DockStyle.Fill;
-            var4i.Location = new Point(173, 204);
+            var4i.Location = new Point(173, 210);
             var4i.Name = "var4i";
             var4i.Size = new Size(150, 46);
             var4i.TabIndex = 6;
@@ -917,7 +916,7 @@
             // var4f
             // 
             var4f.Dock = DockStyle.Fill;
-            var4f.Location = new Point(329, 204);
+            var4f.Location = new Point(329, 210);
             var4f.Name = "var4f";
             var4f.Size = new Size(159, 46);
             var4f.TabIndex = 7;
@@ -928,9 +927,9 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Lavender;
             label1.Dock = DockStyle.Fill;
-            label1.Location = new Point(3, 48);
+            label1.Location = new Point(3, 51);
             label1.Name = "label1";
-            label1.Size = new Size(164, 52);
+            label1.Size = new Size(164, 55);
             label1.TabIndex = 8;
             label1.Text = "Variable 1";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -940,7 +939,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Lavender;
             label2.Dock = DockStyle.Fill;
-            label2.Location = new Point(3, 100);
+            label2.Location = new Point(3, 106);
             label2.Name = "label2";
             label2.Size = new Size(164, 52);
             label2.TabIndex = 9;
@@ -952,7 +951,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Lavender;
             label3.Dock = DockStyle.Fill;
-            label3.Location = new Point(3, 152);
+            label3.Location = new Point(3, 158);
             label3.Name = "label3";
             label3.Size = new Size(164, 49);
             label3.TabIndex = 10;
@@ -964,7 +963,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Lavender;
             label4.Dock = DockStyle.Fill;
-            label4.Location = new Point(3, 201);
+            label4.Location = new Point(3, 207);
             label4.Name = "label4";
             label4.Size = new Size(164, 52);
             label4.TabIndex = 11;
@@ -978,7 +977,7 @@
             label5.Dock = DockStyle.Fill;
             label5.Location = new Point(173, 0);
             label5.Name = "label5";
-            label5.Size = new Size(150, 48);
+            label5.Size = new Size(150, 51);
             label5.TabIndex = 12;
             label5.Text = "Inicio";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -990,7 +989,7 @@
             label6.Dock = DockStyle.Fill;
             label6.Location = new Point(329, 0);
             label6.Name = "label6";
-            label6.Size = new Size(159, 48);
+            label6.Size = new Size(159, 51);
             label6.TabIndex = 13;
             label6.Text = "Final";
             label6.TextAlign = ContentAlignment.MiddleCenter;
@@ -1002,7 +1001,7 @@
             label7.Dock = DockStyle.Fill;
             label7.Location = new Point(3, 0);
             label7.Name = "label7";
-            label7.Size = new Size(164, 48);
+            label7.Size = new Size(164, 51);
             label7.TabIndex = 14;
             label7.Text = "Rango";
             label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -1014,23 +1013,23 @@
             tableLayoutPanel8.Controls.Add(botonCerrar, 0, 1);
             tableLayoutPanel8.Controls.Add(tableLayoutPanel10, 0, 0);
             tableLayoutPanel8.Dock = DockStyle.Fill;
-            tableLayoutPanel8.Location = new Point(3, 262);
+            tableLayoutPanel8.Location = new Point(3, 268);
             tableLayoutPanel8.Name = "tableLayoutPanel8";
             tableLayoutPanel8.RowCount = 2;
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel8.Size = new Size(491, 195);
+            tableLayoutPanel8.Size = new Size(491, 150);
             tableLayoutPanel8.TabIndex = 1;
             // 
             // botonCerrar
             // 
             botonCerrar.BackColor = Color.Tomato;
             botonCerrar.Dock = DockStyle.Fill;
-            botonCerrar.Location = new Point(3, 100);
+            botonCerrar.Location = new Point(3, 78);
             botonCerrar.Name = "botonCerrar";
-            botonCerrar.Size = new Size(485, 92);
+            botonCerrar.Size = new Size(485, 69);
             botonCerrar.TabIndex = 1;
-            botonCerrar.Text = "Cancelar y cerrar";
+            botonCerrar.Text = "Cambiar a Enunciado Normal";
             botonCerrar.UseVisualStyleBackColor = false;
             botonCerrar.Click += botonCerrar_Click;
             // 
@@ -1046,7 +1045,7 @@
             tableLayoutPanel10.Name = "tableLayoutPanel10";
             tableLayoutPanel10.RowCount = 1;
             tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel10.Size = new Size(485, 91);
+            tableLayoutPanel10.Size = new Size(485, 69);
             tableLayoutPanel10.TabIndex = 2;
             // 
             // botonRandom
@@ -1055,7 +1054,7 @@
             botonRandom.Dock = DockStyle.Fill;
             botonRandom.Location = new Point(3, 3);
             botonRandom.Name = "botonRandom";
-            botonRandom.Size = new Size(236, 85);
+            botonRandom.Size = new Size(236, 63);
             botonRandom.TabIndex = 0;
             botonRandom.Text = "Generar Variables";
             botonRandom.UseVisualStyleBackColor = false;
@@ -1067,11 +1066,98 @@
             botonGuardar.Dock = DockStyle.Fill;
             botonGuardar.Location = new Point(245, 3);
             botonGuardar.Name = "botonGuardar";
-            botonGuardar.Size = new Size(237, 85);
+            botonGuardar.Size = new Size(237, 63);
             botonGuardar.TabIndex = 1;
             botonGuardar.Text = "Guardar";
             botonGuardar.UseVisualStyleBackColor = false;
             botonGuardar.Click += botonGuardar_Click;
+            // 
+            // tableLayoutPanel11
+            // 
+            tableLayoutPanel11.ColumnCount = 1;
+            tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel11.Controls.Add(tableLayoutPanel12, 0, 1);
+            tableLayoutPanel11.Controls.Add(avanzadoEnunciado, 0, 0);
+            tableLayoutPanel11.Dock = DockStyle.Fill;
+            tableLayoutPanel11.Location = new Point(3, 94);
+            tableLayoutPanel11.Name = "tableLayoutPanel11";
+            tableLayoutPanel11.RowCount = 2;
+            tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 73.41041F));
+            tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 26.5895958F));
+            tableLayoutPanel11.Size = new Size(491, 173);
+            tableLayoutPanel11.TabIndex = 1;
+            // 
+            // tableLayoutPanel12
+            // 
+            tableLayoutPanel12.ColumnCount = 4;
+            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 49.39759F));
+            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.60241F));
+            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 124F));
+            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 117F));
+            tableLayoutPanel12.Controls.Add(insertVar1, 0, 0);
+            tableLayoutPanel12.Controls.Add(insertVar2, 1, 0);
+            tableLayoutPanel12.Controls.Add(insertVar3, 2, 0);
+            tableLayoutPanel12.Controls.Add(insertVar4, 3, 0);
+            tableLayoutPanel12.Dock = DockStyle.Fill;
+            tableLayoutPanel12.Location = new Point(3, 130);
+            tableLayoutPanel12.Name = "tableLayoutPanel12";
+            tableLayoutPanel12.RowCount = 1;
+            tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel12.Size = new Size(485, 40);
+            tableLayoutPanel12.TabIndex = 0;
+            // 
+            // avanzadoEnunciado
+            // 
+            avanzadoEnunciado.Dock = DockStyle.Fill;
+            avanzadoEnunciado.Location = new Point(3, 3);
+            avanzadoEnunciado.Name = "avanzadoEnunciado";
+            avanzadoEnunciado.Size = new Size(485, 121);
+            avanzadoEnunciado.TabIndex = 1;
+            avanzadoEnunciado.Text = "";
+            // 
+            // insertVar1
+            // 
+            insertVar1.Dock = DockStyle.Fill;
+            insertVar1.Location = new Point(3, 3);
+            insertVar1.Name = "insertVar1";
+            insertVar1.Size = new Size(114, 34);
+            insertVar1.TabIndex = 0;
+            insertVar1.Text = "Variable 1";
+            insertVar1.UseVisualStyleBackColor = true;
+            insertVar1.Click += insertVar1_Click;
+            // 
+            // insertVar2
+            // 
+            insertVar2.Dock = DockStyle.Fill;
+            insertVar2.Location = new Point(123, 3);
+            insertVar2.Name = "insertVar2";
+            insertVar2.Size = new Size(117, 34);
+            insertVar2.TabIndex = 1;
+            insertVar2.Text = "Variable 2";
+            insertVar2.UseVisualStyleBackColor = true;
+            insertVar2.Click += insertVar2_Click;
+            // 
+            // insertVar3
+            // 
+            insertVar3.Dock = DockStyle.Fill;
+            insertVar3.Location = new Point(246, 3);
+            insertVar3.Name = "insertVar3";
+            insertVar3.Size = new Size(118, 34);
+            insertVar3.TabIndex = 2;
+            insertVar3.Text = "Variable 3";
+            insertVar3.UseVisualStyleBackColor = true;
+            insertVar3.Click += insertVar3_Click;
+            // 
+            // insertVar4
+            // 
+            insertVar4.Dock = DockStyle.Fill;
+            insertVar4.Location = new Point(370, 3);
+            insertVar4.Name = "insertVar4";
+            insertVar4.Size = new Size(112, 34);
+            insertVar4.TabIndex = 3;
+            insertVar4.Text = "Variable 4";
+            insertVar4.UseVisualStyleBackColor = true;
+            insertVar4.Click += insertVar4_Click;
             // 
             // MainView
             // 
@@ -1106,6 +1192,8 @@
             tableLayoutPanel7.PerformLayout();
             tableLayoutPanel8.ResumeLayout(false);
             tableLayoutPanel10.ResumeLayout(false);
+            tableLayoutPanel11.ResumeLayout(false);
+            tableLayoutPanel12.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1151,7 +1239,6 @@
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel9;
         private Label label8;
-        private RichTextBox avanzadoEnunciado;
         private TableLayoutPanel tableLayoutPanel5;
         private TableLayoutPanel tableLayoutPanel6;
         private TableLayoutPanel tableLayoutPanel7;
@@ -1179,6 +1266,13 @@
         private Label label9;
         private RichTextBox tbInput;
         private RichTextBox tbResult;
+        private TableLayoutPanel tableLayoutPanel11;
+        private TableLayoutPanel tableLayoutPanel12;
+        private Button insertVar1;
+        private Button insertVar2;
+        private Button insertVar3;
+        private Button insertVar4;
+        private RichTextBox avanzadoEnunciado;
     }
 }
 

@@ -12,20 +12,23 @@ namespace Olimpiadas
 {
     public partial class MainView : Form
     {
-        EnunciadoBase avanzado;
         BDD datosAvanzado;
+        EnunciadoBase avanzado;
         Calculator calculator;
+        AlterarBDD alterarBDD;
         int caretIndex;
         string newText;
         string EnunciadoAvanzado;
         string Operacion;
-        public MainView(BDD datos, EnunciadoBase enunciado)
+        public MainView(BDD datos, EnunciadoBase enunciado, AlterarBDD alterarBDD)
         {
             datosAvanzado = datos;
             avanzado = enunciado;
+            this.alterarBDD = alterarBDD;
             InitializeComponent();
             ActiveControl = tbInput;
             calculator = new Calculator();
+            this.alterarBDD = alterarBDD;
         }
 
         private void on_click_number(object sender, EventArgs e)
@@ -245,6 +248,7 @@ namespace Olimpiadas
         private void botonGuardar_Click(object sender, EventArgs e)
         {
             avanzado.Enunciado = avanzadoEnunciado.Text;
+            avanzado.Formula = tbInput.Text;
             EnunciadoAvanzado = avanzadoEnunciado.Text;
             Operacion = tbInput.Text;
             EnunciadoAvanzado = EnunciadoAvanzado.Replace("{v1}", avanzado.Variable1.ToString());
@@ -258,24 +262,33 @@ namespace Olimpiadas
             bool respuestaValida = double.TryParse(tbResult.Text, out double test);
             if (respuestaValida)
             {
+                alterarBDD.ActualizarAvanzado(avanzadoEnunciado.Text, tbInput.Text);
+                avanzado.Avanzado = true;
                 avanzado.Respuesta = double.Parse(tbResult.Text);
                 MessageBox.Show($"Enunciado: {avanzado.Enunciado}\nSu versión con números es: {EnunciadoAvanzado}\nEl resultado es: {avanzado.Respuesta}");
+                alterarBDD.HabilitarFunciones();
                 datosAvanzado.ActualizarEnunciado(avanzado);
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Error en la respuesta. Asegurese que su fórmula sea válida.");
+                MessageBox.Show("Error en la respuesta. Asegurese que su fórmula sea válida.\nRecuerde presionar el botón = para obtener el resultado también, y verifique que sea correcto.");
             }
         }
 
         private void botonCerrar_Click(object sender, EventArgs e)
         {
-
+            avanzado.Avanzado = false;
+            alterarBDD.ActualizarAvanzado("", "0");
+            alterarBDD.HabilitarFunciones();
+            MessageBox.Show("El enunciado ahora es regular.");
+            this.Close();
         }
 
         private void MainView_Load(object sender, EventArgs e)
         {
             avanzadoEnunciado.Text = avanzado.Enunciado;
+            tbInput.Text = avanzado.Formula;
             var1i.Text = avanzado.Inicio1.ToString();
             var1f.Text = avanzado.Final1.ToString();
             var2i.Text = avanzado.Inicio2.ToString();
@@ -284,6 +297,53 @@ namespace Olimpiadas
             var3f.Text = avanzado.Final3.ToString();
             var4i.Text = avanzado.Inicio4.ToString();
             var4f.Text = avanzado.Final4.ToString();
+        }
+        private void insertVar1_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            string insertar = "{v1}";
+            caretIndex = avanzadoEnunciado.SelectionStart;
+            newText = avanzadoEnunciado.Text.Substring(0, caretIndex) + insertar + avanzadoEnunciado.Text.Substring(caretIndex, avanzadoEnunciado.Text.Length - caretIndex);
+            avanzadoEnunciado.Text = newText;
+            ActiveControl = tbInput;
+            avanzadoEnunciado.SelectionStart = caretIndex + insertar.Length;
+            avanzadoEnunciado.SelectionLength = 0;
+        }
+
+        private void insertVar2_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            string insertar = "{v2}";
+            caretIndex = avanzadoEnunciado.SelectionStart;
+            newText = avanzadoEnunciado.Text.Substring(0, caretIndex) + insertar + avanzadoEnunciado.Text.Substring(caretIndex, avanzadoEnunciado.Text.Length - caretIndex);
+            avanzadoEnunciado.Text = newText;
+            ActiveControl = tbInput;
+            avanzadoEnunciado.SelectionStart = caretIndex + insertar.Length;
+            avanzadoEnunciado.SelectionLength = 0;
+        }
+
+        private void insertVar3_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            string insertar = "{v3}";
+            caretIndex = avanzadoEnunciado.SelectionStart;
+            newText = avanzadoEnunciado.Text.Substring(0, caretIndex) + insertar + avanzadoEnunciado.Text.Substring(caretIndex, avanzadoEnunciado.Text.Length - caretIndex);
+            avanzadoEnunciado.Text = newText;
+            ActiveControl = tbInput;
+            avanzadoEnunciado.SelectionStart = caretIndex + insertar.Length;
+            avanzadoEnunciado.SelectionLength = 0;
+        }
+
+        private void insertVar4_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            string insertar = "{v4}";
+            caretIndex = avanzadoEnunciado.SelectionStart;
+            newText = avanzadoEnunciado.Text.Substring(0, caretIndex) + insertar + avanzadoEnunciado.Text.Substring(caretIndex, avanzadoEnunciado.Text.Length - caretIndex);
+            avanzadoEnunciado.Text = newText;
+            ActiveControl = tbInput;
+            avanzadoEnunciado.SelectionStart = caretIndex + insertar.Length;
+            avanzadoEnunciado.SelectionLength = 0;
         }
     }
     // ʃ

@@ -11,7 +11,7 @@ namespace Olimpiadas
 
         public BDD(string databasePath)
         {
-            nombre = Path.GetFileNameWithoutExtension(connectionString);
+            nombre = Path.GetFileNameWithoutExtension(databasePath);
             connectionString = $"Data Source=\"{databasePath}\";Version=3;";
         }
 
@@ -44,7 +44,7 @@ namespace Olimpiadas
                     variable2 REAL,
                     variable3 REAL,
                     variable4 REAL,
-                    tipo INTEGER
+                    tipo TEXT
                 )";
 
                 using (SQLiteCommand command = new SQLiteCommand(createTableQuery, connection))
@@ -96,7 +96,8 @@ namespace Olimpiadas
                                 Variable1 = Convert.ToDouble(reader["variable1"]),
                                 Variable2 = Convert.ToDouble(reader["variable2"]),
                                 Variable3 = Convert.ToDouble(reader["variable3"]),
-                                Variable4 = Convert.ToDouble(reader["variable4"])
+                                Variable4 = Convert.ToDouble(reader["variable4"]),
+                                Formula = Convert.ToString(reader["tipo"])
                             };
 
                             enunciados.Add(enunciado);
@@ -144,7 +145,7 @@ namespace Olimpiadas
                     command.Parameters.AddWithValue("@variable2", enunciado.Variable2);
                     command.Parameters.AddWithValue("@variable3", enunciado.Variable3);
                     command.Parameters.AddWithValue("@variable4", enunciado.Variable4);
-                    command.Parameters.AddWithValue("@tipo", enunciado.Tipo); // Nuevo parámetro para el campo "tipo"
+                    command.Parameters.AddWithValue("@tipo", enunciado.Formula); // Nuevo parámetro para el campo "tipo"
 
                     command.ExecuteNonQuery();
                 }
@@ -217,7 +218,7 @@ namespace Olimpiadas
                     command.Parameters.AddWithValue("@variable2", enunciado.Variable2);
                     command.Parameters.AddWithValue("@variable3", enunciado.Variable3);
                     command.Parameters.AddWithValue("@variable4", enunciado.Variable4);
-                    command.Parameters.AddWithValue("@tipo", enunciado.Tipo);
+                    command.Parameters.AddWithValue("@tipo", enunciado.Formula);
                     command.Parameters.AddWithValue("@id", enunciado.Id);
 
                     command.ExecuteNonQuery();
