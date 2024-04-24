@@ -7,9 +7,6 @@
     <Compile Update="AlterarBDD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MainView.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="EnunciadoAvanzado.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -13,14 +13,14 @@ namespace Olimpiadas
         public int Categoria { get; set; }
         public int Curso { get; set; }
         public bool Avanzado { get; set; }
-        public int Inicio1 { get; set; }
-        public int Final1 { get; set; }
-        public int Inicio2 { get; set; }
-        public int Final2 { get; set; }
-        public int Inicio3 { get; set; }
-        public int Final3;
-        public int Inicio4 { get; set; }
-        public int Final4 { get; set; }
+        public double Inicio1 { get; set; }
+        public double Final1 { get; set; }
+        public double Inicio2 { get; set; }
+        public double Final2 { get; set; }
+        public double Inicio3 { get; set; }
+        public double Final3;
+        public double Inicio4 { get; set; }
+        public double Final4 { get; set; }
         public double Respuesta { get; set; }
         public double Variable1 { get; set; }
         public double Variable2 { get; set; }

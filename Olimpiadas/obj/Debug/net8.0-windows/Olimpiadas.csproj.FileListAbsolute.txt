@@ -121,7 +121,6 @@ C:\Users\ferba\Documents\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\ref
 C:\Users\ferba\Documents\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.pdb
 C:\Users\ferba\Documents\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.genruntimeconfig.cache
 C:\Users\ferba\Documents\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\ref\Olimpiadas.dll
-C:\Users\ferba\Documents\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.MainView.resources
 G:\JuegoMatematico\Olimpiadas\bin\Debug\net8.0-windows\Olimpiadas.exe
 G:\JuegoMatematico\Olimpiadas\bin\Debug\net8.0-windows\Olimpiadas.deps.json
 G:\JuegoMatematico\Olimpiadas\bin\Debug\net8.0-windows\Olimpiadas.runtimeconfig.json

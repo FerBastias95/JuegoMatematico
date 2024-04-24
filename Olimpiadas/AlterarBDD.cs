@@ -65,11 +65,17 @@ namespace Olimpiadas
             else
             {
                 NombreEnunciado.Enabled = false;
+                NombreEnunciado.Text = "";
                 cursoSeleccion.Enabled = false;
+                cursoSeleccion.SelectedIndex = 0;
                 categoria.Enabled = false;
+                categoria.SelectedIndex = 0;
                 idEnunciado.Enabled = false;
+                idEnunciado.Text = "";
                 textoEnunciado.Enabled = false;
+                textoEnunciado.Text = "";
                 resultadoEnunciado.Enabled = false;
+                resultadoEnunciado.Text = "";
                 abrirAvanzado.Enabled = false;
                 abrirImagen.Enabled = false;
                 actualizarEnunciado.Enabled = false;
@@ -354,7 +360,7 @@ namespace Olimpiadas
                 EnunciadoBase enunciadoSeleccionado = enunciados[indiceSeleccionado];
                 //EnunciadoAvanzado adv = new EnunciadoAvanzado(BaseEnunciados, enunciadoSeleccionado);
                 //adv.ShowDialog();
-                MainView mv = new MainView(BaseEnunciados, enunciadoSeleccionado, this);
+                EnunciadoAvanzado mv = new EnunciadoAvanzado(BaseEnunciados, enunciadoSeleccionado, this);
                 mv.Show();
             }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj": {}
+    "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj": {}
   },
   "projects": {
-    "G:\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj": {
+    "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
+        "projectUniqueName": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
         "projectName": "Ejercicios",
-        "projectPath": "G:\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
+        "projectPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
         "packagesPath": "C:\\Users\\ferba\\.nuget\\packages\\",
-        "outputPath": "G:\\JuegoMatematico\\Ejercicios\\obj\\",
+        "outputPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,11 +39,22 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.118, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -34,6 +34,7 @@ namespace Olimpiadas
 
             this.Hide();
         }
+        
         private void modificarLista()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();

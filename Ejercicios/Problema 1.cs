@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Olimpiadas
+namespace Ejercicios
 {
     public partial class Problema_1 : Form
     {

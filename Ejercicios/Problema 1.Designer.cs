@@ -1,4 +1,4 @@
-﻿namespace Olimpiadas
+﻿namespace Ejercicios
 {
     partial class Problema_1
     {

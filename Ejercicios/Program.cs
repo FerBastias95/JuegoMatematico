@@ -1,5 +1,3 @@
-using Olimpiadas;
-
 namespace Ejercicios
 {
     internal static class Program

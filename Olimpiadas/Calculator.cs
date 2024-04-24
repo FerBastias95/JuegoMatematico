@@ -10,7 +10,6 @@ namespace Olimpiadas
 {
     class Calculator
     {
-
         private double prevNumber(ref String text, int index, out int from)
         {
             double prev = 0.0;
