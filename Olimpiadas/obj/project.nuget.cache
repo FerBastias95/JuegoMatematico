@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NiNUOSWkCYZYwnMzWaIScJP6ZkkYvyEbc7O0Z0dPeG2zFYzjKE7kaEGKprKWAbKdJ6ZNK678qjiCaLacdGxg2A==",
+  "dgSpecHash": "VKQNaZXpG0q2dIVSamS6hIh3ol3C++SoSpCDRSXz+2RHzZbwEz1o5c6Kj93BIQoBXX09dKj6WW540NH+yTkk3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj",
+  "projectFilePath": "G:\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ferba\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

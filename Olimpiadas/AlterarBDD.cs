@@ -339,6 +339,7 @@ namespace Olimpiadas
                 // Crear la tabla de enunciados si no existe
                 BaseEnunciados.CrearTablaEnunciados();
                 CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
+                HabilitarFunciones();
                 ultimoId = 0;
             }
         }
