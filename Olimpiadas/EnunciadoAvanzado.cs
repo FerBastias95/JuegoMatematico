@@ -185,6 +185,8 @@ namespace Olimpiadas
                 {
                     avanzado.Variable1 = double.Parse(var1i.Text);
                     avanzado.Inicio1 = double.Parse(var1i.Text);
+                    avanzado.Decimal1 = true;
+
                     if (b2)
                     {
                         avanzado.Final1 = double.Parse(var1f.Text);
@@ -208,6 +210,8 @@ namespace Olimpiadas
                 {
                     avanzado.Variable1 = int.Parse(var1i.Text);
                     avanzado.Inicio1 = int.Parse(var1i.Text);
+                    avanzado.Decimal1 = false;
+
                     if (b2)
                     {
                         avanzado.Final1 = int.Parse(var1f.Text);
@@ -229,6 +233,8 @@ namespace Olimpiadas
                 {
                     avanzado.Variable2 = double.Parse(var2i.Text);
                     avanzado.Inicio2 = double.Parse(var2i.Text);
+                    avanzado.Decimal2 = true;
+
                     if (b2)
                     {
                         avanzado.Final2 = double.Parse(var2f.Text);
@@ -251,6 +257,7 @@ namespace Olimpiadas
             {
                 if (b3)
                 {
+                    avanzado.Decimal2 = false;
                     avanzado.Variable2 = int.Parse(var2i.Text);
                     avanzado.Inicio2 = int.Parse(var2i.Text);
                     if (b4)
@@ -274,6 +281,8 @@ namespace Olimpiadas
                 {
                     avanzado.Variable3 = double.Parse(var3i.Text);
                     avanzado.Inicio3 = double.Parse(var3i.Text);
+                    avanzado.Decimal3 = true;
+
                     if (b2)
                     {
                         avanzado.Final3 = double.Parse(var3f.Text);
@@ -298,6 +307,8 @@ namespace Olimpiadas
                 {
                     avanzado.Variable3 = int.Parse(var3i.Text);
                     avanzado.Inicio3 = int.Parse(var3i.Text);
+                    avanzado.Decimal3 = false;
+
                     if (b6)
                     {
                         avanzado.Final3 = int.Parse(var3f.Text);
@@ -319,6 +330,7 @@ namespace Olimpiadas
                 {
                     avanzado.Variable4 = double.Parse(var4i.Text);
                     avanzado.Inicio4 = double.Parse(var4i.Text);
+                    avanzado.Decimal4 = true;
                     if (b2)
                     {
                         avanzado.Final4 = double.Parse(var4f.Text);
@@ -343,6 +355,7 @@ namespace Olimpiadas
                 {
                     avanzado.Variable4 = int.Parse(var4i.Text);
                     avanzado.Inicio4 = int.Parse(var4i.Text);
+                    avanzado.Decimal4 = false;
                     if (b8)
                     {
                         avanzado.Final4 = int.Parse(var4f.Text);
@@ -357,7 +370,6 @@ namespace Olimpiadas
                     }
                 }
             }
-
             labelv1.Text = avanzado.Variable1.ToString();
             labelv2.Text = avanzado.Variable2.ToString();
             labelv3.Text = avanzado.Variable3.ToString();

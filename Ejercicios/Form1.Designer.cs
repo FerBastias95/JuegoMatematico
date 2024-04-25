@@ -61,7 +61,7 @@
             botonP10 = new Button();
             tableLayoutPanel6 = new TableLayoutPanel();
             tableLayoutPanel5 = new TableLayoutPanel();
-            button2 = new Button();
+            cambiarVariables = new Button();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -73,6 +73,7 @@
             // botonP1
             // 
             botonP1.Dock = DockStyle.Fill;
+            botonP1.Enabled = false;
             botonP1.Location = new Point(3, 38);
             botonP1.Margin = new Padding(3, 4, 3, 4);
             botonP1.Name = "botonP1";
@@ -85,6 +86,7 @@
             // botonP2
             // 
             botonP2.Dock = DockStyle.Fill;
+            botonP2.Enabled = false;
             botonP2.Location = new Point(162, 38);
             botonP2.Margin = new Padding(3, 4, 3, 4);
             botonP2.Name = "botonP2";
@@ -97,6 +99,7 @@
             // botonP3
             // 
             botonP3.Dock = DockStyle.Fill;
+            botonP3.Enabled = false;
             botonP3.Location = new Point(321, 38);
             botonP3.Margin = new Padding(3, 4, 3, 4);
             botonP3.Name = "botonP3";
@@ -109,6 +112,7 @@
             // botonP4
             // 
             botonP4.Dock = DockStyle.Fill;
+            botonP4.Enabled = false;
             botonP4.Location = new Point(484, 38);
             botonP4.Margin = new Padding(3, 4, 3, 4);
             botonP4.Name = "botonP4";
@@ -121,6 +125,7 @@
             // botonP5
             // 
             botonP5.Dock = DockStyle.Fill;
+            botonP5.Enabled = false;
             botonP5.Location = new Point(641, 38);
             botonP5.Margin = new Padding(3, 4, 3, 4);
             botonP5.Name = "botonP5";
@@ -272,7 +277,7 @@
             tableLayoutPanel1.Controls.Add(tableLayoutPanel4, 0, 2);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel6, 0, 6);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel5, 0, 5);
-            tableLayoutPanel1.Controls.Add(button2, 0, 4);
+            tableLayoutPanel1.Controls.Add(cambiarVariables, 0, 4);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -317,6 +322,7 @@
             // button1
             // 
             button1.Dock = DockStyle.Fill;
+            button1.Enabled = false;
             button1.Location = new Point(3, 330);
             button1.Name = "button1";
             button1.Size = new Size(805, 36);
@@ -361,6 +367,7 @@
             labelP6.TabIndex = 0;
             labelP6.Text = "label3";
             labelP6.TextAlign = ContentAlignment.BottomCenter;
+            labelP6.Visible = false;
             // 
             // labelP7
             // 
@@ -372,6 +379,7 @@
             labelP7.TabIndex = 1;
             labelP7.Text = "label4";
             labelP7.TextAlign = ContentAlignment.BottomCenter;
+            labelP7.Visible = false;
             // 
             // labelP8
             // 
@@ -383,6 +391,7 @@
             labelP8.TabIndex = 2;
             labelP8.Text = "label5";
             labelP8.TextAlign = ContentAlignment.BottomCenter;
+            labelP8.Visible = false;
             // 
             // labelP9
             // 
@@ -394,6 +403,7 @@
             labelP9.TabIndex = 3;
             labelP9.Text = "label6";
             labelP9.TextAlign = ContentAlignment.BottomCenter;
+            labelP9.Visible = false;
             // 
             // labelP10
             // 
@@ -405,60 +415,71 @@
             labelP10.TabIndex = 4;
             labelP10.Text = "label7";
             labelP10.TextAlign = ContentAlignment.BottomCenter;
+            labelP10.Visible = false;
             // 
             // botonP6
             // 
             botonP6.Dock = DockStyle.Fill;
+            botonP6.Enabled = false;
             botonP6.Location = new Point(3, 26);
             botonP6.Name = "botonP6";
             botonP6.Size = new Size(153, 33);
             botonP6.TabIndex = 5;
             botonP6.Text = "Problema 6";
             botonP6.UseVisualStyleBackColor = true;
+            botonP6.Visible = false;
             botonP6.Click += botonP6_Click;
             // 
             // botonP7
             // 
             botonP7.Dock = DockStyle.Fill;
+            botonP7.Enabled = false;
             botonP7.Location = new Point(162, 26);
             botonP7.Name = "botonP7";
             botonP7.Size = new Size(153, 33);
             botonP7.TabIndex = 6;
             botonP7.Text = "Problema 7";
             botonP7.UseVisualStyleBackColor = true;
+            botonP7.Visible = false;
             botonP7.Click += botonP7_Click;
             // 
             // botonP8
             // 
             botonP8.Dock = DockStyle.Fill;
+            botonP8.Enabled = false;
             botonP8.Location = new Point(321, 26);
             botonP8.Name = "botonP8";
             botonP8.Size = new Size(157, 33);
             botonP8.TabIndex = 7;
             botonP8.Text = "Problema 8";
             botonP8.UseVisualStyleBackColor = true;
+            botonP8.Visible = false;
             botonP8.Click += botonP8_Click;
             // 
             // botonP9
             // 
             botonP9.Dock = DockStyle.Fill;
+            botonP9.Enabled = false;
             botonP9.Location = new Point(484, 26);
             botonP9.Name = "botonP9";
             botonP9.Size = new Size(151, 33);
             botonP9.TabIndex = 8;
             botonP9.Text = "Problema 9";
             botonP9.UseVisualStyleBackColor = true;
+            botonP9.Visible = false;
             botonP9.Click += botonP9_Click;
             // 
             // botonP10
             // 
             botonP10.Dock = DockStyle.Fill;
+            botonP10.Enabled = false;
             botonP10.Location = new Point(641, 26);
             botonP10.Name = "botonP10";
             botonP10.Size = new Size(161, 33);
             botonP10.TabIndex = 9;
             botonP10.Text = "Problema 10";
             botonP10.UseVisualStyleBackColor = true;
+            botonP10.Visible = false;
             botonP10.Click += botonP10_Click;
             // 
             // tableLayoutPanel6
@@ -496,15 +517,17 @@
             tableLayoutPanel5.Size = new Size(805, 46);
             tableLayoutPanel5.TabIndex = 4;
             // 
-            // button2
+            // cambiarVariables
             // 
-            button2.Dock = DockStyle.Fill;
-            button2.Location = new Point(3, 372);
-            button2.Name = "button2";
-            button2.Size = new Size(805, 36);
-            button2.TabIndex = 6;
-            button2.Text = "Generar ejercicios";
-            button2.UseVisualStyleBackColor = true;
+            cambiarVariables.Dock = DockStyle.Fill;
+            cambiarVariables.Enabled = false;
+            cambiarVariables.Location = new Point(3, 372);
+            cambiarVariables.Name = "cambiarVariables";
+            cambiarVariables.Size = new Size(805, 36);
+            cambiarVariables.TabIndex = 6;
+            cambiarVariables.Text = "Cambiar variables";
+            cambiarVariables.UseVisualStyleBackColor = true;
+            cambiarVariables.Click += cambiarVariables_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -582,6 +605,6 @@
         private Button botonP8;
         private Button botonP9;
         private Button botonP10;
-        private Button button2;
+        private Button cambiarVariables;
     }
 }

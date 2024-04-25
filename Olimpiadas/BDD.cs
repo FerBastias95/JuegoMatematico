@@ -28,6 +28,10 @@ namespace Olimpiadas
                     nombre TEXT,
                     categoria INTEGER,
                     avanzado INTEGER,
+                    decimal1 INTEGER,
+                    decimal2 INTEGER,
+                    decimal3 INTEGER,
+                    decimal4 INTEGER,
                     curso INTEGER,
                     inicio1 REAL,
                     final1 REAL,
@@ -81,6 +85,10 @@ namespace Olimpiadas
                                 Nombre = Convert.ToString(reader["nombre"]),
                                 Categoria = Convert.ToInt32(reader["categoria"]),
                                 Avanzado = Convert.ToInt32(reader["avanzado"]) == 1,
+                                Decimal1 = Convert.ToInt32(reader["decimal1"]) == 1,
+                                Decimal2 = Convert.ToInt32(reader["decimal2"]) == 1,
+                                Decimal3 = Convert.ToInt32(reader["decimal3"]) == 1,
+                                Decimal4 = Convert.ToInt32(reader["decimal4"]) == 1,
                                 Curso = Convert.ToInt32(reader["curso"]),
                                 Inicio1 = Convert.ToInt32(reader["inicio1"]),
                                 Final1 = Convert.ToInt32(reader["final1"]),
@@ -117,10 +125,10 @@ namespace Olimpiadas
 
                 string insertQuery = @"
             INSERT INTO enunciados (
-                nombre, categoria, avanzado, curso, inicio1, final1, inicio2, final2,
+                nombre, categoria, avanzado, decimal1, decimal2, decimal3, decimal4, curso, inicio1, final1, inicio2, final2,
                 inicio3, final3, inicio4, final4, enunciado, imagen, respuesta, variable1, variable2, variable3, variable4, tipo
             ) VALUES (
-                @nombre, @categoria, @avanzado, @curso, @inicio1, @final1, @inicio2, @final2,
+                @nombre, @categoria, @avanzado, @decimal1, @decimal2, @decimal3, @decimal4, @curso, @inicio1, @final1, @inicio2, @final2,
                 @inicio3, @final3, @inicio4, @final4, @enunciado, @imagen, @respuesta, @variable1, @variable2, @variable3, @variable4, @tipo
             )";
 
@@ -129,6 +137,10 @@ namespace Olimpiadas
                     command.Parameters.AddWithValue("@nombre", enunciado.Nombre);
                     command.Parameters.AddWithValue("@categoria", enunciado.Categoria);
                     command.Parameters.AddWithValue("@avanzado", enunciado.Avanzado ? 1 : 0);
+                    command.Parameters.AddWithValue("@decimal1", enunciado.Decimal1 ? 1 : 0);
+                    command.Parameters.AddWithValue("@decimal2", enunciado.Decimal2 ? 1 : 0);
+                    command.Parameters.AddWithValue("@decimal3", enunciado.Decimal3 ? 1 : 0);
+                    command.Parameters.AddWithValue("@decimal4", enunciado.Decimal4 ? 1 : 0);
                     command.Parameters.AddWithValue("@curso", enunciado.Curso);
                     command.Parameters.AddWithValue("@inicio1", enunciado.Inicio1);
                     command.Parameters.AddWithValue("@final1", enunciado.Final1);
@@ -178,6 +190,10 @@ namespace Olimpiadas
             SET nombre = @nombre,
                 categoria = @categoria,
                 avanzado = @avanzado,
+                decimal1 = @decimal1,
+                decimal2 = @decimal2,
+                decimal3 = @decimal3,
+                decimal4 = @decimal4,
                 curso = @curso,
                 inicio1 = @inicio1,
                 final1 = @final1,
@@ -202,6 +218,10 @@ namespace Olimpiadas
                     command.Parameters.AddWithValue("@nombre", enunciado.Nombre);
                     command.Parameters.AddWithValue("@categoria", enunciado.Categoria);
                     command.Parameters.AddWithValue("@avanzado", enunciado.Avanzado ? 1 : 0);
+                    command.Parameters.AddWithValue("@decimal1", enunciado.Decimal1 ? 1 : 0);
+                    command.Parameters.AddWithValue("@decimal2", enunciado.Decimal2 ? 1 : 0);
+                    command.Parameters.AddWithValue("@decimal3", enunciado.Decimal3 ? 1 : 0);
+                    command.Parameters.AddWithValue("@decimal4", enunciado.Decimal4 ? 1 : 0);
                     command.Parameters.AddWithValue("@curso", enunciado.Curso);
                     command.Parameters.AddWithValue("@inicio1", enunciado.Inicio1);
                     command.Parameters.AddWithValue("@final1", enunciado.Final1);

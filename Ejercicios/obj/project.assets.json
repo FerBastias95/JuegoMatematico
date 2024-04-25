@@ -99,6 +99,15 @@
           }
         }
       },
+      "ncalc/1.3.8": {
+        "type": "package",
+        "compile": {
+          "lib/NCalc.dll": {}
+        },
+        "runtime": {
+          "lib/NCalc.dll": {}
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -610,6 +619,18 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "ncalc/1.3.8": {
+      "sha512": "T3kt6mWc70x3Ex5PxOmuILy563CGAdoAnyknXX7Du2/SXs2T94hNwc5CVwZcwCu5/A2ZBZhnHnc5dpcqCRGQ0A==",
+      "type": "package",
+      "path": "ncalc/1.3.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/NCalc.dll",
+        "ncalc.1.3.8.nupkg.sha512",
+        "ncalc.nuspec"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -1211,7 +1232,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "System.Data.SQLite >= 1.0.118"
+      "System.Data.SQLite >= 1.0.118",
+      "ncalc >= 1.3.8"
     ]
   },
   "packageFolders": {
@@ -1221,11 +1243,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
+      "projectUniqueName": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
       "projectName": "Ejercicios",
-      "projectPath": "G:\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
+      "projectPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
       "packagesPath": "C:\\Users\\ferba\\.nuget\\packages\\",
-      "outputPath": "G:\\JuegoMatematico\\Ejercicios\\obj\\",
+      "outputPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1253,6 +1275,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1262,6 +1289,10 @@
           "System.Data.SQLite": {
             "target": "Package",
             "version": "[1.0.118, )"
+          },
+          "ncalc": {
+            "target": "Package",
+            "version": "[1.3.8, )"
           }
         },
         "imports": [
@@ -1283,8 +1314,20 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"ncalc 1.3.8\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-windows7.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "ncalc",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

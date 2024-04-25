@@ -182,6 +182,10 @@ namespace Olimpiadas
                 Nombre = nuevoNombre,
                 Categoria = 0, // Valor predeterminado para la categoría
                 Avanzado = false,         // Valor predeterminado para Avanzado
+                Decimal1 = false,
+                Decimal2 = false,
+                Decimal3 = false,
+                Decimal4 = false,
                 Curso = 0,                // Valor predeterminado para Curso
                 Inicio1 = 0,              // Valor predeterminado para Inicio1
                 Final1 = 0,               // Valor predeterminado para Final1

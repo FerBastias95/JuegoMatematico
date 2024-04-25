@@ -13,6 +13,10 @@ namespace Olimpiadas
         public int Categoria { get; set; }
         public int Curso { get; set; }
         public bool Avanzado { get; set; }
+        public bool Decimal1 { get; set; }
+        public bool Decimal2 { get; set; }
+        public bool Decimal3 { get; set; }
+        public bool Decimal4 { get; set; }
         public double Inicio1 { get; set; }
         public double Final1 { get; set; }
         public double Inicio2 { get; set; }
