@@ -194,6 +194,12 @@ namespace Olimpiadas
                             avanzado.Variable1 = avanzado.Inicio1 + (avanzado.Final1 - avanzado.Inicio1) * extra;
                             avanzado.Variable1 = Math.Round(avanzado.Variable1, 2);
                         }
+                        else if (avanzado.Final1 < avanzado.Inicio1)
+                        {
+                            double extra = randy.NextDouble();
+                            avanzado.Variable1 = avanzado.Inicio1 + (avanzado.Inicio1 - avanzado.Final1) * extra;
+                            avanzado.Variable1 = Math.Round(avanzado.Variable1, 2);
+                        }
                     }
                 }
             } else
@@ -208,6 +214,10 @@ namespace Olimpiadas
                         if (avanzado.Final1 > avanzado.Inicio1)
                         {
                             avanzado.Variable1 = randy.Next((int)avanzado.Inicio1, (int)avanzado.Final1 + 1);
+                        }
+                        else if (avanzado.Final1 < avanzado.Inicio1)
+                        {
+                            avanzado.Variable1 = randy.Next((int)avanzado.Final1, (int)avanzado.Inicio1 + 1); 
                         }
                     }
                 }
@@ -228,6 +238,12 @@ namespace Olimpiadas
                             avanzado.Variable2 = avanzado.Inicio2 + (avanzado.Final2 - avanzado.Inicio2) * extra;
                             avanzado.Variable2 = Math.Round(avanzado.Variable2, 2);
                         }
+                        else if (avanzado.Final2 < avanzado.Inicio2)
+                        {
+                            double extra = randy.NextDouble();
+                            avanzado.Variable2 = avanzado.Inicio2 + (avanzado.Inicio2 - avanzado.Final2) * extra; 
+                            avanzado.Variable2 = Math.Round(avanzado.Variable2, 2);
+                        }
                     }
                 }
             }
@@ -243,6 +259,10 @@ namespace Olimpiadas
                         if (avanzado.Final2 > avanzado.Inicio2)
                         {
                             avanzado.Variable2 = randy.Next((int)avanzado.Inicio2, (int)avanzado.Final2 + 1);
+                        }
+                        else if (avanzado.Final2 < avanzado.Inicio2)
+                        {
+                            avanzado.Variable2 = randy.Next((int)avanzado.Final2, (int)avanzado.Inicio2 + 1); 
                         }
                     }
                 }
@@ -263,6 +283,12 @@ namespace Olimpiadas
                             avanzado.Variable3 = avanzado.Inicio3 + (avanzado.Final3 - avanzado.Inicio3) * extra;
                             avanzado.Variable3 = Math.Round(avanzado.Variable3, 2);
                         }
+                        else if (avanzado.Final3 < avanzado.Inicio3)
+                        {
+                            double extra = randy.NextDouble();
+                            avanzado.Variable3 = avanzado.Inicio3 + (avanzado.Inicio3 - avanzado.Final3) * extra; 
+                            avanzado.Variable3 = Math.Round(avanzado.Variable3, 2);
+                        }
                     }
                 }
             }
@@ -278,6 +304,10 @@ namespace Olimpiadas
                         if (avanzado.Final3 > avanzado.Inicio3)
                         {
                             avanzado.Variable3 = randy.Next((int)avanzado.Inicio3, (int)avanzado.Final3 + 1);
+                        }
+                        else if (avanzado.Final3 < avanzado.Inicio3)
+                        {
+                            avanzado.Variable3 = randy.Next((int)avanzado.Final3, (int)avanzado.Inicio3 + 1); 
                         }
                     }
                 }
@@ -298,6 +328,12 @@ namespace Olimpiadas
                             avanzado.Variable4 = avanzado.Inicio4 + (avanzado.Final4 - avanzado.Inicio4) * extra;
                             avanzado.Variable4 = Math.Round(avanzado.Variable4, 2);
                         }
+                        else if (avanzado.Final4 < avanzado.Inicio4)
+                        {
+                            double extra = randy.NextDouble();
+                            avanzado.Variable4 = avanzado.Inicio4 + (avanzado.Inicio4 - avanzado.Final4) * extra;
+                            avanzado.Variable4 = Math.Round(avanzado.Variable4, 2);
+                        }
                     }
                 }
             }
@@ -310,9 +346,13 @@ namespace Olimpiadas
                     if (b8)
                     {
                         avanzado.Final4 = int.Parse(var4f.Text);
-                        if (avanzado.Final3 > avanzado.Inicio3)
+                        if (avanzado.Final4 > avanzado.Inicio4)
                         {
                             avanzado.Variable4 = randy.Next((int)avanzado.Inicio4, (int)avanzado.Final4 + 1);
+                        }
+                        else if (avanzado.Final4 < avanzado.Inicio4)
+                        {
+                            avanzado.Variable4 = randy.Next((int)avanzado.Final4, (int)avanzado.Inicio4 + 1); 
                         }
                     }
                 }

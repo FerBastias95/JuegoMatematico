@@ -144,7 +144,6 @@ G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.csproj.Assembl
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.AlterarBDD.resources
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.EnunciadoAvanzado.resources
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.Inicio.resources
-G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.MainView.resources
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.csproj.GenerateResource.cache
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.GeneratedMSBuildEditorConfig.editorconfig
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\Olimpiadas.AssemblyInfoInputs.cache
