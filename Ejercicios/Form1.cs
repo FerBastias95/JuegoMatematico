@@ -1,16 +1,21 @@
 using System.Data;
+using System.Drawing.Drawing2D;
 using NCalc;
 
 namespace Ejercicios {
     public partial class Form1 : Form {
         public int vidas = 0;
+        public int dif = 3;
         public int correctas = 0;
         private int botonesActivos = 0;
         public bool problema1R, problema2R, problema3R, problema4R, problema5R,
             problema6R, problema7R, problema8R, problema9R, problema10R,
             problema1F, problema2F, problema3F, problema4F, problema5F;
+        public List<int> orden;
         public List<EnunciadoBase> enunciados;
+        public List<EnunciadoBase> avanzados;
         public List<Label> labels;
+        public List<Button> botones;
         public List<bool> resueltos;
         public List<string> problemas;
         public List<string> original;
@@ -38,26 +43,10 @@ namespace Ejercicios {
             InitializeComponent();
         }
         private void iniciarLayout() {
-            LabelP1.Text = "No";
-            LabelP2.Text = "No";
-            LabelP3.Text = "No";
-            LabelP4.Text = "No";
-            LabelP5.Text = "No";
-            labelP6.Text = "No";
-            labelP7.Text = "No";
-            labelP8.Text = "No";
-            labelP9.Text = "No";
-            labelP10.Text = "No";
-            LabelP1.ForeColor = Color.Red;
-            LabelP2.ForeColor = Color.Red;
-            LabelP3.ForeColor = Color.Red;
-            LabelP4.ForeColor = Color.Red;
-            LabelP5.ForeColor = Color.Red;
-            labelP6.ForeColor = Color.Red;
-            labelP7.ForeColor = Color.Red;
-            labelP8.ForeColor = Color.Red;
-            labelP9.ForeColor = Color.Red;
-            labelP10.ForeColor = Color.Red;
+            for (int i = 0; i < 10; i++) {
+                labels[i].Text = "No";
+                labels[i].ForeColor = Color.Red;
+            }
         }
         public void actualizarVidas(int a) {
             vidas = a;
@@ -73,169 +62,106 @@ namespace Ejercicios {
             DialogResult result = openFileDialog.ShowDialog();
             // Verificar si se seleccionó un archivo
             if (result == DialogResult.OK) {
-                botonesActivos = 0;
                 string archivoSeleccionado = openFileDialog.FileName;
+                int i = 0;
+                Random randy = new Random();
+                botonesActivos = 0;
                 ejercicios = new BDD(archivoSeleccionado);
                 enunciados = ejercicios.ObtenerTodosEnunciados();
-                int i = 0;
-                // Limpiar las listas de problemas y respuestas antes de llenarlas
+                avanzados = ejercicios.ObtenerTodosEnunciadosAvanzados();
                 problemas = new List<string>();
                 respuestas = new List<double>();
                 original = new List<string>();
+                List<int> ordenEnunciados = GenerarNumerosAleatorios(enunciados.Count());
+
+                dificultad(1);
+
                 cambiarVariables.Enabled = true;
                 // Recorrer los enunciados obtenidos
-                foreach (EnunciadoBase enunciado in enunciados) {
-                    i++;
-                    if (enunciado.Avanzado == true) {
+                for (i = 0; i < enunciados.Count(); i++) {
+                    if (enunciados[i].Avanzado == true) {
+                        EnunciadoBase enunciado = enunciados[i];
                         original.Add(enunciado.Enunciado);
                         enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
                         enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
                         enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
                         enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
+
+                        problemas.Add(enunciado.Enunciado);
+                        respuestas.Add(enunciado.Respuesta);
+
+                        botones[i].Show();
                     }
+                }
+                for(; i < 5; i++) {
+                    int r = randy.Next(0, avanzados.Count());
+                    EnunciadoBase enunciado = avanzados[r];
+                    enunciados.Add(enunciado);
+                    original.Add(enunciado.Enunciado);
+                    enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
+                    enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
+                    enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
+                    enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
+
                     problemas.Add(enunciado.Enunciado);
                     respuestas.Add(enunciado.Respuesta);
-                    switch (i) {
-                        case 1:
-                            botonP1.Enabled = true;
-                            break;
-                        case 2:
-                            botonP2.Enabled = true;
-                            break;
-                        case 3:
-                            botonP3.Enabled = true;
-                            break;
-                        case 4:
-                            botonP4.Enabled = true;
-                            break;
-                        case 5:
-                            botonP5.Enabled = true;
-                            break;
-                        case 6:
-                            botonP6.Enabled = true;
-                            break;
-                        case 7:
-                            botonP7.Enabled = true;
-                            break;
-                        case 8:
-                            botonP8.Enabled = true;
-                            break;
-                        case 9:
-                            botonP9.Enabled = true;
-                            break;
-                        case 10:
-                            botonP10.Enabled = true;
-                            break;
-                        default:
-                            break;
+                    modificarVariables(i);
+                    botones[i].Show();
+                }
+
+                if(dif == 1) {
+                    for (; i < enunciados.Count(); i++) {
+                        if (enunciados[i].Avanzado == true) {
+                            EnunciadoBase enunciado = enunciados[i];
+                            original.Add(enunciado.Enunciado);
+                            enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
+                            enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
+                            enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
+                            enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
+
+                            problemas.Add(enunciado.Enunciado);
+                            respuestas.Add(enunciado.Respuesta);
+
+                            botones[i].Show();
+                        }
                     }
-                    botonesActivos++;
+                    for (; i < 10; i++) {
+                        int r = randy.Next(0, avanzados.Count());
+                        EnunciadoBase enunciado = avanzados[r];
+
+                        original.Add(enunciado.Enunciado);
+                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
+                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
+                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
+                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
+
+                        problemas.Add(enunciado.Enunciado);
+                        respuestas.Add(enunciado.Respuesta);
+                        modificarVariables(i);
+                        botones[i].Show();
+                    }
                 }
+            }
+            else {
+                MessageBox.Show("No se encontraron enunciados en el archivo seleccionado.");
+            }
+        }
+        static List<int> GenerarNumerosAleatorios(int X) {
+            List<int> numerosAleatorios = new List<int>();
+            HashSet<int> numerosGenerados = new HashSet<int>(); // Conjunto para evitar repeticiones
+            Random rnd = new Random();
 
-                // Mostrar el primer enunciado y su respuesta
-                if (enunciados.Count > 0) {
-                    MessageBox.Show($"{enunciados[0].Enunciado}, {enunciados[0].Respuesta}");
+            while (numerosAleatorios.Count < X + 1) {
+                int numeroAleatorio = rnd.Next(0, X + 1); // Genera un número aleatorio entre 0 y X
+
+                if (!numerosGenerados.Contains(numeroAleatorio)) {
+                    numerosAleatorios.Add(numeroAleatorio);
+                    numerosGenerados.Add(numeroAleatorio);
                 }
-                else {
-                    MessageBox.Show("No se encontraron enunciados en el archivo seleccionado.");
-                }
             }
+            return numerosAleatorios;
         }
 
-        private void Form1_Load(object sender, EventArgs e) {
-            labels = [LabelP1, LabelP2, LabelP3, LabelP4, LabelP5, labelP6, labelP7, labelP8, labelP9, labelP10];
-            resueltos = [problema1R, problema2R, problema3R, problema4R, problema5R, problema6R, problema7R, problema8R, problema9R, problema10R];
-            labelVidas.Text = vidas.ToString();
-            LabelResueltos.Text = correctas.ToString();
-            iniciarLayout();
-        }
-
-        private void botonP1_Click(object sender, EventArgs e) {
-            if (problema1R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[0], respuestas[0], 0, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void botonP2_Click(object sender, EventArgs e) {
-            if (problema2R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[1], respuestas[1], 1, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void botonP3_Click(object sender, EventArgs e) {
-            if (problema3R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[2], respuestas[2], 2, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void botonP4_Click(object sender, EventArgs e) {
-            if (problema4R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[3], respuestas[3], 3, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void botonP5_Click(object sender, EventArgs e) {
-            if (problema5R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[4], respuestas[4], 4, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void botonP6_Click(object sender, EventArgs e) {
-            if (problema6R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[5], respuestas[5], 5, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void botonP7_Click(object sender, EventArgs e) {
-            if (problema7R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[6], respuestas[6], 6, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void botonP8_Click(object sender, EventArgs e) {
-            if (problema8R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[7], respuestas[7], 7, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void botonP9_Click(object sender, EventArgs e) {
-            if (problema9R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[8], respuestas[8], 8, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void botonP10_Click(object sender, EventArgs e) {
-            if (problema10R == false) {
-                Problema_1 problema1Form = new Problema_1(problemas[9], respuestas[9], 9, vidas, correctas);
-                problema1Form.FormPrincipal = this;
-                problema1Form.ShowDialog();
-            }
-        }
-
-        private void cambiarVariables_Click(object sender, EventArgs e) {
-            for (int i = 0; i < enunciados.Count; i++) {
-                modificarVariables(i);
-            }
-            MessageBox.Show("Enunciados modificados");
-        }
         public void modificarVariables(int indice) {
             EnunciadoBase enunciado = enunciados[indice];
             if (enunciado.Avanzado == true) {
@@ -351,6 +277,146 @@ namespace Ejercicios {
             catch (Exception ex) {
                 return -1;
             }
+        }
+        private void Form1_Load(object sender, EventArgs e) {
+            labels = [LabelP1, LabelP2, LabelP3, LabelP4, LabelP5, labelP6, labelP7, labelP8, labelP9, labelP10];
+            resueltos = [problema1R, problema2R, problema3R, problema4R, problema5R, problema6R, problema7R, problema8R, problema9R, problema10R];
+            botones = [botonP1, botonP2, botonP3, botonP4, botonP5, botonP6, botonP7, botonP8, botonP9, botonP10, button1];
+            labelVidas.Text = vidas.ToString();
+            LabelResueltos.Text = correctas.ToString();
+            dificultad(3);
+            iniciarLayout();
+        }
+        private void cambiarVariables_Click(object sender, EventArgs e) {
+            for (int i = 0; i < enunciados.Count; i++) {
+                modificarVariables(i);
+            }
+            MessageBox.Show("Enunciados modificados");
+        }
+        private void botonOpciones_Click(object sender, EventArgs e) {
+            Opciones o = new Opciones(this);
+            o.Show();
+        }
+
+        public void dificultad(int d) {
+            dif = d;
+            button1.Hide();
+            int i = 0;
+            for (int j = 0; j < 10; j++) {
+                labels[j].Hide();
+                botones[j].Hide();
+            }
+
+            if (dif == 0) {
+                for (i = 0; i < enunciados.Count() && i < 5; i++) {
+                    labels[i].Show();
+                    botones[i].Show();
+                }
+            }
+            else if (dif == 1) {
+                for (i = 0; i < enunciados.Count() && i < 10; i++) {
+                    labels[i].Show();
+                    botones[i].Show();
+                }
+            }
+            else if (dif == 2) {
+                for (int j = 0; j < 10; j++) {
+                    labels[j].Hide();
+                    botones[j].Hide();
+                }
+                button1.Show();
+            }
+            else {
+                for (int j = 0; j < 10; j++) {
+                    labels[j].Hide();
+                    botones[j].Hide();
+                }
+                button1.Hide();
+            }
+        }
+
+        private void botonP1_Click(object sender, EventArgs e) {
+            if (problema1R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[0], respuestas[0], 0, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP2_Click(object sender, EventArgs e) {
+            if (problema2R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[1], respuestas[1], 1, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP3_Click(object sender, EventArgs e) {
+            if (problema3R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[2], respuestas[2], 2, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP4_Click(object sender, EventArgs e) {
+            if (problema4R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[3], respuestas[3], 3, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP5_Click(object sender, EventArgs e) {
+            if (problema5R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[4], respuestas[4], 4, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP6_Click(object sender, EventArgs e) {
+            if (problema6R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[5], respuestas[5], 5, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP7_Click(object sender, EventArgs e) {
+            if (problema7R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[6], respuestas[6], 6, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP8_Click(object sender, EventArgs e) {
+            if (problema8R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[7], respuestas[7], 7, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP9_Click(object sender, EventArgs e) {
+            if (problema9R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[8], respuestas[8], 8, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP10_Click(object sender, EventArgs e) {
+            if (problema10R == false) {
+                Problema_1 problema1Form = new Problema_1(problemas[9], respuestas[9], 9, vidas, correctas);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
+        private void botonP1_Paint(object sender, PaintEventArgs e) {
+
         }
     }
 }

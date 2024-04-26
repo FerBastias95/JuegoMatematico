@@ -41,3 +41,4 @@ C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\run
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.AssemblyReference.cache
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.Up2Date
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\NCalc.dll
+C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Opciones.resources
