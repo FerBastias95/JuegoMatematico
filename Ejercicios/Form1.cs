@@ -7,16 +7,19 @@ namespace Ejercicios {
         public int vidas = 0;
         public int dif = 3;
         public int correctas = 0;
-        private int botonesActivos = 0;
+        public int botonesActivos = 0;
         public bool problema1R, problema2R, problema3R, problema4R, problema5R,
             problema6R, problema7R, problema8R, problema9R, problema10R,
-            problema1F, problema2F, problema3F, problema4F, problema5F;
+            problema1F, problema2F, problema3F, problema4F, problema5F
+            , problema6F, problema7F, problema8F, problema9F, problema10F;
         public List<int> orden;
+        public List<EnunciadoBase> elegidos;
         public List<EnunciadoBase> enunciados;
         public List<EnunciadoBase> avanzados;
         public List<Label> labels;
         public List<Button> botones;
         public List<bool> resueltos;
+        public List<bool> fallados;
         public List<string> problemas;
         public List<string> original;
         public List<double> respuestas;
@@ -25,21 +28,6 @@ namespace Ejercicios {
         public Form1() {
             vidas = 5;
             correctas = 0;
-            problema1R = false;
-            problema2R = false;
-            problema3R = false;
-            problema4R = false;
-            problema5R = false;
-            problema6R = false;
-            problema7R = false;
-            problema8R = false;
-            problema9R = false;
-            problema10R = false;
-            problema1F = false;
-            problema2F = false;
-            problema3F = false;
-            problema4F = false;
-            problema5F = false;
             InitializeComponent();
         }
         private void iniciarLayout() {
@@ -60,87 +48,71 @@ namespace Ejercicios {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Archivos SQLite|*.sqlite|Todos los archivos|*.*";
             DialogResult result = openFileDialog.ShowDialog();
-            // Verificar si se seleccionó un archivo
+
             if (result == DialogResult.OK) {
+                // Inicializar las listas
+                ejercicios = null;
+                enunciados = new List<EnunciadoBase>();
+                avanzados = new List<EnunciadoBase>();
+                elegidos = new List<EnunciadoBase>();
+                problemas = new List<string>(); // Inicializar como lista vacía
+                respuestas = new List<double>(); // Inicializar como lista vacía
+                original = new List<string>();
+
                 string archivoSeleccionado = openFileDialog.FileName;
                 int i = 0;
                 Random randy = new Random();
                 botonesActivos = 0;
                 ejercicios = new BDD(archivoSeleccionado);
                 enunciados = ejercicios.ObtenerTodosEnunciados();
-                avanzados = ejercicios.ObtenerTodosEnunciadosAvanzados();
-                problemas = new List<string>();
-                respuestas = new List<double>();
-                original = new List<string>();
-                List<int> ordenEnunciados = GenerarNumerosAleatorios(enunciados.Count());
 
-                dificultad(1);
-
-                cambiarVariables.Enabled = true;
-                // Recorrer los enunciados obtenidos
-                for (i = 0; i < enunciados.Count(); i++) {
-                    if (enunciados[i].Avanzado == true) {
-                        EnunciadoBase enunciado = enunciados[i];
-                        original.Add(enunciado.Enunciado);
-                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
-                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
-                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
-                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
-
-                        problemas.Add(enunciado.Enunciado);
-                        respuestas.Add(enunciado.Respuesta);
-
-                        botones[i].Show();
+                // Filtrar enunciados avanzados y almacenarlos en la lista avanzados
+                foreach (var enunciado in enunciados) {
+                    if (enunciado.Avanzado) {
+                        avanzados.Add(enunciado);
                     }
                 }
-                for(; i < 5; i++) {
-                    int r = randy.Next(0, avanzados.Count());
-                    EnunciadoBase enunciado = avanzados[r];
-                    enunciados.Add(enunciado);
-                    original.Add(enunciado.Enunciado);
-                    enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
-                    enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
-                    enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
-                    enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
 
+                // Verificar la cantidad total de enunciados
+                int totalEnunciados = enunciados.Count;
+                if (totalEnunciados <= 10) {
+                    // Si hay 10 o menos enunciados, agregar todos los enunciados
+                    elegidos.AddRange(enunciados);
+                }
+                else {
+                    // Si hay más de 10 enunciados, seleccionar 10 al azar
+                    List<int> indicesSeleccionados = GenerarNumerosAleatorios(totalEnunciados - 1);
+                    foreach (int index in indicesSeleccionados) {
+                        elegidos.Add(enunciados[index]);
+                    }
+                }
+
+                // Si la cantidad de enunciados es menor a 10, rellenar con enunciados avanzados
+                while (elegidos.Count < 10) {
+                    // Calcular cuántos enunciados faltan
+                    int enunciadosRestantes = 10 - elegidos.Count;
+
+                    // Generar números aleatorios para seleccionar los enunciados restantes de la lista de enunciados avanzados
+                    List<int> indicesRestantes = GenerarNumerosAleatorios(avanzados.Count - 1);
+
+                    // Agregar los enunciados restantes a la lista de elegidos
+                    foreach (int index in indicesRestantes) {
+                        elegidos.Add(avanzados[index]);
+                        if (elegidos.Count == 10) break; // Salir del bucle si ya tenemos 10 enunciados
+                    }
+                }
+
+                // Mostrar los enunciados seleccionados en la interfaz gráfica
+                for (int j = 0; j < elegidos.Count; j++) {
+                    var enunciado = elegidos[j];
+                    botones[j].Show();
+                    original.Add(enunciado.Enunciado);
+                    modificarVariables(j, elegidos);
+                    reemplazarVariables(enunciado);
                     problemas.Add(enunciado.Enunciado);
                     respuestas.Add(enunciado.Respuesta);
-                    modificarVariables(i);
-                    botones[i].Show();
                 }
-
-                if(dif == 1) {
-                    for (; i < enunciados.Count(); i++) {
-                        if (enunciados[i].Avanzado == true) {
-                            EnunciadoBase enunciado = enunciados[i];
-                            original.Add(enunciado.Enunciado);
-                            enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
-                            enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
-                            enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
-                            enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
-
-                            problemas.Add(enunciado.Enunciado);
-                            respuestas.Add(enunciado.Respuesta);
-
-                            botones[i].Show();
-                        }
-                    }
-                    for (; i < 10; i++) {
-                        int r = randy.Next(0, avanzados.Count());
-                        EnunciadoBase enunciado = avanzados[r];
-
-                        original.Add(enunciado.Enunciado);
-                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
-                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
-                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
-                        enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
-
-                        problemas.Add(enunciado.Enunciado);
-                        respuestas.Add(enunciado.Respuesta);
-                        modificarVariables(i);
-                        botones[i].Show();
-                    }
-                }
+                cambiarVariables.Enabled = true;
             }
             else {
                 MessageBox.Show("No se encontraron enunciados en el archivo seleccionado.");
@@ -162,105 +134,106 @@ namespace Ejercicios {
             return numerosAleatorios;
         }
 
-        public void modificarVariables(int indice) {
-            EnunciadoBase enunciado = enunciados[indice];
-            if (enunciado.Avanzado == true) {
-                enunciado.Enunciado = original[indice];
-                Random randy = new Random();
+        public void modificarVariables(int indice, List<EnunciadoBase> elegidos) {
+            Random randy = new Random();
+            var enunciado = elegidos[indice];
+                if (enunciado.Avanzado) {
+                    if (enunciado.Decimal1) {
+                        if (enunciado.Final1 > enunciado.Inicio1) {
+                            double extra = randy.NextDouble();
+                            enunciado.Variable1 = enunciado.Inicio1 + (enunciado.Final1 - enunciado.Inicio1) * extra;
+                            enunciado.Variable1 = Math.Round(enunciado.Variable1, 2);
+                        }
+                        else if (enunciado.Final1 < enunciado.Inicio1) {
+                            double extra = randy.NextDouble();
+                            enunciado.Variable1 = enunciado.Inicio1 + (enunciado.Inicio1 - enunciado.Final1) * extra;
+                            enunciado.Variable1 = Math.Round(enunciado.Variable1, 2);
+                        }
+                    }
+                    else {
+                        if (enunciado.Final1 > enunciado.Inicio1) {
+                            enunciado.Variable1 = randy.Next((int)enunciado.Inicio1, (int)enunciado.Final1 + 1);
+                        }
+                        else if (enunciado.Final1 < enunciado.Inicio1) {
+                            enunciado.Variable1 = randy.Next((int)enunciado.Final1, (int)enunciado.Inicio1 + 1);
+                        }
+                    }
+                    if (enunciado.Decimal2) {
+                        if (enunciado.Final2 > enunciado.Inicio2) {
+                            double extra = randy.NextDouble();
+                            enunciado.Variable2 = enunciado.Inicio2 + (enunciado.Final2 - enunciado.Inicio2) * extra;
+                            enunciado.Variable2 = Math.Round(enunciado.Variable2, 2);
+                        }
+                        else if (enunciado.Final2 < enunciado.Inicio2) {
+                            double extra = randy.NextDouble();
+                            enunciado.Variable2 = enunciado.Inicio2 + (enunciado.Inicio2 - enunciado.Final2) * extra;
+                            enunciado.Variable2 = Math.Round(enunciado.Variable2, 2);
+                        }
+                    }
+                    else {
+                        if (enunciado.Final2 > enunciado.Inicio2) {
+                            enunciado.Variable2 = randy.Next((int)enunciado.Inicio2, (int)enunciado.Final2 + 1);
+                        }
+                        else if (enunciado.Final2 < enunciado.Inicio2) {
+                            enunciado.Variable2 = randy.Next((int)enunciado.Final2, (int)enunciado.Inicio2 + 1);
+                        }
+                    }
+                    if (enunciado.Decimal3) {
+                        if (enunciado.Final3 > enunciado.Inicio3) {
+                            double extra = randy.NextDouble();
+                            enunciado.Variable3 = enunciado.Inicio3 + (enunciado.Final3 - enunciado.Inicio3) * extra;
+                            enunciado.Variable3 = Math.Round(enunciado.Variable3, 2);
+                        }
+                        else if (enunciado.Final3 < enunciado.Inicio3) {
+                            double extra = randy.NextDouble();
+                            enunciado.Variable3 = enunciado.Inicio3 + (enunciado.Inicio3 - enunciado.Final3) * extra;
+                            enunciado.Variable3 = Math.Round(enunciado.Variable3, 2);
+                        }
+                    }
+                    else {
+                        if (enunciado.Final3 > enunciado.Inicio3) {
+                            enunciado.Variable3 = randy.Next((int)enunciado.Inicio3, (int)enunciado.Final3 + 1);
+                        }
+                        else if (enunciado.Final3 < enunciado.Inicio3) {
+                            enunciado.Variable3 = randy.Next((int)enunciado.Final3, (int)enunciado.Inicio3 + 1);
+                        }
+                    }
+                    if (enunciado.Decimal4) {
+                        if (enunciado.Final4 > enunciado.Inicio4) {
+                            double extra = randy.NextDouble();
+                            enunciado.Variable4 = enunciado.Inicio4 + (enunciado.Final4 - enunciado.Inicio4) * extra;
+                            enunciado.Variable4 = Math.Round(enunciado.Variable4, 2);
+                        }
+                        else if (enunciado.Final4 < enunciado.Inicio4) {
+                            double extra = randy.NextDouble();
+                            enunciado.Variable4 = enunciado.Inicio4 + (enunciado.Inicio4 - enunciado.Final4) * extra;
+                            enunciado.Variable4 = Math.Round(enunciado.Variable4, 2);
+                        }
+                    }
+                    else {
+                        if (enunciado.Final4 > enunciado.Inicio4) {
+                            enunciado.Variable4 = randy.Next((int)enunciado.Inicio4, (int)enunciado.Final4 + 1);
+                        }
+                        else if (enunciado.Final4 < enunciado.Inicio4) {
+                            enunciado.Variable4 = randy.Next((int)enunciado.Final4, (int)enunciado.Inicio4 + 1);
+                        }
+                    }
+                     enunciado.Enunciado = original[indice];
+        enunciado.Respuesta = CalcularRespuesta(enunciado);
+        reemplazarVariables(enunciado);
 
-                if (enunciado.Decimal1) {
-                    if (enunciado.Final1 > enunciado.Inicio1) {
-                        double extra = randy.NextDouble();
-                        enunciado.Variable1 = enunciado.Inicio1 + (enunciado.Final1 - enunciado.Inicio1) * extra;
-                        enunciado.Variable1 = Math.Round(enunciado.Variable1, 2);
-                    }
-                    else if (enunciado.Final1 < enunciado.Inicio1) {
-                        double extra = randy.NextDouble();
-                        enunciado.Variable1 = enunciado.Inicio1 + (enunciado.Inicio1 - enunciado.Final1) * extra;
-                        enunciado.Variable1 = Math.Round(enunciado.Variable1, 2);
-                    }
-                }
-                else {
-                    if (enunciado.Final1 > enunciado.Inicio1) {
-                        enunciado.Variable1 = randy.Next((int)enunciado.Inicio1, (int)enunciado.Final1 + 1);
-                    }
-                    else if (enunciado.Final1 < enunciado.Inicio1) {
-                        enunciado.Variable1 = randy.Next((int)enunciado.Final1, (int)enunciado.Inicio1 + 1);
-                    }
-                }
-                if (enunciado.Decimal2) {
-                    if (enunciado.Final2 > enunciado.Inicio2) {
-                        double extra = randy.NextDouble();
-                        enunciado.Variable2 = enunciado.Inicio2 + (enunciado.Final2 - enunciado.Inicio2) * extra;
-                        enunciado.Variable2 = Math.Round(enunciado.Variable2, 2);
-                    }
-                    else if (enunciado.Final2 < enunciado.Inicio2) {
-                        double extra = randy.NextDouble();
-                        enunciado.Variable2 = enunciado.Inicio2 + (enunciado.Inicio2 - enunciado.Final2) * extra;
-                        enunciado.Variable2 = Math.Round(enunciado.Variable2, 2);
-                    }
-                }
-                else {
-                    if (enunciado.Final2 > enunciado.Inicio2) {
-                        enunciado.Variable2 = randy.Next((int)enunciado.Inicio2, (int)enunciado.Final2 + 1);
-                    }
-                    else if (enunciado.Final2 < enunciado.Inicio2) {
-                        enunciado.Variable2 = randy.Next((int)enunciado.Final2, (int)enunciado.Inicio2 + 1);
-                    }
-                }
-                if (enunciado.Decimal3) {
-                    if (enunciado.Final3 > enunciado.Inicio3) {
-                        double extra = randy.NextDouble();
-                        enunciado.Variable3 = enunciado.Inicio3 + (enunciado.Final3 - enunciado.Inicio3) * extra;
-                        enunciado.Variable3 = Math.Round(enunciado.Variable3, 2);
-                    }
-                    else if (enunciado.Final3 < enunciado.Inicio3) {
-                        double extra = randy.NextDouble();
-                        enunciado.Variable3 = enunciado.Inicio3 + (enunciado.Inicio3 - enunciado.Final3) * extra;
-                        enunciado.Variable3 = Math.Round(enunciado.Variable3, 2);
-                    }
-                }
-                else {
-                    if (enunciado.Final3 > enunciado.Inicio3) {
-                        enunciado.Variable3 = randy.Next((int)enunciado.Inicio3, (int)enunciado.Final3 + 1);
-                    }
-                    else if (enunciado.Final3 < enunciado.Inicio3) {
-                        enunciado.Variable3 = randy.Next((int)enunciado.Final3, (int)enunciado.Inicio3 + 1);
-                    }
-                }
-                if (enunciado.Decimal4) {
-                    if (enunciado.Final4 > enunciado.Inicio4) {
-                        double extra = randy.NextDouble();
-                        enunciado.Variable4 = enunciado.Inicio4 + (enunciado.Final4 - enunciado.Inicio4) * extra;
-                        enunciado.Variable4 = Math.Round(enunciado.Variable4, 2);
-                    }
-                    else if (enunciado.Final4 < enunciado.Inicio4) {
-                        double extra = randy.NextDouble();
-                        enunciado.Variable4 = enunciado.Inicio4 + (enunciado.Inicio4 - enunciado.Final4) * extra;
-                        enunciado.Variable4 = Math.Round(enunciado.Variable4, 2);
-                    }
-                }
-                else {
-                    if (enunciado.Final4 > enunciado.Inicio4) {
-                        enunciado.Variable4 = randy.Next((int)enunciado.Inicio4, (int)enunciado.Final4 + 1);
-                    }
-                    else if (enunciado.Final4 < enunciado.Inicio4) {
-                        enunciado.Variable4 = randy.Next((int)enunciado.Final4, (int)enunciado.Inicio4 + 1);
-                    }
-                }
-                enunciado.Enunciado = original[indice];
-                enunciado.Respuesta = CalcularRespuesta(enunciado);
-                enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
-                enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
-                enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
-                enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
-            }
-            problemas[indice] = (enunciado.Enunciado);
-            respuestas[indice] = (enunciado.Respuesta);
+        // Actualizar el enunciado en la lista 'elegidos'
+        elegidos[indice] = enunciado;
 
-            enunciados[indice] = enunciado;
+               }
         }
-
+        public EnunciadoBase reemplazarVariables(EnunciadoBase enunciado) {
+            enunciado.Enunciado = enunciado.Enunciado.Replace("{v1}", enunciado.Variable1.ToString());
+            enunciado.Enunciado = enunciado.Enunciado.Replace("{v2}", enunciado.Variable2.ToString());
+            enunciado.Enunciado = enunciado.Enunciado.Replace("{v3}", enunciado.Variable3.ToString());
+            enunciado.Enunciado = enunciado.Enunciado.Replace("{v4}", enunciado.Variable4.ToString());
+            return enunciado;
+        }
         public double CalcularRespuesta(EnunciadoBase enunciado) {
             // Reemplazar las variables en la fórmula por sus valores
             string formulaEvaluable = enunciado.Formula;
@@ -282,18 +255,23 @@ namespace Ejercicios {
             labels = [LabelP1, LabelP2, LabelP3, LabelP4, LabelP5, labelP6, labelP7, labelP8, labelP9, labelP10];
             resueltos = [problema1R, problema2R, problema3R, problema4R, problema5R, problema6R, problema7R, problema8R, problema9R, problema10R];
             botones = [botonP1, botonP2, botonP3, botonP4, botonP5, botonP6, botonP7, botonP8, botonP9, botonP10, button1];
+            fallados = [problema1F, problema2F, problema3F, problema4F, problema5F
+            , problema6F, problema7F, problema8F, problema9F, problema10F];
+
             labelVidas.Text = vidas.ToString();
             LabelResueltos.Text = correctas.ToString();
             dificultad(3);
             iniciarLayout();
         }
         private void cambiarVariables_Click(object sender, EventArgs e) {
-            for (int i = 0; i < enunciados.Count; i++) {
-                modificarVariables(i);
+            for (int i = 0; i < 10; i++) {
+                modificarVariables(i, elegidos);
             }
             MessageBox.Show("Enunciados modificados");
         }
         private void botonOpciones_Click(object sender, EventArgs e) {
+            List<int> numeros = GenerarNumerosAleatorios(enunciados.Count-1);
+            MessageBox.Show($"{numeros[0]}");
             Opciones o = new Opciones(this);
             o.Show();
         }
@@ -308,13 +286,13 @@ namespace Ejercicios {
             }
 
             if (dif == 0) {
-                for (i = 0; i < enunciados.Count() && i < 5; i++) {
+                for (i = 0; i < 5; i++) {
                     labels[i].Show();
                     botones[i].Show();
                 }
             }
             else if (dif == 1) {
-                for (i = 0; i < enunciados.Count() && i < 10; i++) {
+                for (i = 0; i < 10; i++) {
                     labels[i].Show();
                     botones[i].Show();
                 }
@@ -413,10 +391,6 @@ namespace Ejercicios {
                 problema1Form.FormPrincipal = this;
                 problema1Form.ShowDialog();
             }
-        }
-
-        private void botonP1_Paint(object sender, PaintEventArgs e) {
-
         }
     }
 }

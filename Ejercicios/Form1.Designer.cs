@@ -83,7 +83,6 @@
             botonP1.Text = "Problema 1";
             botonP1.UseVisualStyleBackColor = false;
             botonP1.Click += botonP1_Click;
-            botonP1.Paint += botonP1_Paint;
             // 
             // botonP2
             // 
