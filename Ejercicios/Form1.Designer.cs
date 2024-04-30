@@ -173,7 +173,7 @@
             label2.Name = "label2";
             label2.Size = new Size(154, 43);
             label2.TabIndex = 6;
-            label2.Text = "Problemas resueltos:";
+            label2.Text = "Resueltos:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // LabelP1
@@ -356,6 +356,7 @@
             button1.TabIndex = 2;
             button1.Text = "Modo desafío";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // tableLayoutPanel4
             // 

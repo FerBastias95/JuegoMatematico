@@ -33,5 +33,6 @@ namespace Olimpiadas
         public string Enunciado { get; set; }
         public byte[] Imagen { get; set; }
         public string Formula { get; set; }
+        public string original;
     }
 }

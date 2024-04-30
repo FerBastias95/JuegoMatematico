@@ -18,7 +18,6 @@ C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\Eje
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\Ejercicios.dll
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\Ejercicios.pdb
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Form1.resources
-C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Problema_1.resources
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.dll
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\refint\Ejercicios.dll
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.pdb
@@ -42,3 +41,6 @@ C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Eje
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.Up2Date
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\NCalc.dll
 C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Opciones.resources
+C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.VentanaEnunciadoDesafio.resources
+C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.VentanaEnunciado.resources
+C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.VentanaEnunciadoImagen.resources

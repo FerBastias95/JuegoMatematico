@@ -7,7 +7,13 @@
     <Compile Update="Opciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Problema 1.cs">
+    <Compile Update="VentanaEnunciado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="VentanaEnunciadoImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="VentanaEnunciadoDesafio.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
