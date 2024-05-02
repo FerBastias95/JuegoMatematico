@@ -48,7 +48,6 @@ namespace Olimpiadas
                 if (enunciados[listBoxEnunciados.SelectedIndex].Avanzado == true) {
                     textoEnunciado.Enabled = false;
                     resultadoEnunciado.Enabled = false;
-                    VistaPrevia.Enabled = false;
                 }
                 else {
                     textoEnunciado.Enabled = true;
@@ -83,6 +82,7 @@ namespace Olimpiadas
                     listBoxEnunciados.Items.Add(enunciado.Nombre);
                 }
                 ultimoId = enunciados.Max(enun => enun.Id);
+                VistaPrevia.Enabled = true;
                 listBoxEnunciados.SelectedIndex = 0;
                 HabilitarFunciones();
             }
@@ -141,7 +141,6 @@ namespace Olimpiadas
         public void ActualizarAvanzado(string enunciado, string resultado) {
             textoEnunciado.Text = enunciado;
             resultadoEnunciado.Text = resultado;
-            VistaPrevia.Enabled = false;
         }
         private void crearEnunciado() {
             // Incrementar el último ID utilizado
@@ -237,7 +236,8 @@ namespace Olimpiadas
         }
 
         private void actualizarEnunciado_Click(object sender, EventArgs e) {
-            ActualizarBaseDeDatos();
+            VentanaEnunciadoImagen v = new VentanaEnunciadoImagen(enunciados[listBoxEnunciados.SelectedIndex]);
+            v.ShowDialog();
         }
         private void borrarEnunciado_Click(object sender, EventArgs e) {
             // Verificar si hay un enunciado seleccionado en la lista
