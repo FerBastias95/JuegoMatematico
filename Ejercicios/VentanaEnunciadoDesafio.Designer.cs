@@ -39,9 +39,9 @@
             labelTiempo = new Label();
             labelCorrectas = new Label();
             labelIncorrectas = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            valorTiempo = new Label();
+            valorCorrectas = new Label();
+            valorIncorrectas = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
             timer1 = new System.Windows.Forms.Timer(components);
@@ -70,11 +70,14 @@
             // RespuestaP1
             // 
             RespuestaP1.Dock = DockStyle.Fill;
+            RespuestaP1.Enabled = false;
+            RespuestaP1.Font = new Font("Segoe UI", 12F);
             RespuestaP1.Location = new Point(147, 4);
             RespuestaP1.Margin = new Padding(3, 4, 3, 4);
             RespuestaP1.Name = "RespuestaP1";
-            RespuestaP1.Size = new Size(544, 27);
+            RespuestaP1.Size = new Size(544, 34);
             RespuestaP1.TabIndex = 2;
+            RespuestaP1.KeyPress += RespuestaP1_KeyPress;
             // 
             // label1
             // 
@@ -179,9 +182,9 @@
             tableLayoutPanel7.Controls.Add(labelTiempo, 0, 0);
             tableLayoutPanel7.Controls.Add(labelCorrectas, 2, 0);
             tableLayoutPanel7.Controls.Add(labelIncorrectas, 4, 0);
-            tableLayoutPanel7.Controls.Add(label2, 1, 0);
-            tableLayoutPanel7.Controls.Add(label3, 3, 0);
-            tableLayoutPanel7.Controls.Add(label4, 5, 0);
+            tableLayoutPanel7.Controls.Add(valorTiempo, 1, 0);
+            tableLayoutPanel7.Controls.Add(valorCorrectas, 3, 0);
+            tableLayoutPanel7.Controls.Add(valorIncorrectas, 5, 0);
             tableLayoutPanel7.Dock = DockStyle.Fill;
             tableLayoutPanel7.Location = new Point(3, 3);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -199,8 +202,8 @@
             labelTiempo.Name = "labelTiempo";
             labelTiempo.Size = new Size(86, 39);
             labelTiempo.TabIndex = 0;
-            labelTiempo.Text = "Tiempo";
-            labelTiempo.TextAlign = ContentAlignment.MiddleCenter;
+            labelTiempo.Text = "Tiempo:";
+            labelTiempo.TextAlign = ContentAlignment.MiddleRight;
             // 
             // labelCorrectas
             // 
@@ -211,8 +214,8 @@
             labelCorrectas.Name = "labelCorrectas";
             labelCorrectas.Size = new Size(112, 39);
             labelCorrectas.TabIndex = 1;
-            labelCorrectas.Text = "Correctas";
-            labelCorrectas.TextAlign = ContentAlignment.MiddleCenter;
+            labelCorrectas.Text = "Correctas:";
+            labelCorrectas.TextAlign = ContentAlignment.MiddleRight;
             // 
             // labelIncorrectas
             // 
@@ -223,44 +226,44 @@
             labelIncorrectas.Name = "labelIncorrectas";
             labelIncorrectas.Size = new Size(154, 39);
             labelIncorrectas.TabIndex = 2;
-            labelIncorrectas.Text = "Incorrectas";
-            labelIncorrectas.TextAlign = ContentAlignment.MiddleCenter;
+            labelIncorrectas.Text = "Incorrectas:";
+            labelIncorrectas.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label2
+            // valorTiempo
             // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(95, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 39);
-            label2.TabIndex = 3;
-            label2.Text = "label2";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            valorTiempo.AutoSize = true;
+            valorTiempo.Dock = DockStyle.Fill;
+            valorTiempo.Font = new Font("Segoe UI", 12F);
+            valorTiempo.Location = new Point(95, 0);
+            valorTiempo.Name = "valorTiempo";
+            valorTiempo.Size = new Size(121, 39);
+            valorTiempo.TabIndex = 3;
+            valorTiempo.Text = "label2";
+            valorTiempo.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // valorCorrectas
             // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(340, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(87, 39);
-            label3.TabIndex = 4;
-            label3.Text = "label3";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            valorCorrectas.AutoSize = true;
+            valorCorrectas.Dock = DockStyle.Fill;
+            valorCorrectas.Font = new Font("Segoe UI", 12F);
+            valorCorrectas.Location = new Point(340, 0);
+            valorCorrectas.Name = "valorCorrectas";
+            valorCorrectas.Size = new Size(87, 39);
+            valorCorrectas.TabIndex = 4;
+            valorCorrectas.Text = "0";
+            valorCorrectas.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // valorIncorrectas
             // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Fill;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(593, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(92, 39);
-            label4.TabIndex = 5;
-            label4.Text = "label4";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            valorIncorrectas.AutoSize = true;
+            valorIncorrectas.Dock = DockStyle.Fill;
+            valorIncorrectas.Font = new Font("Segoe UI", 12F);
+            valorIncorrectas.Location = new Point(593, 0);
+            valorIncorrectas.Name = "valorIncorrectas";
+            valorIncorrectas.Size = new Size(92, 39);
+            valorIncorrectas.TabIndex = 5;
+            valorIncorrectas.Text = "0";
+            valorIncorrectas.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel3
             // 
@@ -291,6 +294,12 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel4.Size = new Size(694, 40);
             tableLayoutPanel4.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
             // VentanaEnunciadoDesafio
             // 
@@ -336,8 +345,8 @@
         private Label labelCorrectas;
         private Label labelIncorrectas;
         private System.Windows.Forms.Timer timer1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label valorTiempo;
+        private Label valorCorrectas;
+        private Label valorIncorrectas;
     }
 }

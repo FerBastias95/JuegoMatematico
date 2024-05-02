@@ -27,11 +27,15 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
+            tableLayoutPanel3 = new TableLayoutPanel();
             radioButton3 = new RadioButton();
+            label2 = new Label();
+            opcionesTiempo = new RichTextBox();
             button1 = new Button();
             label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -46,9 +50,9 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 184F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.Size = new Size(418, 266);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 153F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 81F));
+            tableLayoutPanel1.Size = new Size(557, 367);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -57,15 +61,15 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.84466F));
             tableLayoutPanel2.Controls.Add(radioButton1, 0, 0);
             tableLayoutPanel2.Controls.Add(radioButton2, 0, 1);
-            tableLayoutPanel2.Controls.Add(radioButton3, 0, 2);
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 2);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(3, 35);
+            tableLayoutPanel2.Location = new Point(3, 136);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 3;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 61F));
-            tableLayoutPanel2.Size = new Size(412, 178);
+            tableLayoutPanel2.Size = new Size(551, 147);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // radioButton1
@@ -76,25 +80,44 @@
             radioButton1.Font = new Font("Segoe UI", 12F);
             radioButton1.Location = new Point(3, 3);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(406, 52);
+            radioButton1.Size = new Size(545, 37);
             radioButton1.TabIndex = 0;
             radioButton1.TabStop = true;
             radioButton1.Text = "5 Ejercicios";
             radioButton1.TextAlign = ContentAlignment.BottomLeft;
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
             radioButton2.Dock = DockStyle.Fill;
             radioButton2.Font = new Font("Segoe UI", 12F);
-            radioButton2.Location = new Point(3, 61);
+            radioButton2.Location = new Point(3, 46);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(406, 52);
+            radioButton2.Size = new Size(545, 37);
             radioButton2.TabIndex = 1;
             radioButton2.TabStop = true;
             radioButton2.Text = "10 Ejercicios";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 3;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.6666641F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 159F));
+            tableLayoutPanel3.Controls.Add(radioButton3, 0, 0);
+            tableLayoutPanel3.Controls.Add(label2, 1, 0);
+            tableLayoutPanel3.Controls.Add(opcionesTiempo, 2, 0);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(3, 89);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Size = new Size(545, 55);
+            tableLayoutPanel3.TabIndex = 2;
             // 
             // radioButton3
             // 
@@ -102,25 +125,47 @@
             radioButton3.CheckAlign = ContentAlignment.TopLeft;
             radioButton3.Dock = DockStyle.Fill;
             radioButton3.Font = new Font("Segoe UI", 12F);
-            radioButton3.Location = new Point(3, 119);
+            radioButton3.Location = new Point(3, 3);
             radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(406, 56);
-            radioButton3.TabIndex = 2;
+            radioButton3.Size = new Size(251, 49);
+            radioButton3.TabIndex = 3;
             radioButton3.TabStop = true;
             radioButton3.Text = "Infinitos ejercicios";
             radioButton3.TextAlign = ContentAlignment.TopLeft;
             radioButton3.UseVisualStyleBackColor = true;
+            radioButton3.CheckedChanged += radioButton3_CheckedChanged_1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Fill;
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(260, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(122, 55);
+            label2.TabIndex = 4;
+            label2.Text = "Tiempo";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // opcionesTiempo
+            // 
+            opcionesTiempo.Dock = DockStyle.Fill;
+            opcionesTiempo.Font = new Font("Segoe UI", 12F);
+            opcionesTiempo.Location = new Point(388, 3);
+            opcionesTiempo.Name = "opcionesTiempo";
+            opcionesTiempo.Size = new Size(154, 49);
+            opcionesTiempo.TabIndex = 5;
+            opcionesTiempo.Text = "";
             // 
             // button1
             // 
             button1.Dock = DockStyle.Fill;
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.Location = new Point(3, 219);
+            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(3, 289);
             button1.Name = "button1";
-            button1.Size = new Size(412, 44);
+            button1.Size = new Size(551, 75);
             button1.TabIndex = 1;
             button1.Text = "Aceptar";
-            button1.TextAlign = ContentAlignment.TopCenter;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -128,10 +173,10 @@
             // 
             label1.AutoSize = true;
             label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 14F);
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(412, 32);
+            label1.Size = new Size(551, 133);
             label1.TabIndex = 2;
             label1.Text = "Dificultad";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -140,7 +185,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(418, 266);
+            ClientSize = new Size(557, 367);
             Controls.Add(tableLayoutPanel1);
             Name = "Opciones";
             Text = "Opciones";
@@ -149,6 +194,8 @@
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -158,8 +205,11 @@
         private TableLayoutPanel tableLayoutPanel2;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
-        private RadioButton radioButton3;
         private Button button1;
         private Label label1;
+        private TableLayoutPanel tableLayoutPanel3;
+        private RadioButton radioButton3;
+        private Label label2;
+        private RichTextBox opcionesTiempo;
     }
 }

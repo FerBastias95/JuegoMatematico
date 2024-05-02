@@ -283,6 +283,7 @@
             // 
             botonOpciones.BackColor = SystemColors.GradientActiveCaption;
             botonOpciones.Dock = DockStyle.Fill;
+            botonOpciones.Enabled = false;
             botonOpciones.Font = new Font("Courier New", 11F);
             botonOpciones.Location = new Point(215, 45);
             botonOpciones.Name = "botonOpciones";

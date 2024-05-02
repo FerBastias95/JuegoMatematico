@@ -28,6 +28,7 @@ namespace Ejercicios {
         }
 
         private void Problema_1_Load(object sender, EventArgs e) {
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // Escalar y centrar la imagen
             Enunciado1.Text = en;
             if (enu.Imagen != null) {
                 using (MemoryStream ms = new MemoryStream(enu.Imagen)) {

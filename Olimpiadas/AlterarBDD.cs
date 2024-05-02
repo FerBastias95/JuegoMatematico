@@ -12,19 +12,17 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Olimpiadas
 {
-    public partial class AlterarBDD : Form
-    {
+    public partial class AlterarBDD : Form {
         private List<EnunciadoBase> enunciados;
         BDD BaseEnunciados;
         private int ultimoId = 0;
         private string path;
         bool update;
         private bool actualizarCategoria = true; // Bandera para controlar la actualización de la categoría
-        public AlterarBDD(BDD info)
-        {
+        public AlterarBDD(BDD info) {
             update = false;
             BaseEnunciados = info;
-            path =  BaseEnunciados.nombre;
+            path = BaseEnunciados.nombre;
             InitializeComponent();
             enunciados = new List<EnunciadoBase>(); // Inicializar la lista de enunciados
 
@@ -32,10 +30,8 @@ namespace Olimpiadas
             CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
         }
 
-        public void HabilitarFunciones()
-        {
-            if (enunciados.Count > 0)
-            {
+        public void HabilitarFunciones() {
+            if (enunciados.Count > 0) {
                 NombreEnunciado.Enabled = true;
                 cursoSeleccion.Enabled = true;
                 categoria.Enabled = true;
@@ -49,21 +45,18 @@ namespace Olimpiadas
                 idEnunciado.Enabled = true;
                 NombreEnunciado.Enabled = true;
                 listBoxEnunciados.Enabled = true;
-                if (enunciados[listBoxEnunciados.SelectedIndex].Avanzado == true)
-                {
+                if (enunciados[listBoxEnunciados.SelectedIndex].Avanzado == true) {
                     textoEnunciado.Enabled = false;
                     resultadoEnunciado.Enabled = false;
-                    actualizarEnunciado.Enabled = false;
+                    VistaPrevia.Enabled = false;
                 }
-                else
-                {
+                else {
                     textoEnunciado.Enabled = true;
                     resultadoEnunciado.Enabled = true;
-                    actualizarEnunciado.Enabled = true;
+                    VistaPrevia.Enabled = true;
                 }
             }
-            else
-            {
+            else {
                 NombreEnunciado.Enabled = false;
                 NombreEnunciado.Text = "";
                 cursoSeleccion.Enabled = false;
@@ -78,18 +71,15 @@ namespace Olimpiadas
                 resultadoEnunciado.Text = "";
                 abrirAvanzado.Enabled = false;
                 abrirImagen.Enabled = false;
-                actualizarEnunciado.Enabled = false;
+                VistaPrevia.Enabled = false;
             }
         }
-        private void CargarEnunciadosDesdeBaseDatos(BDD info)
-        {
+        private void CargarEnunciadosDesdeBaseDatos(BDD info) {
             listBoxEnunciados.Items.Clear();
             // Obtener todos los enunciados de la base de datos
             enunciados = info.ObtenerTodosEnunciados();
-            if (enunciados.Count > 0)
-            {
-                foreach (EnunciadoBase enunciado in enunciados)
-                {
+            if (enunciados.Count > 0) {
+                foreach (EnunciadoBase enunciado in enunciados) {
                     listBoxEnunciados.Items.Add(enunciado.Nombre);
                 }
                 ultimoId = enunciados.Max(enun => enun.Id);
@@ -97,78 +87,63 @@ namespace Olimpiadas
                 HabilitarFunciones();
             }
         }
-        private void EliminarEnunciadoDeBaseDatos(EnunciadoBase enunciado)
-        {
+        private void EliminarEnunciadoDeBaseDatos(EnunciadoBase enunciado) {
             BaseEnunciados.EliminarEnunciado(enunciado.Id);
         }
-        private void ActualizarListaEnunciados(int index)
-        {
+        private void ActualizarListaEnunciados(int index) {
             listBoxEnunciados.Items.Clear();
             int lastIndex;
-            foreach (EnunciadoBase enunciado in enunciados)
-            {
+            foreach (EnunciadoBase enunciado in enunciados) {
                 listBoxEnunciados.Items.Add(enunciado.Nombre);
             }
             lastIndex = listBoxEnunciados.Items.Count - 1;
-            if (index > lastIndex)
-            {
+            if (index > lastIndex) {
                 listBoxEnunciados.SelectedIndex = lastIndex;
             }
-            else
-            {
+            else {
                 listBoxEnunciados.SelectedIndex = index;
             }
         }
-        private void ActualizarBaseDeDatos()
-        {
+        private void ActualizarBaseDeDatos() {
             int seleccion = listBoxEnunciados.SelectedIndex;
             enunciados[seleccion].Enunciado = textoEnunciado.Text.ToString();
             bool esPosible = double.TryParse(resultadoEnunciado.Text, out double test);
-            if (esPosible){
+            if (esPosible) {
                 enunciados[seleccion].Respuesta = int.Parse(resultadoEnunciado.Text);
             }
             BaseEnunciados.ActualizarEnunciado(enunciados[seleccion]);
         }
-        public void CargarDatos(EnunciadoBase e)
-        {
+        public void CargarDatos(EnunciadoBase e) {
             NombreLista.Text = BaseEnunciados.nombre;
             HabilitarFunciones();
-            if (listBoxEnunciados.SelectedIndex >= 0 && listBoxEnunciados.SelectedIndex < enunciados.Count)
-            {
+            if (listBoxEnunciados.SelectedIndex >= 0 && listBoxEnunciados.SelectedIndex < enunciados.Count) {
                 NombreEnunciado.Text = e.Nombre;
                 cursoSeleccion.SelectedIndex = e.Curso;
                 categoria.SelectedIndex = e.Categoria;
                 idEnunciado.Text = e.Id.ToString();
                 textoEnunciado.Text = e.Enunciado;
-                if(e.Avanzado == true)
-                {
+                if (e.Avanzado == true) {
                     resultadoEnunciado.Text = e.Formula;
                 }
-                else
-                {
+                else {
                     resultadoEnunciado.Text = e.Respuesta.ToString();
                 }
-                if (e.Imagen != null)
-                {
-                    using (MemoryStream ms = new MemoryStream(e.Imagen))
-                    {
+                if (e.Imagen != null) {
+                    using (MemoryStream ms = new MemoryStream(e.Imagen)) {
                         imagenEnunciado.Image = System.Drawing.Image.FromStream(ms);
                     }
                 }
-                else
-                {
+                else {
                     imagenEnunciado.Image = null;
                 }
-            }            
+            }
         }
-        public void ActualizarAvanzado(string enunciado, string resultado)
-        {
+        public void ActualizarAvanzado(string enunciado, string resultado) {
             textoEnunciado.Text = enunciado;
             resultadoEnunciado.Text = resultado;
-            actualizarEnunciado.Enabled = false;
+            VistaPrevia.Enabled = false;
         }
-        private void crearEnunciado()
-        {
+        private void crearEnunciado() {
             // Incrementar el último ID utilizado
             ultimoId++;
 
@@ -176,8 +151,7 @@ namespace Olimpiadas
             string nuevoNombre = "Enunciado " + ultimoId;
 
             // Crear un nuevo enunciado con valores predeterminados
-            EnunciadoBase nuevoEnunciado = new EnunciadoBase
-            {
+            EnunciadoBase nuevoEnunciado = new EnunciadoBase {
                 Id = ultimoId,
                 Nombre = nuevoNombre,
                 Categoria = 0, // Valor predeterminado para la categoría
@@ -215,8 +189,7 @@ namespace Olimpiadas
 
             CargarDatos(enunciados[listBoxEnunciados.SelectedIndex]);
         }
-        private void abrirImagen_Click(object sender, EventArgs e)
-        {
+        private void abrirImagen_Click(object sender, EventArgs e) {
             // Crear un nuevo OpenFileDialog
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
@@ -227,8 +200,7 @@ namespace Olimpiadas
             DialogResult result = openFileDialog.ShowDialog();
 
             // Verificar si se seleccionó un archivo de imagen
-            if (result == DialogResult.OK)
-            {
+            if (result == DialogResult.OK) {
                 // Obtener la ruta del archivo seleccionado
                 string filePath = openFileDialog.FileName;
 
@@ -241,48 +213,35 @@ namespace Olimpiadas
                 {
                     MessageBox.Show("La imagen seleccionada excede el tamaño máximo permitido (1 MB). Por favor, selecciona una imagen más pequeña.", "Tamaño de imagen excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else
-                {
-                    // Definir la carpeta de destino para guardar la imagen
-                    string folderPath = "Imagenes";
-
-                    // Crear la carpeta si no existe
-                    if (!Directory.Exists(folderPath))
-                    {
-                        Directory.CreateDirectory(folderPath);
-                    }
-
-                    try
-                    {
-                        // Generar un nombre único para el archivo de imagen
-                        string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(filePath);
-
-                        // Construir la ruta completa del archivo de imagen en la carpeta de destino
-                        string destinationFilePath = Path.Combine(folderPath, uniqueFileName);
-
-                        // Copiar el archivo de la ubicación original a la carpeta de destino
-                        File.Copy(filePath, destinationFilePath);
+                else {
+                    try {
+                        // Leer la imagen como un arreglo de bytes
+                        byte[] imageBytes = File.ReadAllBytes(filePath);
 
                         // Mostrar la imagen en el PictureBox
                         imagenEnunciado.SizeMode = PictureBoxSizeMode.Zoom; // Escalar y centrar la imagen
-                        imagenEnunciado.Image = System.Drawing.Image.FromFile(destinationFilePath);
+                        using (MemoryStream ms = new MemoryStream(imageBytes)) {
+                            imagenEnunciado.Image = System.Drawing.Image.FromStream(ms); // Especificar System.Drawing.Image aquí
+                        }
+
+                        // Guardar los bytes de la imagen en la propiedad Imagen del enunciado (asumiendo que es un arreglo de bytes en la base de datos)
+                        enunciados[listBoxEnunciados.SelectedIndex].Imagen = imageBytes;
+                        
+                        ActualizarBaseDeDatos();
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Se produjo un error al intentar guardar la imagen:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    catch (Exception ex) {
+                        MessageBox.Show($"Se produjo un error al intentar abrir la imagen:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
         }
-        private void actualizarEnunciado_Click(object sender, EventArgs e)
-        {
+
+        private void actualizarEnunciado_Click(object sender, EventArgs e) {
             ActualizarBaseDeDatos();
         }
-        private void borrarEnunciado_Click(object sender, EventArgs e)
-        {
+        private void borrarEnunciado_Click(object sender, EventArgs e) {
             // Verificar si hay un enunciado seleccionado en la lista
-            if (listBoxEnunciados.SelectedIndex >= 0)
-            {
+            if (listBoxEnunciados.SelectedIndex >= 0) {
                 // Obtener el índice del enunciado seleccionado
                 int indiceSeleccionado = listBoxEnunciados.SelectedIndex;
 
@@ -300,8 +259,7 @@ namespace Olimpiadas
                 HabilitarFunciones();
             }
         }
-        private void cambiarBDD_Click(object sender, EventArgs e)
-        {
+        private void cambiarBDD_Click(object sender, EventArgs e) {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             // Establecer el filtro de archivos para mostrar solo archivos SQLite
@@ -311,8 +269,7 @@ namespace Olimpiadas
             DialogResult result = openFileDialog.ShowDialog();
 
             // Verificar si se seleccionó un archivo
-            if (result == DialogResult.OK)
-            {
+            if (result == DialogResult.OK) {
                 // Obtener la ruta del archivo seleccionado
                 string archivoSeleccionado = openFileDialog.FileName;
                 string nombreLista = Path.GetFileNameWithoutExtension(archivoSeleccionado);
@@ -327,8 +284,7 @@ namespace Olimpiadas
                 CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
             }
         }
-        private void crearLista_Click(object sender, EventArgs e)
-        {
+        private void crearLista_Click(object sender, EventArgs e) {
             string databasePath;
             // Crear un nuevo diálogo de Guardar Archivo
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -338,8 +294,7 @@ namespace Olimpiadas
             saveFileDialog.AddExtension = true;
 
             // Mostrar el diálogo y verificar si el usuario hizo clic en Guardar
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
+            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
                 string archivoSeleccionado = saveFileDialog.FileName;
                 string nombreLista = Path.GetFileNameWithoutExtension(archivoSeleccionado);
                 // Asignar el nombre al TextBox
@@ -353,10 +308,8 @@ namespace Olimpiadas
                 ultimoId = 0;
             }
         }
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (listBoxEnunciados.SelectedIndex >= 0)
-            {
+        private void button5_Click(object sender, EventArgs e) {
+            if (listBoxEnunciados.SelectedIndex >= 0) {
                 // Obtener el índice del enunciado seleccionado
                 int indiceSeleccionado = listBoxEnunciados.SelectedIndex;
 
@@ -368,44 +321,45 @@ namespace Olimpiadas
                 mv.Show();
             }
         }
-        private void nuevoEnunciado_Click(object sender, EventArgs e)
-        {
+        private void nuevoEnunciado_Click(object sender, EventArgs e) {
             crearEnunciado();
         }
-        private void categoria_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void categoria_SelectedIndexChanged(object sender, EventArgs e) {
             int indiceSeleccionado = listBoxEnunciados.SelectedIndex;
             enunciados[indiceSeleccionado].Categoria = categoria.SelectedIndex;
             BaseEnunciados.ActualizarEnunciado(enunciados[indiceSeleccionado]);
         }
-        private void cursoSeleccion_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void cursoSeleccion_SelectedIndexChanged(object sender, EventArgs e) {
             int indiceSeleccionado = listBoxEnunciados.SelectedIndex;
             enunciados[indiceSeleccionado].Curso = cursoSeleccion.SelectedIndex;
             BaseEnunciados.ActualizarEnunciado(enunciados[indiceSeleccionado]);
         }
-        private void AlterarBDD_FormClosed(object sender, FormClosedEventArgs e)
-        {
+        private void AlterarBDD_FormClosed(object sender, FormClosedEventArgs e) {
             System.Windows.Forms.Application.Exit();
         }
-        private void AlterarBDD_Load(object sender, EventArgs e)
-        {
+        private void AlterarBDD_Load(object sender, EventArgs e) {
             NombreLista.Text = BaseEnunciados.nombre;
-            if (enunciados.Count > 0)
-            {
+            imagenEnunciado.SizeMode = PictureBoxSizeMode.Zoom; // Escalar y centrar la imagen
+            if (enunciados.Count > 0) {
                 HabilitarFunciones();
                 CargarDatos(enunciados[0]);
             }
         }
 
-        private void listBoxEnunciados_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void listBoxEnunciados_SelectedIndexChanged(object sender, EventArgs e) {
             int indiceSeleccionado = listBoxEnunciados.SelectedIndex;
-            if (indiceSeleccionado >= 0 && indiceSeleccionado < listBoxEnunciados.Items.Count)
-            {
+            if (indiceSeleccionado >= 0 && indiceSeleccionado < listBoxEnunciados.Items.Count) {
                 listBoxEnunciados.SelectedIndex = indiceSeleccionado;
                 CargarDatos(enunciados[indiceSeleccionado]);
             }
+        }
+
+        private void textoEnunciado_TextChanged(object sender, EventArgs e) {
+            ActualizarBaseDeDatos();
+        }
+
+        private void resultadoEnunciado_TextChanged(object sender, EventArgs e) {
+            ActualizarBaseDeDatos();
         }
     }
 }

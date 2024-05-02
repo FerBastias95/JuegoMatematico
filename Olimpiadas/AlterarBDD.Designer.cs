@@ -37,7 +37,7 @@
             textoEnunciado = new RichTextBox();
             idEnunciado = new TextBox();
             label10 = new Label();
-            actualizarEnunciado = new Button();
+            VistaPrevia = new Button();
             abrirImagen = new Button();
             abrirAvanzado = new Button();
             label5 = new Label();
@@ -177,6 +177,7 @@
             textoEnunciado.Size = new Size(470, 447);
             textoEnunciado.TabIndex = 15;
             textoEnunciado.Text = "";
+            textoEnunciado.TextChanged += textoEnunciado_TextChanged;
             // 
             // idEnunciado
             // 
@@ -201,20 +202,20 @@
             label10.Text = "ID";
             label10.TextAlign = ContentAlignment.TopCenter;
             // 
-            // actualizarEnunciado
+            // VistaPrevia
             // 
-            actualizarEnunciado.Dock = DockStyle.Fill;
-            actualizarEnunciado.Enabled = false;
-            actualizarEnunciado.Font = new Font("Segoe UI", 12F);
-            actualizarEnunciado.ImageAlign = ContentAlignment.MiddleRight;
-            actualizarEnunciado.Location = new Point(3, 65);
-            actualizarEnunciado.Margin = new Padding(3, 4, 3, 4);
-            actualizarEnunciado.Name = "actualizarEnunciado";
-            actualizarEnunciado.Size = new Size(947, 53);
-            actualizarEnunciado.TabIndex = 27;
-            actualizarEnunciado.Text = "Actualizar";
-            actualizarEnunciado.UseVisualStyleBackColor = true;
-            actualizarEnunciado.Click += actualizarEnunciado_Click;
+            VistaPrevia.Dock = DockStyle.Fill;
+            VistaPrevia.Enabled = false;
+            VistaPrevia.Font = new Font("Segoe UI", 12F);
+            VistaPrevia.ImageAlign = ContentAlignment.MiddleRight;
+            VistaPrevia.Location = new Point(3, 65);
+            VistaPrevia.Margin = new Padding(3, 4, 3, 4);
+            VistaPrevia.Name = "VistaPrevia";
+            VistaPrevia.Size = new Size(947, 53);
+            VistaPrevia.TabIndex = 27;
+            VistaPrevia.Text = "Vista Previa";
+            VistaPrevia.UseVisualStyleBackColor = true;
+            VistaPrevia.Click += actualizarEnunciado_Click;
             // 
             // abrirImagen
             // 
@@ -370,6 +371,7 @@
             resultadoEnunciado.Name = "resultadoEnunciado";
             resultadoEnunciado.Size = new Size(313, 39);
             resultadoEnunciado.TabIndex = 50;
+            resultadoEnunciado.TextChanged += resultadoEnunciado_TextChanged;
             // 
             // label8
             // 
@@ -566,7 +568,7 @@
             tableLayoutPanel8.ColumnCount = 1;
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel8.Controls.Add(abrirAvanzado, 0, 0);
-            tableLayoutPanel8.Controls.Add(actualizarEnunciado, 0, 1);
+            tableLayoutPanel8.Controls.Add(VistaPrevia, 0, 1);
             tableLayoutPanel8.Dock = DockStyle.Fill;
             tableLayoutPanel8.Location = new Point(3, 557);
             tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -640,7 +642,7 @@
         private RichTextBox textoEnunciado;
         private TextBox idEnunciado;
         private Label label10;
-        private Button actualizarEnunciado;
+        private Button VistaPrevia;
         private Button abrirImagen;
         private Button abrirAvanzado;
         private Label label5;

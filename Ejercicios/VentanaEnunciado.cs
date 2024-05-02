@@ -40,7 +40,6 @@ namespace Ejercicios
             double input;
             bool valid = double.TryParse(RespuestaP1.Text, out double d1);
             if (valid){
-                MessageBox.Show($"{enu.Decimal1}");
                 input = double.Parse(RespuestaP1.Text);
                 double valorAbsoluto = Math.Abs(input - r);
                 Math.Round(input, 1);
@@ -54,7 +53,7 @@ namespace Ejercicios
                     this.Close();
                 }
                 else {
-                    MessageBox.Show($"Error, intente nuevamente.{enu.Respuesta}");
+                    MessageBox.Show($"Error, intente nuevamente.");
                     v--;
                     FormPrincipal.actualizarVidas(v);
                     FormPrincipal.modificarVariables(enu);

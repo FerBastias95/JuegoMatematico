@@ -10,7 +10,7 @@ namespace Ejercicios {
         public int vidas = 0;
         public int dif = 3;
         public int correctas = 0;
-        public int botonesActivos = 0;
+        public int tiempo;
         public bool problema1R, problema2R, problema3R, problema4R, problema5R,
             problema6R, problema7R, problema8R, problema9R, problema10R,
             problema1F, problema2F, problema3F, problema4F, problema5F
@@ -27,11 +27,16 @@ namespace Ejercicios {
         string pathName = "";
         BDD ejercicios;
         public Form1() {
+            tiempo = 60;
             vidas = 5;
             correctas = 0;
             InitializeComponent();
         }
         private void iniciarLayout() {
+            correctas = 0;
+            dif = 0;
+            vidas = 5;
+            tiempo = 60;
             for (int i = 0; i < 10; i++) {
                 labels[i].Text = "No";
                 labels[i].ForeColor = Color.Red;
@@ -52,6 +57,7 @@ namespace Ejercicios {
 
             if (result == DialogResult.OK) {
                 // Inicializar las listas
+                iniciarLayout();
                 ejercicios = null;
                 enunciados = new List<EnunciadoBase>();
                 avanzados = new List<EnunciadoBase>();
@@ -61,7 +67,6 @@ namespace Ejercicios {
                 string archivoSeleccionado = openFileDialog.FileName;
                 int i = 0;
                 Random randy = new Random();
-                botonesActivos = 0;
                 ejercicios = new BDD(archivoSeleccionado);
                 enunciados = ejercicios.ObtenerTodosEnunciados();
                 // Filtrar enunciados avanzados y almacenarlos en la lista avanzados
@@ -135,6 +140,7 @@ namespace Ejercicios {
                 }
                 dificultad(0);
                 cambiarVariables.Enabled = true;
+                botonOpciones.Enabled = true;
             }
             else {
                 MessageBox.Show("No se encontraron enunciados en el archivo seleccionado.");
@@ -245,7 +251,6 @@ namespace Ejercicios {
                 reemplazarVariables(e);
                 e.Respuesta = CalcularRespuesta(e);
             }
-
         }
         public void reemplazarVariables(EnunciadoBase enunciado) {
             if (enunciado.Avanzado) {
@@ -296,7 +301,7 @@ namespace Ejercicios {
         private void botonOpciones_Click(object sender, EventArgs e) {
             List<int> numeros = GenerarNumerosAleatorios(enunciados.Count - 1);
             Opciones o = new Opciones(this);
-            o.Show();
+            o.ShowDialog();
         }
 
         public void dificultad(int d) {
@@ -308,19 +313,19 @@ namespace Ejercicios {
                 botones[j].Hide();
             }
 
-            if (dif == 0) {
+            if (d == 0) {
                 for (i = 0; i < 5; i++) {
                     labels[i].Show();
                     botones[i].Show();
                 }
             }
-            else if (dif == 1) {
+            else if (d == 1) {
                 for (i = 0; i < 10; i++) {
                     labels[i].Show();
                     botones[i].Show();
                 }
             }
-            else if (dif == 2) {
+            else if (d == 2) {
                 for (int j = 0; j < 10; j++) {
                     labels[j].Hide();
                     botones[j].Hide();
@@ -508,7 +513,7 @@ namespace Ejercicios {
 
         private void button1_Click_1(object sender, EventArgs e) {
             if (problema1R == false) {
-                VentanaEnunciadoDesafio problema1Form = new VentanaEnunciadoDesafio(elegidos[9], this, 9);
+                VentanaEnunciadoDesafio problema1Form = new VentanaEnunciadoDesafio(elegidos, this);
                 problema1Form.FormPrincipal = this;
                 problema1Form.ShowDialog();
             }
