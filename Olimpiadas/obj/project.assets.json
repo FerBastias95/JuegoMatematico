@@ -1221,9 +1221,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj",
-      "projectName": "Olimpiadas",
-      "projectPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\Olimpiadas.csproj",
+      "projectUniqueName": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
+      "projectName": "CreadorEnunciados",
+      "projectPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
       "packagesPath": "C:\\Users\\ferba\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\obj\\",
       "projectStyle": "PackageReference",

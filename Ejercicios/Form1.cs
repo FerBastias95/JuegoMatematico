@@ -142,10 +142,7 @@ namespace Ejercicios {
                 cambiarVariables.Enabled = true;
                 botonOpciones.Enabled = true;
             }
-            else {
-                MessageBox.Show("No se encontraron enunciados en el archivo seleccionado.");
-            }
-        }
+¿        }
         static List<int> GenerarNumerosAleatorios(int X) {
             List<int> numerosAleatorios = new List<int>();
             HashSet<int> numerosGenerados = new HashSet<int>(); // Conjunto para evitar repeticiones
@@ -153,7 +150,6 @@ namespace Ejercicios {
 
             while (numerosAleatorios.Count < X + 1) {
                 int numeroAleatorio = rnd.Next(0, X + 1); // Genera un número aleatorio entre 0 y X
-
                 if (!numerosGenerados.Contains(numeroAleatorio)) {
                     numerosAleatorios.Add(numeroAleatorio);
                     numerosGenerados.Add(numeroAleatorio);
