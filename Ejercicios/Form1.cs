@@ -124,9 +124,12 @@ namespace Ejercicios {
                         enunciadoNuevo.Formula = enunciadoBase.Formula;
                         enunciadoNuevo.Original = enunciadoBase.Original;
                         enunciadoNuevo.indice = a;
+                        enunciadoNuevo.Categoria = enunciadoBase.Categoria;
+                        enunciadoNuevo.Curso = enunciadoBase.Curso;
                         // Agregar el nuevo enunciado a la lista de elegidos
 
                         CalcularRespuesta(enunciadoNuevo);
+
                         elegidos.Add(enunciadoNuevo);
                         a++;
                     }
@@ -136,13 +139,21 @@ namespace Ejercicios {
                 for (int j = 0; j < elegidos.Count; j++) {
                     var enunciado = elegidos[j];
                     botones[j].Show();
+
+                    // Modificar las variables del enunciado
                     modificarVariables(enunciado);
+
+                    // Validar la respuesta
+                    while (!IsResponseValid(enunciado)) {
+                        // La respuesta no es válida, volver a generar las variables
+                        modificarVariables(enunciado);
+                    }
                 }
                 dificultad(0);
                 cambiarVariables.Enabled = true;
                 botonOpciones.Enabled = true;
             }
-¿        }
+        }
         static List<int> GenerarNumerosAleatorios(int X) {
             List<int> numerosAleatorios = new List<int>();
             HashSet<int> numerosGenerados = new HashSet<int>(); // Conjunto para evitar repeticiones
@@ -264,7 +275,6 @@ namespace Ejercicios {
             formulaEvaluable = formulaEvaluable.Replace("Var3", enunciado.Variable3.ToString());
             formulaEvaluable = formulaEvaluable.Replace("Var4", enunciado.Variable4.ToString());
             formulaEvaluable = formulaEvaluable.Replace("π", "3.1415926535897932384626433832795");
-
             try {
                 object result = new DataTable().Compute(formulaEvaluable, null);
                 Console.WriteLine($"El resultado de la operación {formulaEvaluable} es: {result}");
@@ -275,6 +285,30 @@ namespace Ejercicios {
             catch (Exception ex) {
                 return -1;
             }
+        }
+        public bool IsResponseValid(EnunciadoBase enunciado) {
+            int categoria = enunciado.Categoria;
+
+            // Validar la respuesta solo para las categorías 1, 2 y 3
+            if (categoria == 1) {
+                // La respuesta debe ser menor que el valor del curso
+                return CalcularRespuesta(enunciado) > enunciado.Curso;
+            }
+            else if (categoria == 2) {
+                // La respuesta debe ser mayor que el valor del curso
+                return CalcularRespuesta(enunciado) < enunciado.Curso;
+            }
+            else if (categoria == 3) {
+                // La respuesta puede ser cualquier valor entero
+                return IsInteger(CalcularRespuesta(enunciado).ToString());
+            }
+            else {
+                // Todas las demás categorías devuelven respuestas válidas automáticamente
+                return true;
+            }
+        }
+        private bool IsInteger(string valor) {
+            return double.TryParse(valor, out double result) && result == Math.Floor(result);
         }
         private void Form1_Load(object sender, EventArgs e) {
             labels = [LabelP1, LabelP2, LabelP3, LabelP4, LabelP5, labelP6, labelP7, labelP8, labelP9, labelP10];
@@ -291,6 +325,10 @@ namespace Ejercicios {
         private void cambiarVariables_Click(object sender, EventArgs e) {
             for (int i = 0; i < 10; i++) {
                 modificarVariables(elegidos[i]);
+                while (!IsResponseValid(elegidos[i])) {
+                    // La respuesta no es válida, volver a generar las variables
+                    modificarVariables(elegidos[i]);
+                }
             }
             MessageBox.Show("Enunciados modificados");
         }

@@ -179,6 +179,24 @@ namespace Olimpiadas
                 }
             }
         }
+        public int ObtenerMaximoId() {
+            int maxId = 0;
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString)) {
+                connection.Open();
+
+                string selectQuery = "SELECT MAX(id) FROM enunciados";
+
+                using (SQLiteCommand command = new SQLiteCommand(selectQuery, connection)) {
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value) {
+                        maxId = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return maxId;
+        }
         public void ActualizarEnunciado(EnunciadoBase enunciado)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))

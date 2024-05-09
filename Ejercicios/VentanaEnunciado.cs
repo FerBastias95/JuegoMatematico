@@ -56,7 +56,10 @@ namespace Ejercicios
                     MessageBox.Show($"Error, intente nuevamente.");
                     v--;
                     FormPrincipal.actualizarVidas(v);
-                    FormPrincipal.modificarVariables(enu);
+                    while (!FormPrincipal.IsResponseValid(enu)) {
+                        // La respuesta no es válida, volver a generar las variables
+                        FormPrincipal.modificarVariables(enu);
+                    }
                     FormPrincipal.CalcularRespuesta(enu);
                     r = enu.Respuesta;
                     this.Close();

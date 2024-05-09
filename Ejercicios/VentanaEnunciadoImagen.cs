@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace Ejercicios {
     public partial class VentanaEnunciadoImagen : Form {
         EnunciadoBase enu;
+        private Image cachedImage = null;
         public Form1 FormPrincipal { get; set; }
         List<EnunciadoBase> lista;
         string en;
@@ -31,9 +32,12 @@ namespace Ejercicios {
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // Escalar y centrar la imagen
             Enunciado1.Text = en;
             if (enu.Imagen != null) {
-                using (MemoryStream ms = new MemoryStream(enu.Imagen)) {
-                    pictureBox1.Image = System.Drawing.Image.FromStream(ms);
+                if (cachedImage == null) { // Load only if not cached
+                    using (MemoryStream ms = new MemoryStream(enu.Imagen)) {
+                        cachedImage = System.Drawing.Image.FromStream(ms);
+                    }
                 }
+                pictureBox1.Image = cachedImage;
             }
             else {
                 pictureBox1.Image = null;
@@ -44,7 +48,6 @@ namespace Ejercicios {
             double input;
             bool valid = double.TryParse(RespuestaP1.Text, out double d1);
             if (valid) {
-                MessageBox.Show($"{enu.Decimal1}");
                 input = double.Parse(RespuestaP1.Text);
                 double valorAbsoluto = Math.Abs(input - r);
                 Math.Round(input, 1);
@@ -57,6 +60,10 @@ namespace Ejercicios {
                 else {
                     MessageBox.Show($"Error, intente nuevamente.{enu.Respuesta}");
                     FormPrincipal.modificarVariables(enu);
+                    while (!FormPrincipal.IsResponseValid(enu)) {
+                        // La respuesta no es válida, volver a generar las variables
+                        FormPrincipal.modificarVariables(enu);
+                    }
                     FormPrincipal.CalcularRespuesta(enu);
                     r = enu.Respuesta;
                 }
