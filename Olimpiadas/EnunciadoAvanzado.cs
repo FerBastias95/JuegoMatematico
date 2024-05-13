@@ -9,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Olimpiadas
-{
+namespace Olimpiadas {
     public partial class EnunciadoAvanzado : Form {
         BDD datosAvanzado;
         EnunciadoBase avanzado;
@@ -475,7 +474,7 @@ namespace Olimpiadas
 
         private void categoria_SelectedIndexChanged(object sender, EventArgs e) {
             avanzado.Categoria = categoria.SelectedIndex;
-            if(categoria.SelectedIndex == 1 || categoria.SelectedIndex == 2) {
+            if (categoria.SelectedIndex == 1 || categoria.SelectedIndex == 2) {
                 curso.Enabled = true;
             }
             else {

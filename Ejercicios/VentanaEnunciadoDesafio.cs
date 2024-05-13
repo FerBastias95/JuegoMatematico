@@ -47,6 +47,7 @@ namespace Ejercicios {
 
             enu = elegidos[seleccion];
             enunciado = enu.Enunciado;
+            FormPrincipal.modificarVariables(enu);
             while (!FormPrincipal.IsResponseValid(enu)) {
                 // La respuesta no es válida, volver a generar las variables
                 FormPrincipal.modificarVariables(enu);

@@ -43,8 +43,7 @@ namespace Ejercicios {
                 pictureBox1.Image = null;
             }
         }
-
-        private void botonP1_Click(object sender, EventArgs e) {
+        private void acciones() {
             double input;
             bool valid = double.TryParse(RespuestaP1.Text, out double d1);
             if (valid) {
@@ -67,6 +66,19 @@ namespace Ejercicios {
                     FormPrincipal.CalcularRespuesta(enu);
                     r = enu.Respuesta;
                 }
+            }
+        }
+
+        private void botonP1_Click(object sender, EventArgs e) {
+            acciones();
+        }
+        private void RespuestaP1_KeyPress(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Enter) {
+                // Llamar al método que deseas activar
+                acciones();
+
+                // Indicar que hemos manejado la tecla Enter para evitar que se inserte en el control
+                e.Handled = true;
             }
         }
     }

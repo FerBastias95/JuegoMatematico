@@ -10,8 +10,7 @@ using System.Windows.Forms;
 
 namespace Ejercicios
 {
-    public partial class VentanaEnunciado : Form
-    {
+    public partial class VentanaEnunciado : Form {
         EnunciadoBase enu;
         public Form1 FormPrincipal { get; set; }
         string en;
@@ -19,8 +18,7 @@ namespace Ejercicios
         int i;
         int v;
         int c;
-        public VentanaEnunciado(EnunciadoBase e, Form1 forma, int indice)
-        {
+        public VentanaEnunciado(EnunciadoBase e, Form1 forma, int indice) {
             enu = e;
             en = enu.Enunciado;
             r = enu.Respuesta;
@@ -29,17 +27,14 @@ namespace Ejercicios
             i = indice;
             InitializeComponent();
         }
-  
-        private void Problema_1_Load(object sender, EventArgs e)
-        {
+
+        private void Problema_1_Load(object sender, EventArgs e) {
             Enunciado1.Text = en;
         }
-
-        private void botonP1_Click(object sender, EventArgs e)
-        {
+        private void acciones() {
             double input;
             bool valid = double.TryParse(RespuestaP1.Text, out double d1);
-            if (valid){
+            if (valid) {
                 input = double.Parse(RespuestaP1.Text);
                 double valorAbsoluto = Math.Abs(input - r);
                 Math.Round(input, 1);
@@ -56,6 +51,7 @@ namespace Ejercicios
                     MessageBox.Show($"Error, intente nuevamente.");
                     v--;
                     FormPrincipal.actualizarVidas(v);
+                    FormPrincipal.modificarVariables(enu);
                     while (!FormPrincipal.IsResponseValid(enu)) {
                         // La respuesta no es válida, volver a generar las variables
                         FormPrincipal.modificarVariables(enu);
@@ -64,6 +60,17 @@ namespace Ejercicios
                     r = enu.Respuesta;
                     this.Close();
                 }
+            }
+        }
+
+        private void botonP1_Click(object sender, EventArgs e) {
+            acciones();
+        }
+
+        private void RespuestaP1_KeyPress(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Enter) {
+                acciones();
+                e.Handled = true;
             }
         }
     }

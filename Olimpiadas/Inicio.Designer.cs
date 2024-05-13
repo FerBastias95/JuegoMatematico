@@ -26,8 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             label1 = new Label();
             label3 = new Label();
             botonCrear = new Button();
@@ -42,11 +41,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
+            label1.Dock = DockStyle.Bottom;
             label1.Font = new Font("Segoe UI", 13.8F);
-            label1.Location = new Point(3, 0);
+            label1.Location = new Point(3, 48);
             label1.Name = "label1";
-            label1.Size = new Size(650, 79);
+            label1.Size = new Size(650, 31);
             label1.TabIndex = 0;
             label1.Text = "¡Bienvenido al editor de enunciados!";
             label1.TextAlign = ContentAlignment.BottomCenter;
@@ -54,11 +53,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Dock = DockStyle.Fill;
+            label3.Dock = DockStyle.Top;
             label3.Font = new Font("Segoe UI", 13.8F);
             label3.Location = new Point(3, 128);
             label3.Name = "label3";
-            label3.Size = new Size(650, 83);
+            label3.Size = new Size(650, 31);
             label3.TabIndex = 2;
             label3.Text = "o desea modificar una existente?";
             label3.TextAlign = ContentAlignment.TopCenter;
@@ -69,7 +68,7 @@
             botonCrear.Font = new Font("Segoe UI", 12F);
             botonCrear.Location = new Point(3, 3);
             botonCrear.Name = "botonCrear";
-            botonCrear.Size = new Size(319, 53);
+            botonCrear.Size = new Size(319, 64);
             botonCrear.TabIndex = 3;
             botonCrear.Text = "Crear";
             botonCrear.UseVisualStyleBackColor = true;
@@ -81,7 +80,7 @@
             botonModificar.Font = new Font("Segoe UI", 12F);
             botonModificar.Location = new Point(328, 3);
             botonModificar.Name = "botonModificar";
-            botonModificar.Size = new Size(319, 53);
+            botonModificar.Size = new Size(319, 64);
             botonModificar.TabIndex = 4;
             botonModificar.Text = "Modificar";
             botonModificar.UseVisualStyleBackColor = true;
@@ -101,8 +100,8 @@
             tableLayoutPanel1.RowCount = 4;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 61.2676048F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 38.7323952F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 83F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 64F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 72F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
             tableLayoutPanel1.Size = new Size(656, 276);
             tableLayoutPanel1.TabIndex = 5;
             // 
@@ -114,11 +113,11 @@
             tableLayoutPanel2.Controls.Add(botonCrear, 0, 0);
             tableLayoutPanel2.Controls.Add(botonModificar, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(3, 214);
+            tableLayoutPanel2.Location = new Point(3, 203);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(650, 59);
+            tableLayoutPanel2.Size = new Size(650, 70);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // label2
@@ -139,6 +138,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(656, 276);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Inicio";
             Text = "Inicio";
             tableLayoutPanel1.ResumeLayout(false);

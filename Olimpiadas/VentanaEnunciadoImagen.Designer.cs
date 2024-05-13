@@ -161,6 +161,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(648, 429);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "VentanaEnunciadoImagen";
             Text = "Ventana Enunciado";

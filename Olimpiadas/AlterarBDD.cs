@@ -16,7 +16,7 @@ namespace Olimpiadas
         private List<EnunciadoBase> enunciados;
         BDD BaseEnunciados;
         private int ultimoId = 0;
-        private int cantidad = 0;
+
         public AlterarBDD(BDD info) {
             BaseEnunciados = info;
             InitializeComponent();
@@ -62,11 +62,10 @@ namespace Olimpiadas
             // Obtener todos los enunciados de la base de datos
             enunciados = info.ObtenerTodosEnunciados();
             if (enunciados.Count > 0) {
-                cantidad = enunciados.Count;
                 foreach (EnunciadoBase enunciado in enunciados) {
                     listBoxEnunciados.Items.Add(enunciado.Nombre);
                 }
-                ultimoId = enunciados.Max(enun => enun.Id);
+                ultimoId = info.ObtenerIdMasAlto();
                 VistaPrevia.Enabled = true;
                 listBoxEnunciados.SelectedIndex = 0;
                 HabilitarFunciones();
@@ -90,15 +89,13 @@ namespace Olimpiadas
             }
         }
         private void ActualizarBaseDeDatos() {
-            if (cantidad > 0) {
-                int seleccion = listBoxEnunciados.SelectedIndex;
-                enunciados[seleccion].Enunciado = textoEnunciado.Text.ToString();
-                bool esPosible = double.TryParse(resultadoEnunciado.Text, out double test);
-                if (esPosible) {
-                    enunciados[seleccion].Respuesta = int.Parse(resultadoEnunciado.Text);
-                }
-                BaseEnunciados.ActualizarEnunciado(enunciados[seleccion]);
+            int seleccion = listBoxEnunciados.SelectedIndex;
+            enunciados[seleccion].Enunciado = textoEnunciado.Text.ToString();
+            bool esPosible = double.TryParse(resultadoEnunciado.Text, out double test);
+            if (esPosible) {
+                enunciados[seleccion].Respuesta = int.Parse(resultadoEnunciado.Text);
             }
+            BaseEnunciados.ActualizarEnunciado(enunciados[seleccion]);
         }
         public void CargarDatos(EnunciadoBase e) {
             NombreLista.Text = BaseEnunciados.nombre;
@@ -129,7 +126,6 @@ namespace Olimpiadas
         private void crearEnunciado() {
             // Incrementar el último ID utilizado
             ultimoId++;
-            cantidad++;
 
             // Generar un nombre predeterminado para el nuevo enunciado
             string nuevoNombre = "Enunciado " + ultimoId;
@@ -210,7 +206,7 @@ namespace Olimpiadas
 
                         // Guardar los bytes de la imagen en la propiedad Imagen del enunciado (asumiendo que es un arreglo de bytes en la base de datos)
                         enunciados[listBoxEnunciados.SelectedIndex].Imagen = imageBytes;
-
+                        
                         ActualizarBaseDeDatos();
                     }
                     catch (Exception ex) {
@@ -240,7 +236,6 @@ namespace Olimpiadas
                 EliminarEnunciadoDeBaseDatos(enunciadoSeleccionado);
 
                 // Actualizar la vista de la lista
-                cantidad--;
                 ActualizarListaEnunciados(indiceSeleccionado);
                 HabilitarFunciones();
             }
@@ -266,8 +261,7 @@ namespace Olimpiadas
                 BaseEnunciados = BaseEnunciados2;
                 enunciados.Clear();
                 enunciados = BaseEnunciados.ObtenerTodosEnunciados();
-                ultimoId = BaseEnunciados.ObtenerMaximoId();
-                cantidad = enunciados.Count;
+                ultimoId = BaseEnunciados.ObtenerIdMasAlto();
                 CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
             }
         }
@@ -282,8 +276,6 @@ namespace Olimpiadas
 
             // Mostrar el diálogo y verificar si el usuario hizo clic en Guardar
             if (saveFileDialog.ShowDialog() == DialogResult.OK) {
-                ultimoId = 0;
-                cantidad = 0;
                 string archivoSeleccionado = saveFileDialog.FileName;
                 string nombreLista = Path.GetFileNameWithoutExtension(archivoSeleccionado);
                 // Asignar el nombre al TextBox
@@ -294,6 +286,7 @@ namespace Olimpiadas
                 BaseEnunciados.CrearTablaEnunciados();
                 CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
                 HabilitarFunciones();
+                ultimoId = 0;
             }
         }
         private void button5_Click(object sender, EventArgs e) {
@@ -337,10 +330,6 @@ namespace Olimpiadas
         }
 
         private void resultadoEnunciado_TextChanged(object sender, EventArgs e) {
-            ActualizarBaseDeDatos();
-        }
-
-        private void NombreEnunciado_TextChanged(object sender, EventArgs e) {
             ActualizarBaseDeDatos();
         }
     }

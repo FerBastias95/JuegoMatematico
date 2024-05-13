@@ -60,6 +60,7 @@
             RespuestaP1.Name = "RespuestaP1";
             RespuestaP1.Size = new Size(498, 32);
             RespuestaP1.TabIndex = 2;
+            RespuestaP1.KeyPress += RespuestaP1_KeyPress;
             // 
             // label1
             // 
@@ -160,6 +161,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(648, 429);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "VentanaEnunciadoImagen";
             Text = "Ventana Enunciado";

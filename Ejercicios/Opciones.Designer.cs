@@ -105,8 +105,8 @@
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.ColumnCount = 3;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66.6666641F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60.25974F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 39.74026F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 159F));
             tableLayoutPanel3.Controls.Add(radioButton3, 0, 0);
             tableLayoutPanel3.Controls.Add(label2, 1, 0);
@@ -127,7 +127,7 @@
             radioButton3.Font = new Font("Segoe UI", 12F);
             radioButton3.Location = new Point(3, 3);
             radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(251, 49);
+            radioButton3.Size = new Size(226, 49);
             radioButton3.TabIndex = 3;
             radioButton3.TabStop = true;
             radioButton3.Text = "Infinitos ejercicios";
@@ -140,11 +140,11 @@
             label2.AutoSize = true;
             label2.Dock = DockStyle.Fill;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(260, 0);
+            label2.Location = new Point(235, 0);
             label2.Name = "label2";
-            label2.Size = new Size(122, 55);
+            label2.Size = new Size(147, 55);
             label2.TabIndex = 4;
-            label2.Text = "Tiempo";
+            label2.Text = "Tiempo límite";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // opcionesTiempo
@@ -187,6 +187,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(557, 367);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Opciones";
             Text = "Opciones";
             Load += Opciones_Load;

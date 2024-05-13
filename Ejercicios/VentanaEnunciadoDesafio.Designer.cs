@@ -307,9 +307,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(706, 477);
             Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "VentanaEnunciadoDesafio";
-            Text = "Ventana Enunciado";
+            Text = "Ventana Enunciado Infinito";
             Load += Problema_1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tableLayoutPanel1.ResumeLayout(false);

@@ -179,23 +179,22 @@ namespace Olimpiadas
                 }
             }
         }
-        public int ObtenerMaximoId() {
-            int maxId = 0;
+        public int ObtenerIdMasAlto() {
+            int idMasAlto = 0;
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString)) {
                 connection.Open();
-
-                string selectQuery = "SELECT MAX(id) FROM enunciados";
+                string selectQuery = "SELECT MAX(id) FROM enunciados"; // Consulta SQL para obtener el máximo id
 
                 using (SQLiteCommand command = new SQLiteCommand(selectQuery, connection)) {
-                    object result = command.ExecuteScalar();
-                    if (result != null && result != DBNull.Value) {
-                        maxId = Convert.ToInt32(result);
+                    object resultado = command.ExecuteScalar(); // Ejecutar la consulta y obtener el resultado
+
+                    if (resultado != null && resultado != DBNull.Value) {
+                        idMasAlto = Convert.ToInt32(resultado); // Convertir a entero
                     }
                 }
             }
-
-            return maxId;
+            return idMasAlto;
         }
         public void ActualizarEnunciado(EnunciadoBase enunciado)
         {
