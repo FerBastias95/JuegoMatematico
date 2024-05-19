@@ -321,6 +321,10 @@ namespace Ejercicios {
             LabelResueltos.Text = correctas.ToString();
             dificultad(3);
             iniciarLayout();
+            toolTip1.SetToolTip(this.botonOpciones, "Acá puede definir cuántos ejercicios desea resolver. También puede optar por un desafío con tiempo.");
+            toolTip1.SetToolTip(this.button1, "Presione aquí para iniciar el desafío contrarreloj.");
+            toolTip1.SetToolTip(this.cambiarVariables, "Si desea modificar los números de los enunciados, presione aquí.");
+            toolTip1.SetToolTip(this.abrirEnunciados, "Presione aquí para abrir una lista de ejercicios. En caso de no tener, utilice el generador.");
         }
         private void cambiarVariables_Click(object sender, EventArgs e) {
             for (int i = 0; i < 10; i++) {

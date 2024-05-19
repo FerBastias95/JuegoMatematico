@@ -54,6 +54,7 @@ namespace Ejercicios {
             }
             r = enu.Respuesta;
             Enunciado1.Text = enunciado;
+            Enunciado1.Text += " " + enu.Respuesta;
             if (enu.Imagen != null) {
                 using (MemoryStream ms = new MemoryStream(enu.Imagen)) {
                     pictureBox1.Image = System.Drawing.Image.FromStream(ms);

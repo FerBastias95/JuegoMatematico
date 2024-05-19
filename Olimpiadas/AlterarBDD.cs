@@ -18,6 +18,11 @@ namespace Olimpiadas
         private int ultimoId = 0;
 
         public AlterarBDD(BDD info) {
+            // Opcional: Habilitar doble búfer para reducir parpadeo
+            this.DoubleBuffered = true;
+
+            // Establecer un color de fondo que no interfiera (aunque no será visible)
+            this.BackColor = Color.White;
             BaseEnunciados = info;
             InitializeComponent();
             enunciados = new List<EnunciadoBase>(); // Inicializar la lista de enunciados
@@ -25,7 +30,16 @@ namespace Olimpiadas
             // Cargar los enunciados desde la base de datos al iniciar el formulario
             CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
         }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
 
+            // Redibujar la imagen de fondo
+            if (this.BackgroundImage != null)
+            {
+                e.Graphics.DrawImage(this.BackgroundImage, this.ClientRectangle);
+            }
+        }
         public void HabilitarFunciones() {
             if (enunciados.Count > 0) {
                 NombreEnunciado.Enabled = true;
