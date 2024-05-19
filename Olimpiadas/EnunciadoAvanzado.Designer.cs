@@ -191,7 +191,7 @@
             // 
             button24.BackColor = Color.DeepSkyBlue;
             button24.Dock = DockStyle.Fill;
-            button24.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button24.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button24.ForeColor = Color.White;
             button24.Location = new Point(150, 129);
             button24.Name = "button24";
@@ -205,7 +205,7 @@
             // 
             button18.BackColor = Color.DeepSkyBlue;
             button18.Dock = DockStyle.Fill;
-            button18.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button18.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button18.ForeColor = Color.White;
             button18.Location = new Point(3, 192);
             button18.Name = "button18";
@@ -219,7 +219,7 @@
             // 
             button13.BackColor = Color.White;
             button13.Dock = DockStyle.Fill;
-            button13.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button13.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button13.Location = new Point(151, 444);
             button13.Margin = new Padding(4, 3, 4, 3);
             button13.Name = "button13";
@@ -233,7 +233,7 @@
             // 
             button19.BackColor = Color.White;
             button19.Dock = DockStyle.Fill;
-            button19.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button19.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button19.Location = new Point(298, 444);
             button19.Margin = new Padding(4, 3, 4, 3);
             button19.Name = "button19";
@@ -247,7 +247,7 @@
             // 
             btnEqual.BackColor = Color.LimeGreen;
             btnEqual.Dock = DockStyle.Fill;
-            btnEqual.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEqual.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             btnEqual.ForeColor = Color.White;
             btnEqual.Location = new Point(445, 3);
             btnEqual.Margin = new Padding(4, 3, 4, 3);
@@ -262,7 +262,7 @@
             // 
             button29.BackColor = Color.LimeGreen;
             button29.Dock = DockStyle.Fill;
-            button29.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button29.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button29.ForeColor = Color.White;
             button29.Location = new Point(298, 3);
             button29.Margin = new Padding(4, 3, 4, 3);
@@ -277,7 +277,7 @@
             // 
             button10.BackColor = Color.White;
             button10.Dock = DockStyle.Fill;
-            button10.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button10.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button10.Location = new Point(151, 381);
             button10.Margin = new Padding(4, 3, 4, 3);
             button10.Name = "button10";
@@ -291,7 +291,7 @@
             // 
             btnBackSpace.BackColor = Color.Black;
             btnBackSpace.Dock = DockStyle.Fill;
-            btnBackSpace.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBackSpace.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             btnBackSpace.ForeColor = Color.White;
             btnBackSpace.Location = new Point(151, 3);
             btnBackSpace.Margin = new Padding(4, 3, 4, 3);
@@ -306,7 +306,7 @@
             // 
             button9.BackColor = Color.White;
             button9.Dock = DockStyle.Fill;
-            button9.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button9.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button9.Location = new Point(298, 381);
             button9.Margin = new Padding(4, 3, 4, 3);
             button9.Name = "button9";
@@ -320,7 +320,7 @@
             // 
             button8.BackColor = Color.White;
             button8.Dock = DockStyle.Fill;
-            button8.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button8.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button8.Location = new Point(298, 318);
             button8.Margin = new Padding(4, 3, 4, 3);
             button8.Name = "button8";
@@ -334,7 +334,7 @@
             // 
             button12.BackColor = Color.DodgerBlue;
             button12.Dock = DockStyle.Fill;
-            button12.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button12.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button12.ForeColor = Color.White;
             button12.Location = new Point(445, 444);
             button12.Margin = new Padding(4, 3, 4, 3);
@@ -349,7 +349,7 @@
             // 
             button5.BackColor = Color.DodgerBlue;
             button5.Dock = DockStyle.Fill;
-            button5.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button5.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button5.ForeColor = Color.White;
             button5.Location = new Point(445, 381);
             button5.Margin = new Padding(4, 3, 4, 3);
@@ -364,7 +364,7 @@
             // 
             button15.BackColor = Color.DodgerBlue;
             button15.Dock = DockStyle.Fill;
-            button15.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button15.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button15.ForeColor = Color.White;
             button15.Location = new Point(445, 318);
             button15.Margin = new Padding(4, 3, 4, 3);
@@ -380,7 +380,7 @@
             btnClear.AutoSize = true;
             btnClear.BackColor = Color.Black;
             btnClear.Dock = DockStyle.Fill;
-            btnClear.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnClear.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             btnClear.ForeColor = Color.White;
             btnClear.Location = new Point(4, 3);
             btnClear.Margin = new Padding(4, 3, 4, 3);
@@ -395,7 +395,7 @@
             // 
             button14.BackColor = Color.White;
             button14.Dock = DockStyle.Fill;
-            button14.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button14.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button14.Location = new Point(4, 444);
             button14.Margin = new Padding(4, 3, 4, 3);
             button14.Name = "button14";
@@ -409,7 +409,7 @@
             // 
             button7.BackColor = Color.White;
             button7.Dock = DockStyle.Fill;
-            button7.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button7.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button7.Location = new Point(151, 318);
             button7.Margin = new Padding(4, 3, 4, 3);
             button7.Name = "button7";
@@ -423,7 +423,7 @@
             // 
             button4.BackColor = Color.DeepSkyBlue;
             button4.Dock = DockStyle.Fill;
-            button4.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button4.ForeColor = Color.White;
             button4.Location = new Point(3, 66);
             button4.Name = "button4";
@@ -437,7 +437,7 @@
             // 
             button16.BackColor = Color.DodgerBlue;
             button16.Dock = DockStyle.Fill;
-            button16.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button16.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button16.ForeColor = Color.White;
             button16.Location = new Point(445, 255);
             button16.Margin = new Padding(4, 3, 4, 3);
@@ -452,7 +452,7 @@
             // 
             button17.BackColor = Color.DeepSkyBlue;
             button17.Dock = DockStyle.Fill;
-            button17.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button17.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button17.ForeColor = Color.White;
             button17.Location = new Point(3, 129);
             button17.Name = "button17";
@@ -466,7 +466,7 @@
             // 
             button3.BackColor = Color.White;
             button3.Dock = DockStyle.Fill;
-            button3.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button3.Location = new Point(298, 255);
             button3.Margin = new Padding(4, 3, 4, 3);
             button3.Name = "button3";
@@ -480,7 +480,7 @@
             // 
             button1.BackColor = Color.White;
             button1.Dock = DockStyle.Fill;
-            button1.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button1.Location = new Point(4, 255);
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
@@ -494,7 +494,7 @@
             // 
             button6.BackColor = Color.White;
             button6.Dock = DockStyle.Fill;
-            button6.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button6.Location = new Point(4, 318);
             button6.Margin = new Padding(4, 3, 4, 3);
             button6.Name = "button6";
@@ -508,7 +508,7 @@
             // 
             button11.BackColor = Color.White;
             button11.Dock = DockStyle.Fill;
-            button11.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button11.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button11.Location = new Point(4, 381);
             button11.Margin = new Padding(4, 3, 4, 3);
             button11.Name = "button11";
@@ -522,7 +522,7 @@
             // 
             button2.BackColor = Color.White;
             button2.Dock = DockStyle.Fill;
-            button2.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button2.Location = new Point(151, 255);
             button2.Margin = new Padding(4, 3, 4, 3);
             button2.Name = "button2";
@@ -536,7 +536,7 @@
             // 
             button25.BackColor = Color.DeepSkyBlue;
             button25.Dock = DockStyle.Fill;
-            button25.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button25.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button25.ForeColor = Color.White;
             button25.Location = new Point(150, 66);
             button25.Name = "button25";
@@ -550,7 +550,7 @@
             // 
             button27.BackColor = Color.DeepSkyBlue;
             button27.Dock = DockStyle.Fill;
-            button27.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button27.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button27.ForeColor = Color.White;
             button27.Location = new Point(297, 66);
             button27.Name = "button27";
@@ -564,7 +564,7 @@
             // 
             button28.BackColor = Color.DodgerBlue;
             button28.Dock = DockStyle.Fill;
-            button28.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button28.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button28.ForeColor = Color.White;
             button28.Location = new Point(445, 192);
             button28.Margin = new Padding(4, 3, 4, 3);
@@ -579,7 +579,7 @@
             // 
             button23.BackColor = Color.DeepSkyBlue;
             button23.Dock = DockStyle.Fill;
-            button23.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button23.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button23.ForeColor = Color.White;
             button23.Location = new Point(297, 192);
             button23.Name = "button23";
@@ -593,7 +593,7 @@
             // 
             button26.BackColor = Color.DeepSkyBlue;
             button26.Dock = DockStyle.Fill;
-            button26.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button26.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button26.ForeColor = Color.White;
             button26.Location = new Point(150, 192);
             button26.Name = "button26";
@@ -607,7 +607,7 @@
             // 
             button20.BackColor = Color.White;
             button20.Dock = DockStyle.Fill;
-            button20.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button20.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button20.Location = new Point(445, 66);
             button20.Margin = new Padding(4, 3, 4, 3);
             button20.Name = "button20";
@@ -621,7 +621,7 @@
             // 
             button30.BackColor = Color.White;
             button30.Dock = DockStyle.Fill;
-            button30.Font = new Font("Calibri", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button30.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button30.Location = new Point(445, 129);
             button30.Margin = new Padding(4, 3, 4, 3);
             button30.Name = "button30";
@@ -635,7 +635,7 @@
             // 
             button22.BackColor = Color.DeepSkyBlue;
             button22.Dock = DockStyle.Fill;
-            button22.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button22.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             button22.ForeColor = Color.White;
             button22.Location = new Point(297, 129);
             button22.Name = "button22";
@@ -648,6 +648,7 @@
             // var1b
             // 
             var1b.Dock = DockStyle.Fill;
+            var1b.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             var1b.Location = new Point(3, 507);
             var1b.Name = "var1b";
             var1b.Size = new Size(141, 46);
@@ -659,6 +660,7 @@
             // var2b
             // 
             var2b.Dock = DockStyle.Fill;
+            var2b.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             var2b.Location = new Point(150, 507);
             var2b.Name = "var2b";
             var2b.Size = new Size(141, 46);
@@ -670,6 +672,7 @@
             // var3b
             // 
             var3b.Dock = DockStyle.Fill;
+            var3b.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             var3b.Location = new Point(297, 507);
             var3b.Name = "var3b";
             var3b.Size = new Size(141, 46);
@@ -681,6 +684,7 @@
             // var4b
             // 
             var4b.Dock = DockStyle.Fill;
+            var4b.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             var4b.Location = new Point(444, 507);
             var4b.Name = "var4b";
             var4b.Size = new Size(142, 46);
@@ -738,6 +742,7 @@
             label9.AutoSize = true;
             label9.BackColor = Color.Lavender;
             label9.Dock = DockStyle.Fill;
+            label9.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             label9.Location = new Point(3, 0);
             label9.Name = "label9";
             label9.Size = new Size(583, 94);
@@ -748,6 +753,7 @@
             // tbInput
             // 
             tbInput.Dock = DockStyle.Fill;
+            tbInput.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             tbInput.Location = new Point(3, 97);
             tbInput.Name = "tbInput";
             tbInput.Size = new Size(583, 91);
@@ -758,6 +764,7 @@
             // 
             tbResult.BackColor = Color.PaleGreen;
             tbResult.Dock = DockStyle.Fill;
+            tbResult.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             tbResult.Location = new Point(3, 194);
             tbResult.Name = "tbResult";
             tbResult.Size = new Size(583, 42);
@@ -769,6 +776,7 @@
             label12.AutoSize = true;
             label12.BackColor = Color.Lavender;
             label12.Dock = DockStyle.Fill;
+            label12.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             label12.Location = new Point(3, 239);
             label12.Name = "label12";
             label12.Size = new Size(583, 51);
@@ -795,11 +803,12 @@
             // 
             categoria.Dock = DockStyle.Fill;
             categoria.DropDownStyle = ComboBoxStyle.DropDownList;
+            categoria.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             categoria.FormattingEnabled = true;
             categoria.Items.AddRange(new object[] { "Sin condiciones", "Mayor a", "Menor a", "Número entero" });
             categoria.Location = new Point(3, 3);
             categoria.Name = "categoria";
-            categoria.Size = new Size(369, 43);
+            categoria.Size = new Size(369, 30);
             categoria.TabIndex = 0;
             categoria.SelectedIndexChanged += categoria_SelectedIndexChanged;
             // 
@@ -807,9 +816,10 @@
             // 
             curso.Dock = DockStyle.Fill;
             curso.Enabled = false;
+            curso.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             curso.Location = new Point(378, 3);
             curso.Name = "curso";
-            curso.Size = new Size(202, 42);
+            curso.Size = new Size(202, 31);
             curso.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -845,6 +855,7 @@
             label8.AutoSize = true;
             label8.BackColor = Color.Lavender;
             label8.Dock = DockStyle.Fill;
+            label8.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.Location = new Point(3, 0);
             label8.Name = "label8";
             label8.Size = new Size(574, 155);
@@ -889,6 +900,7 @@
             // insertVar1
             // 
             insertVar1.Dock = DockStyle.Fill;
+            insertVar1.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             insertVar1.Location = new Point(3, 3);
             insertVar1.Name = "insertVar1";
             insertVar1.Size = new Size(134, 35);
@@ -900,6 +912,7 @@
             // insertVar2
             // 
             insertVar2.Dock = DockStyle.Fill;
+            insertVar2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             insertVar2.Location = new Point(143, 3);
             insertVar2.Name = "insertVar2";
             insertVar2.Size = new Size(138, 35);
@@ -911,6 +924,7 @@
             // insertVar3
             // 
             insertVar3.Dock = DockStyle.Fill;
+            insertVar3.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             insertVar3.Location = new Point(287, 3);
             insertVar3.Name = "insertVar3";
             insertVar3.Size = new Size(138, 35);
@@ -922,6 +936,7 @@
             // insertVar4
             // 
             insertVar4.Dock = DockStyle.Fill;
+            insertVar4.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             insertVar4.Location = new Point(431, 3);
             insertVar4.Name = "insertVar4";
             insertVar4.Size = new Size(134, 35);
@@ -933,6 +948,7 @@
             // avanzadoEnunciado
             // 
             avanzadoEnunciado.Dock = DockStyle.Fill;
+            avanzadoEnunciado.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             avanzadoEnunciado.Location = new Point(3, 3);
             avanzadoEnunciado.Name = "avanzadoEnunciado";
             avanzadoEnunciado.Size = new Size(568, 123);
@@ -1007,81 +1023,89 @@
             tableLayoutPanel7.RowCount = 5;
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 48.2758636F));
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 51.7241364F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 68F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 73F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 69F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 66F));
             tableLayoutPanel7.Size = new Size(574, 340);
             tableLayoutPanel7.TabIndex = 0;
             // 
             // var1i
             // 
             var1i.Dock = DockStyle.Fill;
-            var1i.Location = new Point(145, 73);
+            var1i.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            var1i.Location = new Point(145, 66);
             var1i.Name = "var1i";
-            var1i.Size = new Size(96, 69);
+            var1i.Size = new Size(96, 62);
             var1i.TabIndex = 0;
             var1i.Text = "";
             // 
             // var1f
             // 
             var1f.Dock = DockStyle.Fill;
-            var1f.Location = new Point(247, 73);
+            var1f.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            var1f.Location = new Point(247, 66);
             var1f.Name = "var1f";
-            var1f.Size = new Size(105, 69);
+            var1f.Size = new Size(105, 62);
             var1f.TabIndex = 1;
             var1f.Text = "";
             // 
             // var2i
             // 
             var2i.Dock = DockStyle.Fill;
-            var2i.Location = new Point(145, 148);
+            var2i.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            var2i.Location = new Point(145, 134);
             var2i.Name = "var2i";
-            var2i.Size = new Size(96, 62);
+            var2i.Size = new Size(96, 67);
             var2i.TabIndex = 2;
             var2i.Text = "";
             // 
             // var2f
             // 
             var2f.Dock = DockStyle.Fill;
-            var2f.Location = new Point(247, 148);
+            var2f.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            var2f.Location = new Point(247, 134);
             var2f.Name = "var2f";
-            var2f.Size = new Size(105, 62);
+            var2f.Size = new Size(105, 67);
             var2f.TabIndex = 3;
             var2f.Text = "";
             // 
             // var3i
             // 
             var3i.Dock = DockStyle.Fill;
-            var3i.Location = new Point(145, 216);
+            var3i.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            var3i.Location = new Point(145, 207);
             var3i.Name = "var3i";
-            var3i.Size = new Size(96, 64);
+            var3i.Size = new Size(96, 63);
             var3i.TabIndex = 4;
             var3i.Text = "";
             // 
             // var3f
             // 
             var3f.Dock = DockStyle.Fill;
-            var3f.Location = new Point(247, 216);
+            var3f.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            var3f.Location = new Point(247, 207);
             var3f.Name = "var3f";
-            var3f.Size = new Size(105, 64);
+            var3f.Size = new Size(105, 63);
             var3f.TabIndex = 5;
             var3f.Text = "";
             // 
             // var4i
             // 
             var4i.Dock = DockStyle.Fill;
-            var4i.Location = new Point(145, 286);
+            var4i.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            var4i.Location = new Point(145, 276);
             var4i.Name = "var4i";
-            var4i.Size = new Size(96, 51);
+            var4i.Size = new Size(96, 61);
             var4i.TabIndex = 6;
             var4i.Text = "";
             // 
             // var4f
             // 
             var4f.Dock = DockStyle.Fill;
-            var4f.Location = new Point(247, 286);
+            var4f.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            var4f.Location = new Point(247, 276);
             var4f.Name = "var4f";
-            var4f.Size = new Size(105, 51);
+            var4f.Size = new Size(105, 61);
             var4f.TabIndex = 7;
             var4f.Text = "";
             // 
@@ -1090,9 +1114,10 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Lavender;
             label1.Dock = DockStyle.Fill;
-            label1.Location = new Point(3, 70);
+            label1.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
+            label1.Location = new Point(3, 63);
             label1.Name = "label1";
-            label1.Size = new Size(136, 75);
+            label1.Size = new Size(136, 68);
             label1.TabIndex = 8;
             label1.Text = "Variable 1";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -1102,9 +1127,10 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Lavender;
             label2.Dock = DockStyle.Fill;
-            label2.Location = new Point(3, 145);
+            label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
+            label2.Location = new Point(3, 131);
             label2.Name = "label2";
-            label2.Size = new Size(136, 68);
+            label2.Size = new Size(136, 73);
             label2.TabIndex = 9;
             label2.Text = "Variable 2";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -1114,9 +1140,10 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Lavender;
             label3.Dock = DockStyle.Fill;
-            label3.Location = new Point(3, 213);
+            label3.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
+            label3.Location = new Point(3, 204);
             label3.Name = "label3";
-            label3.Size = new Size(136, 70);
+            label3.Size = new Size(136, 69);
             label3.TabIndex = 10;
             label3.Text = "Variable 3";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -1126,9 +1153,10 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Lavender;
             label4.Dock = DockStyle.Fill;
-            label4.Location = new Point(3, 283);
+            label4.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
+            label4.Location = new Point(3, 273);
             label4.Name = "label4";
-            label4.Size = new Size(136, 57);
+            label4.Size = new Size(136, 67);
             label4.TabIndex = 11;
             label4.Text = "Variable 4";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -1138,9 +1166,10 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Lavender;
             label5.Dock = DockStyle.Fill;
+            label5.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             label5.Location = new Point(145, 0);
             label5.Name = "label5";
-            label5.Size = new Size(96, 70);
+            label5.Size = new Size(96, 63);
             label5.TabIndex = 12;
             label5.Text = "Inicio";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -1150,9 +1179,10 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Lavender;
             label6.Dock = DockStyle.Fill;
+            label6.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             label6.Location = new Point(247, 0);
             label6.Name = "label6";
-            label6.Size = new Size(105, 70);
+            label6.Size = new Size(105, 63);
             label6.TabIndex = 13;
             label6.Text = "Final";
             label6.TextAlign = ContentAlignment.MiddleCenter;
@@ -1162,9 +1192,10 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Lavender;
             label7.Dock = DockStyle.Fill;
+            label7.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             label7.Location = new Point(3, 0);
             label7.Name = "label7";
-            label7.Size = new Size(136, 70);
+            label7.Size = new Size(136, 63);
             label7.TabIndex = 14;
             label7.Text = "Rango";
             label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -1173,9 +1204,10 @@
             // 
             label10.AutoSize = true;
             label10.Dock = DockStyle.Fill;
+            label10.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             label10.Location = new Point(479, 0);
             label10.Name = "label10";
-            label10.Size = new Size(92, 70);
+            label10.Size = new Size(92, 63);
             label10.TabIndex = 15;
             label10.Text = "Valor Actual";
             label10.TextAlign = ContentAlignment.MiddleCenter;
@@ -1184,9 +1216,10 @@
             // 
             labelv1.AutoSize = true;
             labelv1.Dock = DockStyle.Fill;
-            labelv1.Location = new Point(479, 70);
+            labelv1.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
+            labelv1.Location = new Point(479, 63);
             labelv1.Name = "labelv1";
-            labelv1.Size = new Size(92, 75);
+            labelv1.Size = new Size(92, 68);
             labelv1.TabIndex = 16;
             labelv1.Text = "0";
             labelv1.TextAlign = ContentAlignment.MiddleCenter;
@@ -1195,9 +1228,10 @@
             // 
             labelv2.AutoSize = true;
             labelv2.Dock = DockStyle.Fill;
-            labelv2.Location = new Point(479, 145);
+            labelv2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
+            labelv2.Location = new Point(479, 131);
             labelv2.Name = "labelv2";
-            labelv2.Size = new Size(92, 68);
+            labelv2.Size = new Size(92, 73);
             labelv2.TabIndex = 17;
             labelv2.Text = "0";
             labelv2.TextAlign = ContentAlignment.MiddleCenter;
@@ -1206,9 +1240,10 @@
             // 
             labelv3.AutoSize = true;
             labelv3.Dock = DockStyle.Fill;
-            labelv3.Location = new Point(479, 213);
+            labelv3.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
+            labelv3.Location = new Point(479, 204);
             labelv3.Name = "labelv3";
-            labelv3.Size = new Size(92, 70);
+            labelv3.Size = new Size(92, 69);
             labelv3.TabIndex = 18;
             labelv3.Text = "0";
             labelv3.TextAlign = ContentAlignment.MiddleCenter;
@@ -1217,9 +1252,10 @@
             // 
             labelv4.AutoSize = true;
             labelv4.Dock = DockStyle.Fill;
-            labelv4.Location = new Point(479, 283);
+            labelv4.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
+            labelv4.Location = new Point(479, 273);
             labelv4.Name = "labelv4";
-            labelv4.Size = new Size(92, 57);
+            labelv4.Size = new Size(92, 67);
             labelv4.TabIndex = 19;
             labelv4.Text = "0";
             labelv4.TextAlign = ContentAlignment.MiddleCenter;
@@ -1228,19 +1264,21 @@
             // 
             label11.AutoSize = true;
             label11.Dock = DockStyle.Fill;
+            label11.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             label11.Location = new Point(358, 0);
             label11.Name = "label11";
-            label11.Size = new Size(115, 70);
+            label11.Size = new Size(115, 63);
             label11.TabIndex = 20;
             label11.Text = "Permitir decimales";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
             checkBox1.Dock = DockStyle.Fill;
-            checkBox1.Location = new Point(358, 73);
+            checkBox1.Location = new Point(358, 66);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(115, 69);
+            checkBox1.Size = new Size(115, 62);
             checkBox1.TabIndex = 21;
             checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -1248,9 +1286,9 @@
             // 
             checkBox2.AutoSize = true;
             checkBox2.Dock = DockStyle.Fill;
-            checkBox2.Location = new Point(358, 148);
+            checkBox2.Location = new Point(358, 134);
             checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(115, 62);
+            checkBox2.Size = new Size(115, 67);
             checkBox2.TabIndex = 22;
             checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -1258,9 +1296,9 @@
             // 
             checkBox3.AutoSize = true;
             checkBox3.Dock = DockStyle.Fill;
-            checkBox3.Location = new Point(358, 216);
+            checkBox3.Location = new Point(358, 207);
             checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(115, 64);
+            checkBox3.Size = new Size(115, 63);
             checkBox3.TabIndex = 23;
             checkBox3.UseVisualStyleBackColor = true;
             // 
@@ -1268,9 +1306,9 @@
             // 
             checkBox4.AutoSize = true;
             checkBox4.Dock = DockStyle.Fill;
-            checkBox4.Location = new Point(358, 286);
+            checkBox4.Location = new Point(358, 276);
             checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(115, 51);
+            checkBox4.Size = new Size(115, 61);
             checkBox4.TabIndex = 24;
             checkBox4.UseVisualStyleBackColor = true;
             // 
@@ -1293,7 +1331,7 @@
             // 
             botonCerrar.BackColor = Color.Tomato;
             botonCerrar.Dock = DockStyle.Fill;
-            botonCerrar.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            botonCerrar.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             botonCerrar.Location = new Point(3, 102);
             botonCerrar.Name = "botonCerrar";
             botonCerrar.Size = new Size(568, 93);
@@ -1321,7 +1359,7 @@
             // 
             botonRandom.BackColor = Color.FromArgb(128, 255, 128);
             botonRandom.Dock = DockStyle.Fill;
-            botonRandom.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            botonRandom.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             botonRandom.Location = new Point(3, 3);
             botonRandom.Name = "botonRandom";
             botonRandom.Size = new Size(278, 87);
@@ -1334,7 +1372,7 @@
             // 
             botonGuardar.BackColor = Color.CornflowerBlue;
             botonGuardar.Dock = DockStyle.Fill;
-            botonGuardar.Font = new Font("Calibri", 12F, FontStyle.Bold);
+            botonGuardar.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             botonGuardar.Location = new Point(287, 3);
             botonGuardar.Name = "botonGuardar";
             botonGuardar.Size = new Size(278, 87);
