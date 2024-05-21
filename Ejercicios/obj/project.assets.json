@@ -108,6 +108,22 @@
           "lib/NCalc.dll": {}
         }
       },
+      "ReaLTaiizor/3.8.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows7.0/ReaLTaiizor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/ReaLTaiizor.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -631,6 +647,34 @@
         "lib/NCalc.dll",
         "ncalc.1.3.8.nupkg.sha512",
         "ncalc.nuspec"
+      ]
+    },
+    "ReaLTaiizor/3.8.0.5": {
+      "sha512": "l/LKMZXpfBwIEax7ZEXpRNlLmPAENN2OPf5sAYXVecjENvmlGhrgX0YKU72kFsw/Yjuzn+F01jMAAgs2mYsJIg==",
+      "type": "package",
+      "path": "realtaiizor/3.8.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.MD",
+        "Taiizor.png",
+        "lib/net48/ReaLTaiizor.dll",
+        "lib/net48/ReaLTaiizor.xml",
+        "lib/net481/ReaLTaiizor.dll",
+        "lib/net481/ReaLTaiizor.xml",
+        "lib/net6.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net6.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net7.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net7.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net8.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net8.0-windows7.0/ReaLTaiizor.xml",
+        "lib/net9.0-windows7.0/ReaLTaiizor.dll",
+        "lib/net9.0-windows7.0/ReaLTaiizor.xml",
+        "lib/netcoreapp3.1/ReaLTaiizor.dll",
+        "lib/netcoreapp3.1/ReaLTaiizor.xml",
+        "realtaiizor.3.8.0.5.nupkg.sha512",
+        "realtaiizor.nuspec"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -1233,7 +1277,8 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "System.Data.SQLite >= 1.0.118",
-      "ncalc >= 1.3.8"
+      "ncalc >= 1.3.8",
+      "realtaiizor >= 3.8.0.5"
     ]
   },
   "packageFolders": {
@@ -1243,11 +1288,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
+      "projectUniqueName": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
       "projectName": "Ejercicios",
-      "projectPath": "G:\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
+      "projectPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
       "packagesPath": "C:\\Users\\ferba\\.nuget\\packages\\",
-      "outputPath": "G:\\JuegoMatematico\\Ejercicios\\obj\\",
+      "outputPath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Ejercicios\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1275,6 +1320,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1288,6 +1338,10 @@
           "ncalc": {
             "target": "Package",
             "version": "[1.3.8, )"
+          },
+          "realtaiizor": {
+            "target": "Package",
+            "version": "[3.8.0.5, )"
           }
         },
         "imports": [
@@ -1309,7 +1363,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

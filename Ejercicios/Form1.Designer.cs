@@ -26,15 +26,9 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            botonP1 = new Button();
-            botonP2 = new Button();
-            botonP3 = new Button();
-            botonP4 = new Button();
-            botonP5 = new Button();
             label1 = new Label();
             label2 = new Label();
             LabelP1 = new Label();
@@ -46,132 +40,36 @@
             LabelResueltos = new Label();
             abrirEnunciados = new Button();
             botonOpciones = new Button();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            button1 = new Button();
-            tableLayoutPanel4 = new TableLayoutPanel();
             labelP6 = new Label();
             labelP7 = new Label();
             labelP8 = new Label();
             labelP9 = new Label();
             labelP10 = new Label();
-            botonP6 = new Button();
-            botonP7 = new Button();
-            botonP8 = new Button();
-            botonP9 = new Button();
-            botonP10 = new Button();
-            tableLayoutPanel5 = new TableLayoutPanel();
             cambiarVariables = new Button();
             tableLayoutPanel3 = new TableLayoutPanel();
             toolTip1 = new ToolTip(components);
-            tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
-            tableLayoutPanel5.SuspendLayout();
+            label3 = new Label();
+            label4 = new Label();
+            botonP1 = new ReaLTaiizor.Controls.HopeButton();
+            botonP2 = new ReaLTaiizor.Controls.HopeButton();
+            botonP3 = new ReaLTaiizor.Controls.HopeButton();
+            botonP4 = new ReaLTaiizor.Controls.HopeButton();
+            botonP5 = new ReaLTaiizor.Controls.HopeButton();
+            botonP6 = new ReaLTaiizor.Controls.HopeButton();
+            botonP7 = new ReaLTaiizor.Controls.HopeButton();
+            botonP8 = new ReaLTaiizor.Controls.HopeButton();
+            botonP9 = new ReaLTaiizor.Controls.HopeButton();
+            botonP10 = new ReaLTaiizor.Controls.HopeButton();
+            button1 = new ReaLTaiizor.Controls.HopeButton();
             SuspendLayout();
-            // 
-            // botonP1
-            // 
-            botonP1.BackColor = SystemColors.MenuHighlight;
-            botonP1.BackgroundImageLayout = ImageLayout.None;
-            botonP1.Cursor = Cursors.Hand;
-            botonP1.Dock = DockStyle.Fill;
-            botonP1.FlatAppearance.BorderColor = Color.Blue;
-            botonP1.FlatAppearance.BorderSize = 2;
-            botonP1.FlatStyle = FlatStyle.Flat;
-            botonP1.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP1.Location = new Point(4, 73);
-            botonP1.Margin = new Padding(4, 6, 4, 6);
-            botonP1.Name = "botonP1";
-            botonP1.Size = new Size(369, 161);
-            botonP1.TabIndex = 0;
-            botonP1.Text = "Problema 1";
-            botonP1.UseVisualStyleBackColor = false;
-            botonP1.Click += botonP1_Click;
-            // 
-            // botonP2
-            // 
-            botonP2.BackColor = SystemColors.MenuHighlight;
-            botonP2.Cursor = Cursors.Hand;
-            botonP2.Dock = DockStyle.Fill;
-            botonP2.FlatAppearance.BorderColor = Color.Blue;
-            botonP2.FlatAppearance.BorderSize = 2;
-            botonP2.FlatStyle = FlatStyle.Flat;
-            botonP2.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP2.Location = new Point(381, 73);
-            botonP2.Margin = new Padding(4, 6, 4, 6);
-            botonP2.Name = "botonP2";
-            botonP2.Size = new Size(369, 161);
-            botonP2.TabIndex = 1;
-            botonP2.Text = "Problema 2";
-            botonP2.UseVisualStyleBackColor = false;
-            botonP2.Click += botonP2_Click;
-            // 
-            // botonP3
-            // 
-            botonP3.BackColor = SystemColors.MenuHighlight;
-            botonP3.Cursor = Cursors.Hand;
-            botonP3.Dock = DockStyle.Fill;
-            botonP3.FlatAppearance.BorderColor = Color.Blue;
-            botonP3.FlatAppearance.BorderSize = 2;
-            botonP3.FlatStyle = FlatStyle.Flat;
-            botonP3.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP3.Location = new Point(758, 73);
-            botonP3.Margin = new Padding(4, 6, 4, 6);
-            botonP3.Name = "botonP3";
-            botonP3.Size = new Size(368, 161);
-            botonP3.TabIndex = 2;
-            botonP3.Text = "Problema 3";
-            botonP3.UseVisualStyleBackColor = false;
-            botonP3.Click += botonP3_Click;
-            // 
-            // botonP4
-            // 
-            botonP4.BackColor = SystemColors.MenuHighlight;
-            botonP4.Cursor = Cursors.Hand;
-            botonP4.Dock = DockStyle.Fill;
-            botonP4.FlatAppearance.BorderColor = Color.Blue;
-            botonP4.FlatAppearance.BorderSize = 2;
-            botonP4.FlatStyle = FlatStyle.Flat;
-            botonP4.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP4.Location = new Point(1134, 73);
-            botonP4.Margin = new Padding(4, 6, 4, 6);
-            botonP4.Name = "botonP4";
-            botonP4.Size = new Size(370, 161);
-            botonP4.TabIndex = 3;
-            botonP4.Text = "Problema 4";
-            botonP4.UseVisualStyleBackColor = false;
-            botonP4.Click += botonP4_Click;
-            // 
-            // botonP5
-            // 
-            botonP5.BackColor = SystemColors.MenuHighlight;
-            botonP5.BackgroundImage = Properties.Resources._172;
-            botonP5.BackgroundImageLayout = ImageLayout.Stretch;
-            botonP5.Cursor = Cursors.Hand;
-            botonP5.Dock = DockStyle.Fill;
-            botonP5.FlatAppearance.BorderColor = Color.Blue;
-            botonP5.FlatAppearance.BorderSize = 2;
-            botonP5.FlatStyle = FlatStyle.Flat;
-            botonP5.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP5.Location = new Point(1512, 73);
-            botonP5.Margin = new Padding(4, 6, 4, 6);
-            botonP5.Name = "botonP5";
-            botonP5.Size = new Size(369, 161);
-            botonP5.TabIndex = 4;
-            botonP5.Text = "Problema 5";
-            botonP5.UseVisualStyleBackColor = false;
-            botonP5.Click += botonP5_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(4, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(94, 542);
             label1.Name = "label1";
-            label1.Size = new Size(234, 64);
+            label1.Size = new Size(148, 25);
             label1.TabIndex = 5;
             label1.Text = "Vidas restantes: ";
             label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -179,12 +77,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Dock = DockStyle.Fill;
             label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(4, 64);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(94, 589);
             label2.Name = "label2";
-            label2.Size = new Size(234, 64);
+            label2.Size = new Size(95, 25);
             label2.TabIndex = 6;
             label2.Text = "Resueltos:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
@@ -192,13 +88,11 @@
             // LabelP1
             // 
             LabelP1.AutoSize = true;
-            LabelP1.Dock = DockStyle.Fill;
             LabelP1.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP1.ForeColor = Color.LimeGreen;
-            LabelP1.Location = new Point(4, 0);
-            LabelP1.Margin = new Padding(4, 0, 4, 0);
+            LabelP1.Location = new Point(94, 146);
             LabelP1.Name = "LabelP1";
-            LabelP1.Size = new Size(369, 67);
+            LabelP1.Size = new Size(53, 24);
             LabelP1.TabIndex = 8;
             LabelP1.Text = "¡OK!";
             LabelP1.TextAlign = ContentAlignment.BottomCenter;
@@ -206,13 +100,11 @@
             // LabelP2
             // 
             LabelP2.AutoSize = true;
-            LabelP2.Dock = DockStyle.Fill;
             LabelP2.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP2.ForeColor = Color.Red;
-            LabelP2.Location = new Point(381, 0);
-            LabelP2.Margin = new Padding(4, 0, 4, 0);
+            LabelP2.Location = new Point(271, 146);
             LabelP2.Name = "LabelP2";
-            LabelP2.Size = new Size(369, 67);
+            LabelP2.Size = new Size(37, 24);
             LabelP2.TabIndex = 9;
             LabelP2.Text = "No";
             LabelP2.TextAlign = ContentAlignment.BottomCenter;
@@ -220,13 +112,11 @@
             // LabelP3
             // 
             LabelP3.AutoSize = true;
-            LabelP3.Dock = DockStyle.Fill;
             LabelP3.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP3.ForeColor = Color.Red;
-            LabelP3.Location = new Point(758, 0);
-            LabelP3.Margin = new Padding(4, 0, 4, 0);
+            LabelP3.Location = new Point(450, 146);
             LabelP3.Name = "LabelP3";
-            LabelP3.Size = new Size(368, 67);
+            LabelP3.Size = new Size(37, 24);
             LabelP3.TabIndex = 10;
             LabelP3.Text = "No";
             LabelP3.TextAlign = ContentAlignment.BottomCenter;
@@ -234,13 +124,11 @@
             // LabelP4
             // 
             LabelP4.AutoSize = true;
-            LabelP4.Dock = DockStyle.Fill;
             LabelP4.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP4.ForeColor = Color.Red;
-            LabelP4.Location = new Point(1134, 0);
-            LabelP4.Margin = new Padding(4, 0, 4, 0);
+            LabelP4.Location = new Point(629, 146);
             LabelP4.Name = "LabelP4";
-            LabelP4.Size = new Size(370, 67);
+            LabelP4.Size = new Size(37, 24);
             LabelP4.TabIndex = 11;
             LabelP4.Text = "No";
             LabelP4.TextAlign = ContentAlignment.BottomCenter;
@@ -248,13 +136,11 @@
             // LabelP5
             // 
             LabelP5.AutoSize = true;
-            LabelP5.Dock = DockStyle.Fill;
             LabelP5.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP5.ForeColor = Color.Red;
-            LabelP5.Location = new Point(1512, 0);
-            LabelP5.Margin = new Padding(4, 0, 4, 0);
+            LabelP5.Location = new Point(808, 146);
             LabelP5.Name = "LabelP5";
-            LabelP5.Size = new Size(369, 67);
+            LabelP5.Size = new Size(37, 24);
             LabelP5.TabIndex = 12;
             LabelP5.Text = "No";
             LabelP5.TextAlign = ContentAlignment.BottomCenter;
@@ -262,12 +148,10 @@
             // labelVidas
             // 
             labelVidas.AutoSize = true;
-            labelVidas.Dock = DockStyle.Fill;
             labelVidas.Font = new Font("Segoe UI", 11F);
-            labelVidas.Location = new Point(246, 0);
-            labelVidas.Margin = new Padding(4, 0, 4, 0);
+            labelVidas.Location = new Point(248, 542);
             labelVidas.Name = "labelVidas";
-            labelVidas.Size = new Size(35, 64);
+            labelVidas.Size = new Size(22, 25);
             labelVidas.TabIndex = 13;
             labelVidas.Text = "0";
             labelVidas.TextAlign = ContentAlignment.MiddleLeft;
@@ -275,12 +159,10 @@
             // LabelResueltos
             // 
             LabelResueltos.AutoSize = true;
-            LabelResueltos.Dock = DockStyle.Fill;
             LabelResueltos.Font = new Font("Segoe UI", 11F);
-            LabelResueltos.Location = new Point(246, 64);
-            LabelResueltos.Margin = new Padding(4, 0, 4, 0);
+            LabelResueltos.Location = new Point(248, 589);
             LabelResueltos.Name = "LabelResueltos";
-            LabelResueltos.Size = new Size(35, 64);
+            LabelResueltos.Size = new Size(22, 25);
             LabelResueltos.TabIndex = 14;
             LabelResueltos.Text = "0";
             LabelResueltos.TextAlign = ContentAlignment.MiddleLeft;
@@ -288,12 +170,11 @@
             // abrirEnunciados
             // 
             abrirEnunciados.BackColor = SystemColors.GradientActiveCaption;
-            abrirEnunciados.Dock = DockStyle.Fill;
-            abrirEnunciados.Font = new Font("Courier New", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            abrirEnunciados.Location = new Point(289, 6);
-            abrirEnunciados.Margin = new Padding(4, 6, 4, 6);
+            abrirEnunciados.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
+            abrirEnunciados.Location = new Point(314, 542);
+            abrirEnunciados.Margin = new Padding(3, 4, 3, 4);
             abrirEnunciados.Name = "abrirEnunciados";
-            abrirEnunciados.Size = new Size(1592, 52);
+            abrirEnunciados.Size = new Size(667, 34);
             abrirEnunciados.TabIndex = 15;
             abrirEnunciados.Text = "Seleccionar Lista";
             abrirEnunciados.UseVisualStyleBackColor = false;
@@ -302,124 +183,23 @@
             // botonOpciones
             // 
             botonOpciones.BackColor = SystemColors.GradientActiveCaption;
-            botonOpciones.Dock = DockStyle.Fill;
             botonOpciones.Enabled = false;
-            botonOpciones.Font = new Font("Courier New", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            botonOpciones.Location = new Point(289, 68);
-            botonOpciones.Margin = new Padding(4);
+            botonOpciones.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
+            botonOpciones.Location = new Point(314, 588);
             botonOpciones.Name = "botonOpciones";
-            botonOpciones.Size = new Size(1592, 56);
+            botonOpciones.Size = new Size(667, 37);
             botonOpciones.TabIndex = 16;
             botonOpciones.Text = "Ajustar Dificultad";
             botonOpciones.UseVisualStyleBackColor = false;
             botonOpciones.Click += botonOpciones_Click;
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.BackColor = SystemColors.GradientInactiveCaption;
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
-            tableLayoutPanel1.Controls.Add(button1, 0, 3);
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel4, 0, 2);
-            tableLayoutPanel1.Controls.Add(tableLayoutPanel5, 0, 5);
-            tableLayoutPanel1.Controls.Add(cambiarVariables, 0, 4);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(4);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 6;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 43.68601F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 56.31399F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 234F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 129F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 135F));
-            tableLayoutPanel1.Size = new Size(1893, 1010);
-            tableLayoutPanel1.TabIndex = 17;
-            // 
-            // tableLayoutPanel2
-            // 
-            tableLayoutPanel2.ColumnCount = 5;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 376F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 378F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 376F));
-            tableLayoutPanel2.Controls.Add(LabelP2, 1, 0);
-            tableLayoutPanel2.Controls.Add(botonP5, 4, 1);
-            tableLayoutPanel2.Controls.Add(LabelP5, 4, 0);
-            tableLayoutPanel2.Controls.Add(botonP4, 3, 1);
-            tableLayoutPanel2.Controls.Add(LabelP4, 3, 0);
-            tableLayoutPanel2.Controls.Add(botonP3, 2, 1);
-            tableLayoutPanel2.Controls.Add(LabelP3, 2, 0);
-            tableLayoutPanel2.Controls.Add(botonP2, 1, 1);
-            tableLayoutPanel2.Controls.Add(botonP1, 0, 1);
-            tableLayoutPanel2.Controls.Add(LabelP1, 0, 0);
-            tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(4, 197);
-            tableLayoutPanel2.Margin = new Padding(4);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 28.3018875F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 71.69811F));
-            tableLayoutPanel2.Size = new Size(1885, 240);
-            tableLayoutPanel2.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.ActiveCaption;
-            button1.Cursor = Cursors.Hand;
-            button1.Dock = DockStyle.Fill;
-            button1.FlatAppearance.BorderSize = 2;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(4, 679);
-            button1.Margin = new Padding(4);
-            button1.Name = "button1";
-            button1.Size = new Size(1885, 121);
-            button1.TabIndex = 2;
-            button1.Text = "Modo desafío";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
-            // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.ColumnCount = 5;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 376F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 378F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 376F));
-            tableLayoutPanel4.Controls.Add(labelP6, 0, 0);
-            tableLayoutPanel4.Controls.Add(labelP7, 1, 0);
-            tableLayoutPanel4.Controls.Add(labelP8, 2, 0);
-            tableLayoutPanel4.Controls.Add(labelP9, 3, 0);
-            tableLayoutPanel4.Controls.Add(labelP10, 4, 0);
-            tableLayoutPanel4.Controls.Add(botonP6, 0, 1);
-            tableLayoutPanel4.Controls.Add(botonP7, 1, 1);
-            tableLayoutPanel4.Controls.Add(botonP8, 2, 1);
-            tableLayoutPanel4.Controls.Add(botonP9, 3, 1);
-            tableLayoutPanel4.Controls.Add(botonP10, 4, 1);
-            tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(4, 445);
-            tableLayoutPanel4.Margin = new Padding(4);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 25.333334F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 74.6666641F));
-            tableLayoutPanel4.Size = new Size(1885, 226);
-            tableLayoutPanel4.TabIndex = 3;
-            // 
             // labelP6
             // 
             labelP6.AutoSize = true;
-            labelP6.Dock = DockStyle.Fill;
             labelP6.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP6.Location = new Point(4, 0);
-            labelP6.Margin = new Padding(4, 0, 4, 0);
+            labelP6.Location = new Point(94, 303);
             labelP6.Name = "labelP6";
-            labelP6.Size = new Size(369, 57);
+            labelP6.Size = new Size(72, 24);
             labelP6.TabIndex = 0;
             labelP6.Text = "label3";
             labelP6.TextAlign = ContentAlignment.BottomCenter;
@@ -428,12 +208,10 @@
             // labelP7
             // 
             labelP7.AutoSize = true;
-            labelP7.Dock = DockStyle.Fill;
             labelP7.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP7.Location = new Point(381, 0);
-            labelP7.Margin = new Padding(4, 0, 4, 0);
+            labelP7.Location = new Point(271, 303);
             labelP7.Name = "labelP7";
-            labelP7.Size = new Size(369, 57);
+            labelP7.Size = new Size(72, 24);
             labelP7.TabIndex = 1;
             labelP7.Text = "label4";
             labelP7.TextAlign = ContentAlignment.BottomCenter;
@@ -442,12 +220,10 @@
             // labelP8
             // 
             labelP8.AutoSize = true;
-            labelP8.Dock = DockStyle.Fill;
             labelP8.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP8.Location = new Point(758, 0);
-            labelP8.Margin = new Padding(4, 0, 4, 0);
+            labelP8.Location = new Point(450, 303);
             labelP8.Name = "labelP8";
-            labelP8.Size = new Size(368, 57);
+            labelP8.Size = new Size(72, 24);
             labelP8.TabIndex = 2;
             labelP8.Text = "label5";
             labelP8.TextAlign = ContentAlignment.BottomCenter;
@@ -456,12 +232,10 @@
             // labelP9
             // 
             labelP9.AutoSize = true;
-            labelP9.Dock = DockStyle.Fill;
             labelP9.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP9.Location = new Point(1134, 0);
-            labelP9.Margin = new Padding(4, 0, 4, 0);
+            labelP9.Location = new Point(629, 303);
             labelP9.Name = "labelP9";
-            labelP9.Size = new Size(370, 57);
+            labelP9.Size = new Size(72, 24);
             labelP9.TabIndex = 3;
             labelP9.Text = "label6";
             labelP9.TextAlign = ContentAlignment.BottomCenter;
@@ -470,143 +244,23 @@
             // labelP10
             // 
             labelP10.AutoSize = true;
-            labelP10.Dock = DockStyle.Fill;
             labelP10.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP10.Location = new Point(1512, 0);
-            labelP10.Margin = new Padding(4, 0, 4, 0);
+            labelP10.Location = new Point(808, 303);
             labelP10.Name = "labelP10";
-            labelP10.Size = new Size(369, 57);
+            labelP10.Size = new Size(72, 24);
             labelP10.TabIndex = 4;
             labelP10.Text = "label7";
             labelP10.TextAlign = ContentAlignment.BottomCenter;
             labelP10.Visible = false;
             // 
-            // botonP6
-            // 
-            botonP6.BackColor = SystemColors.MenuHighlight;
-            botonP6.Cursor = Cursors.Hand;
-            botonP6.Dock = DockStyle.Fill;
-            botonP6.FlatAppearance.BorderColor = Color.Blue;
-            botonP6.FlatAppearance.BorderSize = 2;
-            botonP6.FlatStyle = FlatStyle.Flat;
-            botonP6.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP6.Location = new Point(4, 61);
-            botonP6.Margin = new Padding(4);
-            botonP6.Name = "botonP6";
-            botonP6.Size = new Size(369, 161);
-            botonP6.TabIndex = 5;
-            botonP6.Text = "Problema 6";
-            botonP6.UseVisualStyleBackColor = false;
-            botonP6.Visible = false;
-            botonP6.Click += botonP6_Click;
-            // 
-            // botonP7
-            // 
-            botonP7.BackColor = SystemColors.MenuHighlight;
-            botonP7.Cursor = Cursors.Hand;
-            botonP7.Dock = DockStyle.Fill;
-            botonP7.FlatAppearance.BorderColor = Color.Blue;
-            botonP7.FlatAppearance.BorderSize = 2;
-            botonP7.FlatStyle = FlatStyle.Flat;
-            botonP7.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP7.Location = new Point(381, 61);
-            botonP7.Margin = new Padding(4);
-            botonP7.Name = "botonP7";
-            botonP7.Size = new Size(369, 161);
-            botonP7.TabIndex = 6;
-            botonP7.Text = "Problema 7";
-            botonP7.UseVisualStyleBackColor = false;
-            botonP7.Visible = false;
-            botonP7.Click += botonP7_Click;
-            // 
-            // botonP8
-            // 
-            botonP8.BackColor = SystemColors.MenuHighlight;
-            botonP8.Cursor = Cursors.Hand;
-            botonP8.Dock = DockStyle.Fill;
-            botonP8.FlatAppearance.BorderSize = 2;
-            botonP8.FlatStyle = FlatStyle.Flat;
-            botonP8.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP8.Location = new Point(758, 61);
-            botonP8.Margin = new Padding(4);
-            botonP8.Name = "botonP8";
-            botonP8.Size = new Size(368, 161);
-            botonP8.TabIndex = 7;
-            botonP8.Text = "Problema 8";
-            botonP8.UseVisualStyleBackColor = false;
-            botonP8.Visible = false;
-            botonP8.Click += botonP8_Click;
-            // 
-            // botonP9
-            // 
-            botonP9.BackColor = SystemColors.MenuHighlight;
-            botonP9.Cursor = Cursors.Hand;
-            botonP9.Dock = DockStyle.Fill;
-            botonP9.FlatAppearance.BorderColor = Color.Blue;
-            botonP9.FlatAppearance.BorderSize = 2;
-            botonP9.FlatStyle = FlatStyle.Flat;
-            botonP9.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP9.Location = new Point(1134, 61);
-            botonP9.Margin = new Padding(4);
-            botonP9.Name = "botonP9";
-            botonP9.Size = new Size(370, 161);
-            botonP9.TabIndex = 8;
-            botonP9.Text = "Problema 9";
-            botonP9.UseVisualStyleBackColor = false;
-            botonP9.Visible = false;
-            botonP9.Click += botonP9_Click;
-            // 
-            // botonP10
-            // 
-            botonP10.BackColor = SystemColors.MenuHighlight;
-            botonP10.Cursor = Cursors.Hand;
-            botonP10.Dock = DockStyle.Fill;
-            botonP10.FlatAppearance.BorderColor = Color.Blue;
-            botonP10.FlatAppearance.BorderSize = 2;
-            botonP10.FlatStyle = FlatStyle.Flat;
-            botonP10.Font = new Font("Courier New", 13.8F, FontStyle.Bold);
-            botonP10.Location = new Point(1512, 61);
-            botonP10.Margin = new Padding(4);
-            botonP10.Name = "botonP10";
-            botonP10.Size = new Size(369, 161);
-            botonP10.TabIndex = 9;
-            botonP10.Text = "Problema 10";
-            botonP10.UseVisualStyleBackColor = false;
-            botonP10.Visible = false;
-            botonP10.Click += botonP10_Click;
-            // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.ColumnCount = 3;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 84.73684F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15.2631578F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 1599F));
-            tableLayoutPanel5.Controls.Add(botonOpciones, 2, 1);
-            tableLayoutPanel5.Controls.Add(abrirEnunciados, 2, 0);
-            tableLayoutPanel5.Controls.Add(label1, 0, 0);
-            tableLayoutPanel5.Controls.Add(labelVidas, 1, 0);
-            tableLayoutPanel5.Controls.Add(label2, 0, 1);
-            tableLayoutPanel5.Controls.Add(LabelResueltos, 1, 1);
-            tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(4, 878);
-            tableLayoutPanel5.Margin = new Padding(4);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 2;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(1885, 128);
-            tableLayoutPanel5.TabIndex = 4;
-            // 
             // cambiarVariables
             // 
             cambiarVariables.BackColor = SystemColors.GradientActiveCaption;
-            cambiarVariables.Dock = DockStyle.Fill;
             cambiarVariables.Enabled = false;
-            cambiarVariables.Font = new Font("Courier New", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cambiarVariables.Location = new Point(4, 808);
-            cambiarVariables.Margin = new Padding(4);
+            cambiarVariables.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
+            cambiarVariables.Location = new Point(94, 462);
             cambiarVariables.Name = "cambiarVariables";
-            cambiarVariables.Size = new Size(1885, 62);
+            cambiarVariables.Size = new Size(887, 61);
             cambiarVariables.TabIndex = 6;
             cambiarVariables.Text = "Cambiar variables";
             cambiarVariables.UseVisualStyleBackColor = false;
@@ -629,37 +283,295 @@
             tableLayoutPanel3.Size = new Size(200, 100);
             tableLayoutPanel3.TabIndex = 0;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Century Gothic", 28F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Location = new Point(94, 231);
+            label3.Name = "label3";
+            label3.Size = new Size(896, 57);
+            label3.TabIndex = 17;
+            label3.Text = "SELECCIONE UNA LISTA DE EJERCICIOS";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Century Gothic", 36F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.Location = new Point(339, 298);
+            label4.Name = "label4";
+            label4.Size = new Size(422, 71);
+            label4.TabIndex = 18;
+            label4.Text = "PARA INICIAR";
+            // 
+            // botonP1
+            // 
+            botonP1.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP1.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP1.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP1.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP1.Font = new Font("Segoe UI", 12F);
+            botonP1.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP1.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP1.Location = new Point(94, 182);
+            botonP1.Name = "botonP1";
+            botonP1.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP1.Size = new Size(171, 106);
+            botonP1.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP1.TabIndex = 19;
+            botonP1.Text = "Problema 1";
+            botonP1.TextColor = Color.White;
+            botonP1.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP1.Click += botonP1_Click;
+            // 
+            // botonP2
+            // 
+            botonP2.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP2.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP2.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP2.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP2.Font = new Font("Segoe UI", 12F);
+            botonP2.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP2.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP2.Location = new Point(271, 182);
+            botonP2.Name = "botonP2";
+            botonP2.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP2.Size = new Size(173, 106);
+            botonP2.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP2.TabIndex = 20;
+            botonP2.Text = "Problema 2";
+            botonP2.TextColor = Color.White;
+            botonP2.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP2.Click += botonP2_Click;
+            // 
+            // botonP3
+            // 
+            botonP3.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP3.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP3.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP3.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP3.Font = new Font("Segoe UI", 12F);
+            botonP3.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP3.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP3.Location = new Point(450, 182);
+            botonP3.Name = "botonP3";
+            botonP3.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP3.Size = new Size(173, 106);
+            botonP3.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP3.TabIndex = 21;
+            botonP3.Text = "Problema 3";
+            botonP3.TextColor = Color.White;
+            botonP3.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP3.Click += botonP3_Click;
+            // 
+            // botonP4
+            // 
+            botonP4.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP4.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP4.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP4.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP4.Font = new Font("Segoe UI", 12F);
+            botonP4.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP4.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP4.Location = new Point(629, 182);
+            botonP4.Name = "botonP4";
+            botonP4.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP4.Size = new Size(173, 106);
+            botonP4.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP4.TabIndex = 22;
+            botonP4.Text = "Problema 4";
+            botonP4.TextColor = Color.White;
+            botonP4.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP4.Click += botonP4_Click;
+            // 
+            // botonP5
+            // 
+            botonP5.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP5.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP5.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP5.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP5.Font = new Font("Segoe UI", 12F);
+            botonP5.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP5.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP5.Location = new Point(808, 182);
+            botonP5.Name = "botonP5";
+            botonP5.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP5.Size = new Size(173, 106);
+            botonP5.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP5.TabIndex = 23;
+            botonP5.Text = "Problema 5";
+            botonP5.TextColor = Color.White;
+            botonP5.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP5.Click += botonP5_Click;
+            // 
+            // botonP6
+            // 
+            botonP6.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP6.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP6.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP6.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP6.Font = new Font("Segoe UI", 12F);
+            botonP6.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP6.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP6.Location = new Point(94, 339);
+            botonP6.Name = "botonP6";
+            botonP6.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP6.Size = new Size(171, 106);
+            botonP6.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP6.TabIndex = 24;
+            botonP6.Text = "Problema 6";
+            botonP6.TextColor = Color.White;
+            botonP6.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP6.Click += botonP6_Click;
+            // 
+            // botonP7
+            // 
+            botonP7.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP7.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP7.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP7.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP7.Font = new Font("Segoe UI", 12F);
+            botonP7.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP7.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP7.Location = new Point(271, 339);
+            botonP7.Name = "botonP7";
+            botonP7.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP7.Size = new Size(173, 106);
+            botonP7.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP7.TabIndex = 25;
+            botonP7.Text = "Problema 7";
+            botonP7.TextColor = Color.White;
+            botonP7.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP7.Click += botonP7_Click;
+            // 
+            // botonP8
+            // 
+            botonP8.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP8.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP8.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP8.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP8.Font = new Font("Segoe UI", 12F);
+            botonP8.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP8.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP8.Location = new Point(450, 339);
+            botonP8.Name = "botonP8";
+            botonP8.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP8.Size = new Size(173, 106);
+            botonP8.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP8.TabIndex = 26;
+            botonP8.Text = "Problema 8";
+            botonP8.TextColor = Color.White;
+            botonP8.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP8.Click += botonP8_Click;
+            // 
+            // botonP9
+            // 
+            botonP9.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP9.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP9.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP9.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP9.Font = new Font("Segoe UI", 12F);
+            botonP9.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP9.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP9.Location = new Point(629, 339);
+            botonP9.Name = "botonP9";
+            botonP9.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP9.Size = new Size(173, 106);
+            botonP9.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP9.TabIndex = 27;
+            botonP9.Text = "Problema 9";
+            botonP9.TextColor = Color.White;
+            botonP9.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP9.Click += botonP9_Click;
+            // 
+            // botonP10
+            // 
+            botonP10.BorderColor = Color.FromArgb(220, 223, 230);
+            botonP10.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            botonP10.DangerColor = Color.FromArgb(245, 108, 108);
+            botonP10.DefaultColor = Color.FromArgb(255, 255, 255);
+            botonP10.Font = new Font("Segoe UI", 12F);
+            botonP10.HoverTextColor = Color.FromArgb(48, 49, 51);
+            botonP10.InfoColor = Color.FromArgb(144, 147, 153);
+            botonP10.Location = new Point(808, 339);
+            botonP10.Name = "botonP10";
+            botonP10.PrimaryColor = Color.FromArgb(64, 158, 255);
+            botonP10.Size = new Size(173, 106);
+            botonP10.SuccessColor = Color.FromArgb(103, 194, 58);
+            botonP10.TabIndex = 28;
+            botonP10.Text = "Problema 10";
+            botonP10.TextColor = Color.White;
+            botonP10.WarningColor = Color.FromArgb(230, 162, 60);
+            botonP10.Click += botonP10_Click;
+            // 
+            // button1
+            // 
+            button1.BorderColor = Color.FromArgb(220, 223, 230);
+            button1.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            button1.DangerColor = Color.FromArgb(245, 108, 108);
+            button1.DefaultColor = Color.FromArgb(255, 255, 255);
+            button1.Font = new Font("Segoe UI", 12F);
+            button1.HoverTextColor = Color.FromArgb(48, 49, 51);
+            button1.InfoColor = Color.FromArgb(144, 147, 153);
+            button1.Location = new Point(92, 126);
+            button1.Name = "button1";
+            button1.PrimaryColor = Color.FromArgb(64, 158, 255);
+            button1.Size = new Size(889, 319);
+            button1.SuccessColor = Color.FromArgb(103, 194, 58);
+            button1.TabIndex = 29;
+            button1.Text = "Modo Desafío";
+            button1.TextColor = Color.White;
+            button1.WarningColor = Color.FromArgb(230, 162, 60);
+            button1.Click += button1_Click_1;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1893, 1010);
-            Controls.Add(tableLayoutPanel1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(1082, 653);
+            Controls.Add(botonP10);
+            Controls.Add(botonP9);
+            Controls.Add(botonP8);
+            Controls.Add(botonP7);
+            Controls.Add(botonP6);
+            Controls.Add(botonP5);
+            Controls.Add(botonP4);
+            Controls.Add(botonP3);
+            Controls.Add(botonP2);
+            Controls.Add(botonP1);
+            Controls.Add(label1);
+            Controls.Add(labelVidas);
+            Controls.Add(botonOpciones);
+            Controls.Add(label2);
+            Controls.Add(labelP6);
+            Controls.Add(LabelResueltos);
+            Controls.Add(abrirEnunciados);
+            Controls.Add(LabelP2);
+            Controls.Add(labelP7);
+            Controls.Add(cambiarVariables);
+            Controls.Add(labelP8);
+            Controls.Add(labelP9);
+            Controls.Add(LabelP5);
+            Controls.Add(labelP10);
+            Controls.Add(LabelP1);
+            Controls.Add(LabelP4);
+            Controls.Add(LabelP3);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(button1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 6, 4, 6);
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "Form1";
             Text = "Resolución de Ejercicios";
             Load += Form1_Load;
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel2.ResumeLayout(false);
-            tableLayoutPanel2.PerformLayout();
-            tableLayoutPanel4.ResumeLayout(false);
-            tableLayoutPanel4.PerformLayout();
-            tableLayoutPanel5.ResumeLayout(false);
-            tableLayoutPanel5.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button botonP1;
-        private Button botonP2;
-        private Button botonP3;
-        private Button botonP4;
-        private Button botonP5;
         private Label label1;
         private Label label2;
         private Label LabelP1;
@@ -671,23 +583,26 @@
         private Label LabelResueltos;
         private Button abrirEnunciados;
         private Button botonOpciones;
-        private TableLayoutPanel tableLayoutPanel1;
-        private TableLayoutPanel tableLayoutPanel2;
-        private Button button1;
         private TableLayoutPanel tableLayoutPanel3;
-        private TableLayoutPanel tableLayoutPanel4;
-        private TableLayoutPanel tableLayoutPanel5;
         private Label labelP6;
         private Label labelP7;
         private Label labelP8;
         private Label labelP9;
         private Label labelP10;
-        private Button botonP6;
-        private Button botonP7;
-        private Button botonP8;
-        private Button botonP9;
-        private Button botonP10;
         private Button cambiarVariables;
         private ToolTip toolTip1;
+        private Label label3;
+        private Label label4;
+        private ReaLTaiizor.Controls.HopeButton botonP1;
+        private ReaLTaiizor.Controls.HopeButton botonP2;
+        private ReaLTaiizor.Controls.HopeButton botonP3;
+        private ReaLTaiizor.Controls.HopeButton botonP4;
+        private ReaLTaiizor.Controls.HopeButton botonP5;
+        private ReaLTaiizor.Controls.HopeButton botonP6;
+        private ReaLTaiizor.Controls.HopeButton botonP7;
+        private ReaLTaiizor.Controls.HopeButton botonP8;
+        private ReaLTaiizor.Controls.HopeButton botonP9;
+        private ReaLTaiizor.Controls.HopeButton botonP10;
+        private ReaLTaiizor.Controls.HopeButton button1;
     }
 }

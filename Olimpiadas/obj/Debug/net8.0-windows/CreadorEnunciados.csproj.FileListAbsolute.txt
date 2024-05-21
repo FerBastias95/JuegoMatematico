@@ -72,3 +72,4 @@ G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\refint\CreadorEnunciados.
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.pdb
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.genruntimeconfig.cache
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\ref\CreadorEnunciados.dll
+C:\Users\ferba\Documents\JuegoMatematico\Olimpiadas\bin\Debug\net8.0-windows\ReaLTaiizor.dll

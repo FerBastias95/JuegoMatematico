@@ -44,23 +44,25 @@ namespace Ejercicios {
             seleccion = azar(randy, cantidad - 1);
             valorCorrectas.Text = correctas.ToString();
             valorIncorrectas.Text = incorrectas.ToString();
-
             enu = elegidos[seleccion];
-            enunciado = enu.Enunciado;
             FormPrincipal.modificarVariables(enu);
             while (!FormPrincipal.IsResponseValid(enu)) {
                 // La respuesta no es válida, volver a generar las variables
                 FormPrincipal.modificarVariables(enu);
             }
+            enunciado = enu.Enunciado;
             r = enu.Respuesta;
             Enunciado1.Text = enunciado;
-            Enunciado1.Text += " " + enu.Respuesta;
             if (enu.Imagen != null) {
+                pictureBox1.Show();
+                Enunciado1.Width = 250;
                 using (MemoryStream ms = new MemoryStream(enu.Imagen)) {
                     pictureBox1.Image = System.Drawing.Image.FromStream(ms);
                 }
             }
             else {
+                Enunciado1.Width = 677;
+                pictureBox1.Hide();
                 pictureBox1.Image = null;
             }
         }

@@ -9,7 +9,8 @@
       "Ejercicios/1.0.0": {
         "dependencies": {
           "System.Data.SQLite": "1.0.118",
-          "ncalc": "1.3.8"
+          "ncalc": "1.3.8",
+          "ReaLTaiizor": "3.8.0.5"
         },
         "runtime": {
           "Ejercicios.dll": {}
@@ -52,6 +53,14 @@
           "lib/NCalc.dll": {
             "assemblyVersion": "1.3.8.0",
             "fileVersion": "1.3.8.0"
+          }
+        }
+      },
+      "ReaLTaiizor/3.8.0.5": {
+        "runtime": {
+          "lib/net8.0-windows7.0/ReaLTaiizor.dll": {
+            "assemblyVersion": "3.8.0.5",
+            "fileVersion": "3.8.0.5"
           }
         }
       },
@@ -250,6 +259,13 @@
       "sha512": "sha512-T3kt6mWc70x3Ex5PxOmuILy563CGAdoAnyknXX7Du2/SXs2T94hNwc5CVwZcwCu5/A2ZBZhnHnc5dpcqCRGQ0A==",
       "path": "ncalc/1.3.8",
       "hashPath": "ncalc.1.3.8.nupkg.sha512"
+    },
+    "ReaLTaiizor/3.8.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l/LKMZXpfBwIEax7ZEXpRNlLmPAENN2OPf5sAYXVecjENvmlGhrgX0YKU72kFsw/Yjuzn+F01jMAAgs2mYsJIg==",
+      "path": "realtaiizor/3.8.0.5",
+      "hashPath": "realtaiizor.3.8.0.5.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",

@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "e79+bPG4Q7T9WGuDzUGGHYV5sbEUTst8d6hGmnv5dFJqp72T4RQICoWyNRyytcDqHG4PG0jg3iaRTzu0JRn5Og==",
+  "dgSpecHash": "QpsOMSDraNzNhGxf0oyyHxuYs282I5VPJtPKMUf7x1RFZYsNCoY2fXe/8zGUnfYO1NlIT4pgRI3AoP9Azs8pEw==",
   "success": true,
-  "projectFilePath": "G:\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
+  "projectFilePath": "C:\\Users\\ferba\\Documents\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ferba\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\ferba\\.nuget\\packages\\realtaiizor\\3.8.0.5\\realtaiizor.3.8.0.5.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

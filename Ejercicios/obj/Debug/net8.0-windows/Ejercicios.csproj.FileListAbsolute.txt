@@ -82,3 +82,5 @@ G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\refint\Ejercicios.dll
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.pdb
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.genruntimeconfig.cache
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\ref\Ejercicios.dll
+C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Properties.Resources.resources
+C:\Users\ferba\Documents\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\ReaLTaiizor.dll

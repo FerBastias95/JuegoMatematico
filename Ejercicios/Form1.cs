@@ -20,7 +20,7 @@ namespace Ejercicios {
         public List<EnunciadoBase> enunciados;
         public List<EnunciadoBase> avanzados;
         public List<Label> labels;
-        public List<Button> botones;
+        public List<ReaLTaiizor.Controls.HopeButton> botones;
         public List<bool> resueltos;
         public List<bool> fallados;
         public List<string> original;
@@ -38,7 +38,7 @@ namespace Ejercicios {
             vidas = 5;
             tiempo = 60;
             for (int i = 0; i < 10; i++) {
-                labels[i].Text = "No";
+                labels[i].Text = "Falta completar";
                 labels[i].ForeColor = Color.Red;
             }
         }
@@ -354,6 +354,8 @@ namespace Ejercicios {
                 for (i = 0; i < 5; i++) {
                     labels[i].Show();
                     botones[i].Show();
+                    label3.Hide();
+                    label4.Hide();
                 }
             }
             else if (d == 1) {
@@ -361,12 +363,16 @@ namespace Ejercicios {
                     labels[i].Show();
                     botones[i].Show();
                 }
+                label3.Hide();
+                label4.Hide();
             }
             else if (d == 2) {
                 for (int j = 0; j < 10; j++) {
                     labels[j].Hide();
                     botones[j].Hide();
                 }
+                label3.Hide();
+                label4.Hide();
                 button1.Show();
             }
             else {
@@ -374,9 +380,12 @@ namespace Ejercicios {
                     labels[j].Hide();
                     botones[j].Hide();
                 }
+                label3.Show();
+                label4.Show();
                 button1.Hide();
             }
         }
+
         private void botonP1_Click(object sender, EventArgs e) {
             if (elegidos[0].Imagen == null) {
                 if (resueltos[0] == false) {
