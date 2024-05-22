@@ -106,6 +106,7 @@ namespace Ejercicios {
                         // Crear un nuevo enunciado y copiar las propiedades del enunciado base
                         EnunciadoBase enunciadoNuevo = new EnunciadoBase();
                         EnunciadoBase enunciadoBase = avanzados[indicesRestantes[index]];
+                        enunciadoNuevo.Nombre = enunciadoBase.Nombre;
                         enunciadoNuevo.Avanzado = enunciadoBase.Avanzado;
                         enunciadoNuevo.Decimal1 = enunciadoBase.Decimal1;
                         enunciadoNuevo.Decimal2 = enunciadoBase.Decimal2;
@@ -138,6 +139,9 @@ namespace Ejercicios {
                 // Mostrar los enunciados seleccionados en la interfaz gráfica
                 for (int j = 0; j < elegidos.Count; j++) {
                     var enunciado = elegidos[j];
+                    botones[j].Text = elegidos[j].Nombre;
+                    resueltos[j] = false;
+                    fallados[j] = false;
                     botones[j].Show();
 
                     // Modificar las variables del enunciado
@@ -150,6 +154,8 @@ namespace Ejercicios {
                     }
                 }
                 dificultad(0);
+                labelVidas.Text = vidas.ToString();
+                LabelResueltos.Text = correctas.ToString();
                 cambiarVariables.Enabled = true;
                 botonOpciones.Enabled = true;
             }
@@ -316,7 +322,7 @@ namespace Ejercicios {
             botones = [botonP1, botonP2, botonP3, botonP4, botonP5, botonP6, botonP7, botonP8, botonP9, botonP10, button1];
             fallados = [problema1F, problema2F, problema3F, problema4F, problema5F
             , problema6F, problema7F, problema8F, problema9F, problema10F];
-
+            
             labelVidas.Text = vidas.ToString();
             LabelResueltos.Text = correctas.ToString();
             dificultad(3);

@@ -36,13 +36,13 @@
             NombreLista = new TextBox();
             label3 = new Label();
             resultadoEnunciado2 = new TextBox();
-            abrirAvanzado = new Button();
-            VistaPrevia = new Button();
             textoEnunciado = new RichTextBox();
             abrirImagen = new Button();
             resultadoEnunciado = new TextBox();
             NombreEnunciado = new TextBox();
             imagenEnunciado = new PictureBox();
+            abrirAvanzado = new ReaLTaiizor.Controls.HopeButton();
+            VistaPrevia = new ReaLTaiizor.Controls.HopeButton();
             ((System.ComponentModel.ISupportInitialize)imagenEnunciado).BeginInit();
             SuspendLayout();
             // 
@@ -144,38 +144,6 @@
             resultadoEnunciado2.Size = new Size(100, 27);
             resultadoEnunciado2.TabIndex = 36;
             // 
-            // abrirAvanzado
-            // 
-            abrirAvanzado.AutoSize = true;
-            abrirAvanzado.BackColor = Color.FromArgb(164, 114, 214);
-            abrirAvanzado.Enabled = false;
-            abrirAvanzado.FlatStyle = FlatStyle.Flat;
-            abrirAvanzado.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            abrirAvanzado.Location = new Point(367, 529);
-            abrirAvanzado.Margin = new Padding(3, 4, 3, 4);
-            abrirAvanzado.Name = "abrirAvanzado";
-            abrirAvanzado.Size = new Size(857, 37);
-            abrirAvanzado.TabIndex = 35;
-            abrirAvanzado.Text = "Editar enunciado avanzado";
-            abrirAvanzado.UseVisualStyleBackColor = false;
-            abrirAvanzado.Click += button5_Click;
-            // 
-            // VistaPrevia
-            // 
-            VistaPrevia.BackColor = Color.FromArgb(164, 114, 214);
-            VistaPrevia.Enabled = false;
-            VistaPrevia.FlatStyle = FlatStyle.Flat;
-            VistaPrevia.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            VistaPrevia.ImageAlign = ContentAlignment.MiddleRight;
-            VistaPrevia.Location = new Point(367, 574);
-            VistaPrevia.Margin = new Padding(3, 4, 3, 4);
-            VistaPrevia.Name = "VistaPrevia";
-            VistaPrevia.Size = new Size(857, 37);
-            VistaPrevia.TabIndex = 27;
-            VistaPrevia.Text = "Vista Previa";
-            VistaPrevia.UseVisualStyleBackColor = false;
-            VistaPrevia.Click += actualizarEnunciado_Click;
-            // 
             // textoEnunciado
             // 
             textoEnunciado.BackColor = Color.MistyRose;
@@ -191,7 +159,7 @@
             // 
             // abrirImagen
             // 
-            abrirImagen.BackColor = SystemColors.GradientInactiveCaption;
+            abrirImagen.BackColor = Color.Salmon;
             abrirImagen.Enabled = false;
             abrirImagen.FlatStyle = FlatStyle.Flat;
             abrirImagen.Font = new Font("Century Gothic", 14.1428576F, FontStyle.Bold);
@@ -225,16 +193,57 @@
             NombreEnunciado.Name = "NombreEnunciado";
             NombreEnunciado.Size = new Size(599, 32);
             NombreEnunciado.TabIndex = 4;
+            NombreEnunciado.TextChanged += NombreEnunciado_TextChanged;
             // 
             // imagenEnunciado
             // 
             imagenEnunciado.BackColor = Color.MistyRose;
             imagenEnunciado.Location = new Point(819, 94);
-            imagenEnunciado.Margin = new Padding(2, 2, 2, 2);
+            imagenEnunciado.Margin = new Padding(2);
             imagenEnunciado.Name = "imagenEnunciado";
             imagenEnunciado.Size = new Size(397, 345);
             imagenEnunciado.TabIndex = 51;
             imagenEnunciado.TabStop = false;
+            // 
+            // abrirAvanzado
+            // 
+            abrirAvanzado.BorderColor = Color.FromArgb(220, 223, 230);
+            abrirAvanzado.ButtonType = ReaLTaiizor.Util.HopeButtonType.Warning;
+            abrirAvanzado.DangerColor = Color.FromArgb(245, 108, 108);
+            abrirAvanzado.DefaultColor = Color.FromArgb(255, 255, 255);
+            abrirAvanzado.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
+            abrirAvanzado.HoverTextColor = Color.FromArgb(48, 49, 51);
+            abrirAvanzado.InfoColor = Color.FromArgb(144, 147, 153);
+            abrirAvanzado.Location = new Point(367, 529);
+            abrirAvanzado.Name = "abrirAvanzado";
+            abrirAvanzado.PrimaryColor = Color.FromArgb(64, 158, 255);
+            abrirAvanzado.Size = new Size(857, 38);
+            abrirAvanzado.SuccessColor = Color.FromArgb(103, 194, 58);
+            abrirAvanzado.TabIndex = 52;
+            abrirAvanzado.Text = "Editar enunciado avanzado";
+            abrirAvanzado.TextColor = Color.White;
+            abrirAvanzado.WarningColor = Color.FromArgb(230, 162, 60);
+            abrirAvanzado.Click += abrirAvanzado_Click;
+            // 
+            // VistaPrevia
+            // 
+            VistaPrevia.BorderColor = Color.FromArgb(220, 223, 230);
+            VistaPrevia.ButtonType = ReaLTaiizor.Util.HopeButtonType.Warning;
+            VistaPrevia.DangerColor = Color.FromArgb(245, 108, 108);
+            VistaPrevia.DefaultColor = Color.FromArgb(255, 255, 255);
+            VistaPrevia.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
+            VistaPrevia.HoverTextColor = Color.FromArgb(48, 49, 51);
+            VistaPrevia.InfoColor = Color.FromArgb(144, 147, 153);
+            VistaPrevia.Location = new Point(367, 574);
+            VistaPrevia.Name = "VistaPrevia";
+            VistaPrevia.PrimaryColor = Color.FromArgb(64, 158, 255);
+            VistaPrevia.Size = new Size(857, 38);
+            VistaPrevia.SuccessColor = Color.FromArgb(103, 194, 58);
+            VistaPrevia.TabIndex = 53;
+            VistaPrevia.Text = "Ver vista previa";
+            VistaPrevia.TextColor = Color.White;
+            VistaPrevia.WarningColor = Color.FromArgb(230, 162, 60);
+            VistaPrevia.Click += VistaPrevia_Click;
             // 
             // AlterarBDD
             // 
@@ -244,15 +253,15 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1247, 628);
+            Controls.Add(VistaPrevia);
+            Controls.Add(abrirAvanzado);
             Controls.Add(imagenEnunciado);
             Controls.Add(crearLista);
             Controls.Add(textoEnunciado);
             Controls.Add(cambiarBDD);
             Controls.Add(NombreEnunciado);
             Controls.Add(NombreLista);
-            Controls.Add(VistaPrevia);
             Controls.Add(resultadoEnunciado);
-            Controls.Add(abrirAvanzado);
             Controls.Add(abrirImagen);
             Controls.Add(borrarEnunciado);
             Controls.Add(listBoxEnunciados);
@@ -279,12 +288,12 @@
         private TextBox NombreLista;
         private Label label3;
         private TextBox resultadoEnunciado2;
-        private Button abrirAvanzado;
-        private Button VistaPrevia;
         private RichTextBox textoEnunciado;
         private Button abrirImagen;
         private TextBox resultadoEnunciado;
         private TextBox NombreEnunciado;
         private PictureBox imagenEnunciado;
+        private ReaLTaiizor.Controls.HopeButton abrirAvanzado;
+        private ReaLTaiizor.Controls.HopeButton VistaPrevia;
     }
 }

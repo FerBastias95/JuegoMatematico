@@ -376,6 +376,7 @@ namespace Olimpiadas {
             avanzado.Formula = tbInput.Text;
             Enunciado = avanzadoEnunciado.Text;
             Operacion = tbInput.Text;
+            getResult();
             Enunciado = Enunciado.Replace("{v1}", avanzado.Variable1.ToString());
             Enunciado = Enunciado.Replace("{v2}", avanzado.Variable2.ToString());
             Enunciado = Enunciado.Replace("{v3}", avanzado.Variable3.ToString());
