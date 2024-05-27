@@ -30,19 +30,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlterarBDD));
             nuevoEnunciado = new Button();
             borrarEnunciado = new Button();
-            cambiarBDD = new Button();
-            crearLista = new Button();
             listBoxEnunciados = new ListBox();
             NombreLista = new TextBox();
             label3 = new Label();
             resultadoEnunciado2 = new TextBox();
             textoEnunciado = new RichTextBox();
-            abrirImagen = new Button();
             resultadoEnunciado = new TextBox();
             NombreEnunciado = new TextBox();
             imagenEnunciado = new PictureBox();
             abrirAvanzado = new ReaLTaiizor.Controls.HopeButton();
             VistaPrevia = new ReaLTaiizor.Controls.HopeButton();
+            crearLista = new ReaLTaiizor.Controls.Button();
+            cambiarBDD = new ReaLTaiizor.Controls.Button();
+            spaceButton1 = new ReaLTaiizor.Controls.SpaceButton();
+            abrirImagen = new ReaLTaiizor.Controls.Button();
             ((System.ComponentModel.ISupportInitialize)imagenEnunciado).BeginInit();
             SuspendLayout();
             // 
@@ -73,34 +74,6 @@
             borrarEnunciado.Text = "Eliminar seleccionado";
             borrarEnunciado.UseVisualStyleBackColor = false;
             borrarEnunciado.Click += borrarEnunciado_Click;
-            // 
-            // cambiarBDD
-            // 
-            cambiarBDD.BackColor = SystemColors.GradientInactiveCaption;
-            cambiarBDD.FlatStyle = FlatStyle.Popup;
-            cambiarBDD.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Italic);
-            cambiarBDD.Location = new Point(24, 94);
-            cambiarBDD.Margin = new Padding(3, 4, 3, 4);
-            cambiarBDD.Name = "cambiarBDD";
-            cambiarBDD.Size = new Size(149, 41);
-            cambiarBDD.TabIndex = 45;
-            cambiarBDD.Text = "Cambiar lista";
-            cambiarBDD.UseVisualStyleBackColor = false;
-            cambiarBDD.Click += cambiarBDD_Click;
-            // 
-            // crearLista
-            // 
-            crearLista.BackColor = SystemColors.GradientInactiveCaption;
-            crearLista.FlatStyle = FlatStyle.Popup;
-            crearLista.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Italic);
-            crearLista.Location = new Point(178, 94);
-            crearLista.Margin = new Padding(3, 4, 3, 4);
-            crearLista.Name = "crearLista";
-            crearLista.Size = new Size(157, 41);
-            crearLista.TabIndex = 46;
-            crearLista.Text = "Crear lista";
-            crearLista.UseVisualStyleBackColor = false;
-            crearLista.Click += crearLista_Click;
             // 
             // listBoxEnunciados
             // 
@@ -157,27 +130,12 @@
             textoEnunciado.Text = "";
             textoEnunciado.TextChanged += textoEnunciado_TextChanged;
             // 
-            // abrirImagen
-            // 
-            abrirImagen.BackColor = Color.Salmon;
-            abrirImagen.Enabled = false;
-            abrirImagen.FlatStyle = FlatStyle.Flat;
-            abrirImagen.Font = new Font("Century Gothic", 14.1428576F, FontStyle.Bold);
-            abrirImagen.Location = new Point(819, 460);
-            abrirImagen.Margin = new Padding(3, 4, 3, 4);
-            abrirImagen.Name = "abrirImagen";
-            abrirImagen.Size = new Size(397, 41);
-            abrirImagen.TabIndex = 31;
-            abrirImagen.Text = "Cargar Imagen";
-            abrirImagen.UseVisualStyleBackColor = false;
-            abrirImagen.Click += abrirImagen_Click;
-            // 
             // resultadoEnunciado
             // 
             resultadoEnunciado.BackColor = Color.MistyRose;
             resultadoEnunciado.Enabled = false;
             resultadoEnunciado.Font = new Font("Century Gothic", 15.8571434F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            resultadoEnunciado.Location = new Point(523, 461);
+            resultadoEnunciado.Location = new Point(523, 460);
             resultadoEnunciado.Name = "resultadoEnunciado";
             resultadoEnunciado.Size = new Size(265, 40);
             resultadoEnunciado.TabIndex = 50;
@@ -207,7 +165,7 @@
             // 
             // abrirAvanzado
             // 
-            abrirAvanzado.BorderColor = Color.FromArgb(220, 223, 230);
+            abrirAvanzado.BorderColor = Color.Transparent;
             abrirAvanzado.ButtonType = ReaLTaiizor.Util.HopeButtonType.Warning;
             abrirAvanzado.DangerColor = Color.FromArgb(245, 108, 108);
             abrirAvanzado.DefaultColor = Color.FromArgb(255, 255, 255);
@@ -227,7 +185,7 @@
             // 
             // VistaPrevia
             // 
-            VistaPrevia.BorderColor = Color.FromArgb(220, 223, 230);
+            VistaPrevia.BorderColor = Color.Transparent;
             VistaPrevia.ButtonType = ReaLTaiizor.Util.HopeButtonType.Warning;
             VistaPrevia.DangerColor = Color.FromArgb(245, 108, 108);
             VistaPrevia.DefaultColor = Color.FromArgb(255, 255, 255);
@@ -245,6 +203,79 @@
             VistaPrevia.WarningColor = Color.FromArgb(230, 162, 60);
             VistaPrevia.Click += VistaPrevia_Click;
             // 
+            // crearLista
+            // 
+            crearLista.BackColor = Color.Transparent;
+            crearLista.BorderColor = Color.Transparent;
+            crearLista.EnteredBorderColor = Color.Transparent;
+            crearLista.EnteredColor = SystemColors.GradientInactiveCaption;
+            crearLista.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            crearLista.Image = null;
+            crearLista.ImageAlign = ContentAlignment.MiddleLeft;
+            crearLista.InactiveColor = SystemColors.GradientActiveCaption;
+            crearLista.Location = new Point(24, 94);
+            crearLista.Name = "crearLista";
+            crearLista.PressedBorderColor = Color.Transparent;
+            crearLista.PressedColor = SystemColors.GradientActiveCaption;
+            crearLista.Size = new Size(150, 41);
+            crearLista.TabIndex = 54;
+            crearLista.Text = "Crear Lista";
+            crearLista.TextAlignment = StringAlignment.Center;
+            crearLista.Click += crearLista_Click;
+            // 
+            // cambiarBDD
+            // 
+            cambiarBDD.BackColor = Color.Transparent;
+            cambiarBDD.BorderColor = Color.Transparent;
+            cambiarBDD.EnteredBorderColor = Color.Transparent;
+            cambiarBDD.EnteredColor = SystemColors.GradientInactiveCaption;
+            cambiarBDD.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cambiarBDD.Image = null;
+            cambiarBDD.ImageAlign = ContentAlignment.MiddleLeft;
+            cambiarBDD.InactiveColor = SystemColors.GradientActiveCaption;
+            cambiarBDD.Location = new Point(186, 94);
+            cambiarBDD.Name = "cambiarBDD";
+            cambiarBDD.PressedBorderColor = Color.Transparent;
+            cambiarBDD.PressedColor = SystemColors.GradientActiveCaption;
+            cambiarBDD.Size = new Size(150, 41);
+            cambiarBDD.TabIndex = 55;
+            cambiarBDD.Text = "Cambiar Lista";
+            cambiarBDD.TextAlignment = StringAlignment.Center;
+            cambiarBDD.Click += cambiarBDD_Click;
+            // 
+            // spaceButton1
+            // 
+            spaceButton1.Customization = "Kioq/zIyMv8yMjL/Kioq/y8vL/8nJyf//v7+/yMjI/8qKir/";
+            spaceButton1.Font = new Font("Verdana", 8F);
+            spaceButton1.Image = null;
+            spaceButton1.Location = new Point(1220, 521);
+            spaceButton1.Name = "spaceButton1";
+            spaceButton1.NoRounding = false;
+            spaceButton1.Size = new Size(150, 50);
+            spaceButton1.TabIndex = 56;
+            spaceButton1.Text = "spaceButton1";
+            spaceButton1.TextAlignment = HorizontalAlignment.Center;
+            spaceButton1.Transparent = false;
+            // 
+            // abrirImagen
+            // 
+            abrirImagen.BackColor = Color.Transparent;
+            abrirImagen.BorderColor = Color.Transparent;
+            abrirImagen.EnteredBorderColor = Color.Transparent;
+            abrirImagen.EnteredColor = Color.FromArgb(255, 128, 128);
+            abrirImagen.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            abrirImagen.Image = null;
+            abrirImagen.ImageAlign = ContentAlignment.MiddleLeft;
+            abrirImagen.InactiveColor = Color.FromArgb(255, 192, 192);
+            abrirImagen.Location = new Point(819, 460);
+            abrirImagen.Name = "abrirImagen";
+            abrirImagen.PressedBorderColor = Color.Transparent;
+            abrirImagen.PressedColor = Color.Red;
+            abrirImagen.Size = new Size(397, 40);
+            abrirImagen.TabIndex = 57;
+            abrirImagen.Text = "Abrir Imagen";
+            abrirImagen.TextAlignment = StringAlignment.Center;
+            // 
             // AlterarBDD
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -253,16 +284,17 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1247, 628);
+            Controls.Add(abrirImagen);
+            Controls.Add(spaceButton1);
+            Controls.Add(cambiarBDD);
+            Controls.Add(crearLista);
             Controls.Add(VistaPrevia);
             Controls.Add(abrirAvanzado);
             Controls.Add(imagenEnunciado);
-            Controls.Add(crearLista);
             Controls.Add(textoEnunciado);
-            Controls.Add(cambiarBDD);
             Controls.Add(NombreEnunciado);
             Controls.Add(NombreLista);
             Controls.Add(resultadoEnunciado);
-            Controls.Add(abrirImagen);
             Controls.Add(borrarEnunciado);
             Controls.Add(listBoxEnunciados);
             Controls.Add(nuevoEnunciado);
@@ -282,18 +314,19 @@
         #endregion
         private Button nuevoEnunciado;
         private Button borrarEnunciado;
-        private Button cambiarBDD;
-        private Button crearLista;
         private ListBox listBoxEnunciados;
         private TextBox NombreLista;
         private Label label3;
         private TextBox resultadoEnunciado2;
         private RichTextBox textoEnunciado;
-        private Button abrirImagen;
         private TextBox resultadoEnunciado;
         private TextBox NombreEnunciado;
         private PictureBox imagenEnunciado;
         private ReaLTaiizor.Controls.HopeButton abrirAvanzado;
         private ReaLTaiizor.Controls.HopeButton VistaPrevia;
+        private ReaLTaiizor.Controls.Button crearLista;
+        private ReaLTaiizor.Controls.Button cambiarBDD;
+        private ReaLTaiizor.Controls.SpaceButton spaceButton1;
+        private ReaLTaiizor.Controls.Button abrirImagen;
     }
 }

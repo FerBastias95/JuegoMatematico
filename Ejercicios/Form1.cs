@@ -86,13 +86,11 @@ namespace Ejercicios {
                 else {
                     // Si hay más de 10 enunciados, seleccionar 10 al azar
                     List<int> indicesSeleccionados = GenerarNumerosAleatorios(totalEnunciados - 1);
-                    foreach (int index in indicesSeleccionados) {
-                        int a = 0;
+                    for(int k = 0; k < 10; k++) {
+                        MessageBox.Show("Seleccionando 10");
                         EnunciadoBase enunciadoNuevo = new EnunciadoBase();
-                        enunciadoNuevo = enunciados[index];
-                        enunciadoNuevo.indice = a;
+                        enunciadoNuevo = enunciados[indicesSeleccionados[k]];
                         elegidos.Add(enunciadoNuevo);
-                        a++;
                     }
                 }
 

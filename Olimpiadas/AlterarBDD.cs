@@ -257,55 +257,6 @@ namespace Olimpiadas
                 HabilitarFunciones();
             }
         }
-        private void cambiarBDD_Click(object sender, EventArgs e) {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            // Establecer el filtro de archivos para mostrar solo archivos SQLite
-            openFileDialog.Filter = "Archivos SQLite|*.sqlite|Todos los archivos|*.*";
-
-            // Mostrar el diálogo de apertura de archivo
-            DialogResult result = openFileDialog.ShowDialog();
-
-            // Verificar si se seleccionó un archivo
-            if (result == DialogResult.OK) {
-                // Obtener la ruta del archivo seleccionado
-                string archivoSeleccionado = openFileDialog.FileName;
-                string nombreLista = Path.GetFileNameWithoutExtension(archivoSeleccionado);
-                // Asignar el nombre al TextBox
-                NombreLista.Text = nombreLista;
-                // Crear una instancia de BDD con el archivo seleccionado
-                BDD BaseEnunciados2 = new BDD(archivoSeleccionado);
-                BaseEnunciados = BaseEnunciados2;
-                enunciados.Clear();
-                enunciados = BaseEnunciados.ObtenerTodosEnunciados();
-                ultimoId = BaseEnunciados.ObtenerIdMasAlto();
-                CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
-            }
-        }
-        private void crearLista_Click(object sender, EventArgs e) {
-            string databasePath;
-            // Crear un nuevo diálogo de Guardar Archivo
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Archivos de base de datos SQLite (*.sqlite)|*.sqlite";
-            saveFileDialog.Title = "Guardar base de datos";
-            saveFileDialog.DefaultExt = "sqlite";
-            saveFileDialog.AddExtension = true;
-
-            // Mostrar el diálogo y verificar si el usuario hizo clic en Guardar
-            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
-                string archivoSeleccionado = saveFileDialog.FileName;
-                string nombreLista = Path.GetFileNameWithoutExtension(archivoSeleccionado);
-                // Asignar el nombre al TextBox
-                NombreLista.Text = nombreLista;
-                BDD BaseEnunciados2 = new BDD(archivoSeleccionado);
-                BaseEnunciados = BaseEnunciados2;
-                // Crear la tabla de enunciados si no existe
-                BaseEnunciados.CrearTablaEnunciados();
-                CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
-                HabilitarFunciones();
-                ultimoId = 0;
-            }
-        }
 
         private void nuevoEnunciado_Click(object sender, EventArgs e) {
             crearEnunciado();
@@ -358,6 +309,57 @@ namespace Olimpiadas
 
         private void NombreEnunciado_TextChanged(object sender, EventArgs e) {
             ActualizarBaseDeDatos();
+        }
+
+        private void cambiarBDD_Click(object sender, EventArgs e) {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Establecer el filtro de archivos para mostrar solo archivos SQLite
+            openFileDialog.Filter = "Archivos SQLite|*.sqlite|Todos los archivos|*.*";
+
+            // Mostrar el diálogo de apertura de archivo
+            DialogResult result = openFileDialog.ShowDialog();
+
+            // Verificar si se seleccionó un archivo
+            if (result == DialogResult.OK) {
+                // Obtener la ruta del archivo seleccionado
+                string archivoSeleccionado = openFileDialog.FileName;
+                string nombreLista = Path.GetFileNameWithoutExtension(archivoSeleccionado);
+                // Asignar el nombre al TextBox
+                NombreLista.Text = nombreLista;
+                // Crear una instancia de BDD con el archivo seleccionado
+                BDD BaseEnunciados2 = new BDD(archivoSeleccionado);
+                BaseEnunciados = BaseEnunciados2;
+                enunciados.Clear();
+                enunciados = BaseEnunciados.ObtenerTodosEnunciados();
+                ultimoId = BaseEnunciados.ObtenerIdMasAlto();
+                CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
+            }
+        }
+
+        private void crearLista_Click(object sender, EventArgs e) {
+            string databasePath;
+            // Crear un nuevo diálogo de Guardar Archivo
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivos de base de datos SQLite (*.sqlite)|*.sqlite";
+            saveFileDialog.Title = "Guardar base de datos";
+            saveFileDialog.DefaultExt = "sqlite";
+            saveFileDialog.AddExtension = true;
+
+            // Mostrar el diálogo y verificar si el usuario hizo clic en Guardar
+            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+                string archivoSeleccionado = saveFileDialog.FileName;
+                string nombreLista = Path.GetFileNameWithoutExtension(archivoSeleccionado);
+                // Asignar el nombre al TextBox
+                NombreLista.Text = nombreLista;
+                BDD BaseEnunciados2 = new BDD(archivoSeleccionado);
+                BaseEnunciados = BaseEnunciados2;
+                // Crear la tabla de enunciados si no existe
+                BaseEnunciados.CrearTablaEnunciados();
+                CargarEnunciadosDesdeBaseDatos(BaseEnunciados);
+                HabilitarFunciones();
+                ultimoId = 0;
+            }
         }
     }
 }

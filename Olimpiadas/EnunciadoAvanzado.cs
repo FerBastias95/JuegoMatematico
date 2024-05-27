@@ -439,6 +439,7 @@ namespace Olimpiadas {
             ActiveControl = tbInput;
             avanzadoEnunciado.SelectionStart = caretIndex + insertar.Length;
             avanzadoEnunciado.SelectionLength = 0;
+            avanzadoEnunciado.Focus();
         }
         private void insertVar2_Click(object sender, EventArgs e) {
             Button b = (Button)sender;
@@ -449,6 +450,7 @@ namespace Olimpiadas {
             ActiveControl = tbInput;
             avanzadoEnunciado.SelectionStart = caretIndex + insertar.Length;
             avanzadoEnunciado.SelectionLength = 0;
+            avanzadoEnunciado.Focus();
         }
 
         private void insertVar3_Click(object sender, EventArgs e) {
@@ -460,6 +462,7 @@ namespace Olimpiadas {
             ActiveControl = tbInput;
             avanzadoEnunciado.SelectionStart = caretIndex + insertar.Length;
             avanzadoEnunciado.SelectionLength = 0;
+            avanzadoEnunciado.Focus();
         }
 
         private void insertVar4_Click(object sender, EventArgs e) {
@@ -471,6 +474,7 @@ namespace Olimpiadas {
             ActiveControl = tbInput;
             avanzadoEnunciado.SelectionStart = caretIndex + insertar.Length;
             avanzadoEnunciado.SelectionLength = 0;
+            avanzadoEnunciado.Focus();
         }
 
         private void categoria_SelectedIndexChanged(object sender, EventArgs e) {
