@@ -87,7 +87,6 @@ namespace Ejercicios {
                     // Si hay más de 10 enunciados, seleccionar 10 al azar
                     List<int> indicesSeleccionados = GenerarNumerosAleatorios(totalEnunciados - 1);
                     for(int k = 0; k < 10; k++) {
-                        MessageBox.Show("Seleccionando 10");
                         EnunciadoBase enunciadoNuevo = new EnunciadoBase();
                         enunciadoNuevo = enunciados[indicesSeleccionados[k]];
                         elegidos.Add(enunciadoNuevo);
@@ -137,19 +136,17 @@ namespace Ejercicios {
                 // Mostrar los enunciados seleccionados en la interfaz gráfica
                 for (int j = 0; j < elegidos.Count; j++) {
                     var enunciado = elegidos[j];
-                    botones[j].Text = elegidos[j].Nombre;
-                    resueltos[j] = false;
-                    fallados[j] = false;
-                    botones[j].Show();
-
                     // Modificar las variables del enunciado
                     modificarVariables(enunciado);
-
                     // Validar la respuesta
                     while (!IsResponseValid(enunciado)) {
                         // La respuesta no es válida, volver a generar las variables
                         modificarVariables(enunciado);
                     }
+                    botones[j].Text = elegidos[j].Nombre;
+                    resueltos[j] = false;
+                    fallados[j] = false;
+                    botones[j].Show();
                 }
                 dificultad(0);
                 labelVidas.Text = vidas.ToString();

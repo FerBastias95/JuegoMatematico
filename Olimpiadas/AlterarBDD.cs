@@ -105,16 +105,21 @@ namespace Olimpiadas
         private void ActualizarBaseDeDatos() {
             if (loaded) {
                 int seleccion = listBoxEnunciados.SelectedIndex;
-                enunciados[seleccion].Enunciado = textoEnunciado.Text.ToString();
-                enunciados[seleccion].Nombre = NombreEnunciado.Text;
+                enunciados[seleccion].Enunciado = textoEnunciado.Text;
                 bool esPosible = double.TryParse(resultadoEnunciado.Text, out double test);
                 if (esPosible) {
                     enunciados[seleccion].Respuesta = double.Parse(resultadoEnunciado.Text);
                 }
-                listBoxEnunciados.Items[seleccion] = NombreEnunciado.Text;
                 BaseEnunciados.ActualizarEnunciado(enunciados[seleccion]);
             }
         }
+        private void ActualizarNombreEnunciado() {
+            int seleccion = listBoxEnunciados.SelectedIndex;
+            enunciados[seleccion].Nombre = NombreEnunciado.Text;
+            listBoxEnunciados.Items[seleccion] = NombreEnunciado.Text;
+            BaseEnunciados.ActualizarEnunciado(enunciados[seleccion]);
+        }
+
         public void CargarDatos(EnunciadoBase e) {
             loaded = false;
             NombreLista.Text = BaseEnunciados.nombre;
@@ -308,7 +313,7 @@ namespace Olimpiadas
         }
 
         private void NombreEnunciado_TextChanged(object sender, EventArgs e) {
-            ActualizarBaseDeDatos();
+            ActualizarNombreEnunciado();
         }
 
         private void cambiarBDD_Click(object sender, EventArgs e) {

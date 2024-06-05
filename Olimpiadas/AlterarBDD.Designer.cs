@@ -125,6 +125,7 @@
             textoEnunciado.Location = new Point(379, 94);
             textoEnunciado.Margin = new Padding(3, 4, 3, 4);
             textoEnunciado.Name = "textoEnunciado";
+            textoEnunciado.RightToLeft = RightToLeft.No;
             textoEnunciado.Size = new Size(409, 347);
             textoEnunciado.TabIndex = 15;
             textoEnunciado.Text = "";
