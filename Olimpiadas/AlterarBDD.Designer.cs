@@ -42,7 +42,6 @@
             VistaPrevia = new ReaLTaiizor.Controls.HopeButton();
             crearLista = new ReaLTaiizor.Controls.Button();
             cambiarBDD = new ReaLTaiizor.Controls.Button();
-            spaceButton1 = new ReaLTaiizor.Controls.SpaceButton();
             abrirImagen = new ReaLTaiizor.Controls.Button();
             ((System.ComponentModel.ISupportInitialize)imagenEnunciado).BeginInit();
             SuspendLayout();
@@ -125,6 +124,7 @@
             textoEnunciado.Location = new Point(379, 94);
             textoEnunciado.Margin = new Padding(3, 4, 3, 4);
             textoEnunciado.Name = "textoEnunciado";
+            textoEnunciado.RightToLeft = RightToLeft.No;
             textoEnunciado.Size = new Size(409, 347);
             textoEnunciado.TabIndex = 15;
             textoEnunciado.Text = "";
@@ -172,10 +172,10 @@
             abrirAvanzado.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
             abrirAvanzado.HoverTextColor = Color.FromArgb(48, 49, 51);
             abrirAvanzado.InfoColor = Color.FromArgb(144, 147, 153);
-            abrirAvanzado.Location = new Point(367, 529);
+            abrirAvanzado.Location = new Point(367, 528);
             abrirAvanzado.Name = "abrirAvanzado";
             abrirAvanzado.PrimaryColor = Color.FromArgb(64, 158, 255);
-            abrirAvanzado.Size = new Size(857, 38);
+            abrirAvanzado.Size = new Size(421, 38);
             abrirAvanzado.SuccessColor = Color.FromArgb(103, 194, 58);
             abrirAvanzado.TabIndex = 52;
             abrirAvanzado.Text = "Editar enunciado avanzado";
@@ -192,10 +192,10 @@
             VistaPrevia.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
             VistaPrevia.HoverTextColor = Color.FromArgb(48, 49, 51);
             VistaPrevia.InfoColor = Color.FromArgb(144, 147, 153);
-            VistaPrevia.Location = new Point(367, 574);
+            VistaPrevia.Location = new Point(805, 529);
             VistaPrevia.Name = "VistaPrevia";
             VistaPrevia.PrimaryColor = Color.FromArgb(64, 158, 255);
-            VistaPrevia.Size = new Size(857, 38);
+            VistaPrevia.Size = new Size(421, 38);
             VistaPrevia.SuccessColor = Color.FromArgb(103, 194, 58);
             VistaPrevia.TabIndex = 53;
             VistaPrevia.Text = "Ver vista previa";
@@ -243,20 +243,6 @@
             cambiarBDD.TextAlignment = StringAlignment.Center;
             cambiarBDD.Click += cambiarBDD_Click;
             // 
-            // spaceButton1
-            // 
-            spaceButton1.Customization = "Kioq/zIyMv8yMjL/Kioq/y8vL/8nJyf//v7+/yMjI/8qKir/";
-            spaceButton1.Font = new Font("Verdana", 8F);
-            spaceButton1.Image = null;
-            spaceButton1.Location = new Point(1220, 521);
-            spaceButton1.Name = "spaceButton1";
-            spaceButton1.NoRounding = false;
-            spaceButton1.Size = new Size(150, 50);
-            spaceButton1.TabIndex = 56;
-            spaceButton1.Text = "spaceButton1";
-            spaceButton1.TextAlignment = HorizontalAlignment.Center;
-            spaceButton1.Transparent = false;
-            // 
             // abrirImagen
             // 
             abrirImagen.BackColor = Color.Transparent;
@@ -285,7 +271,6 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1247, 628);
             Controls.Add(abrirImagen);
-            Controls.Add(spaceButton1);
             Controls.Add(cambiarBDD);
             Controls.Add(crearLista);
             Controls.Add(VistaPrevia);
@@ -326,7 +311,6 @@
         private ReaLTaiizor.Controls.HopeButton VistaPrevia;
         private ReaLTaiizor.Controls.Button crearLista;
         private ReaLTaiizor.Controls.Button cambiarBDD;
-        private ReaLTaiizor.Controls.SpaceButton spaceButton1;
         private ReaLTaiizor.Controls.Button abrirImagen;
     }
 }
