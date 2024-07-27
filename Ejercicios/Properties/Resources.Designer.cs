@@ -73,6 +73,16 @@ namespace Ejercicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _360_F_483901821_46VsNR67uJC3xIKQN4aaxR6GtAZhx9G8 {
+            get {
+                object obj = ResourceManager.GetObject("360_F_483901821_46VsNR67uJC3xIKQN4aaxR6GtAZhx9G8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton {
             get {
                 object obj = ResourceManager.GetObject("Boton", resourceCulture);

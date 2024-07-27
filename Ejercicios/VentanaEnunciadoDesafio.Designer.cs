@@ -24,7 +24,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             components = new System.ComponentModel.Container();
             RespuestaP1 = new TextBox();
             label1 = new Label();
@@ -45,11 +46,10 @@
             // 
             RespuestaP1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             RespuestaP1.Enabled = false;
-            RespuestaP1.Font = new Font("Century Gothic", 13.8F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            RespuestaP1.Location = new Point(210, 361);
-            RespuestaP1.Margin = new Padding(3, 4, 3, 4);
+            RespuestaP1.Font = new Font("Century Gothic", 18.8F, FontStyle.Italic);
+            RespuestaP1.Location = new Point(213, 517);
             RespuestaP1.Name = "RespuestaP1";
-            RespuestaP1.Size = new Size(515, 36);
+            RespuestaP1.Size = new Size(1001, 38);
             RespuestaP1.TabIndex = 2;
             RespuestaP1.KeyPress += RespuestaP1_KeyPress;
             // 
@@ -57,10 +57,10 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            label1.Location = new Point(46, 364);
+            label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold);
+            label1.Location = new Point(42, 523);
             label1.Name = "label1";
-            label1.Size = new Size(158, 27);
+            label1.Size = new Size(165, 28);
             label1.TabIndex = 3;
             label1.Text = "Su respuesta:";
             // 
@@ -68,10 +68,9 @@
             // 
             botonP1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             botonP1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            botonP1.Location = new Point(46, 416);
-            botonP1.Margin = new Padding(3, 4, 3, 4);
+            botonP1.Location = new Point(40, 566);
             botonP1.Name = "botonP1";
-            botonP1.Size = new Size(679, 103);
+            botonP1.Size = new Size(1174, 79);
             botonP1.TabIndex = 4;
             botonP1.Text = "Enviar respuesta";
             botonP1.UseVisualStyleBackColor = true;
@@ -81,10 +80,10 @@
             // 
             labelTiempo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelTiempo.AutoSize = true;
-            labelTiempo.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            labelTiempo.Location = new Point(69, 36);
+            labelTiempo.Font = new Font("Century Gothic", 17.8F, FontStyle.Bold);
+            labelTiempo.Location = new Point(60, 27);
             labelTiempo.Name = "labelTiempo";
-            labelTiempo.Size = new Size(101, 27);
+            labelTiempo.Size = new Size(104, 28);
             labelTiempo.TabIndex = 0;
             labelTiempo.Text = "Tiempo:";
             labelTiempo.TextAlign = ContentAlignment.MiddleRight;
@@ -93,10 +92,10 @@
             // 
             labelCorrectas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelCorrectas.AutoSize = true;
-            labelCorrectas.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            labelCorrectas.Location = new Point(321, 36);
+            labelCorrectas.Font = new Font("Century Gothic", 17.8F, FontStyle.Bold);
+            labelCorrectas.Location = new Point(361, 27);
             labelCorrectas.Name = "labelCorrectas";
-            labelCorrectas.Size = new Size(127, 27);
+            labelCorrectas.Size = new Size(133, 28);
             labelCorrectas.TabIndex = 1;
             labelCorrectas.Text = "Correctas:";
             labelCorrectas.TextAlign = ContentAlignment.MiddleRight;
@@ -105,10 +104,10 @@
             // 
             labelIncorrectas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             labelIncorrectas.AutoSize = true;
-            labelIncorrectas.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            labelIncorrectas.Location = new Point(527, 36);
+            labelIncorrectas.Font = new Font("Century Gothic", 17.8F, FontStyle.Bold);
+            labelIncorrectas.Location = new Point(648, 27);
             labelIncorrectas.Name = "labelIncorrectas";
-            labelIncorrectas.Size = new Size(144, 27);
+            labelIncorrectas.Size = new Size(150, 28);
             labelIncorrectas.TabIndex = 2;
             labelIncorrectas.Text = "Incorrectas:";
             labelIncorrectas.TextAlign = ContentAlignment.MiddleRight;
@@ -117,10 +116,10 @@
             // 
             valorTiempo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             valorTiempo.AutoSize = true;
-            valorTiempo.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            valorTiempo.Location = new Point(176, 36);
+            valorTiempo.Font = new Font("Century Gothic", 17.8F, FontStyle.Bold);
+            valorTiempo.Location = new Point(170, 27);
             valorTiempo.Name = "valorTiempo";
-            valorTiempo.Size = new Size(82, 27);
+            valorTiempo.Size = new Size(84, 28);
             valorTiempo.TabIndex = 3;
             valorTiempo.Text = "label2";
             valorTiempo.TextAlign = ContentAlignment.MiddleLeft;
@@ -129,10 +128,10 @@
             // 
             valorCorrectas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             valorCorrectas.AutoSize = true;
-            valorCorrectas.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            valorCorrectas.Location = new Point(454, 36);
+            valorCorrectas.Font = new Font("Century Gothic", 17.8F, FontStyle.Bold);
+            valorCorrectas.Location = new Point(500, 27);
             valorCorrectas.Name = "valorCorrectas";
-            valorCorrectas.Size = new Size(25, 27);
+            valorCorrectas.Size = new Size(25, 28);
             valorCorrectas.TabIndex = 4;
             valorCorrectas.Text = "0";
             valorCorrectas.TextAlign = ContentAlignment.MiddleLeft;
@@ -141,10 +140,10 @@
             // 
             valorIncorrectas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             valorIncorrectas.AutoSize = true;
-            valorIncorrectas.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            valorIncorrectas.Location = new Point(677, 36);
+            valorIncorrectas.Font = new Font("Century Gothic", 17.8F, FontStyle.Bold);
+            valorIncorrectas.Location = new Point(804, 27);
             valorIncorrectas.Name = "valorIncorrectas";
-            valorIncorrectas.Size = new Size(25, 27);
+            valorIncorrectas.Size = new Size(25, 28);
             valorIncorrectas.TabIndex = 5;
             valorIncorrectas.Text = "0";
             valorIncorrectas.TextAlign = ContentAlignment.MiddleLeft;
@@ -158,29 +157,30 @@
             // Enunciado1
             // 
             Enunciado1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Enunciado1.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Enunciado1.Location = new Point(48, 85);
-            Enunciado1.Margin = new Padding(3, 4, 3, 4);
+            Enunciado1.Font = new Font("Century Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Enunciado1.Location = new Point(42, 64);
             Enunciado1.Name = "Enunciado1";
             Enunciado1.ReadOnly = true;
-            Enunciado1.Size = new Size(325, 250);
+            Enunciado1.Size = new Size(537, 422);
             Enunciado1.TabIndex = 1;
             Enunciado1.Text = "";
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox1.Location = new Point(400, 85);
+            pictureBox1.Location = new Point(648, 64);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(325, 250);
+            pictureBox1.Size = new Size(566, 422);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
             // VentanaEnunciadoDesafio
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(782, 553);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1264, 671);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(Enunciado1);
@@ -193,7 +193,7 @@
             Controls.Add(valorIncorrectas);
             Controls.Add(valorCorrectas);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "VentanaEnunciadoDesafio";
             Text = "Desafío Infinito";
             Load += Problema_1_Load;

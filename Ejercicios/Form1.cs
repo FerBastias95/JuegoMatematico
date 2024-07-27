@@ -355,6 +355,17 @@ namespace Ejercicios {
             }
 
             if (d == 0) {
+                botones[0].Location = new Point(117, 174);
+                botones[1].Location = new Point(264, 174);
+                botones[2].Location = new Point(412, 174);
+                botones[3].Location = new Point(563, 174);
+                botones[4].Location = new Point(707, 174);
+                labels[0].Location = new Point(107, 148);
+                labels[1].Location = new Point(255, 148);
+                labels[2].Location = new Point(403, 148);
+                labels[3].Location = new Point(552, 148);
+                labels[4].Location = new Point(698, 148);
+
                 for (i = 0; i < 5; i++) {
                     labels[i].Show();
                     botones[i].Show();
@@ -363,6 +374,16 @@ namespace Ejercicios {
                 }
             }
             else if (d == 1) {
+                botones[0].Location = new Point(117, 123);
+                botones[1].Location = new Point(264, 123);
+                botones[2].Location = new Point(412, 123);
+                botones[3].Location = new Point(563, 123);
+                botones[4].Location = new Point(707, 123);
+                labels[0].Location = new Point(107, 97);
+                labels[1].Location = new Point(255, 97);
+                labels[2].Location = new Point(403, 97);
+                labels[3].Location = new Point(552, 97);
+                labels[4].Location = new Point(698, 97);
                 for (i = 0; i < 10; i++) {
                     labels[i].Show();
                     botones[i].Show();

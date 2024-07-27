@@ -26,7 +26,8 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
@@ -66,10 +67,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(94, 542);
+            label1.BackColor = SystemColors.ActiveCaption;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            label1.Location = new Point(117, 412);
             label1.Name = "label1";
-            label1.Size = new Size(148, 25);
+            label1.Size = new Size(155, 25);
             label1.TabIndex = 5;
             label1.Text = "Vidas restantes: ";
             label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -77,10 +79,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(94, 589);
+            label2.BackColor = SystemColors.ActiveCaption;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            label2.Location = new Point(117, 452);
             label2.Name = "label2";
-            label2.Size = new Size(95, 25);
+            label2.Size = new Size(101, 25);
             label2.TabIndex = 6;
             label2.Text = "Resueltos:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
@@ -88,11 +91,12 @@
             // LabelP1
             // 
             LabelP1.AutoSize = true;
+            LabelP1.BackColor = Color.Transparent;
             LabelP1.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP1.ForeColor = Color.LimeGreen;
-            LabelP1.Location = new Point(94, 146);
+            LabelP1.Location = new Point(107, 97);
             LabelP1.Name = "LabelP1";
-            LabelP1.Size = new Size(53, 24);
+            LabelP1.Size = new Size(42, 19);
             LabelP1.TabIndex = 8;
             LabelP1.Text = "¡OK!";
             LabelP1.TextAlign = ContentAlignment.BottomCenter;
@@ -100,11 +104,12 @@
             // LabelP2
             // 
             LabelP2.AutoSize = true;
+            LabelP2.BackColor = Color.Transparent;
             LabelP2.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP2.ForeColor = Color.Red;
-            LabelP2.Location = new Point(271, 146);
+            LabelP2.Location = new Point(255, 97);
             LabelP2.Name = "LabelP2";
-            LabelP2.Size = new Size(37, 24);
+            LabelP2.Size = new Size(31, 19);
             LabelP2.TabIndex = 9;
             LabelP2.Text = "No";
             LabelP2.TextAlign = ContentAlignment.BottomCenter;
@@ -112,11 +117,12 @@
             // LabelP3
             // 
             LabelP3.AutoSize = true;
+            LabelP3.BackColor = Color.Transparent;
             LabelP3.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP3.ForeColor = Color.Red;
-            LabelP3.Location = new Point(450, 146);
+            LabelP3.Location = new Point(403, 97);
             LabelP3.Name = "LabelP3";
-            LabelP3.Size = new Size(37, 24);
+            LabelP3.Size = new Size(31, 19);
             LabelP3.TabIndex = 10;
             LabelP3.Text = "No";
             LabelP3.TextAlign = ContentAlignment.BottomCenter;
@@ -124,11 +130,12 @@
             // LabelP4
             // 
             LabelP4.AutoSize = true;
+            LabelP4.BackColor = Color.Transparent;
             LabelP4.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP4.ForeColor = Color.Red;
-            LabelP4.Location = new Point(629, 146);
+            LabelP4.Location = new Point(552, 97);
             LabelP4.Name = "LabelP4";
-            LabelP4.Size = new Size(37, 24);
+            LabelP4.Size = new Size(31, 19);
             LabelP4.TabIndex = 11;
             LabelP4.Text = "No";
             LabelP4.TextAlign = ContentAlignment.BottomCenter;
@@ -136,11 +143,12 @@
             // LabelP5
             // 
             LabelP5.AutoSize = true;
+            LabelP5.BackColor = Color.Transparent;
             LabelP5.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             LabelP5.ForeColor = Color.Red;
-            LabelP5.Location = new Point(808, 146);
+            LabelP5.Location = new Point(698, 97);
             LabelP5.Name = "LabelP5";
-            LabelP5.Size = new Size(37, 24);
+            LabelP5.Size = new Size(31, 19);
             LabelP5.TabIndex = 12;
             LabelP5.Text = "No";
             LabelP5.TextAlign = ContentAlignment.BottomCenter;
@@ -148,10 +156,11 @@
             // labelVidas
             // 
             labelVidas.AutoSize = true;
-            labelVidas.Font = new Font("Segoe UI", 11F);
-            labelVidas.Location = new Point(248, 542);
+            labelVidas.BackColor = SystemColors.ActiveCaption;
+            labelVidas.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            labelVidas.Location = new Point(295, 412);
             labelVidas.Name = "labelVidas";
-            labelVidas.Size = new Size(22, 25);
+            labelVidas.Size = new Size(23, 25);
             labelVidas.TabIndex = 13;
             labelVidas.Text = "0";
             labelVidas.TextAlign = ContentAlignment.MiddleLeft;
@@ -159,10 +168,11 @@
             // LabelResueltos
             // 
             LabelResueltos.AutoSize = true;
-            LabelResueltos.Font = new Font("Segoe UI", 11F);
-            LabelResueltos.Location = new Point(248, 589);
+            LabelResueltos.BackColor = SystemColors.ActiveCaption;
+            LabelResueltos.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            LabelResueltos.Location = new Point(295, 452);
             LabelResueltos.Name = "LabelResueltos";
-            LabelResueltos.Size = new Size(22, 25);
+            LabelResueltos.Size = new Size(23, 25);
             LabelResueltos.TabIndex = 14;
             LabelResueltos.Text = "0";
             LabelResueltos.TextAlign = ContentAlignment.MiddleLeft;
@@ -171,10 +181,9 @@
             // 
             abrirEnunciados.BackColor = SystemColors.GradientActiveCaption;
             abrirEnunciados.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            abrirEnunciados.Location = new Point(314, 542);
-            abrirEnunciados.Margin = new Padding(3, 4, 3, 4);
+            abrirEnunciados.Location = new Point(363, 407);
             abrirEnunciados.Name = "abrirEnunciados";
-            abrirEnunciados.Size = new Size(667, 34);
+            abrirEnunciados.Size = new Size(472, 35);
             abrirEnunciados.TabIndex = 15;
             abrirEnunciados.Text = "Seleccionar Lista";
             abrirEnunciados.UseVisualStyleBackColor = false;
@@ -185,9 +194,10 @@
             botonOpciones.BackColor = SystemColors.GradientActiveCaption;
             botonOpciones.Enabled = false;
             botonOpciones.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            botonOpciones.Location = new Point(314, 588);
+            botonOpciones.Location = new Point(363, 447);
+            botonOpciones.Margin = new Padding(3, 2, 3, 2);
             botonOpciones.Name = "botonOpciones";
-            botonOpciones.Size = new Size(667, 37);
+            botonOpciones.Size = new Size(472, 35);
             botonOpciones.TabIndex = 16;
             botonOpciones.Text = "Ajustar Dificultad";
             botonOpciones.UseVisualStyleBackColor = false;
@@ -196,10 +206,11 @@
             // labelP6
             // 
             labelP6.AutoSize = true;
+            labelP6.BackColor = Color.Transparent;
             labelP6.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP6.Location = new Point(94, 303);
+            labelP6.Location = new Point(107, 214);
             labelP6.Name = "labelP6";
-            labelP6.Size = new Size(72, 24);
+            labelP6.Size = new Size(59, 19);
             labelP6.TabIndex = 0;
             labelP6.Text = "label3";
             labelP6.TextAlign = ContentAlignment.BottomCenter;
@@ -208,10 +219,11 @@
             // labelP7
             // 
             labelP7.AutoSize = true;
+            labelP7.BackColor = Color.Transparent;
             labelP7.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP7.Location = new Point(271, 303);
+            labelP7.Location = new Point(255, 214);
             labelP7.Name = "labelP7";
-            labelP7.Size = new Size(72, 24);
+            labelP7.Size = new Size(59, 19);
             labelP7.TabIndex = 1;
             labelP7.Text = "label4";
             labelP7.TextAlign = ContentAlignment.BottomCenter;
@@ -220,10 +232,11 @@
             // labelP8
             // 
             labelP8.AutoSize = true;
+            labelP8.BackColor = Color.Transparent;
             labelP8.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP8.Location = new Point(450, 303);
+            labelP8.Location = new Point(403, 214);
             labelP8.Name = "labelP8";
-            labelP8.Size = new Size(72, 24);
+            labelP8.Size = new Size(59, 19);
             labelP8.TabIndex = 2;
             labelP8.Text = "label5";
             labelP8.TextAlign = ContentAlignment.BottomCenter;
@@ -232,10 +245,11 @@
             // labelP9
             // 
             labelP9.AutoSize = true;
+            labelP9.BackColor = Color.Transparent;
             labelP9.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP9.Location = new Point(629, 303);
+            labelP9.Location = new Point(552, 214);
             labelP9.Name = "labelP9";
-            labelP9.Size = new Size(72, 24);
+            labelP9.Size = new Size(59, 19);
             labelP9.TabIndex = 3;
             labelP9.Text = "label6";
             labelP9.TextAlign = ContentAlignment.BottomCenter;
@@ -244,10 +258,11 @@
             // labelP10
             // 
             labelP10.AutoSize = true;
+            labelP10.BackColor = Color.Transparent;
             labelP10.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            labelP10.Location = new Point(808, 303);
+            labelP10.Location = new Point(698, 214);
             labelP10.Name = "labelP10";
-            labelP10.Size = new Size(72, 24);
+            labelP10.Size = new Size(59, 19);
             labelP10.TabIndex = 4;
             labelP10.Text = "label7";
             labelP10.TextAlign = ContentAlignment.BottomCenter;
@@ -258,9 +273,10 @@
             cambiarVariables.BackColor = SystemColors.GradientActiveCaption;
             cambiarVariables.Enabled = false;
             cambiarVariables.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
-            cambiarVariables.Location = new Point(94, 462);
+            cambiarVariables.Location = new Point(117, 363);
+            cambiarVariables.Margin = new Padding(3, 2, 3, 2);
             cambiarVariables.Name = "cambiarVariables";
-            cambiarVariables.Size = new Size(887, 61);
+            cambiarVariables.Size = new Size(718, 44);
             cambiarVariables.TabIndex = 6;
             cambiarVariables.Text = "Cambiar variables";
             cambiarVariables.UseVisualStyleBackColor = false;
@@ -287,10 +303,10 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Century Gothic", 28F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(94, 231);
+            label3.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(125, 174);
             label3.Name = "label3";
-            label3.Size = new Size(896, 57);
+            label3.Size = new Size(702, 50);
             label3.TabIndex = 17;
             label3.Text = "SELECCIONE UNA LISTA DE EJERCICIOS";
             // 
@@ -298,10 +314,10 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Century Gothic", 36F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(339, 298);
+            label4.Font = new Font("Century Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(320, 220);
             label4.Name = "label4";
-            label4.Size = new Size(422, 71);
+            label4.Size = new Size(340, 56);
             label4.TabIndex = 18;
             label4.Text = "PARA INICIAR";
             // 
@@ -314,10 +330,11 @@
             botonP1.Font = new Font("Segoe UI", 12F);
             botonP1.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP1.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP1.Location = new Point(94, 182);
+            botonP1.Location = new Point(117, 123);
+            botonP1.Margin = new Padding(3, 2, 3, 2);
             botonP1.Name = "botonP1";
             botonP1.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP1.Size = new Size(171, 106);
+            botonP1.Size = new Size(115, 80);
             botonP1.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP1.TabIndex = 19;
             botonP1.Text = "Problema 1";
@@ -334,10 +351,11 @@
             botonP2.Font = new Font("Segoe UI", 12F);
             botonP2.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP2.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP2.Location = new Point(271, 182);
+            botonP2.Location = new Point(264, 123);
+            botonP2.Margin = new Padding(3, 2, 3, 2);
             botonP2.Name = "botonP2";
             botonP2.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP2.Size = new Size(173, 106);
+            botonP2.Size = new Size(115, 80);
             botonP2.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP2.TabIndex = 20;
             botonP2.Text = "Problema 2";
@@ -354,10 +372,11 @@
             botonP3.Font = new Font("Segoe UI", 12F);
             botonP3.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP3.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP3.Location = new Point(450, 182);
+            botonP3.Location = new Point(412, 123);
+            botonP3.Margin = new Padding(3, 2, 3, 2);
             botonP3.Name = "botonP3";
             botonP3.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP3.Size = new Size(173, 106);
+            botonP3.Size = new Size(115, 80);
             botonP3.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP3.TabIndex = 21;
             botonP3.Text = "Problema 3";
@@ -374,10 +393,11 @@
             botonP4.Font = new Font("Segoe UI", 12F);
             botonP4.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP4.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP4.Location = new Point(629, 182);
+            botonP4.Location = new Point(563, 123);
+            botonP4.Margin = new Padding(3, 2, 3, 2);
             botonP4.Name = "botonP4";
             botonP4.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP4.Size = new Size(173, 106);
+            botonP4.Size = new Size(115, 80);
             botonP4.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP4.TabIndex = 22;
             botonP4.Text = "Problema 4";
@@ -394,10 +414,11 @@
             botonP5.Font = new Font("Segoe UI", 12F);
             botonP5.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP5.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP5.Location = new Point(808, 182);
+            botonP5.Location = new Point(707, 123);
+            botonP5.Margin = new Padding(3, 2, 3, 2);
             botonP5.Name = "botonP5";
             botonP5.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP5.Size = new Size(173, 106);
+            botonP5.Size = new Size(115, 80);
             botonP5.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP5.TabIndex = 23;
             botonP5.Text = "Problema 5";
@@ -414,10 +435,11 @@
             botonP6.Font = new Font("Segoe UI", 12F);
             botonP6.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP6.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP6.Location = new Point(94, 339);
+            botonP6.Location = new Point(117, 241);
+            botonP6.Margin = new Padding(3, 2, 3, 2);
             botonP6.Name = "botonP6";
             botonP6.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP6.Size = new Size(171, 106);
+            botonP6.Size = new Size(115, 80);
             botonP6.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP6.TabIndex = 24;
             botonP6.Text = "Problema 6";
@@ -434,10 +456,11 @@
             botonP7.Font = new Font("Segoe UI", 12F);
             botonP7.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP7.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP7.Location = new Point(271, 339);
+            botonP7.Location = new Point(255, 241);
+            botonP7.Margin = new Padding(3, 2, 3, 2);
             botonP7.Name = "botonP7";
             botonP7.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP7.Size = new Size(173, 106);
+            botonP7.Size = new Size(115, 80);
             botonP7.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP7.TabIndex = 25;
             botonP7.Text = "Problema 7";
@@ -454,10 +477,11 @@
             botonP8.Font = new Font("Segoe UI", 12F);
             botonP8.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP8.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP8.Location = new Point(450, 339);
+            botonP8.Location = new Point(412, 241);
+            botonP8.Margin = new Padding(3, 2, 3, 2);
             botonP8.Name = "botonP8";
             botonP8.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP8.Size = new Size(173, 106);
+            botonP8.Size = new Size(115, 80);
             botonP8.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP8.TabIndex = 26;
             botonP8.Text = "Problema 8";
@@ -474,10 +498,11 @@
             botonP9.Font = new Font("Segoe UI", 12F);
             botonP9.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP9.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP9.Location = new Point(629, 339);
+            botonP9.Location = new Point(563, 240);
+            botonP9.Margin = new Padding(3, 2, 3, 2);
             botonP9.Name = "botonP9";
             botonP9.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP9.Size = new Size(173, 106);
+            botonP9.Size = new Size(115, 80);
             botonP9.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP9.TabIndex = 27;
             botonP9.Text = "Problema 9";
@@ -494,10 +519,11 @@
             botonP10.Font = new Font("Segoe UI", 12F);
             botonP10.HoverTextColor = Color.FromArgb(48, 49, 51);
             botonP10.InfoColor = Color.FromArgb(144, 147, 153);
-            botonP10.Location = new Point(808, 339);
+            botonP10.Location = new Point(707, 241);
+            botonP10.Margin = new Padding(3, 2, 3, 2);
             botonP10.Name = "botonP10";
             botonP10.PrimaryColor = Color.FromArgb(64, 158, 255);
-            botonP10.Size = new Size(173, 106);
+            botonP10.Size = new Size(115, 80);
             botonP10.SuccessColor = Color.FromArgb(103, 194, 58);
             botonP10.TabIndex = 28;
             botonP10.Text = "Problema 10";
@@ -514,10 +540,11 @@
             button1.Font = new Font("Segoe UI", 12F);
             button1.HoverTextColor = Color.FromArgb(48, 49, 51);
             button1.InfoColor = Color.FromArgb(144, 147, 153);
-            button1.Location = new Point(92, 126);
+            button1.Location = new Point(117, 92);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.PrimaryColor = Color.FromArgb(64, 158, 255);
-            button1.Size = new Size(889, 319);
+            button1.Size = new Size(718, 239);
             button1.SuccessColor = Color.FromArgb(103, 194, 58);
             button1.TabIndex = 29;
             button1.Text = "Modo Desafío";
@@ -527,10 +554,13 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(1082, 653);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(947, 490);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(botonP10);
             Controls.Add(botonP9);
             Controls.Add(botonP8);
@@ -558,11 +588,8 @@
             Controls.Add(LabelP1);
             Controls.Add(LabelP4);
             Controls.Add(LabelP3);
-            Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(button1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "Form1";
             Text = "Resolución de Ejercicios";

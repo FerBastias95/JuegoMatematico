@@ -22,7 +22,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             Enunciado1 = new RichTextBox();
             RespuestaP1 = new TextBox();
             label1 = new Label();
@@ -42,23 +43,21 @@
             // Enunciado1
             // 
             Enunciado1.Dock = DockStyle.Fill;
-            Enunciado1.Font = new Font("Segoe UI", 12F);
-            Enunciado1.Location = new Point(3, 4);
-            Enunciado1.Margin = new Padding(3, 4, 3, 4);
+            Enunciado1.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
+            Enunciado1.Location = new Point(3, 3);
             Enunciado1.Name = "Enunciado1";
             Enunciado1.ReadOnly = true;
-            Enunciado1.Size = new Size(315, 294);
+            Enunciado1.Size = new Size(623, 557);
             Enunciado1.TabIndex = 1;
             Enunciado1.Text = "";
             // 
             // RespuestaP1
             // 
             RespuestaP1.Dock = DockStyle.Fill;
-            RespuestaP1.Font = new Font("Segoe UI", 11F);
-            RespuestaP1.Location = new Point(135, 4);
-            RespuestaP1.Margin = new Padding(3, 4, 3, 4);
+            RespuestaP1.Font = new Font("Segoe UI", 20F);
+            RespuestaP1.Location = new Point(262, 3);
             RespuestaP1.Name = "RespuestaP1";
-            RespuestaP1.Size = new Size(498, 32);
+            RespuestaP1.Size = new Size(987, 43);
             RespuestaP1.TabIndex = 2;
             RespuestaP1.KeyPress += RespuestaP1_KeyPress;
             // 
@@ -66,10 +65,10 @@
             // 
             label1.AutoSize = true;
             label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 12F);
+            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(126, 36);
+            label1.Size = new Size(253, 53);
             label1.TabIndex = 3;
             label1.Text = "Su respuesta:";
             // 
@@ -77,10 +76,9 @@
             // 
             botonP1.Dock = DockStyle.Fill;
             botonP1.Font = new Font("Segoe UI", 12F);
-            botonP1.Location = new Point(3, 46);
-            botonP1.Margin = new Padding(3, 4, 3, 4);
+            botonP1.Location = new Point(3, 60);
             botonP1.Name = "botonP1";
-            botonP1.Size = new Size(636, 65);
+            botonP1.Size = new Size(1252, 47);
             botonP1.TabIndex = 4;
             botonP1.Text = "Enviar respuesta";
             botonP1.UseVisualStyleBackColor = true;
@@ -89,9 +87,10 @@
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(324, 3);
+            pictureBox1.Location = new Point(632, 2);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(315, 296);
+            pictureBox1.Size = new Size(623, 559);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
@@ -103,11 +102,12 @@
             tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 72.02797F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 27.9720287F));
-            tableLayoutPanel1.Size = new Size(648, 429);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 83.25991F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.7400875F));
+            tableLayoutPanel1.Size = new Size(1264, 681);
             tableLayoutPanel1.TabIndex = 6;
             // 
             // tableLayoutPanel2
@@ -118,11 +118,12 @@
             tableLayoutPanel2.Controls.Add(Enunciado1, 0, 0);
             tableLayoutPanel2.Controls.Add(pictureBox1, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(3, 3);
+            tableLayoutPanel2.Location = new Point(3, 2);
+            tableLayoutPanel2.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new Size(642, 302);
+            tableLayoutPanel2.Size = new Size(1258, 563);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -132,12 +133,13 @@
             tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 0);
             tableLayoutPanel3.Controls.Add(botonP1, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 311);
+            tableLayoutPanel3.Location = new Point(3, 569);
+            tableLayoutPanel3.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 36.52174F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 63.47826F));
-            tableLayoutPanel3.Size = new Size(642, 115);
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 52.0270271F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 47.9729729F));
+            tableLayoutPanel3.Size = new Size(1258, 110);
             tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -148,21 +150,23 @@
             tableLayoutPanel4.Controls.Add(label1, 0, 0);
             tableLayoutPanel4.Controls.Add(RespuestaP1, 1, 0);
             tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(3, 3);
+            tableLayoutPanel4.Location = new Point(3, 2);
+            tableLayoutPanel4.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(636, 36);
+            tableLayoutPanel4.Size = new Size(1252, 53);
             tableLayoutPanel4.TabIndex = 0;
             // 
             // VentanaEnunciadoImagen
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(648, 429);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1264, 681);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "VentanaEnunciadoImagen";
             Text = "Ventana Enunciado";
             Load += Problema_1_Load;
