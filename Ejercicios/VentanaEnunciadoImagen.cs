@@ -20,11 +20,13 @@ namespace Ejercicios {
         int tiempo;
         int correctas;
         int incorrectas;
+        int c;
         public VentanaEnunciadoImagen(EnunciadoBase e, Form1 forma, int indice) {
             enu = e;
             en = enu.Enunciado;
             r = enu.Respuesta;
             i = indice;
+            c = forma.correctas;
             InitializeComponent();
         }
 
@@ -55,6 +57,9 @@ namespace Ejercicios {
                     FormPrincipal.resueltos[i] = true; // Modificar el booleano del formulario principal
                     FormPrincipal.labels[i].Text = "¡OK!";
                     FormPrincipal.labels[i].ForeColor = Color.Green;
+                    c++;
+                    FormPrincipal.actualizarCorrectas(c);
+                    this.Close();
                 }
                 else {
                     MessageBox.Show($"Error, intente nuevamente.{enu.Respuesta}");

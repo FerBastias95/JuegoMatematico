@@ -161,6 +161,10 @@ namespace Olimpiadas {
                     // Verificar si la respuesta es un número entero
                     numeroOK = IsInteger(result);
                     break;
+                case 4:
+                    // Verificar si la respuesta es un múltiplo
+                    numeroOK = IsMultiple(result);
+                    break;
                 default:
                     // En caso de una categoría no válida, la respuesta se considera no válida
                     break;
@@ -188,10 +192,19 @@ namespace Olimpiadas {
         // Función para verificar si la respuesta es menor que el valor del curso
         private bool IsLessThanCurso(string respuesta) {
             double respuestaValue = Convert.ToDouble(respuesta);
-            double cursoValue = Convert.ToDouble(curso);
+            double cursoValue = Convert.ToDouble(curso.Text);
             return respuestaValue < cursoValue;
         }
+        private bool IsMultiple(string respuesta) {
+            double respuestaValue = Convert.ToDouble(respuesta);
+            double cursoValue = Convert.ToDouble(curso.Text);
 
+            if(cursoValue == 0) {
+                return false;
+            }
+
+            return respuestaValue % cursoValue == 0;
+        }
         // Función para verificar si la respuesta es un número entero
         private bool IsInteger(string respuesta) {
             return double.TryParse(respuesta, out double result) && result == Math.Floor(result);
@@ -200,6 +213,7 @@ namespace Olimpiadas {
         private void botonRandom_Click(object sender, EventArgs e) {
             generarVariables();
         }
+
         private void generarVariables() {
             Random randy = new Random();
             bool b1, b2, b3, b4, b5, b6, b7, b8;
@@ -479,7 +493,7 @@ namespace Olimpiadas {
 
         private void categoria_SelectedIndexChanged(object sender, EventArgs e) {
             avanzado.Categoria = categoria.SelectedIndex;
-            if (categoria.SelectedIndex == 1 || categoria.SelectedIndex == 2) {
+            if (categoria.SelectedIndex == 1 || categoria.SelectedIndex == 2 || categoria.SelectedIndex == 4) {
                 curso.Enabled = true;
             }
             else {

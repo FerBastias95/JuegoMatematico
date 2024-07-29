@@ -192,7 +192,7 @@ namespace Olimpiadas
 
             CargarDatos(enunciados[listBoxEnunciados.SelectedIndex]);
         }
-        private void abrirImagen_Click(object sender, EventArgs e) {
+        private void abrirImagen_Click_1(object sender, EventArgs e) {
             // Crear un nuevo OpenFileDialog
             OpenFileDialog openFileDialog = new OpenFileDialog();
 

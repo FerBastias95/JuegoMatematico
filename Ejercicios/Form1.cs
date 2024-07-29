@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Drawing.Drawing2D;
+using System.Numerics;
 using System.Reflection;
 using NCalc;
 using static System.Net.Mime.MediaTypeNames;
@@ -20,7 +21,7 @@ namespace Ejercicios {
         public List<EnunciadoBase> enunciados;
         public List<EnunciadoBase> avanzados;
         public List<Label> labels;
-        public List<ReaLTaiizor.Controls.HopeButton> botones;
+        public List<ReaLTaiizor.Controls.Button> botones;
         public List<bool> resueltos;
         public List<bool> fallados;
         public List<string> original;
@@ -280,8 +281,8 @@ namespace Ejercicios {
                 object result = new DataTable().Compute(formulaEvaluable, null);
                 Console.WriteLine($"El resultado de la operación {formulaEvaluable} es: {result}");
                 double resultadoNumerico = Convert.ToDouble(result);
-                double resultadoRedondeado = Math.Round(resultadoNumerico, 1);
-                return resultadoRedondeado;
+                //double resultadoRedondeado = Math.Round(resultadoNumerico, 1);
+                return resultadoNumerico;
             }
             catch (Exception ex) {
                 return -1;
@@ -303,13 +304,18 @@ namespace Ejercicios {
                 // La respuesta puede ser cualquier valor entero
                 return IsInteger(CalcularRespuesta(enunciado).ToString());
             }
+            else if (categoria == 4) {
+                // La respuesta puede ser cualquier valor entero
+                return CalcularRespuesta(enunciado) % enunciado.Curso == 0;
+            }
             else {
                 // Todas las demás categorías devuelven respuestas válidas automáticamente
                 return true;
             }
         }
         private bool IsInteger(string valor) {
-            return double.TryParse(valor, out double result) && result == Math.Floor(result);
+            // Try to parse the string to a BigInteger
+            return BigInteger.TryParse(valor, out _);
         }
         private void Form1_Load(object sender, EventArgs e) {
             labels = [LabelP1, LabelP2, LabelP3, LabelP4, LabelP5, labelP6, labelP7, labelP8, labelP9, labelP10];
@@ -322,6 +328,20 @@ namespace Ejercicios {
             LabelResueltos.Text = correctas.ToString();
             dificultad(3);
             iniciarLayout();
+            abrirEnunciados.ForeColor = Color.Black;
+            cambiarVariables.ForeColor = Color.Black;
+            botonOpciones.ForeColor = Color.Black;
+            botonP1.ForeColor = Color.Black;
+            botonP2.ForeColor = Color.Black;
+            botonP3.ForeColor = Color.Black;
+            botonP4.ForeColor = Color.Black;
+            botonP5.ForeColor = Color.Black;
+            botonP6.ForeColor = Color.Black;
+            botonP7.ForeColor = Color.Black;
+            botonP8.ForeColor = Color.Black;
+            botonP9.ForeColor = Color.Black;
+            botonP10.ForeColor = Color.Black;
+            button1.ForeColor = Color.Black;
             toolTip1.SetToolTip(this.botonOpciones, "Acá puede definir cuántos ejercicios desea resolver. También puede optar por un desafío con tiempo.");
             toolTip1.SetToolTip(this.button1, "Presione aquí para iniciar el desafío contrarreloj.");
             toolTip1.SetToolTip(this.cambiarVariables, "Si desea modificar los números de los enunciados, presione aquí.");
@@ -331,9 +351,10 @@ namespace Ejercicios {
             for (int i = 0; i < 10; i++) {
                 modificarVariables(elegidos[i]);
                 while (!IsResponseValid(elegidos[i])) {
-                    // La respuesta no es válida, volver a generar las variables
                     modificarVariables(elegidos[i]);
                 }
+                MessageBox.Show($"{elegidos[i].Respuesta}");
+
             }
             MessageBox.Show("Enunciados modificados");
         }
@@ -352,16 +373,25 @@ namespace Ejercicios {
             }
 
             if (d == 0) {
-                botones[0].Location = new Point(117, 174);
-                botones[1].Location = new Point(264, 174);
-                botones[2].Location = new Point(412, 174);
-                botones[3].Location = new Point(563, 174);
-                botones[4].Location = new Point(707, 174);
-                labels[0].Location = new Point(107, 148);
-                labels[1].Location = new Point(255, 148);
-                labels[2].Location = new Point(403, 148);
-                labels[3].Location = new Point(552, 148);
-                labels[4].Location = new Point(698, 148);
+                cambiarVariables.Show();
+                botonOpciones.Show();
+                labelVidas.Show();
+                LabelResueltos.Show();
+                label1.Show();
+                label2.Show();
+                abrirEnunciados.Size = new System.Drawing.Size(472, 35);
+                abrirEnunciados.Location = new Point(363, 407);
+
+                botones[0].Location = new Point(117, 164);
+                botones[1].Location = new Point(264, 164);
+                botones[2].Location = new Point(412, 164);
+                botones[3].Location = new Point(563, 164);
+                botones[4].Location = new Point(707, 164);
+                labels[0].Location = new Point(107, 138);
+                labels[1].Location = new Point(255, 138);
+                labels[2].Location = new Point(403, 138);
+                labels[3].Location = new Point(552, 138);
+                labels[4].Location = new Point(698, 138);
 
                 for (i = 0; i < 5; i++) {
                     labels[i].Show();
@@ -371,16 +401,25 @@ namespace Ejercicios {
                 }
             }
             else if (d == 1) {
-                botones[0].Location = new Point(117, 123);
-                botones[1].Location = new Point(264, 123);
-                botones[2].Location = new Point(412, 123);
-                botones[3].Location = new Point(563, 123);
-                botones[4].Location = new Point(707, 123);
-                labels[0].Location = new Point(107, 97);
-                labels[1].Location = new Point(255, 97);
-                labels[2].Location = new Point(403, 97);
-                labels[3].Location = new Point(552, 97);
-                labels[4].Location = new Point(698, 97);
+                cambiarVariables.Show();
+                botonOpciones.Show();
+                labelVidas.Show();
+                LabelResueltos.Show();
+                label1.Show();
+                label2.Show();
+                abrirEnunciados.Size = new System.Drawing.Size(472, 35);
+                abrirEnunciados.Location = new Point(363, 407);
+
+                botones[0].Location = new Point(117, 110);
+                botones[1].Location = new Point(264, 110);
+                botones[2].Location = new Point(412, 110);
+                botones[3].Location = new Point(563, 110);
+                botones[4].Location = new Point(707, 110);
+                labels[0].Location = new Point(107, 84);
+                labels[1].Location = new Point(255, 84);
+                labels[2].Location = new Point(403, 84);
+                labels[3].Location = new Point(552, 84);
+                labels[4].Location = new Point(698, 84);
                 for (i = 0; i < 10; i++) {
                     labels[i].Show();
                     botones[i].Show();
@@ -389,6 +428,15 @@ namespace Ejercicios {
                 label4.Hide();
             }
             else if (d == 2) {
+                labelVidas.Show();
+                LabelResueltos.Show();
+                label1.Show();
+                label2.Show();
+                cambiarVariables.Show();
+                botonOpciones.Show();
+                abrirEnunciados.Size = new System.Drawing.Size(472, 35);
+                abrirEnunciados.Location = new Point(363, 407);
+
                 for (int j = 0; j < 10; j++) {
                     labels[j].Hide();
                     botones[j].Hide();
@@ -398,6 +446,14 @@ namespace Ejercicios {
                 button1.Show();
             }
             else {
+                labelVidas.Hide();
+                LabelResueltos.Hide();
+                label1.Hide();
+                label2.Hide();
+                cambiarVariables.Hide();
+                botonOpciones.Hide();
+                abrirEnunciados.Location = new Point(117, 374);
+                abrirEnunciados.Size = new System.Drawing.Size(718, 75);
                 for (int j = 0; j < 10; j++) {
                     labels[j].Hide();
                     botones[j].Hide();

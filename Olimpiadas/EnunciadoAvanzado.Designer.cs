@@ -1228,10 +1228,10 @@
             categoria.DropDownStyle = ComboBoxStyle.DropDownList;
             categoria.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             categoria.FormattingEnabled = true;
-            categoria.Items.AddRange(new object[] { "Sin condiciones", "Mayor a", "Menor a", "Número entero" });
+            categoria.Items.AddRange(new object[] { "Sin condiciones", "Mayor a", "Menor a", "Número entero", "Es múltiplo de" });
             categoria.Location = new Point(3, 3);
             categoria.Name = "categoria";
-            categoria.Size = new Size(322, 38);
+            categoria.Size = new Size(322, 30);
             categoria.TabIndex = 0;
             categoria.SelectedIndexChanged += categoria_SelectedIndexChanged;
             // 
@@ -1242,7 +1242,7 @@
             curso.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold);
             curso.Location = new Point(331, 3);
             curso.Name = "curso";
-            curso.Size = new Size(176, 37);
+            curso.Size = new Size(176, 31);
             curso.TabIndex = 1;
             // 
             // tableLayoutPanel9
