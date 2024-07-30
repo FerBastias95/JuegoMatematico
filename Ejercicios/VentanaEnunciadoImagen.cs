@@ -70,6 +70,7 @@ namespace Ejercicios {
                     }
                     FormPrincipal.CalcularRespuesta(enu);
                     r = enu.Respuesta;
+                    this.Close();
                 }
             }
         }
