@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ejercicios
-{
+namespace Ejercicios{
     public partial class VentanaEnunciado : Form {
         EnunciadoBase enu;
         public Form1 FormPrincipal { get; set; }

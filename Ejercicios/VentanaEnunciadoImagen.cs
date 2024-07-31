@@ -13,20 +13,18 @@ namespace Ejercicios {
         EnunciadoBase enu;
         private Image cachedImage = null;
         public Form1 FormPrincipal { get; set; }
-        List<EnunciadoBase> lista;
         string en;
         double r;
         int i;
-        int tiempo;
-        int correctas;
-        int incorrectas;
         int c;
+        int v;
         public VentanaEnunciadoImagen(EnunciadoBase e, Form1 forma, int indice) {
             enu = e;
             en = enu.Enunciado;
             r = enu.Respuesta;
-            i = indice;
+            v = forma.vidas;
             c = forma.correctas;
+            i = indice;
             InitializeComponent();
         }
 
@@ -63,6 +61,8 @@ namespace Ejercicios {
                 }
                 else {
                     MessageBox.Show($"Error, intente nuevamente.{enu.Respuesta}");
+                    v--;
+                    FormPrincipal.actualizarVidas(v);
                     FormPrincipal.modificarVariables(enu);
                     while (!FormPrincipal.IsResponseValid(enu)) {
                         // La respuesta no es válida, volver a generar las variables
@@ -70,6 +70,7 @@ namespace Ejercicios {
                     }
                     FormPrincipal.CalcularRespuesta(enu);
                     r = enu.Respuesta;
+                    this.Close();
                 }
             }
         }
@@ -79,10 +80,7 @@ namespace Ejercicios {
         }
         private void RespuestaP1_KeyPress(object sender, KeyPressEventArgs e) {
             if (e.KeyChar == (char)Keys.Enter) {
-                // Llamar al método que deseas activar
                 acciones();
-
-                // Indicar que hemos manejado la tecla Enter para evitar que se inserte en el control
                 e.Handled = true;
             }
         }
