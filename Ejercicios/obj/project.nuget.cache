@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YPXKQ0JlUqoq8e2pibZcHP4kIpFsS6CuMKjDQoDV0+voYiNTPHeQVNX2Qfr9/Q3coJtYinf377Jhpx8LR8CRkQ==",
+  "dgSpecHash": "Zn4AtQkVVI7CBtTzeDM/Pv9d+c2XMfd9YFdbSqbQMaKECih7vqlqJ7271Iuw+EwI/Lu+u8uZ35+rgFgKOai0Ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
+  "projectFilePath": "G:\\JuegoMatematico\\Ejercicios\\Ejercicios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ferba\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
