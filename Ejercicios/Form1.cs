@@ -95,42 +95,84 @@ namespace Ejercicios {
                 }
 
                 // Si la cantidad de enunciados es menor a 10, rellenar con enunciados avanzados
-                while (elegidos.Count < 10) {
-                    int a = 0;
-                    // Generar números aleatorios para seleccionar los enunciados restantes de la lista de enunciados avanzados
-                    List<int> indicesRestantes = GenerarNumerosAleatorios(avanzados.Count - 1);
-                    // Agregar los enunciados restantes a la lista de elegidos
-                    foreach (int index in indicesRestantes) {
-                        // Crear un nuevo enunciado y copiar las propiedades del enunciado base
-                        EnunciadoBase enunciadoNuevo = new EnunciadoBase();
-                        EnunciadoBase enunciadoBase = avanzados[indicesRestantes[index]];
-                        enunciadoNuevo.Nombre = enunciadoBase.Nombre;
-                        enunciadoNuevo.Avanzado = enunciadoBase.Avanzado;
-                        enunciadoNuevo.Decimal1 = enunciadoBase.Decimal1;
-                        enunciadoNuevo.Decimal2 = enunciadoBase.Decimal2;
-                        enunciadoNuevo.Decimal3 = enunciadoBase.Decimal3;
-                        enunciadoNuevo.Decimal4 = enunciadoBase.Decimal4;
-                        enunciadoNuevo.Inicio1 = enunciadoBase.Inicio1;
-                        enunciadoNuevo.Inicio2 = enunciadoBase.Inicio2;
-                        enunciadoNuevo.Inicio3 = enunciadoBase.Inicio3;
-                        enunciadoNuevo.Inicio4 = enunciadoBase.Inicio4;
-                        enunciadoNuevo.Final1 = enunciadoBase.Final1;
-                        enunciadoNuevo.Final2 = enunciadoBase.Final2;
-                        enunciadoNuevo.Final3 = enunciadoBase.Final3;
-                        enunciadoNuevo.Final4 = enunciadoBase.Final4;
-                        enunciadoNuevo.Enunciado = enunciadoBase.Enunciado;
-                        enunciadoNuevo.Imagen = enunciadoBase.Imagen;
-                        enunciadoNuevo.Formula = enunciadoBase.Formula;
-                        enunciadoNuevo.Original = enunciadoBase.Original;
-                        enunciadoNuevo.indice = a;
-                        enunciadoNuevo.Categoria = enunciadoBase.Categoria;
-                        enunciadoNuevo.Curso = enunciadoBase.Curso;
-                        // Agregar el nuevo enunciado a la lista de elegidos
+                if(avanzados.Count() > 0) {
+                    while (elegidos.Count < 10) {
+                        int a = 0;
+                        // Generar números aleatorios para seleccionar los enunciados restantes de la lista de enunciados avanzados
+                        List<int> indicesRestantes = GenerarNumerosAleatorios(avanzados.Count - 1);
+                        // Agregar los enunciados restantes a la lista de elegidos
+                        foreach (int index in indicesRestantes) {
+                            // Crear un nuevo enunciado y copiar las propiedades del enunciado base
+                            EnunciadoBase enunciadoNuevo = new EnunciadoBase();
+                            EnunciadoBase enunciadoBase = avanzados[indicesRestantes[index]];
+                            enunciadoNuevo.Nombre = enunciadoBase.Nombre;
+                            enunciadoNuevo.Avanzado = enunciadoBase.Avanzado;
+                            enunciadoNuevo.Decimal1 = enunciadoBase.Decimal1;
+                            enunciadoNuevo.Decimal2 = enunciadoBase.Decimal2;
+                            enunciadoNuevo.Decimal3 = enunciadoBase.Decimal3;
+                            enunciadoNuevo.Decimal4 = enunciadoBase.Decimal4;
+                            enunciadoNuevo.Inicio1 = enunciadoBase.Inicio1;
+                            enunciadoNuevo.Inicio2 = enunciadoBase.Inicio2;
+                            enunciadoNuevo.Inicio3 = enunciadoBase.Inicio3;
+                            enunciadoNuevo.Inicio4 = enunciadoBase.Inicio4;
+                            enunciadoNuevo.Final1 = enunciadoBase.Final1;
+                            enunciadoNuevo.Final2 = enunciadoBase.Final2;
+                            enunciadoNuevo.Final3 = enunciadoBase.Final3;
+                            enunciadoNuevo.Final4 = enunciadoBase.Final4;
+                            enunciadoNuevo.Enunciado = enunciadoBase.Enunciado;
+                            enunciadoNuevo.Imagen = enunciadoBase.Imagen;
+                            enunciadoNuevo.Formula = enunciadoBase.Formula;
+                            enunciadoNuevo.Original = enunciadoBase.Original;
+                            enunciadoNuevo.indice = a;
+                            enunciadoNuevo.Categoria = enunciadoBase.Categoria;
+                            enunciadoNuevo.Curso = enunciadoBase.Curso;
+                            // Agregar el nuevo enunciado a la lista de elegidos
 
-                        CalcularRespuesta(enunciadoNuevo);
+                            CalcularRespuesta(enunciadoNuevo);
 
-                        elegidos.Add(enunciadoNuevo);
-                        a++;
+                            elegidos.Add(enunciadoNuevo);
+                            a++;
+                        }
+                    }
+                }
+                else {
+                    while (elegidos.Count < 10) {
+                        int a = 0;
+                        // Generar números aleatorios para seleccionar los enunciados restantes de la lista de enunciados avanzados
+                        List<int> indicesRestantes = GenerarNumerosAleatorios(elegidos.Count - 1);
+                        // Agregar los enunciados restantes a la lista de elegidos
+                        foreach (int index in indicesRestantes) {
+                            // Crear un nuevo enunciado y copiar las propiedades del enunciado base
+                            EnunciadoBase enunciadoNuevo = new EnunciadoBase();
+                            EnunciadoBase enunciadoBase = elegidos[indicesRestantes[index]];
+                            enunciadoNuevo.Nombre = enunciadoBase.Nombre;
+                            enunciadoNuevo.Avanzado = enunciadoBase.Avanzado;
+                            enunciadoNuevo.Decimal1 = enunciadoBase.Decimal1;
+                            enunciadoNuevo.Decimal2 = enunciadoBase.Decimal2;
+                            enunciadoNuevo.Decimal3 = enunciadoBase.Decimal3;
+                            enunciadoNuevo.Decimal4 = enunciadoBase.Decimal4;
+                            enunciadoNuevo.Inicio1 = enunciadoBase.Inicio1;
+                            enunciadoNuevo.Inicio2 = enunciadoBase.Inicio2;
+                            enunciadoNuevo.Inicio3 = enunciadoBase.Inicio3;
+                            enunciadoNuevo.Inicio4 = enunciadoBase.Inicio4;
+                            enunciadoNuevo.Final1 = enunciadoBase.Final1;
+                            enunciadoNuevo.Final2 = enunciadoBase.Final2;
+                            enunciadoNuevo.Final3 = enunciadoBase.Final3;
+                            enunciadoNuevo.Final4 = enunciadoBase.Final4;
+                            enunciadoNuevo.Enunciado = enunciadoBase.Enunciado;
+                            enunciadoNuevo.Imagen = enunciadoBase.Imagen;
+                            enunciadoNuevo.Formula = enunciadoBase.Formula;
+                            enunciadoNuevo.Original = enunciadoBase.Original;
+                            enunciadoNuevo.indice = a;
+                            enunciadoNuevo.Categoria = enunciadoBase.Categoria;
+                            enunciadoNuevo.Curso = enunciadoBase.Curso;
+                            // Agregar el nuevo enunciado a la lista de elegidos
+
+                            CalcularRespuesta(enunciadoNuevo);
+
+                            elegidos.Add(enunciadoNuevo);
+                            a++;
+                        }
                     }
                 }
 
@@ -144,10 +186,10 @@ namespace Ejercicios {
                         // La respuesta no es válida, volver a generar las variables
                         modificarVariables(enunciado);
                     }
-                    botones[j].Text = elegidos[j].Nombre;
-                    resueltos[j] = false;
-                    fallados[j] = false;
-                    botones[j].Show();
+                    //botones[j].Text = elegidos[j].Nombre;
+                    //resueltos[j] = false;
+                    //fallados[j] = false;
+                    //botones[j].Show();
                 }
                 dificultad(0);
                 labelVidas.Text = vidas.ToString();
@@ -170,7 +212,6 @@ namespace Ejercicios {
             }
             return numerosAleatorios;
         }
-
         public void modificarVariables(EnunciadoBase enunciadoBase) {
             Random randy = new Random();
             EnunciadoBase e = enunciadoBase;
@@ -353,8 +394,6 @@ namespace Ejercicios {
                 while (!IsResponseValid(elegidos[i])) {
                     modificarVariables(elegidos[i]);
                 }
-                MessageBox.Show($"{elegidos[i].Respuesta}");
-
             }
             MessageBox.Show("Enunciados modificados");
         }

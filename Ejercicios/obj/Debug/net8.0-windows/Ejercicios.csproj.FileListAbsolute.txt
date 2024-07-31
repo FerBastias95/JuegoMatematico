@@ -126,3 +126,4 @@ C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.pdb
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.genruntimeconfig.cache
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\ref\Ejercicios.dll
+C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.CustomBox.resources

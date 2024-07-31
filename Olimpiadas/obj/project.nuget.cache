@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qPE4wXO1HIp+feLfAQbtviJGa4UzEv9PXCP6XO1WnP9d/kISTtrbvI/GweBmAzUcm6w3CITwOUUWWW2c+ML6+A==",
+  "dgSpecHash": "iP7GrQvbvwNO65flEclgbCM5RBzUfBU4IoKWYWMuAqisAIqi+b2i4641OzZDSaO0723YT1uObp67RPPl4nYWjA==",
   "success": true,
-  "projectFilePath": "G:\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
+  "projectFilePath": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ferba\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\ferba\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

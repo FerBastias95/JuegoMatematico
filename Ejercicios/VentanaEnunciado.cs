@@ -17,6 +17,7 @@ namespace Ejercicios{
         int i;
         int v;
         int c;
+        CustomBox cb;
         public VentanaEnunciado(EnunciadoBase e, Form1 forma, int indice) {
             enu = e;
             en = enu.Enunciado;
@@ -38,7 +39,9 @@ namespace Ejercicios{
                 double valorAbsoluto = Math.Abs(input - r);
                 Math.Round(input, 1);
                 if (input == FormPrincipal.elegidos[i].Respuesta || valorAbsoluto < 0.3) {
-                    MessageBox.Show("¡Respuesta correcta!");
+                    cb = new CustomBox(true);
+                    cb.ShowDialog();
+                    //MessageBox.Show("¡Respuesta correcta!");
                     FormPrincipal.resueltos[i] = true; // Modificar el booleano del formulario principal
                     FormPrincipal.labels[i].Text = "¡OK!";
                     FormPrincipal.labels[i].ForeColor = Color.Green;
@@ -47,7 +50,9 @@ namespace Ejercicios{
                     this.Close();
                 }
                 else {
-                    MessageBox.Show($"Error, intente nuevamente.");
+                    //MessageBox.Show($"Error, intente nuevamente.");
+                    cb = new CustomBox(false);
+                    cb.ShowDialog();
                     v--;
                     FormPrincipal.actualizarVidas(v);
                     FormPrincipal.modificarVariables(enu);
