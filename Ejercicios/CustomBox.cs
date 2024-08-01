@@ -49,5 +49,17 @@ namespace Ejercicios {
         private void button1_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void CustomBox_KeyPress(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Enter) {
+                this.Close();
+            }
+        }
+
+        private void button1_KeyPress(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Enter) {
+                this.Close();
+            }
+        }
     }
 }

@@ -46,6 +46,7 @@
             button1.Text = "Volver";
             button1.TextAlignment = StringAlignment.Center;
             button1.Click += button1_Click;
+            button1.KeyPress += button1_KeyPress;
             // 
             // cyberTextBox1
             // 
@@ -90,6 +91,7 @@
             Name = "CustomBox";
             Text = "CustomBox";
             Load += CustomBox_Load;
+            KeyPress += CustomBox_KeyPress;
             ResumeLayout(false);
         }
 
