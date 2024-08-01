@@ -10,6 +10,9 @@
     <Compile Update="Opciones.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Resultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="VentanaEnunciado.cs">
       <SubType>Form</SubType>
     </Compile>

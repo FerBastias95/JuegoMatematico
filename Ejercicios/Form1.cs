@@ -86,16 +86,11 @@ namespace Ejercicios {
                 }
                 else {
                     // Si hay más de 10 enunciados, seleccionar 10 al azar
-                    List<int> indicesSeleccionados = GenerarNumerosAleatorios(totalEnunciados - 1);
-                    for(int k = 0; k < 10; k++) {
-                        EnunciadoBase enunciadoNuevo = new EnunciadoBase();
-                        enunciadoNuevo = enunciados[indicesSeleccionados[k]];
-                        elegidos.Add(enunciadoNuevo);
-                    }
+                    Seleccionar10(enunciados, totalEnunciados);
                 }
 
                 // Si la cantidad de enunciados es menor a 10, rellenar con enunciados avanzados
-                if(avanzados.Count() > 0) {
+                if (avanzados.Count() > 0) {
                     while (elegidos.Count < 10) {
                         int a = 0;
                         // Generar números aleatorios para seleccionar los enunciados restantes de la lista de enunciados avanzados
@@ -105,31 +100,9 @@ namespace Ejercicios {
                             // Crear un nuevo enunciado y copiar las propiedades del enunciado base
                             EnunciadoBase enunciadoNuevo = new EnunciadoBase();
                             EnunciadoBase enunciadoBase = avanzados[indicesRestantes[index]];
-                            enunciadoNuevo.Nombre = enunciadoBase.Nombre;
-                            enunciadoNuevo.Avanzado = enunciadoBase.Avanzado;
-                            enunciadoNuevo.Decimal1 = enunciadoBase.Decimal1;
-                            enunciadoNuevo.Decimal2 = enunciadoBase.Decimal2;
-                            enunciadoNuevo.Decimal3 = enunciadoBase.Decimal3;
-                            enunciadoNuevo.Decimal4 = enunciadoBase.Decimal4;
-                            enunciadoNuevo.Inicio1 = enunciadoBase.Inicio1;
-                            enunciadoNuevo.Inicio2 = enunciadoBase.Inicio2;
-                            enunciadoNuevo.Inicio3 = enunciadoBase.Inicio3;
-                            enunciadoNuevo.Inicio4 = enunciadoBase.Inicio4;
-                            enunciadoNuevo.Final1 = enunciadoBase.Final1;
-                            enunciadoNuevo.Final2 = enunciadoBase.Final2;
-                            enunciadoNuevo.Final3 = enunciadoBase.Final3;
-                            enunciadoNuevo.Final4 = enunciadoBase.Final4;
-                            enunciadoNuevo.Enunciado = enunciadoBase.Enunciado;
-                            enunciadoNuevo.Imagen = enunciadoBase.Imagen;
-                            enunciadoNuevo.Formula = enunciadoBase.Formula;
-                            enunciadoNuevo.Original = enunciadoBase.Original;
-                            enunciadoNuevo.indice = a;
-                            enunciadoNuevo.Categoria = enunciadoBase.Categoria;
-                            enunciadoNuevo.Curso = enunciadoBase.Curso;
+                            enunciadoNuevo = crearEnunciado(enunciadoNuevo, enunciadoBase, a);
                             // Agregar el nuevo enunciado a la lista de elegidos
-
                             CalcularRespuesta(enunciadoNuevo);
-
                             elegidos.Add(enunciadoNuevo);
                             a++;
                         }
@@ -145,31 +118,9 @@ namespace Ejercicios {
                             // Crear un nuevo enunciado y copiar las propiedades del enunciado base
                             EnunciadoBase enunciadoNuevo = new EnunciadoBase();
                             EnunciadoBase enunciadoBase = elegidos[indicesRestantes[index]];
-                            enunciadoNuevo.Nombre = enunciadoBase.Nombre;
-                            enunciadoNuevo.Avanzado = enunciadoBase.Avanzado;
-                            enunciadoNuevo.Decimal1 = enunciadoBase.Decimal1;
-                            enunciadoNuevo.Decimal2 = enunciadoBase.Decimal2;
-                            enunciadoNuevo.Decimal3 = enunciadoBase.Decimal3;
-                            enunciadoNuevo.Decimal4 = enunciadoBase.Decimal4;
-                            enunciadoNuevo.Inicio1 = enunciadoBase.Inicio1;
-                            enunciadoNuevo.Inicio2 = enunciadoBase.Inicio2;
-                            enunciadoNuevo.Inicio3 = enunciadoBase.Inicio3;
-                            enunciadoNuevo.Inicio4 = enunciadoBase.Inicio4;
-                            enunciadoNuevo.Final1 = enunciadoBase.Final1;
-                            enunciadoNuevo.Final2 = enunciadoBase.Final2;
-                            enunciadoNuevo.Final3 = enunciadoBase.Final3;
-                            enunciadoNuevo.Final4 = enunciadoBase.Final4;
-                            enunciadoNuevo.Enunciado = enunciadoBase.Enunciado;
-                            enunciadoNuevo.Imagen = enunciadoBase.Imagen;
-                            enunciadoNuevo.Formula = enunciadoBase.Formula;
-                            enunciadoNuevo.Original = enunciadoBase.Original;
-                            enunciadoNuevo.indice = a;
-                            enunciadoNuevo.Categoria = enunciadoBase.Categoria;
-                            enunciadoNuevo.Curso = enunciadoBase.Curso;
-                            enunciadoNuevo.Respuesta = enunciadoBase.Respuesta;
-                            // Agregar el nuevo enunciado a la lista de elegidos
 
-                            elegidos.Add(enunciadoNuevo);
+                            // Agregar el nuevo enunciado a la lista de elegidos
+                            elegidos.Add(crearEnunciado(enunciadoNuevo, enunciadoBase, a));
                             a++;
                         }
                     }
@@ -195,6 +146,32 @@ namespace Ejercicios {
                 botonOpciones.Enabled = true;
             }
         }
+
+        private EnunciadoBase crearEnunciado(EnunciadoBase enunciadoNuevo, EnunciadoBase enunciadoBase, int a) {
+            enunciadoNuevo.Nombre = enunciadoBase.Nombre;
+            enunciadoNuevo.Avanzado = enunciadoBase.Avanzado;
+            enunciadoNuevo.Decimal1 = enunciadoBase.Decimal1;
+            enunciadoNuevo.Decimal2 = enunciadoBase.Decimal2;
+            enunciadoNuevo.Decimal3 = enunciadoBase.Decimal3;
+            enunciadoNuevo.Decimal4 = enunciadoBase.Decimal4;
+            enunciadoNuevo.Inicio1 = enunciadoBase.Inicio1;
+            enunciadoNuevo.Inicio2 = enunciadoBase.Inicio2;
+            enunciadoNuevo.Inicio3 = enunciadoBase.Inicio3;
+            enunciadoNuevo.Inicio4 = enunciadoBase.Inicio4;
+            enunciadoNuevo.Final1 = enunciadoBase.Final1;
+            enunciadoNuevo.Final2 = enunciadoBase.Final2;
+            enunciadoNuevo.Final3 = enunciadoBase.Final3;
+            enunciadoNuevo.Final4 = enunciadoBase.Final4;
+            enunciadoNuevo.Enunciado = enunciadoBase.Enunciado;
+            enunciadoNuevo.Imagen = enunciadoBase.Imagen;
+            enunciadoNuevo.Formula = enunciadoBase.Formula;
+            enunciadoNuevo.Original = enunciadoBase.Original;
+            enunciadoNuevo.indice = a;
+            enunciadoNuevo.Categoria = enunciadoBase.Categoria;
+            enunciadoNuevo.Curso = enunciadoBase.Curso;
+            enunciadoNuevo.Respuesta = enunciadoBase.Respuesta;
+            return enunciadoNuevo;
+        }
         static List<int> GenerarNumerosAleatorios(int X) {
             List<int> numerosAleatorios = new List<int>();
             HashSet<int> numerosGenerados = new HashSet<int>(); // Conjunto para evitar repeticiones
@@ -208,6 +185,30 @@ namespace Ejercicios {
                 }
             }
             return numerosAleatorios;
+        }
+
+        public void Seleccionar10(List<EnunciadoBase> e, int totalEnunciados) {
+            List<int> indicesSeleccionados = GenerarNumerosAleatorios(totalEnunciados - 1);
+            if (elegidos.Count < 10) {
+                for (int k = 0; k < 10; k++) {
+                    EnunciadoBase enunciadoNuevo = new EnunciadoBase();
+                    enunciadoNuevo = e[indicesSeleccionados[k]];
+                    elegidos.Add(enunciadoNuevo);
+                }
+            }
+            else {
+                for (int k = 0; k < 10; k++) {
+                    EnunciadoBase enunciadoNuevo = new EnunciadoBase();
+                    enunciadoNuevo = e[indicesSeleccionados[k]];
+                    elegidos[k] = enunciadoNuevo;
+                }
+            }
+            for (int j = 0; j < 10; j++) {
+                botones[j].Text = elegidos[j].Nombre;
+            }
+        }
+        public void actualizarBotones(List<EnunciadoBase> lista) {
+
         }
         public void modificarVariables(EnunciadoBase enunciadoBase) {
             Random randy = new Random();
@@ -361,12 +362,20 @@ namespace Ejercicios {
             botones = [botonP1, botonP2, botonP3, botonP4, botonP5, botonP6, botonP7, botonP8, botonP9, botonP10, button1];
             fallados = [problema1F, problema2F, problema3F, problema4F, problema5F
             , problema6F, problema7F, problema8F, problema9F, problema10F];
-            
+
             labelVidas.Text = vidas.ToString();
             LabelResueltos.Text = correctas.ToString();
             dificultad(3);
             iniciarLayout();
             abrirEnunciados.ForeColor = Color.Black;
+            cambiarEnunciados.ForeColor = Color.Black;
+            cambiarEnunciados.InactiveColor = SystemColors.InactiveCaption;
+            cambiarEnunciados.EnteredColor = SystemColors.ActiveCaption;
+            cambiarEnunciados.BorderColor = Color.FromArgb(32, 34, 37);
+            cambiarEnunciados.EnteredBorderColor = Color.Black;
+            cambiarEnunciados.EnteredColor = SystemColors.ActiveCaption;
+            cambiarEnunciados.PressedBorderColor = SystemColors.Highlight;
+            cambiarEnunciados.PressedColor = SystemColors.Highlight;
             cambiarVariables.ForeColor = Color.Black;
             botonOpciones.ForeColor = Color.Black;
             botonP1.ForeColor = Color.Black;
@@ -409,8 +418,19 @@ namespace Ejercicios {
             }
 
             if (d == 0) {
+                if (enunciados.Count > 10) {
+                    cambiarEnunciados.Show();
+                    cambiarVariables.Size = new Size(472, 44);
+                    cambiarVariables.Location = new Point(363, 357);
+                }
+                else {
+                    cambiarEnunciados.Hide();
+                    cambiarVariables.Size = new Size(718, 44);
+                    cambiarVariables.Location = new Point(117, 357);
+                }
                 cambiarVariables.Show();
                 botonOpciones.Show();
+                backColor.Show();
                 labelVidas.Show();
                 LabelResueltos.Show();
                 label1.Show();
@@ -441,6 +461,7 @@ namespace Ejercicios {
                 botonOpciones.Show();
                 labelVidas.Show();
                 LabelResueltos.Show();
+                backColor.Show();
                 label1.Show();
                 label2.Show();
                 abrirEnunciados.Size = new System.Drawing.Size(472, 35);
@@ -468,6 +489,7 @@ namespace Ejercicios {
                 LabelResueltos.Show();
                 label1.Show();
                 label2.Show();
+                backColor.Show();
                 cambiarVariables.Show();
                 botonOpciones.Show();
                 abrirEnunciados.Size = new System.Drawing.Size(472, 35);
@@ -486,6 +508,7 @@ namespace Ejercicios {
                 LabelResueltos.Hide();
                 label1.Hide();
                 label2.Hide();
+                backColor.Hide();
                 cambiarVariables.Hide();
                 botonOpciones.Hide();
                 abrirEnunciados.Location = new Point(117, 374);
@@ -662,10 +685,14 @@ namespace Ejercicios {
         }
         private void button1_Click_1(object sender, EventArgs e) {
             if (problema1R == false) {
-                VentanaEnunciadoDesafio problema1Form = new VentanaEnunciadoDesafio(elegidos, this);
+                VentanaEnunciadoDesafio problema1Form = new VentanaEnunciadoDesafio(enunciados, this);
                 problema1Form.FormPrincipal = this;
                 problema1Form.ShowDialog();
             }
+        }
+
+        private void cambiarEnunciados_Click(object sender, EventArgs e) {
+            Seleccionar10(enunciados, enunciados.Count);
         }
     }
 }

@@ -26,8 +26,7 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
@@ -62,17 +61,18 @@
             botonP9 = new ReaLTaiizor.Controls.Button();
             botonP10 = new ReaLTaiizor.Controls.Button();
             button1 = new ReaLTaiizor.Controls.Button();
+            cambiarEnunciados = new ReaLTaiizor.Controls.Button();
+            backColor = new RichTextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = SystemColors.InactiveCaption;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            label1.Location = new Point(117, 412);
+            label1.Font = new Font("Segoe UI", 16.25F, FontStyle.Bold);
+            label1.Location = new Point(117, 407);
             label1.Name = "label1";
-            label1.Size = new Size(157, 27);
+            label1.Size = new Size(184, 30);
             label1.TabIndex = 5;
             label1.Text = "Vidas restantes: ";
             label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -81,11 +81,10 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = SystemColors.InactiveCaption;
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            label2.Location = new Point(117, 452);
+            label2.Font = new Font("Segoe UI", 16.25F, FontStyle.Bold);
+            label2.Location = new Point(117, 447);
             label2.Name = "label2";
-            label2.Size = new Size(103, 27);
+            label2.Size = new Size(117, 30);
             label2.TabIndex = 6;
             label2.Text = "Resueltos:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
@@ -159,11 +158,11 @@
             // 
             labelVidas.AutoSize = true;
             labelVidas.BackColor = SystemColors.InactiveCaption;
-            labelVidas.BorderStyle = BorderStyle.FixedSingle;
-            labelVidas.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            labelVidas.Location = new Point(295, 412);
+            labelVidas.BorderStyle = BorderStyle.Fixed3D;
+            labelVidas.Font = new Font("Segoe UI", 16.25F, FontStyle.Bold);
+            labelVidas.Location = new Point(318, 407);
             labelVidas.Name = "labelVidas";
-            labelVidas.Size = new Size(25, 27);
+            labelVidas.Size = new Size(28, 32);
             labelVidas.TabIndex = 13;
             labelVidas.Text = "0";
             labelVidas.TextAlign = ContentAlignment.MiddleLeft;
@@ -172,11 +171,11 @@
             // 
             LabelResueltos.AutoSize = true;
             LabelResueltos.BackColor = SystemColors.InactiveCaption;
-            LabelResueltos.BorderStyle = BorderStyle.FixedSingle;
-            LabelResueltos.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            LabelResueltos.Location = new Point(295, 452);
+            LabelResueltos.BorderStyle = BorderStyle.Fixed3D;
+            LabelResueltos.Font = new Font("Segoe UI", 16.25F, FontStyle.Bold);
+            LabelResueltos.Location = new Point(318, 447);
             LabelResueltos.Name = "LabelResueltos";
-            LabelResueltos.Size = new Size(25, 27);
+            LabelResueltos.Size = new Size(28, 32);
             LabelResueltos.TabIndex = 14;
             LabelResueltos.Text = "0";
             LabelResueltos.TextAlign = ContentAlignment.MiddleLeft;
@@ -580,6 +579,38 @@
             button1.TextAlignment = StringAlignment.Center;
             button1.Click += button1_Click_1;
             // 
+            // cambiarEnunciados
+            // 
+            cambiarEnunciados.BackColor = Color.Transparent;
+            cambiarEnunciados.BorderColor = Color.FromArgb(32, 34, 37);
+            cambiarEnunciados.EnteredBorderColor = Color.Black;
+            cambiarEnunciados.EnteredColor = SystemColors.ActiveCaption;
+            cambiarEnunciados.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cambiarEnunciados.Image = null;
+            cambiarEnunciados.ImageAlign = ContentAlignment.MiddleLeft;
+            cambiarEnunciados.InactiveColor = SystemColors.InactiveCaption;
+            cambiarEnunciados.Location = new Point(117, 357);
+            cambiarEnunciados.Name = "cambiarEnunciados";
+            cambiarEnunciados.PressedBorderColor = SystemColors.Highlight;
+            cambiarEnunciados.PressedColor = SystemColors.Highlight;
+            cambiarEnunciados.Size = new Size(229, 44);
+            cambiarEnunciados.TabIndex = 30;
+            cambiarEnunciados.Text = "Cambiar Enunciados";
+            cambiarEnunciados.TextAlignment = StringAlignment.Center;
+            cambiarEnunciados.Visible = false;
+            cambiarEnunciados.Click += cambiarEnunciados_Click;
+            // 
+            // backColor
+            // 
+            backColor.BackColor = SystemColors.InactiveCaption;
+            backColor.BorderStyle = BorderStyle.None;
+            backColor.Location = new Point(117, 407);
+            backColor.Name = "backColor";
+            backColor.Size = new Size(229, 71);
+            backColor.TabIndex = 31;
+            backColor.Text = "";
+            backColor.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -588,6 +619,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(947, 490);
+            Controls.Add(cambiarEnunciados);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(botonP10);
@@ -618,6 +650,7 @@
             Controls.Add(LabelP4);
             Controls.Add(LabelP3);
             Controls.Add(button1);
+            Controls.Add(backColor);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -662,5 +695,7 @@
         private ReaLTaiizor.Controls.Button botonP9;
         private ReaLTaiizor.Controls.Button botonP10;
         private ReaLTaiizor.Controls.Button button1;
+        private ReaLTaiizor.Controls.Button cambiarEnunciados;
+        private RichTextBox backColor;
     }
 }

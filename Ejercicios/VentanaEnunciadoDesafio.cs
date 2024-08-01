@@ -22,7 +22,7 @@ namespace Ejercicios {
         Random randy;
         public VentanaEnunciadoDesafio(List<EnunciadoBase> e, Form1 f) {
             resultadoC = "Correctas:";
-            resultadoI = "\n\nIncorrectas:";
+            resultadoI = "Incorrectas:";
             modo = 0;
             FormPrincipal = f;
             elegidos = e;
@@ -87,7 +87,7 @@ namespace Ejercicios {
                         correctas++;
                     }
                     else {
-                        resultadoI += "\n" + enunciado;
+                        resultadoI += "\n" + enunciado + " Respuesta: " + enu.Respuesta;
                         incorrectas++;
                     }
                     actualizar();
@@ -95,7 +95,8 @@ namespace Ejercicios {
                 }
             }
             else if (modo == 2) {
-                MessageBox.Show(resultadoC + resultadoI);
+                Resultados r = new Resultados(resultadoC, resultadoI);
+                r.ShowDialog();
             }
         }
         private int azar(Random r, int largo) {
