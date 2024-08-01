@@ -166,9 +166,8 @@ namespace Ejercicios {
                             enunciadoNuevo.indice = a;
                             enunciadoNuevo.Categoria = enunciadoBase.Categoria;
                             enunciadoNuevo.Curso = enunciadoBase.Curso;
+                            enunciadoNuevo.Respuesta = enunciadoBase.Respuesta;
                             // Agregar el nuevo enunciado a la lista de elegidos
-
-                            CalcularRespuesta(enunciadoNuevo);
 
                             elegidos.Add(enunciadoNuevo);
                             a++;
@@ -177,19 +176,17 @@ namespace Ejercicios {
                 }
 
                 // Mostrar los enunciados seleccionados en la interfaz gráfica
-                for (int j = 0; j < elegidos.Count; j++) {
-                    var enunciado = elegidos[j];
-                    // Modificar las variables del enunciado
-                    modificarVariables(enunciado);
-                    // Validar la respuesta
-                    while (!IsResponseValid(enunciado)) {
-                        // La respuesta no es válida, volver a generar las variables
+                if (avanzados.Count > 0) {
+                    for (int j = 0; j < 10; j++) {
+                        var enunciado = elegidos[j];
                         modificarVariables(enunciado);
+                        while (!IsResponseValid(enunciado)) {
+                            modificarVariables(enunciado);
+                        }
                     }
-                    //botones[j].Text = elegidos[j].Nombre;
-                    //resueltos[j] = false;
-                    //fallados[j] = false;
-                    //botones[j].Show();
+                }
+                for (int j = 0; j < 10; j++) {
+                    botones[j].Text = elegidos[j].Nombre;
                 }
                 dificultad(0);
                 labelVidas.Text = vidas.ToString();
