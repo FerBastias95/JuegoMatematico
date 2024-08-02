@@ -22,7 +22,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             button1 = new ReaLTaiizor.Controls.Button();
             cyberTextBox1 = new ReaLTaiizor.Controls.CyberTextBox();
             SuspendLayout();
@@ -89,6 +90,7 @@
             Controls.Add(cyberTextBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CustomBox";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomBox";
             Load += CustomBox_Load;
             KeyPress += CustomBox_KeyPress;
