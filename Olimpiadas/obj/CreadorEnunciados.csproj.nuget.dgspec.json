@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj": {}
+    "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj": {}
   },
   "projects": {
-    "G:\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj": {
+    "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
+        "projectUniqueName": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
         "projectName": "CreadorEnunciados",
-        "projectPath": "G:\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
+        "projectPath": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\CreadorEnunciados.csproj",
         "packagesPath": "C:\\Users\\ferba\\.nuget\\packages\\",
-        "outputPath": "G:\\JuegoMatematico\\Olimpiadas\\obj\\",
+        "outputPath": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -73,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
