@@ -95,6 +95,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "VentanaEnunciadoImagen";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Ventana Enunciado";
             Load += Problema_1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

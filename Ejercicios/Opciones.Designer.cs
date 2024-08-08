@@ -38,9 +38,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label2.Location = new Point(222, 150);
+            label2.Location = new Point(194, 112);
             label2.Name = "label2";
-            label2.Size = new Size(140, 23);
+            label2.Size = new Size(113, 19);
             label2.TabIndex = 4;
             label2.Text = "Tiempo límite";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -49,9 +49,10 @@
             // 
             opcionesTiempo.Enabled = false;
             opcionesTiempo.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            opcionesTiempo.Location = new Point(368, 147);
+            opcionesTiempo.Location = new Point(322, 110);
+            opcionesTiempo.Margin = new Padding(3, 2, 3, 2);
             opcionesTiempo.Name = "opcionesTiempo";
-            opcionesTiempo.Size = new Size(154, 36);
+            opcionesTiempo.Size = new Size(135, 28);
             opcionesTiempo.TabIndex = 5;
             opcionesTiempo.Text = "";
             // 
@@ -59,9 +60,10 @@
             // 
             radioButton3.AutoSize = true;
             radioButton3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            radioButton3.Location = new Point(0, 148);
+            radioButton3.Location = new Point(0, 111);
+            radioButton3.Margin = new Padding(3, 2, 3, 2);
             radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(175, 27);
+            radioButton3.Size = new Size(137, 23);
             radioButton3.TabIndex = 6;
             radioButton3.TabStop = true;
             radioButton3.Text = "Desafío Infinito";
@@ -72,9 +74,10 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            radioButton1.Location = new Point(0, 48);
+            radioButton1.Location = new Point(0, 36);
+            radioButton1.Margin = new Padding(3, 2, 3, 2);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(140, 27);
+            radioButton1.Size = new Size(111, 23);
             radioButton1.TabIndex = 3;
             radioButton1.TabStop = true;
             radioButton1.Text = "5 Ejercicios";
@@ -84,9 +87,10 @@
             // 
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            radioButton2.Location = new Point(0, 98);
+            radioButton2.Location = new Point(0, 74);
+            radioButton2.Margin = new Padding(3, 2, 3, 2);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(151, 27);
+            radioButton2.Size = new Size(120, 23);
             radioButton2.TabIndex = 4;
             radioButton2.TabStop = true;
             radioButton2.Text = "10 Ejercicios";
@@ -96,9 +100,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(30, 48);
+            label1.Location = new Point(26, 36);
             label1.Name = "label1";
-            label1.Size = new Size(153, 37);
+            label1.Size = new Size(122, 28);
             label1.TabIndex = 2;
             label1.Text = "Dificultad";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -113,9 +117,11 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             groupBox1.ForeColor = Color.Black;
-            groupBox1.Location = new Point(30, 105);
+            groupBox1.Location = new Point(26, 79);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(551, 208);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(482, 156);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             // 
@@ -128,10 +134,11 @@
             button1.Font = new Font("Segoe UI", 12F);
             button1.HoverTextColor = Color.FromArgb(48, 49, 51);
             button1.InfoColor = Color.FromArgb(144, 147, 153);
-            button1.Location = new Point(30, 348);
+            button1.Location = new Point(26, 261);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.PrimaryColor = Color.FromArgb(64, 158, 255);
-            button1.Size = new Size(551, 50);
+            button1.Size = new Size(482, 38);
             button1.SuccessColor = Color.FromArgb(103, 194, 58);
             button1.TabIndex = 8;
             button1.Text = "Aceptar Cambios";
@@ -141,14 +148,16 @@
             // 
             // Opciones
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(622, 433);
+            ClientSize = new Size(544, 325);
             Controls.Add(button1);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Opciones";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Opciones";
             Load += Opciones_Load;
             groupBox1.ResumeLayout(false);

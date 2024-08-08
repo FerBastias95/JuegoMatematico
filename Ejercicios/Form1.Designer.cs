@@ -70,11 +70,11 @@
             label1.AutoSize = true;
             label1.BackColor = SystemColors.InactiveCaption;
             label1.Font = new Font("Segoe UI", 16.25F, FontStyle.Bold);
-            label1.Location = new Point(117, 407);
+            label1.Location = new Point(128, 407);
             label1.Name = "label1";
-            label1.Size = new Size(184, 30);
+            label1.Size = new Size(188, 30);
             label1.TabIndex = 5;
-            label1.Text = "Vidas restantes: ";
+            label1.Text = "Vidas Restantes: ";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -82,7 +82,7 @@
             label2.AutoSize = true;
             label2.BackColor = SystemColors.InactiveCaption;
             label2.Font = new Font("Segoe UI", 16.25F, FontStyle.Bold);
-            label2.Location = new Point(117, 447);
+            label2.Location = new Point(129, 447);
             label2.Name = "label2";
             label2.Size = new Size(117, 30);
             label2.TabIndex = 6;
@@ -290,7 +290,7 @@
             // cambiarVariables
             // 
             cambiarVariables.BackColor = SystemColors.GradientActiveCaption;
-            cambiarVariables.BorderColor = Color.FromArgb(32, 34, 37);
+            cambiarVariables.BorderColor = Color.Transparent;
             cambiarVariables.Enabled = false;
             cambiarVariables.EnteredBorderColor = Color.Black;
             cambiarVariables.EnteredColor = SystemColors.ActiveCaption;
@@ -305,7 +305,7 @@
             cambiarVariables.PressedColor = SystemColors.Highlight;
             cambiarVariables.Size = new Size(718, 44);
             cambiarVariables.TabIndex = 6;
-            cambiarVariables.Text = "Cambiar variables";
+            cambiarVariables.Text = "Cambiar Variables";
             cambiarVariables.TextAlignment = StringAlignment.Center;
             cambiarVariables.Click += cambiarVariables_Click;
             // 
@@ -331,7 +331,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(125, 154);
+            label3.Location = new Point(122, 208);
             label3.Name = "label3";
             label3.Size = new Size(702, 50);
             label3.TabIndex = 17;
@@ -342,7 +342,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Century Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(320, 200);
+            label4.Location = new Point(298, 147);
             label4.Name = "label4";
             label4.Size = new Size(340, 56);
             label4.TabIndex = 18;
@@ -604,7 +604,7 @@
             // 
             backColor.BackColor = SystemColors.InactiveCaption;
             backColor.BorderStyle = BorderStyle.None;
-            backColor.Location = new Point(117, 407);
+            backColor.Location = new Point(118, 407);
             backColor.Name = "backColor";
             backColor.Size = new Size(229, 71);
             backColor.TabIndex = 31;
@@ -656,6 +656,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Resolución de Ejercicios";
             Load += Form1_Load;
             ResumeLayout(false);

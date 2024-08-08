@@ -292,6 +292,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             MaximizeBox = false;
             Name = "AlterarBDD";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AlterarBDD";
             FormClosed += AlterarBDD_FormClosed;
             Load += AlterarBDD_Load;

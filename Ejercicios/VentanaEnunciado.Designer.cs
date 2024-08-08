@@ -93,6 +93,7 @@
             Margin = new Padding(2, 3, 2, 3);
             MaximizeBox = false;
             Name = "VentanaEnunciado";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Enunciado";
             Load += Problema_1_Load;
             ResumeLayout(false);
