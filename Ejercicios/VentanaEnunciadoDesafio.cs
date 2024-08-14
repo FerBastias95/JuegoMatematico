@@ -77,9 +77,13 @@ namespace Ejercicios {
             }
             else if (modo == 1) {
                 double input;
-                bool valid = double.TryParse(RespuestaP1.Text, out double d1);
+                string ans = RespuestaP1.Text;
+                if(ans.Length > 0) {
+                    ans = ans.Replace('.', ',');
+                }
+                bool valid = double.TryParse(ans, out double d1);
                 if (valid) {
-                    input = double.Parse(RespuestaP1.Text);
+                    input = double.Parse(ans);
                     double valorAbsoluto = Math.Abs(input - r);
                     Math.Round(input, 1);
                     if (input == enu.Respuesta || valorAbsoluto < 0.3) {

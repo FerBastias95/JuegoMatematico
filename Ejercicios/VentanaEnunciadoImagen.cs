@@ -52,9 +52,13 @@ namespace Ejercicios {
         }
         private void acciones() {
             double input;
-            bool valid = double.TryParse(RespuestaP1.Text, out double d1);
+            string ans = RespuestaP1.Text;
+            if (ans.Length > 0) {
+                ans = ans.Replace('.', ',');
+            }
+            bool valid = double.TryParse(ans, out double d1);
             if (valid) {
-                input = double.Parse(RespuestaP1.Text);
+                input = double.Parse(ans);
                 double valorAbsoluto = Math.Abs(input - r);
                 Math.Round(input, 1);
                 if (input == FormPrincipal.elegidos[i].Respuesta || valorAbsoluto < 0.3) {
@@ -74,13 +78,15 @@ namespace Ejercicios {
                     //MessageBox.Show($"Error, intente nuevamente.{enu.Respuesta}");
                     v--;
                     FormPrincipal.actualizarVidas(v);
-                    FormPrincipal.modificarVariables(enu);
-                    while (!FormPrincipal.IsResponseValid(enu)) {
-                        // La respuesta no es válida, volver a generar las variables
+                    if(enu.Avanzado == true) {
                         FormPrincipal.modificarVariables(enu);
+                        while (!FormPrincipal.IsResponseValid(enu)) {
+                            // La respuesta no es válida, volver a generar las variables
+                            FormPrincipal.modificarVariables(enu);
+                        }
+                        FormPrincipal.CalcularRespuesta(enu);
+                        r = enu.Respuesta;
                     }
-                    FormPrincipal.CalcularRespuesta(enu);
-                    r = enu.Respuesta;
                     this.Close();
                 }
             }
