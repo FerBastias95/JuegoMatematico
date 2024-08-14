@@ -173,7 +173,7 @@
             LabelResueltos.BackColor = SystemColors.InactiveCaption;
             LabelResueltos.BorderStyle = BorderStyle.Fixed3D;
             LabelResueltos.Font = new Font("Segoe UI", 16.25F, FontStyle.Bold);
-            LabelResueltos.Location = new Point(318, 447);
+            LabelResueltos.Location = new Point(318, 445);
             LabelResueltos.Name = "LabelResueltos";
             LabelResueltos.Size = new Size(28, 32);
             LabelResueltos.TabIndex = 14;
@@ -290,7 +290,7 @@
             // cambiarVariables
             // 
             cambiarVariables.BackColor = SystemColors.GradientActiveCaption;
-            cambiarVariables.BorderColor = Color.Transparent;
+            cambiarVariables.BorderColor = Color.Black;
             cambiarVariables.Enabled = false;
             cambiarVariables.EnteredBorderColor = Color.Black;
             cambiarVariables.EnteredColor = SystemColors.ActiveCaption;
@@ -603,7 +603,6 @@
             // backColor
             // 
             backColor.BackColor = SystemColors.InactiveCaption;
-            backColor.BorderStyle = BorderStyle.None;
             backColor.Location = new Point(118, 407);
             backColor.Name = "backColor";
             backColor.Size = new Size(229, 71);

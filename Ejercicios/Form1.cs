@@ -138,6 +138,7 @@ namespace Ejercicios {
                 }
                 for (int j = 0; j < 10; j++) {
                     botones[j].Text = elegidos[j].Nombre;
+                    resueltos[j] = false;
                 }
                 dificultad(0);
                 labelVidas.Text = vidas.ToString();

@@ -65,10 +65,10 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ActiveCaption;
-            pictureBox1.Location = new Point(640, 12);
+            pictureBox1.Location = new Point(630, 12);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(612, 559);
+            pictureBox1.Size = new Size(622, 559);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 

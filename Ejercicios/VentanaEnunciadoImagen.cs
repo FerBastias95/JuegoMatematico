@@ -33,6 +33,11 @@ namespace Ejercicios {
         private void Problema_1_Load(object sender, EventArgs e) {
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // Escalar y centrar la imagen
             Enunciado1.Text = en;
+            if (en.Length < 1) {
+                Enunciado1.Visible = false;
+                pictureBox1.Size = new Size(1240, 559);
+                pictureBox1.Location = new Point(12, 12);
+            }
             if (enu.Imagen != null) {
                 if (cachedImage == null) { // Load only if not cached
                     using (MemoryStream ms = new MemoryStream(enu.Imagen)) {
