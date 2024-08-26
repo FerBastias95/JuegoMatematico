@@ -33,11 +33,20 @@ namespace Ejercicios {
         private void Problema_1_Load(object sender, EventArgs e) {
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // Escalar y centrar la imagen
             Enunciado1.Text = en;
-            if (en.Length < 1) {
+            if (en.Length < 1 && enu.Imagen != null)
+            {
                 Enunciado1.Visible = false;
                 pictureBox1.Size = new Size(1240, 559);
                 pictureBox1.Location = new Point(12, 12);
             }
+
+            else if (en.Length > 1 && enu.Imagen == null)
+            {
+                pictureBox1.Visible = false;
+                Enunciado1.Size = new Size(1240, 559);
+                Enunciado1.Location = new Point(12, 12);
+            }
+
             if (enu.Imagen != null) {
                 if (cachedImage == null) { // Load only if not cached
                     using (MemoryStream ms = new MemoryStream(enu.Imagen)) {
@@ -71,6 +80,14 @@ namespace Ejercicios {
                     c++;
                     FormPrincipal.actualizarCorrectas(c);
                     this.Close();
+                    if(FormPrincipal.dif == 0 && FormPrincipal.correctas == 5)
+                    {
+                        FormPrincipal.Victoria();
+                    }
+                    else if (FormPrincipal.dif == 1 && FormPrincipal.correctas == 10)
+                    {
+                        FormPrincipal.Victoria();
+                    }
                 }
                 else {
                     cb = new CustomBox(false);

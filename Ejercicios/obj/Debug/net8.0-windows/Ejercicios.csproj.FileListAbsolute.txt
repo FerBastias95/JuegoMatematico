@@ -67,7 +67,6 @@ G:\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\runtimes\win\lib\netcorea
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.AssemblyReference.cache
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Form1.resources
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Opciones.resources
-G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.VentanaEnunciado.resources
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.VentanaEnunciadoDesafio.resources
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.VentanaEnunciadoImagen.resources
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.GenerateResource.cache
@@ -76,7 +75,6 @@ G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.AssemblyInfoIn
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.AssemblyInfo.cs
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.CoreCompileInputs.cache
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.sourcelink.json
-G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.CopyComplete
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.dll
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\refint\Ejercicios.dll
 G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.pdb
@@ -136,3 +134,10 @@ C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\bin\Debug\net
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Interop.WMPLib.dll
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\AxInterop.WMPLib.dll
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.ResolveComReference.cache
+G:\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\Interop.WMPLib.dll
+G:\JuegoMatematico\Ejercicios\bin\Debug\net8.0-windows\AxInterop.WMPLib.dll
+G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Interop.WMPLib.dll
+G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\AxInterop.WMPLib.dll
+G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.ResolveComReference.cache
+G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Victory.resources
+G:\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.Up2Date

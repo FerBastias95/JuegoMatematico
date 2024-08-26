@@ -524,165 +524,45 @@ namespace Ejercicios {
             }
         }
 
+        private void CrearVentana(int i)
+        {
+            if (resueltos[i] == false)
+            {
+                VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[i], this, i);
+                problema1Form.FormPrincipal = this;
+                problema1Form.ShowDialog();
+            }
+        }
+
         private void botonP1_Click(object sender, EventArgs e) {
-            if (elegidos[0].Imagen == null) {
-                if (resueltos[0] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[0], this, 0);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[0] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[0], this, 0);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(0);
         }
         private void botonP2_Click(object sender, EventArgs e) {
-            if (elegidos[1].Imagen == null) {
-                if (resueltos[1] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[1], this, 1);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[1] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[1], this, 1);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(1);
         }
         private void botonP3_Click(object sender, EventArgs e) {
-            if (elegidos[2].Imagen == null) {
-                if (resueltos[2] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[2], this, 2);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[2] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[2], this, 2);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(2);
         }
         private void botonP4_Click(object sender, EventArgs e) {
-            if (elegidos[3].Imagen == null) {
-                if (resueltos[3] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[3], this, 3);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[3] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[3], this, 3);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(3);
         }
         private void botonP5_Click(object sender, EventArgs e) {
-            if (elegidos[4].Imagen == null) {
-                if (resueltos[4] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[4], this, 4);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[4] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[4], this, 4);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(4);
         }
         private void botonP6_Click(object sender, EventArgs e) {
-            if (elegidos[5].Imagen == null) {
-                if (resueltos[5] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[5], this, 5);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[5] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[5], this, 5);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(5);
         }
         private void botonP7_Click(object sender, EventArgs e) {
-            if (elegidos[6].Imagen == null) {
-                if (resueltos[6] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[6], this, 6);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[6] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[6], this, 6);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(6);
         }
         private void botonP8_Click(object sender, EventArgs e) {
-            if (elegidos[7].Imagen == null) {
-                if (resueltos[7] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[7], this, 7);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[7] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[7], this, 7);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(7);
         }
         private void botonP9_Click(object sender, EventArgs e) {
-            if (elegidos[8].Imagen == null) {
-                if (resueltos[8] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[8], this, 8);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[8] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[8], this, 8);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(8);
         }
         private void botonP10_Click(object sender, EventArgs e) {
-            if (elegidos[9].Imagen == null) {
-                if (resueltos[9] == false) {
-                    VentanaEnunciado problema1Form = new VentanaEnunciado(elegidos[9], this, 9);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
-            else {
-                if (resueltos[9] == false) {
-                    VentanaEnunciadoImagen problema1Form = new VentanaEnunciadoImagen(elegidos[9], this, 9);
-                    problema1Form.FormPrincipal = this;
-                    problema1Form.ShowDialog();
-                }
-            }
+            CrearVentana(9);
         }
         private void button1_Click_1(object sender, EventArgs e) {
             if (problema1R == false) {
@@ -691,9 +571,13 @@ namespace Ejercicios {
                 problema1Form.ShowDialog();
             }
         }
-
         private void cambiarEnunciados_Click(object sender, EventArgs e) {
             Seleccionar10(enunciados, enunciados.Count);
+        }
+        public void Victoria()
+        {
+            Victory v = new Victory();
+            v.ShowDialog();
         }
     }
 }

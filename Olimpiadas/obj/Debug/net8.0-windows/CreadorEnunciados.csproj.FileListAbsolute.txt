@@ -66,7 +66,6 @@ G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.Assembl
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.AssemblyInfo.cs
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.csproj.CoreCompileInputs.cache
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.sourcelink.json
-G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.csproj.CopyComplete
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.dll
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\refint\CreadorEnunciados.dll
 G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.pdb
@@ -112,3 +111,4 @@ C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Olimpiadas\obj\Debug\net
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.pdb
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorEnunciados.genruntimeconfig.cache
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\ref\CreadorEnunciados.dll
+G:\JuegoMatematico\Olimpiadas\obj\Debug\net8.0-windows\CreadorE.5B8F86B5.Up2Date
