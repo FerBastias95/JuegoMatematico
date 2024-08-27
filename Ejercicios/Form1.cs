@@ -369,6 +369,7 @@ namespace Ejercicios {
             dificultad(3);
             iniciarLayout();
             abrirEnunciados.ForeColor = Color.Black;
+            abrirEnunciados2.ForeColor = Color.Black;
             cambiarEnunciados.ForeColor = Color.Black;
             cambiarEnunciados.InactiveColor = SystemColors.InactiveCaption;
             cambiarEnunciados.EnteredColor = SystemColors.ActiveCaption;
@@ -513,7 +514,7 @@ namespace Ejercicios {
                 cambiarVariables.Hide();
                 botonOpciones.Hide();
                 abrirEnunciados.Location = new Point(117, 374);
-                abrirEnunciados.Size = new System.Drawing.Size(718, 75);
+                abrirEnunciados.Size = new System.Drawing.Size(355, 75);
                 for (int j = 0; j < 10; j++) {
                     labels[j].Hide();
                     botones[j].Hide();

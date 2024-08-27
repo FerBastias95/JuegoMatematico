@@ -26,7 +26,8 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
@@ -63,6 +64,7 @@
             button1 = new ReaLTaiizor.Controls.Button();
             cambiarEnunciados = new ReaLTaiizor.Controls.Button();
             backColor = new RichTextBox();
+            abrirEnunciados2 = new ReaLTaiizor.Controls.Button();
             SuspendLayout();
             // 
             // label1
@@ -196,7 +198,7 @@
             abrirEnunciados.PressedColor = SystemColors.Highlight;
             abrirEnunciados.Size = new Size(472, 35);
             abrirEnunciados.TabIndex = 15;
-            abrirEnunciados.Text = "Seleccionar Lista";
+            abrirEnunciados.Text = "Practicar";
             abrirEnunciados.TextAlignment = StringAlignment.Center;
             abrirEnunciados.Click += button1_Click;
             // 
@@ -610,6 +612,25 @@
             backColor.Text = "";
             backColor.Visible = false;
             // 
+            // abrirEnunciados2
+            // 
+            abrirEnunciados2.BackColor = SystemColors.GradientActiveCaption;
+            abrirEnunciados2.BorderColor = Color.FromArgb(32, 34, 37);
+            abrirEnunciados2.EnteredBorderColor = Color.Black;
+            abrirEnunciados2.EnteredColor = SystemColors.ActiveCaption;
+            abrirEnunciados2.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            abrirEnunciados2.Image = null;
+            abrirEnunciados2.ImageAlign = ContentAlignment.MiddleLeft;
+            abrirEnunciados2.InactiveColor = SystemColors.InactiveCaption;
+            abrirEnunciados2.Location = new Point(480, 374);
+            abrirEnunciados2.Name = "abrirEnunciados2";
+            abrirEnunciados2.PressedBorderColor = SystemColors.Highlight;
+            abrirEnunciados2.PressedColor = SystemColors.Highlight;
+            abrirEnunciados2.Size = new Size(353, 75);
+            abrirEnunciados2.TabIndex = 32;
+            abrirEnunciados2.Text = "Olimpiadas";
+            abrirEnunciados2.TextAlignment = StringAlignment.Center;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -618,6 +639,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(947, 490);
+            Controls.Add(abrirEnunciados2);
             Controls.Add(cambiarEnunciados);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -697,5 +719,6 @@
         private ReaLTaiizor.Controls.Button button1;
         private ReaLTaiizor.Controls.Button cambiarEnunciados;
         private RichTextBox backColor;
+        private ReaLTaiizor.Controls.Button abrirEnunciados2;
     }
 }

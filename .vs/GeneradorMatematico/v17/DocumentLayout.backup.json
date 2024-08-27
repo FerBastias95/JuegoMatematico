@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "G:\\JuegoMatematico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|g:\\juegomatematico\\ejercicios\\victory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\victory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|g:\\juegomatematico\\ejercicios\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|g:\\juegomatematico\\ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|g:\\juegomatematico\\ejercicios\\resultados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\resultados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|g:\\juegomatematico\\ejercicios\\victory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\victory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|g:\\juegomatematico\\ejercicios\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|G:\\JuegoMatematico\\ejercicios\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|g:\\juegomatematico\\ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +30,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\Form1.cs",
+              "RelativeDocumentMoniker": "Ejercicios\\Form1.cs",
+              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\Form1.cs [Design]*",
+              "RelativeToolTip": "Ejercicios\\Form1.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T01:47:26.738Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "VentanaEnunciadoImagen.cs [Design]",
               "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\VentanaEnunciadoImagen.cs",
               "RelativeDocumentMoniker": "Ejercicios\\VentanaEnunciadoImagen.cs",
@@ -54,63 +54,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Victory.cs",
-              "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\Victory.cs",
-              "RelativeDocumentMoniker": "Ejercicios\\Victory.cs",
-              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\Victory.cs",
-              "RelativeToolTip": "Ejercicios\\Victory.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAawBQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T01:34:12.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Victory.cs [Design]",
-              "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\Victory.cs",
-              "RelativeDocumentMoniker": "Ejercicios\\Victory.cs",
-              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\Victory.cs [Design]",
-              "RelativeToolTip": "Ejercicios\\Victory.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T01:34:09.67Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Resultados.cs [Design]",
-              "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\Resultados.cs",
-              "RelativeDocumentMoniker": "Ejercicios\\Resultados.cs",
-              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\Resultados.cs [Design]",
-              "RelativeToolTip": "Ejercicios\\Resultados.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T01:33:04.277Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VentanaEnunciadoImagen.cs",
-              "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\VentanaEnunciadoImagen.cs",
-              "RelativeDocumentMoniker": "Ejercicios\\VentanaEnunciadoImagen.cs",
-              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\VentanaEnunciadoImagen.cs",
-              "RelativeToolTip": "Ejercicios\\VentanaEnunciadoImagen.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAwwD0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T01:24:46.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\Form1.cs",
               "RelativeDocumentMoniker": "Ejercicios\\Form1.cs",
-              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\Form1.cs",
-              "RelativeToolTip": "Ejercicios\\Form1.cs",
-              "ViewState": "AgIAACECAAAAAAAAAAA6wD0CAAAOAAAAAAAAAA==",
+              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\Form1.cs*",
+              "RelativeToolTip": "Ejercicios\\Form1.cs*",
+              "ViewState": "AgIAAGQBAAAAAAAAAAD4v3MBAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-14T21:13:56.807Z",
               "EditorCaption": ""
