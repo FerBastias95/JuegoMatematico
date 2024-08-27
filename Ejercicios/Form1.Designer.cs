@@ -630,6 +630,7 @@
             abrirEnunciados2.TabIndex = 32;
             abrirEnunciados2.Text = "Olimpiadas";
             abrirEnunciados2.TextAlignment = StringAlignment.Center;
+            abrirEnunciados2.Click += abrirEnunciados2_Click;
             // 
             // Form1
             // 
