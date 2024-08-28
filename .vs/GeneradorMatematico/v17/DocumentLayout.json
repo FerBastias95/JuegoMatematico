@@ -1,18 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\JuegoMatematico\\",
+  "WorkspaceRootPath": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|g:\\juegomatematico\\ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|c:\\users\\ferba\\documents\\personales\\jm2\\juegomatematico\\olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|solutionrelative:olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|g:\\juegomatematico\\ejercicios\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|c:\\users\\ferba\\documents\\personales\\jm2\\juegomatematico\\olimpiadas\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|solutionrelative:olimpiadas\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|c:\\users\\ferba\\documents\\personales\\jm2\\juegomatematico\\ejercicios\\victory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\victory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|c:\\users\\ferba\\documents\\personales\\jm2\\juegomatematico\\olimpiadas\\enunciadoavanzado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|solutionrelative:olimpiadas\\enunciadoavanzado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|c:\\users\\ferba\\documents\\personales\\jm2\\juegomatematico\\olimpiadas\\enunciadoavanzado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|solutionrelative:olimpiadas\\enunciadoavanzado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|c:\\users\\ferba\\documents\\personales\\jm2\\juegomatematico\\olimpiadas\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|solutionrelative:olimpiadas\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|c:\\users\\ferba\\documents\\personales\\jm2\\juegomatematico\\olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45CFFF4F-4BCD-47BA-BC3C-2AC1E48C447C}|Olimpiadas\\CreadorEnunciados.csproj|solutionrelative:olimpiadas\\alterarbdd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\ejercicios\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\ventanaenunciadoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|G:\\JuegoMatematico\\ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|c:\\users\\ferba\\documents\\personales\\jm2\\juegomatematico\\ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D13BFA8-DC95-42F2-B78D-D033E9195E14}|Ejercicios\\Ejercicios.csproj|solutionrelative:ejercicios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 339,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,22 +55,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\Form1.cs",
-              "RelativeDocumentMoniker": "Ejercicios\\Form1.cs",
-              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\Form1.cs [Design]",
-              "RelativeToolTip": "Ejercicios\\Form1.cs [Design]",
+              "Title": "Victory.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Ejercicios\\Victory.cs",
+              "RelativeDocumentMoniker": "Ejercicios\\Victory.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Ejercicios\\Victory.cs [Design]",
+              "RelativeToolTip": "Ejercicios\\Victory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T01:47:26.738Z",
+              "WhenOpened": "2024-08-28T19:38:33.46Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnunciadoAvanzado.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\EnunciadoAvanzado.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\EnunciadoAvanzado.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\EnunciadoAvanzado.cs",
+              "RelativeToolTip": "Olimpiadas\\EnunciadoAvanzado.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAANMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T19:33:42.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnunciadoAvanzado.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\EnunciadoAvanzado.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\EnunciadoAvanzado.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\EnunciadoAvanzado.cs [Design]",
+              "RelativeToolTip": "Olimpiadas\\EnunciadoAvanzado.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T19:33:39.507Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VentanaEnunciadoImagen.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\VentanaEnunciadoImagen.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\VentanaEnunciadoImagen.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\VentanaEnunciadoImagen.cs",
+              "RelativeToolTip": "Olimpiadas\\VentanaEnunciadoImagen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T19:31:23.667Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "VentanaEnunciadoImagen.cs [Design]",
-              "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\VentanaEnunciadoImagen.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\VentanaEnunciadoImagen.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\VentanaEnunciadoImagen.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\VentanaEnunciadoImagen.cs [Design]",
+              "RelativeToolTip": "Olimpiadas\\VentanaEnunciadoImagen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T19:31:19.716Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AlterarBDD.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\AlterarBDD.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs",
+              "RelativeToolTip": "Olimpiadas\\AlterarBDD.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAAhwNcAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T19:13:02.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AlterarBDD.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs",
+              "RelativeDocumentMoniker": "Olimpiadas\\AlterarBDD.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Olimpiadas\\AlterarBDD.cs [Design]",
+              "RelativeToolTip": "Olimpiadas\\AlterarBDD.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T19:09:16.932Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VentanaEnunciadoImagen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Ejercicios\\VentanaEnunciadoImagen.cs",
               "RelativeDocumentMoniker": "Ejercicios\\VentanaEnunciadoImagen.cs",
-              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\VentanaEnunciadoImagen.cs [Design]",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Ejercicios\\VentanaEnunciadoImagen.cs [Design]",
               "RelativeToolTip": "Ejercicios\\VentanaEnunciadoImagen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T01:38:05.397Z",
@@ -54,13 +153,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Form1.cs",
-              "DocumentMoniker": "G:\\JuegoMatematico\\Ejercicios\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Ejercicios\\Form1.cs",
               "RelativeDocumentMoniker": "Ejercicios\\Form1.cs",
-              "ToolTip": "G:\\JuegoMatematico\\Ejercicios\\Form1.cs",
+              "ToolTip": "C:\\Users\\ferba\\Documents\\Personales\\JM2\\JuegoMatematico\\Ejercicios\\Form1.cs",
               "RelativeToolTip": "Ejercicios\\Form1.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAD4v5QAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAH4CAAAAAAAAAAAAAJQCAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-14T21:13:56.807Z",
               "EditorCaption": ""
@@ -73,25 +172,11 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
-            }
-          ]
-        },
-        {
-          "DockedHeight": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             }
           ]
         }

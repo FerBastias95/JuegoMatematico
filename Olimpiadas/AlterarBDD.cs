@@ -57,7 +57,7 @@ namespace Olimpiadas
                 NombreEnunciado.Enabled = false;
                 NombreEnunciado.Text = "";
                 textoEnunciado.Enabled = false;
-                textoEnunciado.Text = "";
+                textoEnunciado.Text = "Presione 'Nuevo Enunciado' para crear su primer enunciado.";
                 resultadoEnunciado.Enabled = false;
                 resultadoEnunciado.Text = "";
                 abrirAvanzado.Enabled = false;
@@ -78,6 +78,9 @@ namespace Olimpiadas
                 VistaPrevia.Enabled = true;
                 listBoxEnunciados.SelectedIndex = 0;
                 HabilitarFunciones();
+            }
+            else {
+                textoEnunciado.Text = "Presione 'Nuevo Enunciado' para crear su primer enunciado.";
             }
             loaded = true;
         }
@@ -103,7 +106,7 @@ namespace Olimpiadas
             loaded = true;
         }
         private void ActualizarBaseDeDatos() {
-            if (loaded) {
+            if (loaded && enunciados.Count > 0) {
                 int seleccion = listBoxEnunciados.SelectedIndex;
                 enunciados[seleccion].Enunciado = textoEnunciado.Text;
                 bool esPosible = double.TryParse(resultadoEnunciado.Text, out double test);
@@ -114,10 +117,12 @@ namespace Olimpiadas
             }
         }
         private void ActualizarNombreEnunciado() {
-            int seleccion = listBoxEnunciados.SelectedIndex;
-            enunciados[seleccion].Nombre = NombreEnunciado.Text;
-            listBoxEnunciados.Items[seleccion] = NombreEnunciado.Text;
-            BaseEnunciados.ActualizarEnunciado(enunciados[seleccion]);
+            if (enunciados.Count > 0) {
+                int seleccion = listBoxEnunciados.SelectedIndex;
+                enunciados[seleccion].Nombre = NombreEnunciado.Text;
+                listBoxEnunciados.Items[seleccion] = NombreEnunciado.Text;
+                BaseEnunciados.ActualizarEnunciado(enunciados[seleccion]);
+            }
         }
 
         public void CargarDatos(EnunciadoBase e) {
@@ -260,6 +265,12 @@ namespace Olimpiadas
                 // Actualizar la vista de la lista
                 ActualizarListaEnunciados(indiceSeleccionado);
                 HabilitarFunciones();
+                if(enunciados.Count < 1) {
+                    ultimoId = 0;
+                }
+                else if(ultimoId > enunciados[enunciados.Count-1].Id) {
+                    ultimoId = enunciados[enunciados.Count-1].Id;
+                }
             }
         }
 

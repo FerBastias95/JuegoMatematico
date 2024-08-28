@@ -89,7 +89,7 @@
             // NombreLista
             // 
             NombreLista.BackColor = SystemColors.GradientInactiveCaption;
-            NombreLista.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            NombreLista.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             NombreLista.Location = new Point(21, 42);
             NombreLista.Margin = new Padding(3, 2, 3, 2);
             NombreLista.Name = "NombreLista";
@@ -120,7 +120,7 @@
             // 
             textoEnunciado.BackColor = Color.MistyRose;
             textoEnunciado.Enabled = false;
-            textoEnunciado.Font = new Font("Century Gothic", 14.1428576F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            textoEnunciado.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textoEnunciado.Location = new Point(331, 85);
             textoEnunciado.Name = "textoEnunciado";
             textoEnunciado.RightToLeft = RightToLeft.No;
@@ -133,7 +133,7 @@
             // 
             resultadoEnunciado.BackColor = Color.MistyRose;
             resultadoEnunciado.Enabled = false;
-            resultadoEnunciado.Font = new Font("Century Gothic", 15.8571434F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            resultadoEnunciado.Font = new Font("Century Gothic", 15.8571434F, FontStyle.Bold, GraphicsUnit.Point, 0);
             resultadoEnunciado.Location = new Point(458, 413);
             resultadoEnunciado.Margin = new Padding(3, 2, 3, 2);
             resultadoEnunciado.Name = "resultadoEnunciado";
@@ -145,7 +145,7 @@
             // 
             NombreEnunciado.BackColor = Color.MistyRose;
             NombreEnunciado.Enabled = false;
-            NombreEnunciado.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            NombreEnunciado.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             NombreEnunciado.Location = new Point(547, 15);
             NombreEnunciado.Name = "NombreEnunciado";
             NombreEnunciado.Size = new Size(525, 27);
@@ -250,6 +250,7 @@
             // 
             abrirImagen.BackColor = Color.Transparent;
             abrirImagen.BorderColor = Color.Transparent;
+            abrirImagen.Enabled = false;
             abrirImagen.EnteredBorderColor = Color.Transparent;
             abrirImagen.EnteredColor = Color.FromArgb(255, 128, 128);
             abrirImagen.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);

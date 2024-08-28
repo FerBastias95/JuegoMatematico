@@ -243,10 +243,7 @@ namespace Ejercicios {
                 botones[j].Text = elegidos[j].Nombre;
             }
         }
-        public void actualizarBotones(List<EnunciadoBase> lista)
-        {
 
-        }
         public void modificarVariables(EnunciadoBase enunciadoBase)
         {
             Random randy = new Random();
@@ -502,6 +499,8 @@ namespace Ejercicios {
 
             if (d == 0)
             {
+                abrirEnunciados2.Visible = false;
+
                 if (enunciados.Count > 10)
                 {
                     cambiarEnunciados.Show();
@@ -514,14 +513,27 @@ namespace Ejercicios {
                     cambiarVariables.Size = new Size(718, 44);
                     cambiarVariables.Location = new Point(117, 357);
                 }
-                cambiarVariables.Show();
-                botonOpciones.Show();
+
+                if (!inicio) {
+                    if (practica) {
+                        if (avanzados.Count > 0) {
+                            cambiarVariables.Show();
+                        }
+                        abrirEnunciados.Size = new System.Drawing.Size(472, 35);
+                        botonOpciones.Show();
+                    }
+                    else {
+                        abrirEnunciados.Size = new Size(472, 71);
+                        abrirEnunciados.Text = "Cambiar Enunciados";
+                    }
+                    inicio = true;
+                }
+                
                 backColor.Show();
                 labelVidas.Show();
                 LabelResueltos.Show();
                 label1.Show();
                 label2.Show();
-                abrirEnunciados.Size = new System.Drawing.Size(472, 35);
                 abrirEnunciados.Location = new Point(363, 407);
 
                 botones[0].Location = new Point(117, 164);
@@ -545,8 +557,18 @@ namespace Ejercicios {
             }
             else if (d == 1)
             {
-                cambiarVariables.Show();
-                botonOpciones.Show();
+                abrirEnunciados2.Visible = false;
+                abrirEnunciados.Size = new Size(718, 71);
+
+                if (practica) {
+                    if (avanzados.Count > 0) {
+                        cambiarVariables.Show();
+                    }
+                    botonOpciones.Show();
+                    abrirEnunciados.Size = new Size(718, 35);
+
+                }
+
                 labelVidas.Show();
                 LabelResueltos.Show();
                 backColor.Show();
@@ -575,6 +597,8 @@ namespace Ejercicios {
             }
             else if (d == 2)
             {
+                abrirEnunciados2.Visible = false;
+
                 labelVidas.Show();
                 LabelResueltos.Show();
                 label1.Show();
@@ -628,15 +652,13 @@ namespace Ejercicios {
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cargarEnunciados();
-            inicio = true;
             practica = true;
+            cargarEnunciados();
         }
 
         private void abrirEnunciados2_Click(object sender, EventArgs e)
         {
             cargarEnunciados();
-            inicio = true;
         }
         private void botonP1_Click(object sender, EventArgs e)
         {

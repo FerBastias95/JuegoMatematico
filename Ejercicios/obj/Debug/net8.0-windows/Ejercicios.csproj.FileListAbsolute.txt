@@ -109,7 +109,6 @@ C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Form1.resources
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Opciones.resources
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.Properties.Resources.resources
-C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.VentanaEnunciado.resources
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.VentanaEnunciadoDesafio.resources
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.VentanaEnunciadoImagen.resources
 C:\Users\ferba\Documents\Personales\JM2\JuegoMatematico\Ejercicios\obj\Debug\net8.0-windows\Ejercicios.csproj.GenerateResource.cache

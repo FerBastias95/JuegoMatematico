@@ -209,7 +209,6 @@ namespace Olimpiadas {
         private bool IsInteger(string respuesta) {
             return double.TryParse(respuesta, out double result) && result == Math.Floor(result);
         }
-
         private void botonRandom_Click(object sender, EventArgs e) {
             generarVariables();
         }
@@ -421,7 +420,6 @@ namespace Olimpiadas {
         }
         private void botonCerrar_Click(object sender, EventArgs e) {
             avanzado.Avanzado = false;
-            alterarBDD.ActualizarAvanzado("", "0");
             alterarBDD.HabilitarFunciones();
             MessageBox.Show("El enunciado ahora es regular.");
             this.Close();
@@ -467,7 +465,6 @@ namespace Olimpiadas {
             avanzadoEnunciado.SelectionLength = 0;
             avanzadoEnunciado.Focus();
         }
-
         private void insertVar3_Click(object sender, EventArgs e) {
             Button b = (Button)sender;
             string insertar = "{v3}";
@@ -479,7 +476,6 @@ namespace Olimpiadas {
             avanzadoEnunciado.SelectionLength = 0;
             avanzadoEnunciado.Focus();
         }
-
         private void insertVar4_Click(object sender, EventArgs e) {
             Button b = (Button)sender;
             string insertar = "{v4}";
