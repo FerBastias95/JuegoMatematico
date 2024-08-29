@@ -26,7 +26,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlterarBDD));
             nuevoEnunciado = new Button();
             borrarEnunciado = new Button();
@@ -146,9 +147,9 @@
             NombreEnunciado.BackColor = Color.MistyRose;
             NombreEnunciado.Enabled = false;
             NombreEnunciado.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NombreEnunciado.Location = new Point(547, 15);
+            NombreEnunciado.Location = new Point(600, 15);
             NombreEnunciado.Name = "NombreEnunciado";
-            NombreEnunciado.Size = new Size(525, 27);
+            NombreEnunciado.Size = new Size(472, 27);
             NombreEnunciado.TabIndex = 4;
             NombreEnunciado.TextChanged += NombreEnunciado_TextChanged;
             // 

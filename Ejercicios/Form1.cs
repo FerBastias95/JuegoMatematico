@@ -500,6 +500,7 @@ namespace Ejercicios {
             if (d == 0)
             {
                 abrirEnunciados2.Visible = false;
+                abrirEnunciados.Text = "Cambiar Enunciados";
 
                 if (enunciados.Count > 10)
                 {
@@ -524,7 +525,6 @@ namespace Ejercicios {
                     }
                     else {
                         abrirEnunciados.Size = new Size(472, 71);
-                        abrirEnunciados.Text = "Cambiar Enunciados";
                     }
                     inicio = true;
                 }
